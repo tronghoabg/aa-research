@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@android:id/content"
+    android:background="?android:attr/selectableItemBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall">
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="0x7f0809d8"
+        android:tint="@color/gearhead_sdk_tint_dark"
+        android:paddingEnd="@dimen/car_frx_text_separation_margin"/>
+    <TextView
+        android:ellipsize="end"
+        android:layout_gravity="center_vertical"
+        android:id="@+id/device_name"
+        android:background="@android:color/transparent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:layout_weight="1"
+        style="@android:style/TextAppearance.Material.Medium"/>
+    <Switch
+        android:layout_gravity="center_vertical"
+        android:id="@+id/device_selected"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="false"
+        android:paddingStart="@dimen/settings_autolaunch_dialog_element_padding"/>
+</LinearLayout>

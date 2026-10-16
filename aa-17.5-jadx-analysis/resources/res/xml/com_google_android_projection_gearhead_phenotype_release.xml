@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phenotype-registrations>
+    <phenotype-registration>
+        <configuration-package>com.google.android.projection.gearhead
+        </configuration-package>
+        <log-sources>
+            <log-source>CAR
+            </log-source>
+            <log-source>GEARHEAD_ANDROID_PRIMES
+            </log-source>
+        </log-sources>
+        <auto-subpackage>false
+        </auto-subpackage>
+        <params>CAE=
+        </params>
+    </phenotype-registration>
+</phenotype-registrations>

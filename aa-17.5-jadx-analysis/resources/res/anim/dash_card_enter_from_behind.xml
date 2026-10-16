@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:duration="@android:integer/config_mediumAnimTime">
+    <alpha
+        android:fromAlpha="0"
+        android:toAlpha="1"/>
+    <scale
+        android:pivotX="@fraction/dashboard_card_appear_pivot"
+        android:pivotY="@fraction/dashboard_card_appear_pivot"
+        android:zAdjustment="bottom"
+        android:fromXScale="@fraction/dashboard_card_appear_scale"
+        android:toXScale="100%"
+        android:fromYScale="@fraction/dashboard_card_appear_scale"
+        android:toYScale="100%"/>
+</set>

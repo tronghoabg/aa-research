@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="enableGSFProvidersInGmsCore">true</bool>
+    <bool name="sdkLevelIsAtLeast35">true</bool>
+    <bool name="sdkLevelIsAtMost34">false</bool>
+</resources>

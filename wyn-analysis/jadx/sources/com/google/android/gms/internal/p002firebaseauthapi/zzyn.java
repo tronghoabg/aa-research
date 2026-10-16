@@ -1,0 +1,13 @@
+package com.google.android.gms.internal.p002firebaseauthapi;
+
+import java.security.GeneralSecurityException;
+import java.security.Provider;
+import javax.crypto.KeyAgreement;
+
+/* loaded from: classes.dex */
+public final class zzyn implements zzyl<KeyAgreement> {
+    @Override // com.google.android.gms.internal.p002firebaseauthapi.zzyl
+    public final /* synthetic */ KeyAgreement zza(String str, Provider provider) throws GeneralSecurityException {
+        return provider == null ? KeyAgreement.getInstance(str) : KeyAgreement.getInstance(str, provider);
+    }
+}

@@ -1,0 +1,19 @@
+package androidx.camera.core.internal.utils;
+
+/* compiled from: WazeSource */
+/* loaded from: classes2.dex */
+public interface RingBuffer<T> {
+
+    /* compiled from: WazeSource */
+    public interface OnRemoveCallback<T> {
+        void onRemove(T t);
+    }
+
+    T dequeue();
+
+    void enqueue(T t);
+
+    int getMaxCapacity();
+
+    boolean isEmpty();
+}

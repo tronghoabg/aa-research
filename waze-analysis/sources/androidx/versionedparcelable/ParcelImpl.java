@@ -1,0 +1,46 @@
+package androidx.versionedparcelable;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import java.lang.reflect.InvocationTargetException;
+
+/* compiled from: WazeSource */
+/* loaded from: classes4.dex */
+public class ParcelImpl implements Parcelable {
+    public static final Parcelable.Creator<ParcelImpl> CREATOR = new Parcelable.Creator<ParcelImpl>() { // from class: androidx.versionedparcelable.ParcelImpl.1
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public ParcelImpl createFromParcel(Parcel parcel) {
+            return new ParcelImpl(parcel);
+        }
+
+        /* JADX WARN: Can't rename method to resolve collision */
+        @Override // android.os.Parcelable.Creator
+        public ParcelImpl[] newArray(int i2) {
+            return new ParcelImpl[i2];
+        }
+    };
+    private final VersionedParcelable mParcel;
+
+    protected ParcelImpl(Parcel parcel) {
+        this.mParcel = new VersionedParcelParcel(parcel).readVersionedParcelable();
+    }
+
+    @Override // android.os.Parcelable
+    public int describeContents() {
+        return 0;
+    }
+
+    public <T extends VersionedParcelable> T getVersionedParcel() {
+        return (T) this.mParcel;
+    }
+
+    @Override // android.os.Parcelable
+    public void writeToParcel(Parcel parcel, int i2) throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+        new VersionedParcelParcel(parcel).writeVersionedParcelable(this.mParcel);
+    }
+
+    public ParcelImpl(VersionedParcelable versionedParcelable) {
+        this.mParcel = versionedParcelable;
+    }
+}

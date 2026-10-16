@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/icon_edit"
+        android:enabled="false"
+        android:id="@+id/car_details_edit"
+        android:title="@string/settings_car_details_menu_edit_name"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:enabled="false"
+        android:id="@+id/car_details_disable"
+        android:title="@string/settings_car_details_menu_disable"
+        app:showAsAction="never"/>
+</menu>

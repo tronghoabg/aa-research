@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/seekable_linear_progress_indicator_ripple"/>
+    <item>
+        <selector>
+            <item
+                android:state_window_focused="true"
+                android:state_hovered="true">
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="@dimen/gearhead_focus_ring_stroke_width_hovered"
+                        android:color="?attr/gearheadFocusAccentColor"/>
+                    <corners android:radius="@dimen/seek_bar_focus_outline_round_corner_radius"/>
+                </shape>
+            </item>
+            <item
+                android:state_focused="true"
+                android:state_window_focused="true">
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="@dimen/gearhead_focus_ring_stroke_width_hovered"
+                        android:color="?attr/gearheadFocusAccentColor"/>
+                    <corners android:radius="@dimen/seek_bar_focus_outline_round_corner_radius"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>

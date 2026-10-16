@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.apps.auto.sdk.ui.PagedListView
+        android:id="@+id/list"
+        android:paddingTop="@dimen/demand_space_action_plate_padding_top"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:listMaxWidth="0dp"
+        app:offsetRows="true"/>
+    <FrameLayout
+        android:id="@+id/header"
+        android:background="?attr/gearheadAssistantPlateColor"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/demand_space_action_plate_header_height"/>
+</FrameLayout>

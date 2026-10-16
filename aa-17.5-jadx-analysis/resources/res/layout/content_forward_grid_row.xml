@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/main_container"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/grid_row_bottom_margin_adaptive"
+    android:layout_marginStart="@dimen/grid_item_focus_radius_negative"
+    android:layout_marginEnd="@dimen/grid_item_focus_radius_negative"/>

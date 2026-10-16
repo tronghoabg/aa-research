@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gearhead="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/pause_icon"
+        android:drawable="@drawable/gs_pause_fill1_vd_theme_48"
+        gearhead:state_pause="true"/>
+    <item
+        android:id="@+id/stop_icon"
+        android:drawable="@drawable/gs_stop_fill1_vd_theme_48"
+        gearhead:state_stop="true"/>
+    <item
+        android:id="@+id/play_icon"
+        android:drawable="@drawable/gs_play_arrow_fill1_vd_theme_48"
+        gearhead:state_play="true"/>
+    <item
+        android:id="@+id/default_play_button"
+        android:drawable="@drawable/gs_play_arrow_fill1_vd_theme_48"/>
+</selector>

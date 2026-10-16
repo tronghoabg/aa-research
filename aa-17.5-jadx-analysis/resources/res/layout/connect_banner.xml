@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:textColor="@android:color/white"
+    android:gravity="start|center_vertical"
+    android:background="@color/gearhead_sdk_light_blue_600"
+    android:padding="@dimen/car_margin_small"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/companion_connect_phone_to_car"
+    android:lineSpacingMultiplier="1.1"
+    android:elevation="1dp"
+    style="@style/TextAppearance.MediumTitle"/>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/gearhead_rectangle_round_corner_ripple_background"
+    android:paddingLeft="@dimen/app_bar_tab_container_horizontal_padding"
+    android:paddingRight="@dimen/app_bar_tab_container_horizontal_padding"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:foreground="@drawable/gearhead_rectangle_round_corner_focus_foreground"
+    android:layout_weight="1">
+    <LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:duplicateParentState="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stateListAnimator="@animator/app_bar_tab_animator">
+        <ImageView
+            android:id="@+id/tab_icon"
+            android:layout_width="@dimen/app_bar_tab_icon_size"
+            android:layout_height="@dimen/app_bar_tab_icon_size"
+            android:layout_marginBottom="@dimen/app_bar_tab_icon_margin_bottom"
+            android:tintMode="src_in"/>
+        <TextView
+            android:textAppearance="@style/TextAppearance.AppBar.Tab"
+            android:gravity="center"
+            android:id="@+id/tab_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:includeFontPadding="false"
+            style="@style/Widget.Boardwalk.TextView.Body3"/>
+    </LinearLayout>
+</FrameLayout>

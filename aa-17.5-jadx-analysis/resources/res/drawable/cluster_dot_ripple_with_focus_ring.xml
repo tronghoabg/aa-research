@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/gearhead_sdk_controller_ripple">
+    <item
+        android:gravity="center"
+        android:id="@android:id/mask">
+        <shape android:shape="oval">
+            <solid android:color="@color/gearhead_controller_ripple_color_selector"/>
+        </shape>
+    </item>
+    <item>
+        <selector>
+            <item
+                android:state_window_focused="true"
+                android:state_hovered="true">
+                <shape android:shape="oval">
+                    <stroke
+                        android:width="@dimen/cluster_dot_indicator_focus_ring_stroke_thickness"
+                        android:color="?attr/gearheadFocusAccentColor"/>
+                </shape>
+            </item>
+            <item
+                android:state_focused="true"
+                android:state_window_focused="true">
+                <shape android:shape="oval">
+                    <stroke
+                        android:width="@dimen/cluster_dot_indicator_focus_ring_stroke_thickness"
+                        android:color="?attr/gearheadFocusAccentColor"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:focusable="true"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/gearhead_sdk_list_item_height"
+    android:layout_marginBottom="@dimen/gearhead_sdk_card_bottom_margin"
+    app:cardBackgroundColor="@color/gearhead_sdk_card">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:background="@drawable/gearhead_sdk_masked_ripple_background"
+        android:duplicateParentState="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/icon"
+            android:layout_width="@dimen/gearhead_sdk_list_item_icon_size"
+            android:layout_height="@dimen/gearhead_sdk_list_item_icon_size"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:scaleType="centerCrop"/>
+        <TextView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_weight="1"
+            style="@style/GearheadSdkBody1"/>
+        <ImageView
+            android:layout_gravity="center_vertical"
+            android:id="@+id/right_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/gearhead_sdk_list_item_right_icon_margin"
+            android:scaleType="center"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

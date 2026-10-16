@@ -1,0 +1,33 @@
+package io.ktor.utils.io;
+
+import lf.AbstractC3464c;
+
+/* renamed from: io.ktor.utils.io.p, reason: case insensitive filesystem */
+/* loaded from: classes5.dex */
+public final class C2883p extends AbstractC3464c {
+
+    /* renamed from: a, reason: collision with root package name */
+    public boolean f37421a;
+
+    /* renamed from: b, reason: collision with root package name */
+    public /* synthetic */ Object f37422b;
+
+    /* renamed from: c, reason: collision with root package name */
+    public final /* synthetic */ C2884q f37423c;
+
+    /* renamed from: d, reason: collision with root package name */
+    public int f37424d;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public C2883p(C2884q c2884q, AbstractC3464c abstractC3464c) {
+        super(abstractC3464c);
+        this.f37423c = c2884q;
+    }
+
+    @Override // lf.AbstractC3462a
+    public final Object invokeSuspend(Object obj) {
+        this.f37422b = obj;
+        this.f37424d |= Integer.MIN_VALUE;
+        return this.f37423c.d(false, this);
+    }
+}

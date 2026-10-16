@@ -1,0 +1,34 @@
+.class final synthetic Lcom/google/android/gms/internal/ads/zzexe;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field private final synthetic zza:Lcom/google/android/gms/internal/ads/zzexg;
+
+
+# direct methods
+.method public synthetic constructor <init>(Lcom/google/android/gms/internal/ads/zzexg;)V
+    .locals 0
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput-object p1, p0, Lcom/google/android/gms/internal/ads/zzexe;->zza:Lcom/google/android/gms/internal/ads/zzexg;
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final synthetic run()V
+    .locals 1
+
+    iget-object v0, p0, Lcom/google/android/gms/internal/ads/zzexe;->zza:Lcom/google/android/gms/internal/ads/zzexg;
+
+    invoke-virtual {v0}, Lcom/google/android/gms/internal/ads/zzexg;->zzd()V
+
+    return-void
+.end method

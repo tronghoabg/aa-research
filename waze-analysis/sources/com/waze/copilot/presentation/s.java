@@ -1,0 +1,36 @@
+package com.waze.copilot.presentation;
+
+/* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
+/* JADX WARN: Unknown enum class pattern. Please report as an issue! */
+/* compiled from: WazeSource */
+/* loaded from: classes5.dex */
+public final class s {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final s f23156a;
+
+    /* renamed from: b, reason: collision with root package name */
+    public static final s f23157b;
+
+    /* renamed from: c, reason: collision with root package name */
+    public static final s f23158c;
+
+    /* renamed from: d, reason: collision with root package name */
+    private static final /* synthetic */ s[] f23159d;
+
+    static {
+        s sVar = new s("IDLE", 0);
+        f23156a = sVar;
+        s sVar2 = new s("LOADING", 1);
+        f23157b = sVar2;
+        s sVar3 = new s("SAVING", 2);
+        f23158c = sVar3;
+        s[] sVarArr = {sVar, sVar2, sVar3};
+        f23159d = sVarArr;
+        h.d.b.a(sVarArr);
+    }
+
+    public static s[] values() {
+        return (s[]) f23159d.clone();
+    }
+}

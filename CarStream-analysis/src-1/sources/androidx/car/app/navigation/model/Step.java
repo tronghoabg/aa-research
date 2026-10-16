@@ -1,0 +1,158 @@
+package androidx.car.app.navigation.model;
+
+import androidx.car.app.annotations.CarProtocol;
+import androidx.car.app.model.CarIcon;
+import androidx.car.app.model.CarText;
+import androidx.car.app.model.constraints.CarIconConstraints;
+import androidx.car.app.model.constraints.CarTextConstraints;
+import androidx.car.app.utils.CollectionUtils;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Objects;
+
+/* compiled from: r8-map-id-0308adb7379ba4f751dce57ff165d4b8556222573b5bec89923a9da20a3bb2b7 */
+@CarProtocol
+/* loaded from: classes.dex */
+public final class Step {
+    private final CarText mCue;
+    private final List<Lane> mLanes;
+    private final CarIcon mLanesImage;
+    private final Maneuver mManeuver;
+    private final CarText mRoad;
+
+    public Step(Maneuver maneuver, List<Lane> list, CarIcon carIcon, CarText carText, CarText carText2) {
+        this.mManeuver = maneuver;
+        this.mLanes = CollectionUtils.unmodifiableCopy(list);
+        CarIconConstraints.DEFAULT.validateOrThrow(carIcon);
+        this.mLanesImage = carIcon;
+        this.mCue = carText;
+        this.mRoad = carText2;
+    }
+
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof Step)) {
+            return false;
+        }
+        Step step = (Step) obj;
+        return Objects.equals(this.mManeuver, step.mManeuver) && Objects.equals(this.mLanes, step.mLanes) && Objects.equals(this.mLanesImage, step.mLanesImage) && Objects.equals(this.mCue, step.mCue) && Objects.equals(this.mRoad, step.mRoad);
+    }
+
+    public CarText getCue() {
+        return this.mCue;
+    }
+
+    public List<Lane> getLanes() {
+        return CollectionUtils.emptyIfNull(this.mLanes);
+    }
+
+    public CarIcon getLanesImage() {
+        return this.mLanesImage;
+    }
+
+    public Maneuver getManeuver() {
+        return this.mManeuver;
+    }
+
+    public CarText getRoad() {
+        return this.mRoad;
+    }
+
+    public int hashCode() {
+        return Objects.hash(this.mManeuver, this.mLanes, this.mLanesImage, this.mCue, this.mRoad);
+    }
+
+    public String toString() {
+        StringBuilder sb = new StringBuilder("[maneuver: ");
+        sb.append(this.mManeuver);
+        sb.append(", lane count: ");
+        List<Lane> list = this.mLanes;
+        sb.append(list != null ? list.size() : 0);
+        sb.append(", lanes image: ");
+        sb.append(this.mLanesImage);
+        sb.append(", cue: ");
+        sb.append(CarText.toShortString(this.mCue));
+        sb.append(", road: ");
+        sb.append(CarText.toShortString(this.mRoad));
+        sb.append("]");
+        return sb.toString();
+    }
+
+    /* compiled from: r8-map-id-0308adb7379ba4f751dce57ff165d4b8556222573b5bec89923a9da20a3bb2b7 */
+    public static final class Builder {
+        private CarText mCue;
+        private final List<Lane> mLanes = new ArrayList();
+        private CarIcon mLanesImage;
+        private Maneuver mManeuver;
+        private CarText mRoad;
+
+        public Builder() {
+        }
+
+        public Builder addLane(Lane lane) {
+            List<Lane> list = this.mLanes;
+            Objects.requireNonNull(lane);
+            list.add(lane);
+            return this;
+        }
+
+        public Step build() {
+            if (this.mLanesImage == null || !this.mLanes.isEmpty()) {
+                return new Step(this.mManeuver, this.mLanes, this.mLanesImage, this.mCue, this.mRoad);
+            }
+            throw new IllegalStateException("A step must have lane data when the lanes image is set");
+        }
+
+        public Builder setCue(CharSequence charSequence) {
+            Objects.requireNonNull(charSequence);
+            CarText carTextCreate = CarText.create(charSequence);
+            this.mCue = carTextCreate;
+            CarTextConstraints.TEXT_AND_ICON.validateOrThrow(carTextCreate);
+            return this;
+        }
+
+        public Builder setLanesImage(CarIcon carIcon) {
+            Objects.requireNonNull(carIcon);
+            this.mLanesImage = carIcon;
+            return this;
+        }
+
+        public Builder setManeuver(Maneuver maneuver) {
+            Objects.requireNonNull(maneuver);
+            this.mManeuver = maneuver;
+            return this;
+        }
+
+        public Builder setRoad(CharSequence charSequence) {
+            Objects.requireNonNull(charSequence);
+            CarText carTextCreate = CarText.create(charSequence);
+            this.mRoad = carTextCreate;
+            CarTextConstraints.TEXT_ONLY.validateOrThrow(carTextCreate);
+            return this;
+        }
+
+        public Builder(CharSequence charSequence) {
+            Objects.requireNonNull(charSequence);
+            CarText carTextCreate = CarText.create(charSequence);
+            this.mCue = carTextCreate;
+            CarTextConstraints.TEXT_AND_ICON.validateOrThrow(carTextCreate);
+        }
+
+        public Builder(CarText carText) {
+            Objects.requireNonNull(carText);
+            this.mCue = carText;
+            CarTextConstraints.TEXT_AND_ICON.validateOrThrow(carText);
+        }
+    }
+
+    private Step() {
+        this.mManeuver = null;
+        this.mLanes = Collections.EMPTY_LIST;
+        this.mLanesImage = null;
+        this.mCue = null;
+        this.mRoad = null;
+    }
+}

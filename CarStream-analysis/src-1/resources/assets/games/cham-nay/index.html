@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Chấm nảy</title>
+<!--
+  CHAM NAY — 1 nguoi, hai nut trai/phai.
+
+  Luat: mot cham nay len xuong giua mot luc giac sau canh. Bam Trai/Phai de XOAY
+  luc giac, sao cho luc cham roi xuong thi canh o DAY dung MAU voi cham. Trung
+  mau: duoc 1 diem, cham doi mau, nhip nhanh dan. Sai mau: thua.
+
+  Bon quy tac cua game HTML (xem md/app/tro-choi.md):
+
+    1. Nghe onPause/onResume. Day la game DAU TIEN co vong ve, nen luat 1 moi
+       that su co rang: onPause phai huy han requestAnimationFrame, va onResume
+       phai DAT LAI moc thoi gian - khong thi quay lai, dt = ca chuc giay va
+       cham roi xuyen qua day trong mot khung hinh.
+    2. Mau lay tu CarGame.theme - dung ca SAU mau, moi canh mot mau nhu ban goc.
+       Vai mau trong bang gan nhau (kem/xam, xanh nhat/xanh reu), nen thu tu
+       quanh luc giac phai theo vong RING o duoi, dung xao lung tung.
+    3. O bam >= CarGame.TOUCH_MIN (60px): hai nut xoay to han, va bam vao NUA
+       TRAI / NUA PHAI cua khung ve cung xoay duoc.
+    4. Khung ve do CHIEU CAO quyet dinh: canvas vuong = min(rong, cao).
+
+  VAT LY TINH THEO BAN KINH, KHONG THEO PIXEL: vi tri cham giu bang don vi R
+  (ban kinh luc giac). Doi co man hinh giua van thi chi R doi, con duong nay va
+  nhip roi khong doi - neu tinh bang pixel thi man to se roi nhanh hon man nho.
+-->
+<script src="../carstream-game.js"></script>
+<style>
+  html, body {
+    margin: 0; height: 100%;
+    background: var(--bg, #201E1D); color: var(--text, #F9F4ED);
+    font-family: "Be Vietnam Pro", system-ui, sans-serif;
+    -webkit-user-select: none; user-select: none;
+    overflow: hidden;
+  }
+  #wrap {
+    height: 100%;
+    display: flex; align-items: center; justify-content: center; gap: 48px;
+  }
+  #cv { display: block; border-radius: 18px; background: var(--surface, #2E2B25); touch-action: none; }
+
+  #side { width: 300px; flex: none; }
+  #scores { display: flex; gap: 12px; }
+  .box { flex: 1; background: var(--surface, #2E2B25); border-radius: 14px; padding: 10px 14px; }
+  .box b { display: block; font-size: 13px; font-weight: 600; color: var(--dim, #C0B6A5); }
+  .box span { font-size: 26px; font-weight: 700; }
+  #status { font-size: 17px; font-weight: 700; margin: 12px 0 4px; min-height: 24px; }
+
+  #turn { display: flex; gap: 12px; margin-top: 8px; }
+  .rot {
+    flex: 1; min-height: 84px; border: 0; border-radius: 18px;
+    background: var(--surface, #2E2B25); color: var(--text, #F9F4ED);
+    font-family: inherit; font-size: 20px; font-weight: 700;
+    cursor: pointer; touch-action: manipulation;
+  }
+  .rot:active { background: var(--accent, #C67139); color: var(--bg, #201E1D); }
+  #again {
+    margin-top: 12px; width: 100%; min-height: 60px; border: 0; border-radius: 999px;
+    background: var(--accent, #C67139); color: var(--bg, #201E1D);
+    font-family: inherit; font-size: 18px; font-weight: 700;
+    cursor: pointer; touch-action: manipulation;
+  }
+  #again:hover { background: var(--accentSoft, #F6A06B); }
+  #hint { font-size: 14px; color: var(--dim, #C0B6A5); margin-top: 12px; line-height: 1.45; }
+
+  @media (max-width: 1100px) {
+    #wrap { gap: 24px; }
+    #side { width: 210px; }
+    .box span { font-size: 21px; }
+    #hint { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<div id="wrap">
+  <canvas id="cv"></canvas>
+  <div id="side">
+    <div id="scores">
+      <div class="box"><b>Điểm</b><span id="score">0</span></div>
+      <div class="box"><b>Cao nhất</b><span id="best">0</span></div>
+    </div>
+    <div id="status">Bấm để bắt đầu</div>
+    <div id="turn">
+      <button class="rot" data-dir="-1" type="button">◀ Trái</button>
+      <button class="rot" data-dir="1" type="button">Phải ▶</button>
+    </div>
+    <button id="again" type="button">Bắt đầu</button>
+    <div id="hint">Xoay lục giác để chấm rơi trúng cạnh <b>cùng màu</b>. Bấm nửa trái / nửa phải khung cũng xoay được.</div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var CarGame = window.CarGame;
+  var T = CarGame.theme;
+
+  var SIN60 = Math.sin(Math.PI / 3);   // 0.866 - tam luc giac den canh giua
+  var DOT = 0.125;                     // ban kinh cham, theo R - sau mau thi cham
+                                       // phai to hon mot chut moi doc duoc mau
+  var FLOOR = SIN60 - DOT;             // cham cham day o do cao nay
+  var RISE = 1.15;                     // do cao nay len, theo R
+  var G0 = 8.8;                        // gia toc, don vi R/giay^2 -> mot nhip ~1s
+  var GMAX = 3.6;                      // nhanh nhat gap 3,6 lan
+  var BEST_KEY = 'carstream.chamnay.best';
+
+  /*
+    SAU mau, moi canh MOT mau - dung nhu ban goc.
+
+    Bang mau app co du sau mau, nhung vai cap gan nhau: kem/xam, xanh nhat/xanh
+    reu, cam dat/cam nhat. Nen thu tu quanh luc giac KHONG duoc xao lung tung -
+    hai mau de lan nhau ma nam canh nhau la nhin nham, ma nhin nham o day la
+    thua ngay.
+
+    Cach giu: chon san MOT vong an toan (RING) khong co cap de lan nao ke nhau,
+    roi moi van chi XOAY vong do di va co the LAT GUONG. Hai phep nay khong doi
+    cap nao ke cap nao, nen van nao cung khac nhau ma van an toan.
+  */
+  var COLORS = [T.accent, T.accentSoft, T.accent2, T.accent2Soft, T.text, T.dim];
+  //          cam dat · xanh nhat · cam nhat · kem · xanh reu · xam am
+  var RING = [0, 3, 1, 4, 2, 5];
+  var SIDES = RING.slice();            // mau sau canh, xoay lai moi van
+
+  var wrap = document.getElementById('wrap');
+  var side = document.getElementById('side');
+  var cv = document.getElementById('cv');
+  var ctx = cv.getContext('2d');
+  var scoreEl = document.getElementById('score');
+  var bestEl = document.getElementById('best');
+  var statusEl = document.getElementById('status');
+  var againBtn = document.getElementById('again');
+
+  var box = 0, cx = 0, cy = 0, R = 0;  // pixel
+  var rot = 0, rotTo = 0;              // goc xoay luc giac, do
+  var u = FLOOR, vu = 0;               // vi tri / van toc cham, don vi R
+  var dotColor = 0;
+  var trail = [];
+  var score = 0, best = 0;
+  var state = 'ready';                 // ready | play | over
+  var raf = 0, last = 0;
+
+  for (var k in T) {
+    if (Object.prototype.hasOwnProperty.call(T, k)) {
+      document.documentElement.style.setProperty('--' + k, T[k]);
+    }
+  }
+
+  /* ---------------- khung ve: luat 4 ---------------- */
+
+  function layout() {
+    var dpr = Math.min(2, window.devicePixelRatio || 1);
+    var wrapGap = parseFloat(getComputedStyle(wrap).columnGap) || 48;
+    var availW = Math.max(240, window.innerWidth - side.offsetWidth - wrapGap - 32);
+    var availH = Math.max(240, window.innerHeight - 32);
+    box = Math.floor(Math.min(availW, availH));
+    cv.style.width = box + 'px';
+    cv.style.height = box + 'px';
+    cv.width = Math.round(box * dpr);
+    cv.height = Math.round(box * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    cx = box / 2; cy = box / 2;
+    R = box * 0.40;
+    draw();
+  }
+
+  /* ---------------- luat choi ---------------- */
+
+  /** Xoay + lat guong vong mau an toan. Khong dung Fisher-Yates: xem chu thich RING. */
+  function shuffleSides() {
+    var off = Math.floor(Math.random() * 6);
+    var flip = Math.random() < 0.5;
+    for (var i = 0; i < 6; i++) {
+      var j = flip ? (6 - i) % 6 : i;
+      SIDES[i] = RING[(j + off) % 6];
+    }
+  }
+
+  /** Canh dang o DAY, tinh tu goc xoay that (khong phai goc dang nham toi). */
+  function bottomSide() {
+    var i = Math.round((90 - rot) / 60 - 0.5) % 6;
+    return (i + 6) % 6;
+  }
+
+  function gravity() {
+    return G0 * Math.min(GMAX, 1 + score * 0.05);
+  }
+
+  function ready() {
+    stop();                            // bo van dang choi: khong de hai vong ve chong nhau
+    CarGame.hideOver();
+    shuffleSides();
+    rot = 0; rotTo = 0;
+    u = FLOOR; vu = 0;
+    trail = [];
+    score = 0;
+    dotColor = SIDES[bottomSide()];    // van moi luon bat dau bang mot cu nay dung
+    state = 'ready';
+    CarGame.score(0);
+    scoreEl.textContent = '0';
+    statusEl.textContent = 'Bấm để bắt đầu';
+    againBtn.textContent = 'Bắt đầu';
+    draw();
+  }
+
+  function start() {
+    if (state === 'play') { return; }
+    if (state === 'over') { ready(); }
+    state = 'play';
+    vu = -Math.sqrt(2 * gravity() * RISE);
+    statusEl.textContent = 'Trúng màu là được điểm';
+    againBtn.textContent = 'Chơi lại';
+    last = 0;
+    loop();
+  }
+
+  function rotate(dir) {
+    if (state === 'over') { return; }
+    if (state === 'ready') { start(); }
+    rotTo += dir * 60;
+  }
+
+  function land() {
+    var c = SIDES[bottomSide()];
+    if (c !== dotColor) {
+      over();
+      return;
+    }
+    score++;
+    CarGame.score(score);
+    scoreEl.textContent = score;
+    if (score > best) {
+      best = score;
+      bestEl.textContent = best;
+      try { localStorage.setItem(BEST_KEY, String(best)); } catch (e) { /* rieng tu */ }
+    }
+    // Mau moi luon KHAC mau cu: khong thi co luot khong phai lam gi.
+    var next = Math.floor(Math.random() * (COLORS.length - 1));
+    dotColor = (next >= dotColor) ? next + 1 : next;
+    vu = -Math.sqrt(2 * gravity() * RISE);
+  }
+
+  function over() {
+    state = 'over';
+    stop();
+    u = FLOOR; vu = 0;
+    statusEl.textContent = 'Sai màu · ' + score + ' điểm';
+    againBtn.textContent = 'Chơi lại';
+    draw();
+    CarGame.over({
+      title: 'Sai màu',
+      note: score + ' điểm',
+      sub: (score >= best && score > 0) ? 'Kỷ lục mới' : ('Cao nhất ' + best),
+      again: 'Chơi lại',
+      onAgain: function () { ready(); start(); }
+    });
+  }
+
+  /* ---------------- vong ve: luat 1 ---------------- */
+
+  function step(dt) {
+    // Xoay muot, nhung va cham van xet theo goc THAT o duoi day.
+    rot += (rotTo - rot) * Math.min(1, dt * 16);
+    if (Math.abs(rotTo - rot) < 0.05) { rot = rotTo; }
+
+    vu += gravity() * dt;
+    u += vu * dt;
+    if (u >= FLOOR) {
+      u = FLOOR;
+      land();
+    }
+    trail.push(u);
+    if (trail.length > 7) { trail.shift(); }
+  }
+
+  function loop(now) {
+    raf = window.requestAnimationFrame(loop);
+    if (!last) { last = now || 0; return; }
+    // Chan dt: mot khung hinh dai bat thuong (may ban, vua chay lai) khong duoc
+    // phep day cham di ca man hinh trong mot buoc.
+    var dt = Math.min(0.05, ((now || 0) - last) / 1000);
+    last = now || 0;
+    if (state === 'play') { step(dt); }
+    draw();
+  }
+
+  function stop() {
+    if (raf) { window.cancelAnimationFrame(raf); raf = 0; }
+    last = 0;
+  }
+
+  /* ---------------- ve ---------------- */
+
+  function vertex(i) {
+    var a = (rot + i * 60) * Math.PI / 180;
+    return [cx + R * Math.cos(a), cy + R * Math.sin(a)];
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, box, box);
+
+    // Sau canh, moi canh mot mau.
+    ctx.lineWidth = Math.max(6, R * 0.11);
+    ctx.lineCap = 'round';
+    for (var i = 0; i < 6; i++) {
+      var a = vertex(i), b = vertex(i + 1);
+      ctx.strokeStyle = COLORS[SIDES[i]];
+      ctx.beginPath();
+      ctx.moveTo(a[0], a[1]);
+      ctx.lineTo(b[0], b[1]);
+      ctx.stroke();
+    }
+
+    // Bong tren mat day: cho biet con bao xa moi cham.
+    var gap = Math.min(1, (FLOOR - u) / RISE);   // 0 = sap cham day, 1 = cao nhat
+    ctx.globalAlpha = 0.28 * (1 - gap);
+    ctx.fillStyle = COLORS[dotColor];
+    ctx.beginPath();
+    ctx.ellipse(cx, cy + FLOOR * R + R * DOT * 0.9, R * DOT * (1.1 - gap * 0.5), R * DOT * 0.28, 0, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+
+    // Vet duoi cham roi.
+    for (var t = 0; t < trail.length - 1; t++) {
+      ctx.globalAlpha = 0.05 + 0.05 * t;
+      ctx.beginPath();
+      ctx.arc(cx, cy + trail[t] * R, R * DOT * (0.5 + t * 0.06), 0, Math.PI * 2);
+      ctx.fill();
+    }
+    ctx.globalAlpha = 1;
+
+    // Cham.
+    ctx.beginPath();
+    ctx.arc(cx, cy + u * R, R * DOT, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  /* ---------------- dieu khien ---------------- */
+
+  var rots = document.querySelectorAll('.rot');
+  for (var r = 0; r < rots.length; r++) {
+    rots[r].addEventListener('click', function (e) {
+      rotate(+e.currentTarget.dataset.dir);
+    });
+  }
+  againBtn.addEventListener('click', function () {
+    if (state === 'play') { ready(); } else { start(); }
+  });
+
+  // Bam thang vao khung ve: nua trai xoay trai, nua phai xoay phai. Tren xe day
+  // la vung bam to nhat, khong phai voi tay sang bang ben.
+  cv.addEventListener('pointerdown', function (e) {
+    var box2 = cv.getBoundingClientRect();
+    rotate(e.clientX - box2.left < box2.width / 2 ? -1 : 1);
+  });
+
+  var KEYS = { ArrowLeft: -1, ArrowRight: 1, z: -1, x: 1, a: -1, d: 1 };
+  window.addEventListener('keydown', function (e) {
+    if (e.key === ' ') { e.preventDefault(); start(); return; }
+    if (KEYS[e.key]) { e.preventDefault(); rotate(KEYS[e.key]); }
+  });
+
+  var pendingLayout = 0;
+  window.addEventListener('resize', function () {
+    clearTimeout(pendingLayout);
+    pendingLayout = setTimeout(layout, 120);
+  });
+
+  // Luat 1. Roi man hinh giua van thi DUNG HAN vong ve; quay lai thi dat lai moc
+  // thoi gian roi chay tiep - khong dat lai la mot buoc dt khong lo.
+  CarGame.onPause(function () {
+    stop();
+    if (state === 'play') { statusEl.textContent = 'Tạm dừng'; }
+  });
+  CarGame.onResume(function () {
+    if (state === 'play') {
+      last = 0;
+      statusEl.textContent = 'Trúng màu là được điểm';
+      loop();
+    }
+  });
+
+  try { best = parseInt(localStorage.getItem(BEST_KEY), 10) || 0; } catch (e) { best = 0; }
+  bestEl.textContent = best;
+  layout();
+  ready();
+}());
+</script>
+</body>
+</html>

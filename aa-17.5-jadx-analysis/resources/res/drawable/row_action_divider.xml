@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:left="?attr/templateRowActionPaddingHorizontal"
+        android:right="?attr/templateRowActionPaddingHorizontal">
+        <shape android:shape="rectangle">
+            <size
+                android:height="64dp"
+                android:width="@dimen/template_row_action_divider_width"/>
+            <solid android:color="?attr/templateRowActionDividerColor"/>
+        </shape>
+    </item>
+</layer-list>

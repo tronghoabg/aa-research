@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:id="@+id/csat_dialog_choice_circle_backdrop"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/csat_dialog_choice_margin_top"
+        android:layout_marginBottom="@dimen/csat_dialog_choice_margin_bottom"
+        android:src="@drawable/csat_icon_backdrop"
+        android:tint="?attr/colorPrimary"
+        android:layout_marginStart="?attr/dialogPreferredPadding"
+        android:tintMode="src_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/csat_dialog_choice_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:tint="?attr/colorOnPrimary"
+        android:tintMode="src_in"
+        app:layout_constraintBottom_toBottomOf="@+id/csat_dialog_choice_circle_backdrop"
+        app:layout_constraintEnd_toEndOf="@+id/csat_dialog_choice_circle_backdrop"
+        app:layout_constraintStart_toStartOf="@+id/csat_dialog_choice_circle_backdrop"
+        app:layout_constraintTop_toTopOf="@+id/csat_dialog_choice_circle_backdrop"/>
+    <TextView
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:gravity="center_vertical"
+        android:id="@+id/csat_dialog_choice_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/csat_dialog_choice_margin_top"
+        android:layout_marginBottom="@dimen/csat_dialog_choice_margin_bottom"
+        android:layout_marginStart="@dimen/csat_dialog_choice_margin_intra"
+        android:layout_marginEnd="?attr/dialogPreferredPadding"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/csat_dialog_choice_circle_backdrop"
+        app:layout_constraintTop_toTopOf="parent"/>
+</android.support.constraint.ConstraintLayout>

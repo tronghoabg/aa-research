@@ -1,0 +1,72 @@
+package com.waze.planned_drive;
+
+/* compiled from: WazeSource */
+/* loaded from: classes6.dex */
+public final class bq implements kotlinx.coroutines.b.l {
+
+    /* renamed from: a, reason: collision with root package name */
+    final /* synthetic */ kotlinx.coroutines.b.l f33270a;
+
+    /* renamed from: b, reason: collision with root package name */
+    final /* synthetic */ h.g.a.l f33271b;
+
+    public bq(kotlinx.coroutines.b.l lVar, h.g.a.l lVar2) {
+        this.f33270a = lVar;
+        this.f33271b = lVar2;
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:7:0x0013  */
+    @Override // kotlinx.coroutines.b.l
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public final java.lang.Object emit(java.lang.Object r5, h.c.e r6) {
+        /*
+            r4 = this;
+            boolean r0 = r6 instanceof com.waze.planned_drive.bp
+            if (r0 == 0) goto L13
+            r0 = r6
+            com.waze.planned_drive.bp r0 = (com.waze.planned_drive.bp) r0
+            int r1 = r0.f33268b
+            r2 = -2147483648(0xffffffff80000000, float:-0.0)
+            r3 = r1 & r2
+            if (r3 == 0) goto L13
+            int r1 = r1 - r2
+            r0.f33268b = r1
+            goto L18
+        L13:
+            com.waze.planned_drive.bp r0 = new com.waze.planned_drive.bp
+            r0.<init>(r4, r6)
+        L18:
+            java.lang.Object r6 = r0.f33267a
+            h.c.a.a r1 = h.c.a.a.f48038a
+            int r2 = r0.f33268b
+            r3 = 1
+            if (r2 == 0) goto L2f
+            if (r2 != r3) goto L27
+            e.b.c.b(r6)
+            goto L46
+        L27:
+            java.lang.IllegalStateException r4 = new java.lang.IllegalStateException
+            java.lang.String r5 = "call to 'resume' before 'invoke' with coroutine"
+            r4.<init>(r5)
+            throw r4
+        L2f:
+            e.b.c.b(r6)
+            kotlinx.coroutines.b.l r6 = r4.f33270a
+            r2 = r0
+            h.c.e r2 = (h.c.e) r2
+            h.g.a.l r4 = r4.f33271b
+            java.lang.Object r4 = r4.invoke(r5)
+            r0.f33268b = r3
+            java.lang.Object r4 = r6.emit(r4, r0)
+            if (r4 != r1) goto L46
+            return r1
+        L46:
+            h.ab r4 = h.ab.f48028a
+            return r4
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.waze.planned_drive.bq.emit(java.lang.Object, h.c.e):java.lang.Object");
+    }
+}

@@ -1,0 +1,20 @@
+package defpackage;
+
+/* loaded from: classes3.dex */
+enum udj {
+    NOTHING_PLACED(false, false, false),
+    ONLY_PRIMARY_PLACED(true, false, false),
+    PRIMARY_AND_SECONDARY_PLACED(true, true, false),
+    PRIMARY_AND_TERTIARY_PLACED(true, false, true),
+    PRIMARY_SECONDARY_AND_TERTIARY_PLACED(true, true, true);
+
+    final boolean f;
+    final boolean g;
+    final boolean h;
+
+    udj(boolean z, boolean z2, boolean z3) {
+        this.f = z;
+        this.g = z2;
+        this.h = z3;
+    }
+}

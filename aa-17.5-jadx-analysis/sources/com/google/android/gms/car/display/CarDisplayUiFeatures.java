@@ -1,0 +1,51 @@
+package com.google.android.gms.car.display;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.google.android.gms.common.internal.safeparcel.AbstractSafeParcelable;
+import defpackage.rcd;
+import defpackage.spu;
+import j$.util.Objects;
+
+/* loaded from: classes.dex */
+public class CarDisplayUiFeatures extends AbstractSafeParcelable {
+    public static final Parcelable.Creator<CarDisplayUiFeatures> CREATOR = new rcd(5);
+    public final int a;
+    public final int b;
+
+    public CarDisplayUiFeatures(int i, int i2) {
+        this.a = i;
+        this.b = i2;
+    }
+
+    public final boolean a(int i) {
+        return (this.b & i) != 0;
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (!(obj instanceof CarDisplayUiFeatures)) {
+            return false;
+        }
+        CarDisplayUiFeatures carDisplayUiFeatures = (CarDisplayUiFeatures) obj;
+        return this.a == carDisplayUiFeatures.a && this.b == carDisplayUiFeatures.b;
+    }
+
+    public final int hashCode() {
+        return Objects.hash(Integer.valueOf(this.a), Integer.valueOf(this.b));
+    }
+
+    public final String toString() {
+        return "CarDisplayUiFeatures{resizeType=" + this.a + ", hasClock=" + a(1) + ", hasBatteryLevel=" + a(2) + ", hasPhoneSignal=" + a(4) + ", hasNativeUiAffordance=" + a(8) + ", hasClusterTurnCard=" + a(16) + "}";
+    }
+
+    @Override // android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i) {
+        int iL = spu.l(parcel, 20293);
+        spu.r(parcel, 1, this.a);
+        spu.r(parcel, 2, this.b);
+        spu.m(parcel, iL);
+    }
+}

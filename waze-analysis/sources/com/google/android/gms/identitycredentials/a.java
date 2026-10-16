@@ -1,0 +1,27 @@
+package com.google.android.gms.identitycredentials;
+
+import android.os.Parcel;
+import android.os.Parcelable;
+import com.google.android.gms.common.internal.bb;
+
+/* compiled from: WazeSource */
+/* loaded from: classes4.dex */
+public final class a extends com.google.android.gms.common.internal.a.a {
+    public static final Parcelable.Creator<a> CREATOR = new com.google.android.gms.auth.api.signin.e(12);
+
+    /* renamed from: a, reason: collision with root package name */
+    private final boolean f5508a;
+
+    public a(boolean z) {
+        this.f5508a = z;
+    }
+
+    @Override // android.os.Parcelable
+    public final void writeToParcel(Parcel parcel, int i2) {
+        h.g.b.x.f(parcel, "dest");
+        boolean z = this.f5508a;
+        int iD = bb.d(parcel);
+        bb.f(parcel, 1, z);
+        bb.e(parcel, iD);
+    }
+}

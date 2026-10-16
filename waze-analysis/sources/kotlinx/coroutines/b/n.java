@@ -1,0 +1,43 @@
+package kotlinx.coroutines.b;
+
+/* compiled from: WazeSource */
+/* loaded from: classes7.dex */
+final class n extends h.c.b.a.g implements h.g.a.p {
+
+    /* renamed from: a, reason: collision with root package name */
+    int f51696a;
+
+    /* renamed from: b, reason: collision with root package name */
+    final /* synthetic */ k f51697b;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    n(k kVar, h.c.e eVar) {
+        super(2, eVar);
+        this.f51697b = kVar;
+    }
+
+    @Override // h.c.b.a.a
+    public final h.c.e<h.ab> create(Object obj, h.c.e<?> eVar) {
+        return new n(this.f51697b, eVar);
+    }
+
+    @Override // h.g.a.p
+    public final /* bridge */ /* synthetic */ Object invoke(Object obj, Object obj2) {
+        return ((n) create((kotlinx.coroutines.af) obj, (h.c.e) obj2)).invokeSuspend(h.ab.f48028a);
+    }
+
+    @Override // h.c.b.a.a
+    public final Object invokeSuspend(Object obj) {
+        h.c.a.a aVar = h.c.a.a.f48038a;
+        if (this.f51696a != 0) {
+            e.b.c.b(obj);
+        } else {
+            e.b.c.b(obj);
+            this.f51696a = 1;
+            if (bl.n(this.f51697b, this) == aVar) {
+                return aVar;
+            }
+        }
+        return h.ab.f48028a;
+    }
+}

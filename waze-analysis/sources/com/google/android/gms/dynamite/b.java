@@ -1,0 +1,26 @@
+package com.google.android.gms.dynamite;
+
+/* compiled from: WazeSource */
+/* loaded from: classes4.dex */
+public final class b {
+
+    /* renamed from: a, reason: collision with root package name */
+    private static ClassLoader f5183a;
+
+    /* renamed from: b, reason: collision with root package name */
+    private static Thread f5184b;
+
+    /* JADX WARN: Removed duplicated region for block: B:49:0x00a4 A[Catch: all -> 0x00d2, PHI: r1
+  0x00a4: PHI (r1v4 java.lang.Thread) = (r1v3 java.lang.Thread), (r1v16 java.lang.Thread) binds: [B:7:0x000a, B:45:0x009f] A[DONT_GENERATE, DONT_INLINE], TRY_LEAVE, TryCatch #0 {, blocks: (B:4:0x0003, B:6:0x0007, B:8:0x000c, B:44:0x009d, B:58:0x00cb, B:12:0x001f, B:48:0x00a3, B:49:0x00a4, B:61:0x00cf, B:50:0x00a5, B:56:0x00c9, B:55:0x00af, B:13:0x0020, B:15:0x002d, B:21:0x0042, B:22:0x0049, B:24:0x0054, B:30:0x0069, B:31:0x006e, B:41:0x0081, B:42:0x009b, B:18:0x003c), top: B:67:0x0003, inners: #3, #4 }] */
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public static synchronized java.lang.ClassLoader a() {
+        /*
+            Method dump skipped, instructions count: 213
+            To view this dump add '--comments-level debug' option
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.google.android.gms.dynamite.b.a():java.lang.ClassLoader");
+    }
+}

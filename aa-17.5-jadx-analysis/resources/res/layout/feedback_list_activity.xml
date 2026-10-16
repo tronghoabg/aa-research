@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fitsSystemWindows="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ListView
+            android:id="@+id/feedback_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:gravity="center"
+            android:id="@+id/feedback_list_empty"
+            android:paddingLeft="@dimen/feedback_spacer"
+            android:paddingRight="@dimen/feedback_spacer"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:text="@string/feedback_list_empty"
+            android:layout_weight="1"
+            style="@android:style/TextAppearance.Material.Large"/>
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/add_feedback_report"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="8dp"
+        android:src="0x7f08099d"
+        android:layout_alignParentBottom="true"
+        android:contentDescription="@string/feedback_add"
+        android:layout_marginEnd="8dp"
+        android:layout_alignParentEnd="true"/>
+</RelativeLayout>

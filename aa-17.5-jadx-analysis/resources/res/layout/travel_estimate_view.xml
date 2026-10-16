@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.navigation.TravelEstimateView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/template_padding_3"
+    android:paddingVertical="@dimen/template_padding_2">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/trip_icon"
+        android:layout_width="?attr/templateTravelEstimateImageSize"
+        android:layout_height="?attr/templateTravelEstimateImageSize"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_marginEnd="@dimen/template_padding_3"/>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/trip_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/bodyLegacyGoogleSansFontFamily"
+            android:letterSpacing="0"
+            style="@style/Widget.Template.Text.Body3.Medium"/>
+        <TextView
+            android:id="@+id/time_and_distance_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="?attr/bodyLegacyGoogleSansFontFamily"
+            android:letterSpacing="0"
+            style="@style/Widget.Template.Text.Body3"/>
+    </LinearLayout>
+</com.google.android.apps.auto.components.apphost.view.widgets.navigation.TravelEstimateView>

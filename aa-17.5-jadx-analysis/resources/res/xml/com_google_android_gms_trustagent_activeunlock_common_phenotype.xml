@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phenotype-registrations>
+    <phenotype-registration>
+        <configuration-package>com.google.android.gms.trustagent.activeunlock.common
+        </configuration-package>
+        <log-sources>
+            <log-source>ACTIVEUNLOCK_PRIMARY
+            </log-source>
+            <log-source>ANDROID_AUTH
+            </log-source>
+        </log-sources>
+        <auto-subpackage>true
+        </auto-subpackage>
+    </phenotype-registration>
+</phenotype-registrations>

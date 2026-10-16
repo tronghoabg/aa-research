@@ -1,0 +1,302 @@
+/*
+  Tông màu lấy đúng hệ Organic của app (nền nâu tối, nhấn cam) để trang này
+  không lạc lõng giữa các trang khác trên màn hình xe.
+
+  MỌI KÍCH THƯỚC ĐỀU THEO vmin, không theo px cố định: màn hình xe rộng từ
+  khoảng 800px (xe phổ thông) tới hơn 1900px (màn lớn), để px cố định thì một
+  trong hai đầu sẽ hỏng — chữ bé như kiến hoặc ô kênh to lấp cả màn.
+*/
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #17120F;
+  color: #F3EDE6;
+  font-family: system-ui, "Roboto", sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* --------------------------------------------------------------- khung */
+
+/*
+  Khung bọc mọi thứ. Toàn màn hình xin cho nó, nên nó phải tự có nền và phủ
+  kín — lúc trình duyệt tách nó ra vẽ riêng thì nền của body không còn ở đó.
+*/
+#khung {
+  position: fixed;
+  inset: 0;
+  background: #17120F;
+}
+
+/* --------------------------------------------------------------- video */
+
+#v {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  object-fit: contain;
+}
+
+/* --------------------------------------------------------------- báo */
+
+#bao {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 76%;
+  padding: 3.2vmin 4.4vmin;
+  border-radius: 3vmin;
+  background: rgba(23, 18, 15, .92);
+  border: .3vmin solid #4A3F36;
+  font-size: 3.4vmin;
+  line-height: 1.45;
+  text-align: center;
+  white-space: pre-line;
+}
+
+.an { display: none !important; }
+
+/* --------------------------------------------------------------- lưới kênh */
+
+#luoi {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 12, 10, .96);
+  display: flex;
+  flex-direction: column;
+  padding: 2.6vmin 3vmin 0;
+}
+
+#dau {
+  display: flex;
+  align-items: center;
+  gap: 2vmin;
+  padding-bottom: 2vmin;
+}
+
+#tieu {
+  font-size: 4vmin;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/*
+  O loc: nhin nhu o nhap nhung la mot cai NUT.
+
+  Man hinh chieu cua Android Auto khong bat duoc ban phim he thong cho o nhap
+  trong trang web - cham vao chi thay con tro nhay ma khong go duoc gi. Nen
+  cham vao day la bung khay phim tu ve o duoi (xem #phim).
+*/
+#tim {
+  flex: 1;
+  height: 8.4vmin;
+  line-height: 8.4vmin;
+  padding: 0 3vmin;
+  border-radius: 99vmin;
+  border: .3vmin solid #4A3F36;
+  background: #221B17;
+  color: #F3EDE6;
+  font-size: 3vmin;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+#tim.rong { color: #8A7A6C; }
+
+#tim.dang { border-color: #F6A06B; }
+
+/*
+ * Con trỏ nháy — ô lọc không phải <input> nên không có con trỏ của hệ thống.
+ * Vẽ giống hệt bên mục "Trong máy" (assets/media/media.css) để hai chỗ gõ như một.
+ */
+#tim .nhay {
+  display: inline-block;
+  vertical-align: middle;
+  width: .4vmin;
+  min-width: 2px;
+  height: 4vmin;
+  margin-left: .4vmin;
+  background: #F6A06B;
+  animation: nhay 1.05s step-end infinite;
+}
+
+@keyframes nhay {
+  0%, 50%   { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #tim .nhay { animation: none; }
+}
+
+/* Phím: cùng cỡ chữ và độ dày nét với bàn phím mục "Trong máy". */
+.phim { font-size: 3vmin; font-weight: 600; min-height: 46px; }
+
+/* ------------------------------------------------------------- khay phím */
+
+#phim {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4vmin;
+  padding: 2vmin 0 2.4vmin;
+  border-top: .3vmin solid #3A312A;
+}
+
+.hangphim {
+  display: flex;
+  gap: 1.4vmin;
+  justify-content: center;
+}
+
+.phim {
+  flex: 1 1 0;
+  max-width: 12vmin;
+  height: 9.4vmin;
+  line-height: 9.4vmin;
+  text-align: center;
+  border-radius: 1.8vmin;
+  border: .3vmin solid #3A312A;
+  background: #221B17;
+  font-size: 3.4vmin;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.phim:active { background: #F6A06B; color: #2A1B10; }
+
+.phim.rong-key { max-width: 26vmin; flex: 2 1 0; }
+.phim.xoa { max-width: 18vmin; flex: 1.5 1 0; color: #F6A06B; }
+
+.nut {
+  padding: 0 3.6vmin;
+  height: 8.4vmin;
+  line-height: 8.4vmin;
+  border-radius: 99vmin;
+  border: .3vmin solid #4A3F36;
+  background: #221B17;
+  font-size: 3vmin;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.nut:active { background: #2E2520; }
+
+/* Hàng nhóm (group-title trong M3U) - cuộn ngang, không xuống dòng. */
+#nhom {
+  display: flex;
+  gap: 1.6vmin;
+  overflow-x: auto;
+  padding-bottom: 2vmin;
+  scrollbar-width: none;
+}
+
+#nhom::-webkit-scrollbar { display: none; }
+
+.chip {
+  padding: 0 3.2vmin;
+  height: 7.6vmin;
+  line-height: 7.6vmin;
+  border-radius: 99vmin;
+  border: .3vmin solid #4A3F36;
+  background: #221B17;
+  font-size: 2.8vmin;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.chip.chon {
+  background: #F6A06B;
+  border-color: #F6A06B;
+  color: #2A1B10;
+  font-weight: 700;
+}
+
+/*
+  Lưới kênh: mỗi ô tối thiểu 30vmin nên màn nhỏ được 3 cột, màn lớn tự thành
+  5-6 cột. Không đặt số cột cứng - xe nào cũng khác.
+*/
+#o {
+  flex: 1;
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(30vmin, 1fr));
+  gap: 2vmin;
+  padding-bottom: 3vmin;
+  align-content: start;
+}
+
+.k {
+  display: flex;
+  align-items: center;
+  gap: 2vmin;
+  padding: 2.2vmin;
+  border-radius: 2.4vmin;
+  border: .3vmin solid #3A312A;
+  background: #221B17;
+  cursor: pointer;
+  min-height: 14vmin;
+}
+
+.k:active { background: #2E2520; }
+
+.k.dang {
+  border-color: #F6A06B;
+  background: #2C2118;
+}
+
+.k img {
+  width: 9vmin;
+  height: 9vmin;
+  flex: 0 0 auto;
+  object-fit: contain;
+  border-radius: 1.4vmin;
+  background: #17120F;
+}
+
+/* Không có logo thì lấy chữ cái đầu - vẫn phân biệt được ô này với ô kia. */
+.k .chudau {
+  width: 9vmin;
+  height: 9vmin;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.4vmin;
+  background: #17120F;
+  color: #F6A06B;
+  font-size: 4vmin;
+  font-weight: 700;
+}
+
+.k .ten {
+  flex: 1;
+  font-size: 2.9vmin;
+  line-height: 1.3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Ngôi sao yêu thích: vùng chạm rộng hơn hẳn ngôi sao, cho tay lái xe. */
+.k .sao {
+  flex: 0 0 auto;
+  width: 9vmin;
+  height: 9vmin;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4vmin;
+  color: #5A4E44;
+}
+
+.k .sao.co { color: #F6A06B; }

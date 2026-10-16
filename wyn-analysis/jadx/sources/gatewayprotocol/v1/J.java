@@ -1,0 +1,12 @@
+package gatewayprotocol.v1;
+
+import com.google.protobuf.Internal;
+import gatewayprotocol.v1.InitializationResponseOuterClass;
+
+/* loaded from: classes5.dex */
+public final class J implements Internal.EnumLiteMap {
+    @Override // com.google.protobuf.Internal.EnumLiteMap
+    public final Internal.EnumLite findValueByNumber(int i5) {
+        return InitializationResponseOuterClass.RequestType.forNumber(i5);
+    }
+}

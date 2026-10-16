@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="vn_dialer_dialpad_number_horizontal_margin">12dp</dimen>
+    <dimen name="vn_dialer_dialpad_number_size">76dp</dimen>
+    <dimen name="vn_dialpad_number_input_height">96dp</dimen>
+</resources>

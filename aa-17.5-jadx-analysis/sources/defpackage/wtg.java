@@ -1,0 +1,26 @@
+package defpackage;
+
+import android.R;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
+
+/* loaded from: classes.dex */
+public final class wtg {
+    public static final int[] a = {R.attr.state_pressed};
+    public static final int[] b = {R.attr.state_focused};
+    public static final int[] c = {R.attr.state_selected, R.attr.state_pressed};
+    public static final int[] d = {R.attr.state_selected};
+
+    private wtg() {
+    }
+
+    public static int a(ColorStateList colorStateList, int[] iArr) {
+        int colorForState = colorStateList != null ? colorStateList.getColorForState(iArr, colorStateList.getDefaultColor()) : 0;
+        int iAlpha = Color.alpha(colorForState);
+        return dvd.e(colorForState, Math.min(iAlpha + iAlpha, 255));
+    }
+
+    public static ColorStateList b(ColorStateList colorStateList) {
+        return colorStateList != null ? colorStateList : ColorStateList.valueOf(0);
+    }
+}

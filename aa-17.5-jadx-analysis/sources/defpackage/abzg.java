@@ -1,0 +1,39 @@
+package defpackage;
+
+/* loaded from: classes3.dex */
+public final class abzg extends abnv implements abox {
+    public static final abzg a;
+    public String b = "";
+    public aboh c = abpf.b;
+    public boolean d;
+
+    static {
+        abzg abzgVar = new abzg();
+        a = abzgVar;
+        abnv.P(abzg.class, abzgVar);
+    }
+
+    private abzg() {
+    }
+
+    @Override // defpackage.abnv
+    protected final Object a(int i, Object obj) {
+        int i2 = i - 1;
+        if (i2 == 2) {
+            return new abpg(a, "\u0004\u0003\u0000\u0000\u0001\u0003\u0003\u0000\u0001\u0000\u0001Ȉ\u0002Ț\u0003\u0007", new Object[]{"b", "c", "d"});
+        }
+        if (i2 == 3) {
+            return new abzg();
+        }
+        if (i2 == 4) {
+            return new abnp(a);
+        }
+        if (i2 == 5) {
+            return a;
+        }
+        if (i2 != 6) {
+            return null;
+        }
+        return abnv.L(abzg.class);
+    }
+}

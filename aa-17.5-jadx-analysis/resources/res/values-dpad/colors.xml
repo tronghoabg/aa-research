@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gearhead_sdk_card_ripple_background">@color/gearhead_sdk_controller_ripple_dark</color>
+    <color name="gearhead_sdk_controller_ripple">@color/gearhead_sdk_controller_ripple_day</color>
+    <color name="gearhead_sdk_ripple">@color/gearhead_sdk_controller_ripple</color>
+    <color name="gearhead_sdk_touch_ripple">@color/gearhead_sdk_touch_ripple_day</color>
+</resources>

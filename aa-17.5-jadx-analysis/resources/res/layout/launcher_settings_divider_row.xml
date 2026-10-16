@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/launcher_app_settings_row_height"
+    android:layout_marginTop="@dimen/launcher_app_settings_divider_margin"
+    style="@style/TextAppearance.CompanionSettings">
+    <View
+        android:id="@+id/section_separator"
+        android:paddingTop="@dimen/gearhead_baseline_grid_2x"
+        style="@style/CompanionAppSeparator"/>
+    <TextView
+        android:id="@+id/disabled_app_area_text"
+        android:paddingTop="@dimen/gearhead_baseline_grid_2x"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/launcher_app_settings_row_height"
+        android:text="@string/settings_customize_disabled_apps_section_title"
+        android:paddingStart="@dimen/launcher_app_settings_padding_to_icon_left"
+        android:paddingEnd="@dimen/launcher_app_settings_row_spacing"/>
+</FrameLayout>

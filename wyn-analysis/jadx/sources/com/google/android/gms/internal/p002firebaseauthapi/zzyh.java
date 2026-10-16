@@ -1,0 +1,17 @@
+package com.google.android.gms.internal.p002firebaseauthapi;
+
+import java.security.GeneralSecurityException;
+
+/* loaded from: classes.dex */
+final class zzyh<JcePrimitiveT> implements zzyj<JcePrimitiveT> {
+    private final zzyl<JcePrimitiveT> zza;
+
+    @Override // com.google.android.gms.internal.p002firebaseauthapi.zzyj
+    public final JcePrimitiveT zza(String str) throws GeneralSecurityException {
+        return this.zza.zza(str, null);
+    }
+
+    private zzyh(zzyl<JcePrimitiveT> zzylVar) {
+        this.zza = zzylVar;
+    }
+}

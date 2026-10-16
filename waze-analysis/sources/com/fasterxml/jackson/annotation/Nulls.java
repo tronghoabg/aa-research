@@ -1,0 +1,11 @@
+package com.fasterxml.jackson.annotation;
+
+/* compiled from: WazeSource */
+/* loaded from: classes4.dex */
+public enum Nulls {
+    SET,
+    SKIP,
+    FAIL,
+    AS_EMPTY,
+    DEFAULT
+}

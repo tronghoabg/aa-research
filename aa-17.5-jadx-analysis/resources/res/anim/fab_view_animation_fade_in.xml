@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:ordering="together">
+    <objectAnimator
+        android:duration="@integer/action_strip_animation_duration_millis"
+        android:valueFrom=".7f"
+        android:valueTo="1f"
+        android:valueType="floatType"
+        android:propertyName="scaleX"/>
+    <objectAnimator
+        android:duration="@integer/action_strip_animation_duration_millis"
+        android:valueFrom=".7f"
+        android:valueTo="1f"
+        android:valueType="floatType"
+        android:propertyName="scaleY"/>
+    <objectAnimator
+        android:duration="@integer/action_strip_animation_duration_millis"
+        android:valueFrom="0f"
+        android:valueTo="1f"
+        android:valueType="floatType"
+        android:propertyName="alpha"/>
+</set>

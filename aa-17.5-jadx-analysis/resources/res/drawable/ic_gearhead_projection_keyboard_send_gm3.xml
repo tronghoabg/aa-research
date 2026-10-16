@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/key_oval_background">
+        <shape android:shape="oval">
+            <size
+                android:height="@dimen/projection_keyboard_action_circle"
+                android:width="@dimen/projection_keyboard_action_circle"/>
+        </shape>
+    </item>
+    <item
+        android:gravity="center"
+        android:id="@+id/key_icon"
+        android:height="@dimen/projection_keyboard_action_icon"
+        android:width="@dimen/projection_keyboard_action_icon"
+        android:drawable="@drawable/gs_send_vd_24"/>
+</layer-list>

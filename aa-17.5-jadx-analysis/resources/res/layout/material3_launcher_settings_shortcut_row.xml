@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/content"
+    android:background="@drawable/material3_ripple"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/launcher_app_settings_row_height"
+    android:foreground="?attr/selectableItemBackground"
+    android:paddingStart="@dimen/launcher_app_settings_row_start_padding"
+    android:paddingEnd="@dimen/launcher_app_settings_shortcut_row_end_padding">
+    <include layout="@layout/material3_launcher_settings_draggable_item_row"/>
+    <FrameLayout
+        android:layout_gravity="end|center_vertical"
+        android:id="@+id/delete_shortcut"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="@dimen/material3_launcher_app_settings_shortcut_delete_tap_target_width"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/delete_shortcut_icon"
+            android:layout_width="@dimen/launcher_app_settings_shortcut_delete_icon_size"
+            android:layout_height="@dimen/launcher_app_settings_shortcut_delete_icon_size"
+            android:src="@drawable/ic_close"
+            android:tint="@color/boardwalk_dark_red_600"/>
+    </FrameLayout>
+</LinearLayout>

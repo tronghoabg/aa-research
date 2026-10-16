@@ -1,0 +1,15 @@
+package com.fasterxml.jackson.databind.node;
+
+/* compiled from: WazeSource */
+/* loaded from: classes4.dex */
+public enum JsonNodeType {
+    ARRAY,
+    BINARY,
+    BOOLEAN,
+    MISSING,
+    NULL,
+    NUMBER,
+    OBJECT,
+    POJO,
+    STRING
+}

@@ -1,0 +1,81 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class mkt {
+    public static final android.content.ComponentName A;
+    public static final android.content.ComponentName B;
+    public static final android.content.ComponentName C;
+    public static final android.content.ComponentName D;
+    public static final android.content.ComponentName E;
+    public static final android.content.ComponentName F;
+    public static final android.content.ComponentName G;
+    public static final android.content.ComponentName H;
+    public static final android.content.ComponentName a;
+    public static final android.content.ComponentName b;
+    public static final android.content.ComponentName c;
+    public static final android.content.ComponentName d;
+    public static final android.content.ComponentName e;
+    public static final android.content.ComponentName f;
+    public static final android.content.ComponentName g;
+    public static final android.content.ComponentName h;
+    public static final android.content.ComponentName i;
+    public static final android.content.ComponentName j;
+    public static final android.content.ComponentName k;
+    public static final android.content.ComponentName l;
+    public static final android.content.ComponentName m;
+    public static final android.content.ComponentName n;
+    public static final android.content.ComponentName o;
+    public static final android.content.ComponentName p;
+    public static final android.content.ComponentName q;
+    public static final android.content.ComponentName r;
+    public static final android.content.ComponentName s;
+    public static final android.content.ComponentName t;
+    public static final android.content.ComponentName u;
+    public static final android.content.ComponentName v;
+    public static final android.content.ComponentName w;
+    public static final android.content.ComponentName x;
+    public static final android.content.ComponentName y;
+    public static final android.content.ComponentName z;
+
+    static {
+        new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.stream.StreamService");
+        a = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.oem.AllCarAppsService");
+        b = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.telecom.TelecomService");
+        c = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.phone.PhoneCarAppService");
+        d = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.phone.incall.InCallCarAppService");
+        e = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.oem.OEMExitService");
+        f = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.media.MediaService");
+        g = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.media.template.MediaSearchTemplateService");
+        h = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.apphost.TemplateService");
+        i = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.apphost.TemplateFullScreenImmersiveService");
+        j = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.apphost.TemplatePartialImmersiveService");
+        k = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.apphost.TemplateNavigationService");
+        l = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.apphost.TemplateClusterService");
+        m = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.apphost.TemplateAuxiliaryDisplayService");
+        n = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.messaging.MessagingService");
+        new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.messaging.template.MessagingRemoteScreenService");
+        o = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.messaging.template.MessagingCarAppService");
+        p = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.calendar.CalendarCarAppService");
+        q = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.ux.PrototypeService");
+        r = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.messaging.SmsMessagingService");
+        s = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.system.applauncher.GhAppLauncherService");
+        t = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.system.cluster.media.MiniMediaClusterCarActivityService");
+        u = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.gearsnacks.GearSnacksService");
+        v = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.settings.ui.CarSettingsService");
+        w = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.companion.settings.LauncherAppSettingsActivity");
+        x = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.companion.settings.DefaultSettingsActivity");
+        y = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.system.ProjectionTrampolineInitialService");
+        z = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.system.ProjectionTrampolineFallbackService");
+        A = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.projection.gearhead.system.secondary.SecondaryScreenTurnCardCarActivityService");
+        B = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.system.navigation.fallback.NavigationFallbackCarActivityService");
+        C = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.gearhead.demand.DemandClientService");
+        new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.parkedapps.activity.ParkedWebAppActivity");
+        D = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.carcontrol.demo.CarControlCarAppService");
+        new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.hvac.HvacCarActivityService");
+        E = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.integratedoverlay.IntegratedOverlayService");
+        F = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.carlocalmedia.CarLocalMediaBrowserService");
+        G = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.radio.RadioMediaBrowserService");
+        H = new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.system.applauncher.LauncherCarAppService");
+        new android.content.ComponentName("com.google.android.projection.gearhead", "com.google.android.apps.auto.components.messaging.smartactions.template.SmartReplyConfirmationService");
+    }
+}

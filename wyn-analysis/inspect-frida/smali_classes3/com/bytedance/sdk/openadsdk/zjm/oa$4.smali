@@ -1,0 +1,277 @@
+.class Lcom/bytedance/sdk/openadsdk/zjm/oa$4;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/bytedance/sdk/openadsdk/ab/oa;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/bytedance/sdk/openadsdk/zjm/oa;->uef(ILjava/lang/String;Ljava/lang/Throwable;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic lw:Lcom/bytedance/sdk/openadsdk/zjm/oa;
+
+.field final synthetic moa:Ljava/lang/String;
+
+.field final synthetic oa:I
+
+.field final synthetic uef:J
+
+.field final synthetic yo:Ljava/lang/Throwable;
+
+
+# direct methods
+.method public constructor <init>(Lcom/bytedance/sdk/openadsdk/zjm/oa;JILjava/lang/Throwable;Ljava/lang/String;)V
+    .locals 0
+
+    .line 1
+    iput-object p1, p0, Lcom/bytedance/sdk/openadsdk/zjm/oa$4;->lw:Lcom/bytedance/sdk/openadsdk/zjm/oa;
+
+    .line 2
+    .line 3
+    iput-wide p2, p0, Lcom/bytedance/sdk/openadsdk/zjm/oa$4;->uef:J
+
+    .line 4
+    .line 5
+    iput p4, p0, Lcom/bytedance/sdk/openadsdk/zjm/oa$4;->oa:I
+
+    .line 6
+    .line 7
+    iput-object p5, p0, Lcom/bytedance/sdk/openadsdk/zjm/oa$4;->yo:Ljava/lang/Throwable;
+
+    .line 8
+    .line 9
+    iput-object p6, p0, Lcom/bytedance/sdk/openadsdk/zjm/oa$4;->moa:Ljava/lang/String;
+
+    .line 10
+    .line 11
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 12
+    .line 13
+    .line 14
+    return-void
+.end method
+
+
+# virtual methods
+.method public uef()Lcom/bytedance/sdk/openadsdk/ab/uef/yo;
+    .locals 4
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/lang/Exception;
+        }
+    .end annotation
+
+    .line 1
+    new-instance v0, Lorg/json/JSONObject;
+
+    .line 2
+    .line 3
+    invoke-direct {v0}, Lorg/json/JSONObject;-><init>()V
+
+    .line 4
+    .line 5
+    .line 6
+    const-string v1, "duration"
+
+    .line 7
+    .line 8
+    iget-wide v2, p0, Lcom/bytedance/sdk/openadsdk/zjm/oa$4;->uef:J
+
+    .line 9
+    .line 10
+    invoke-virtual {v0, v1, v2, v3}, Lorg/json/JSONObject;->put(Ljava/lang/String;J)Lorg/json/JSONObject;
+
+    .line 11
+    .line 12
+    .line 13
+    iget-object v1, p0, Lcom/bytedance/sdk/openadsdk/zjm/oa$4;->lw:Lcom/bytedance/sdk/openadsdk/zjm/oa;
+
+    .line 14
+    .line 15
+    invoke-static {v1}, Lcom/bytedance/sdk/openadsdk/zjm/oa;->uef(Lcom/bytedance/sdk/openadsdk/zjm/oa;)Ljava/lang/String;
+
+    .line 16
+    .line 17
+    .line 18
+    move-result-object v1
+
+    .line 19
+    const-string v2, "url"
+
+    .line 20
+    .line 21
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 22
+    .line 23
+    .line 24
+    const-string v1, "error_code"
+
+    .line 25
+    .line 26
+    iget v2, p0, Lcom/bytedance/sdk/openadsdk/zjm/oa$4;->oa:I
+
+    .line 27
+    .line 28
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    .line 29
+    .line 30
+    .line 31
+    iget-object v1, p0, Lcom/bytedance/sdk/openadsdk/zjm/oa$4;->yo:Ljava/lang/Throwable;
+
+    .line 32
+    .line 33
+    instance-of v2, v1, Ljava/lang/NullPointerException;
+
+    .line 34
+    .line 35
+    if-eqz v2, :cond_0
+
+    .line 36
+    .line 37
+    const-string v2, "image load fail"
+
+    .line 38
+    .line 39
+    const-string v3, "image_load"
+
+    .line 40
+    .line 41
+    invoke-static {v2, v3, v1}, Lcom/bytedance/sdk/openadsdk/ApmHelper;->reportCustomError(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)V
+
+    .line 42
+    .line 43
+    .line 44
+    :cond_0
+    const-string v1, "error_message"
+
+    .line 45
+    .line 46
+    iget-object v2, p0, Lcom/bytedance/sdk/openadsdk/zjm/oa$4;->moa:Ljava/lang/String;
+
+    .line 47
+    .line 48
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;Ljava/lang/Object;)Lorg/json/JSONObject;
+
+    .line 49
+    .line 50
+    .line 51
+    iget-object v1, p0, Lcom/bytedance/sdk/openadsdk/zjm/oa$4;->lw:Lcom/bytedance/sdk/openadsdk/zjm/oa;
+
+    .line 52
+    .line 53
+    invoke-static {v1}, Lcom/bytedance/sdk/openadsdk/zjm/oa;->oa(Lcom/bytedance/sdk/openadsdk/zjm/oa;)Lcom/bytedance/sdk/openadsdk/core/model/gzw;
+
+    .line 54
+    .line 55
+    .line 56
+    move-result-object v1
+
+    .line 57
+    invoke-virtual {v1}, Lcom/bytedance/sdk/openadsdk/core/model/gzw;->hw()I
+
+    .line 58
+    .line 59
+    .line 60
+    move-result v1
+
+    .line 61
+    const-string v2, "image_mode"
+
+    .line 62
+    .line 63
+    invoke-virtual {v0, v2, v1}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    .line 64
+    .line 65
+    .line 66
+    const-string v1, "use_new_img"
+
+    .line 67
+    .line 68
+    const/4 v2, 0x1
+
+    .line 69
+    invoke-virtual {v0, v1, v2}, Lorg/json/JSONObject;->put(Ljava/lang/String;I)Lorg/json/JSONObject;
+
+    .line 70
+    .line 71
+    .line 72
+    invoke-static {}, Lcom/bytedance/sdk/openadsdk/ab/uef/moa;->oa()Lcom/bytedance/sdk/openadsdk/ab/uef/moa;
+
+    .line 73
+    .line 74
+    .line 75
+    move-result-object v1
+
+    .line 76
+    const-string v2, "load_image_error"
+
+    .line 77
+    .line 78
+    invoke-virtual {v1, v2}, Lcom/bytedance/sdk/openadsdk/ab/uef/moa;->uef(Ljava/lang/String;)Lcom/bytedance/sdk/openadsdk/ab/uef/moa;
+
+    .line 79
+    .line 80
+    .line 81
+    move-result-object v1
+
+    .line 82
+    iget-object v2, p0, Lcom/bytedance/sdk/openadsdk/zjm/oa$4;->lw:Lcom/bytedance/sdk/openadsdk/zjm/oa;
+
+    .line 83
+    .line 84
+    invoke-static {v2}, Lcom/bytedance/sdk/openadsdk/zjm/oa;->oa(Lcom/bytedance/sdk/openadsdk/zjm/oa;)Lcom/bytedance/sdk/openadsdk/core/model/gzw;
+
+    .line 85
+    .line 86
+    .line 87
+    move-result-object v2
+
+    .line 88
+    invoke-virtual {v2}, Lcom/bytedance/sdk/openadsdk/core/model/gzw;->epe()I
+
+    .line 89
+    .line 90
+    .line 91
+    move-result v2
+
+    .line 92
+    invoke-virtual {v1, v2}, Lcom/bytedance/sdk/openadsdk/ab/uef/moa;->uef(I)Lcom/bytedance/sdk/openadsdk/ab/uef/moa;
+
+    .line 93
+    .line 94
+    .line 95
+    move-result-object v1
+
+    .line 96
+    invoke-virtual {v0}, Lorg/json/JSONObject;->toString()Ljava/lang/String;
+
+    .line 97
+    .line 98
+    .line 99
+    move-result-object v0
+
+    .line 100
+    invoke-virtual {v1, v0}, Lcom/bytedance/sdk/openadsdk/ab/uef/moa;->oa(Ljava/lang/String;)Lcom/bytedance/sdk/openadsdk/ab/uef/moa;
+
+    .line 101
+    .line 102
+    .line 103
+    move-result-object v0
+
+    .line 104
+    return-object v0
+.end method

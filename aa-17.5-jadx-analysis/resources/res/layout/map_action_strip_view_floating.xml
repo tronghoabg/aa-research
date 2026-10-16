@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.common.ActionStripView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="false"
+    android:visibility="gone"
+    android:clipChildren="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="?attr/templateMapActionStripFabBottomMargin"
+    app:fabAppearance="?attr/templateActionStripFabAppearance"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_gravity="end"
+            android:orientation="vertical"
+            android:id="@+id/action_strip_container_secondary"
+            android:clipChildren="false"
+            android:layout_width="?attr/templateMapActionStripWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="?attr/templateActionStripButtonMargin"/>
+        <LinearLayout
+            android:layout_gravity="end"
+            android:orientation="vertical"
+            android:id="@+id/action_strip_container"
+            android:clipChildren="false"
+            android:layout_width="?attr/templateMapActionStripWidth"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="?attr/templateActionStripButtonMargin"/>
+    </LinearLayout>
+</com.google.android.apps.auto.components.apphost.view.widgets.common.ActionStripView>

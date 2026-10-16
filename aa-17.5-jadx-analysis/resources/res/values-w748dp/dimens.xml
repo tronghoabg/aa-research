@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="apps_max_content_width">748dp</dimen>
+    <dimen name="keyboard_key_horizontal_tiny_gap">0dp</dimen>
+    <dimen name="projection_keyboard_key_width">68dp</dimen>
+</resources>

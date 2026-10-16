@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.system.layout.KeyEventDispatchingFrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/notification_decor"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/notification_scrim"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <View
+            android:id="@+id/notification_scrim_view"
+            android:background="@drawable/hun_gradient_background"
+            android:layout_width="match_parent"
+            style="@style/NotificationScrimViewHeight"/>
+    </FrameLayout>
+    <com.google.android.apps.auto.sdk.ui.FocusClusterLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/notification_content_root"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:clickable="true"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="@dimen/notification_new_elevation"
+        app:forceFieldType="modal"
+        style="@style/HunContainerViewWidth"/>
+</com.google.android.apps.auto.components.system.layout.KeyEventDispatchingFrameLayout>

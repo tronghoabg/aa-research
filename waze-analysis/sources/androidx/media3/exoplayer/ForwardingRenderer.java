@@ -1,0 +1,163 @@
+package androidx.media3.exoplayer;
+
+import androidx.media3.common.Format;
+import androidx.media3.common.Timeline;
+import androidx.media3.common.util.Clock;
+import androidx.media3.exoplayer.analytics.PlayerId;
+import androidx.media3.exoplayer.source.MediaSource;
+import androidx.media3.exoplayer.source.SampleStream;
+
+/* compiled from: WazeSource */
+/* loaded from: classes3.dex */
+public class ForwardingRenderer implements Renderer {
+    private final Renderer renderer;
+
+    public ForwardingRenderer(Renderer renderer) {
+        this.renderer = renderer;
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void disable() {
+        this.renderer.disable();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void enable(RendererConfiguration rendererConfiguration, Format[] formatArr, SampleStream sampleStream, long j2, boolean z, boolean z2, long j3, long j4, MediaSource.MediaPeriodId mediaPeriodId) {
+        this.renderer.enable(rendererConfiguration, formatArr, sampleStream, j2, z, z2, j3, j4, mediaPeriodId);
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void enableMayRenderStartOfStream() {
+        this.renderer.enableMayRenderStartOfStream();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public RendererCapabilities getCapabilities() {
+        return this.renderer.getCapabilities();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public long getDurationToProgressUs(long j2, long j3) {
+        return this.renderer.getDurationToProgressUs(j2, j3);
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public MediaClock getMediaClock() {
+        return this.renderer.getMediaClock();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public String getName() {
+        return this.renderer.getName();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public long getReadingPositionUs() {
+        return this.renderer.getReadingPositionUs();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public int getState() {
+        return this.renderer.getState();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public SampleStream getStream() {
+        return this.renderer.getStream();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer, androidx.media3.exoplayer.RendererCapabilities
+    public int getTrackType() {
+        return this.renderer.getTrackType();
+    }
+
+    @Override // androidx.media3.exoplayer.PlayerMessage.Target
+    public void handleMessage(int i2, Object obj) {
+        this.renderer.handleMessage(i2, obj);
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public boolean hasReadStreamToEnd() {
+        return this.renderer.hasReadStreamToEnd();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void init(int i2, PlayerId playerId, Clock clock) {
+        this.renderer.init(i2, playerId, clock);
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public boolean isCurrentStreamFinal() {
+        return this.renderer.isCurrentStreamFinal();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public boolean isEnded() {
+        return this.renderer.isEnded();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public boolean isReady() {
+        return this.renderer.isReady();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void maybeThrowStreamError() {
+        this.renderer.maybeThrowStreamError();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void release() {
+        this.renderer.release();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void render(long j2, long j3) {
+        this.renderer.render(j2, j3);
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void replaceStream(Format[] formatArr, SampleStream sampleStream, long j2, long j3, MediaSource.MediaPeriodId mediaPeriodId) {
+        this.renderer.replaceStream(formatArr, sampleStream, j2, j3, mediaPeriodId);
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void reset() {
+        this.renderer.reset();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void resetPosition(long j2, boolean z) {
+        this.renderer.resetPosition(j2, z);
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void setCurrentStreamFinal() {
+        this.renderer.setCurrentStreamFinal();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void setPlaybackSpeed(float f2, float f3) {
+        this.renderer.setPlaybackSpeed(f2, f3);
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void setTimeline(Timeline timeline) {
+        this.renderer.setTimeline(timeline);
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void start() {
+        this.renderer.start();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public void stop() {
+        this.renderer.stop();
+    }
+
+    @Override // androidx.media3.exoplayer.Renderer
+    public boolean supportsResetPositionWithoutKeyFrameReset(long j2) {
+        return this.renderer.supportsResetPositionWithoutKeyFrameReset(j2);
+    }
+}

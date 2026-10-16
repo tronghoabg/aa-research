@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.ui.telecom.UnCallView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/call_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.apps.auto.components.ui.image.CrossfadeImageView
+        android:id="@+id/un_contact_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/telecom_button_size"
+        android:scaleType="centerCrop"/>
+    <com.google.android.apps.auto.sdk.ui.FocusClusterLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:forceFieldType="multimoveModal">
+        <include
+            android:visibility="gone"
+            layout="@layout/expanding_action_panel"/>
+    </com.google.android.apps.auto.sdk.ui.FocusClusterLayout>
+</com.google.android.apps.auto.components.ui.telecom.UnCallView>

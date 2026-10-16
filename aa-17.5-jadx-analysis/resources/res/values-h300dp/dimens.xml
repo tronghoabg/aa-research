@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dashboard_card_badge_size">@dimen/gearhead_baseline_grid_3.5x</dimen>
+    <dimen name="dashboard_card_icon_size">@dimen/gearhead_baseline_grid_12x</dimen>
+    <dimen name="dashboard_media_album_art_size">@dimen/gearhead_baseline_grid_12x</dimen>
+    <dimen name="dashboard_media_invalid_session_icon_padding">0dp</dimen>
+    <dimen name="dashboard_media_invalid_session_icon_size">@dimen/gearhead_baseline_grid_6x</dimen>
+    <dimen name="dashboard_media_loading_title_album_art_spacing">17dp</dimen>
+</resources>

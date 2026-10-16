@@ -1,0 +1,37 @@
+package com.google.android.recaptcha.internal;
+
+import org.jetbrains.annotations.NotNull;
+
+/* loaded from: classes4.dex */
+public final class zzev implements zzfe {
+
+    @NotNull
+    public static final zzev zza = new zzev();
+
+    private zzev() {
+    }
+
+    @Override // com.google.android.recaptcha.internal.zzfe
+    public final void zza(int i5, @NotNull zzek zzekVar, @NotNull zzrr... zzrrVarArr) throws zzby {
+        if (zzrrVarArr.length != 2) {
+            throw new zzby(4, 3, null);
+        }
+        Object objZza = zzekVar.zzc().zza(zzrrVarArr[0]);
+        if (true != (objZza instanceof String)) {
+            objZza = null;
+        }
+        String str = (String) objZza;
+        if (str == null) {
+            throw new zzby(4, 5, null);
+        }
+        Object objZza2 = zzekVar.zzc().zza(zzrrVarArr[1]);
+        if (true != (objZza2 instanceof String)) {
+            objZza2 = null;
+        }
+        String str2 = (String) objZza2;
+        if (str2 == null) {
+            throw new zzby(4, 5, null);
+        }
+        zzekVar.zzc().zze(i5, str.concat(str2));
+    }
+}

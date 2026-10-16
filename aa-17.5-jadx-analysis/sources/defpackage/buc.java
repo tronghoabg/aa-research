@@ -1,0 +1,55 @@
+package defpackage;
+
+/* loaded from: classes.dex */
+public final class buc {
+    public static final long a = cjn.i(-12513781);
+    public static final long b = cjn.i(-1);
+    public static final long c = cjn.i(-10480624);
+    public static final long d = cjn.i(-7594728);
+    public static final long e = cjn.i(-5036514);
+    public static final long f = cjn.i(-870219);
+    public static final long g = cjn.i(-401700);
+    public static final long h = cjn.i(-16777216);
+    public static final long i = cjn.i(-14869728);
+    public static final long j = cjn.i(-1);
+    public static final long k = cjn.i(-14606554);
+    public static final long l = cjn.i(-13948624);
+    public static final long m = cjn.i(-13488331);
+    public static final long n = cjn.i(-13224901);
+    public static final long o = cjn.i(-12896194);
+    public static final long p = cjn.i(-15790829);
+    public static final long q = cjn.i(-15461864);
+    public static final long r = cjn.i(-2172703);
+    public static final long s = cjn.i(-1646359);
+    public static final long t = cjn.i(-1251600);
+    public static final long u = cjn.i(-791049);
+    public static final long v = cjn.i(-659465);
+    public static final long w = cjn.i(-527622);
+    public static final long x = cjn.i(-67585);
+    public static final long y = cjn.i(-11975345);
+    public static final long z = cjn.i(-8817538);
+    public static final long A = cjn.i(-7106663);
+    public static final long B = cjn.i(-3488560);
+    public static final long C = cjn.i(-1580820);
+    public static final long D = cjn.i(-14614435);
+    public static final long E = cjn.i(-1);
+    public static final long F = cjn.i(-13099406);
+    public static final long G = cjn.i(-11585653);
+    public static final long H = cjn.i(-10006364);
+    public static final long I = cjn.i(-3097345);
+    public static final long J = cjn.i(-1384961);
+    public static final long K = cjn.i(-14870229);
+    public static final long L = cjn.i(-1);
+    public static final long M = cjn.i(-13423295);
+    public static final long N = cjn.i(-11910056);
+    public static final long O = cjn.i(-10331279);
+    public static final long P = cjn.i(-3357988);
+    public static final long Q = cjn.i(-1515784);
+    public static final long R = cjn.i(-13561571);
+    public static final long S = cjn.i(-1);
+    public static final long T = cjn.i(-11983566);
+    public static final long U = cjn.i(-10273976);
+    public static final long V = cjn.i(-8564128);
+    public static final long W = cjn.i(-1066808);
+    public static final long X = cjn.i(-10012);
+}

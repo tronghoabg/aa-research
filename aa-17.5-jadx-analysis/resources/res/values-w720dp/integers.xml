@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="common_column_grid_card_span_cols">12</integer>
+    <integer name="common_column_grid_num_cols">12</integer>
+    <integer name="demand_space_prompt_summary_column_grid_card_span_cols">8</integer>
+</resources>

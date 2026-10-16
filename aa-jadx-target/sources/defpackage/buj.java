@@ -1,0 +1,55 @@
+package defpackage;
+
+/* JADX INFO: loaded from: D:\AA\aa-apk-unpacked\classes.dex */
+public final class buj {
+    public static final long a = defpackage.cjv.j(-12513781);
+    public static final long b = defpackage.cjv.j(-1);
+    public static final long c = defpackage.cjv.j(-10480624);
+    public static final long d = defpackage.cjv.j(-7594728);
+    public static final long e = defpackage.cjv.j(-5036514);
+    public static final long f = defpackage.cjv.j(-870219);
+    public static final long g = defpackage.cjv.j(-401700);
+    public static final long h = defpackage.cjv.j(-16777216);
+    public static final long i = defpackage.cjv.j(-14869728);
+    public static final long j = defpackage.cjv.j(-1);
+    public static final long k = defpackage.cjv.j(-14606554);
+    public static final long l = defpackage.cjv.j(-13948624);
+    public static final long m = defpackage.cjv.j(-13488331);
+    public static final long n = defpackage.cjv.j(-13224901);
+    public static final long o = defpackage.cjv.j(-12896194);
+    public static final long p = defpackage.cjv.j(-15790829);
+    public static final long q = defpackage.cjv.j(-15461864);
+    public static final long r = defpackage.cjv.j(-2172703);
+    public static final long s = defpackage.cjv.j(-1646359);
+    public static final long t = defpackage.cjv.j(-1251600);
+    public static final long u = defpackage.cjv.j(-791049);
+    public static final long v = defpackage.cjv.j(-659465);
+    public static final long w = defpackage.cjv.j(-527622);
+    public static final long x = defpackage.cjv.j(-67585);
+    public static final long y = defpackage.cjv.j(-11975345);
+    public static final long z = defpackage.cjv.j(-8817538);
+    public static final long A = defpackage.cjv.j(-7106663);
+    public static final long B = defpackage.cjv.j(-3488560);
+    public static final long C = defpackage.cjv.j(-1580820);
+    public static final long D = defpackage.cjv.j(-14614435);
+    public static final long E = defpackage.cjv.j(-1);
+    public static final long F = defpackage.cjv.j(-13099406);
+    public static final long G = defpackage.cjv.j(-11585653);
+    public static final long H = defpackage.cjv.j(-10006364);
+    public static final long I = defpackage.cjv.j(-3097345);
+    public static final long J = defpackage.cjv.j(-1384961);
+    public static final long K = defpackage.cjv.j(-14870229);
+    public static final long L = defpackage.cjv.j(-1);
+    public static final long M = defpackage.cjv.j(-13423295);
+    public static final long N = defpackage.cjv.j(-11910056);
+    public static final long O = defpackage.cjv.j(-10331279);
+    public static final long P = defpackage.cjv.j(-3357988);
+    public static final long Q = defpackage.cjv.j(-1515784);
+    public static final long R = defpackage.cjv.j(-13561571);
+    public static final long S = defpackage.cjv.j(-1);
+    public static final long T = defpackage.cjv.j(-11983566);
+    public static final long U = defpackage.cjv.j(-10273976);
+    public static final long V = defpackage.cjv.j(-8564128);
+    public static final long W = defpackage.cjv.j(-1066808);
+    public static final long X = defpackage.cjv.j(-10012);
+}

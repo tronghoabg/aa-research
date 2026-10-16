@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.menu.WrapperMenuView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.apps.auto.sdk.ui.FocusClusterLayout
+        android:clipChildren="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:forceFieldType="multimoveModal">
+        <TextView
+            android:layout_gravity="center"
+            android:id="@+id/list_no_items_text"
+            android:background="@drawable/no_content_view_focus_ring"
+            android:focusable="true"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/template_list_no_items"
+            android:paddingHorizontal="?attr/templateNoContentPaddingHorizontal"
+            android:paddingVertical="?attr/templateNoContentPaddingVertical"
+            style="?attr/templateRowListEmptyTextStyle"/>
+        <com.google.android.apps.auto.sdk.ui.PagedListView
+            android:id="@+id/menu_recycler_view"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:inertialScrollingEnabled="true"
+            app:listMaxWidth="0dp"
+            style="?attr/templateRowListStyle"/>
+    </com.google.android.apps.auto.sdk.ui.FocusClusterLayout>
+</com.google.android.apps.auto.components.apphost.menu.WrapperMenuView>

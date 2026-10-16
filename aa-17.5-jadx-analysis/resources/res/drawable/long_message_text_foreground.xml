@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="@dimen/template_long_message_text_horizontal_inset"
+    android:insetRight="@dimen/template_long_message_text_horizontal_inset"
+    android:insetTop="@dimen/template_no_content_view_focus_ring_padding"
+    android:insetBottom="@dimen/template_no_content_view_focus_ring_padding">
+    <selector>
+        <item
+            android:state_window_focused="true"
+            android:state_selected="true">
+            <shape android:shape="rectangle">
+                <stroke
+                    android:width="?attr/templateFocusStrokeWidthFocused"
+                    android:color="?attr/templateFocusNoContentAccentColor"/>
+                <corners android:radius="?attr/templateNoContentFocusCornerRadius"/>
+            </shape>
+        </item>
+    </selector>
+</inset>

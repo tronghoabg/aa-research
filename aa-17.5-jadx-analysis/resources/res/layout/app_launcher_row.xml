@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/app_launcher_row"
+    android:paddingLeft="@dimen/gearhead_launcher_left_padding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:baselineAligned="false">
+    <include
+        android:id="@+id/first"
+        layout="@layout/app_launcher_item"/>
+    <Space
+        android:layout_width="@dimen/gearhead_launcher_app_margin"
+        android:layout_height="0dp"
+        android:layout_weight="0"/>
+    <include
+        android:id="@+id/second"
+        layout="@layout/app_launcher_item"/>
+    <Space
+        android:layout_width="@dimen/gearhead_launcher_app_margin"
+        android:layout_height="0dp"
+        android:layout_weight="0"/>
+    <include
+        android:id="@+id/third"
+        layout="@layout/app_launcher_item"/>
+    <Space
+        android:layout_width="@dimen/gearhead_launcher_app_margin"
+        android:layout_height="0dp"
+        android:layout_weight="0"/>
+    <include
+        android:id="@+id/fourth"
+        layout="@layout/app_launcher_item"/>
+</LinearLayout>

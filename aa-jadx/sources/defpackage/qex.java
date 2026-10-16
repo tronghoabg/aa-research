@@ -1,0 +1,7 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class qex {
+    public static final int[] a = {com.google.android.projection.gearhead.R.attr.alignContent, com.google.android.projection.gearhead.R.attr.alignItems, com.google.android.projection.gearhead.R.attr.dividerDrawable, com.google.android.projection.gearhead.R.attr.dividerDrawableHorizontal, com.google.android.projection.gearhead.R.attr.dividerDrawableVertical, com.google.android.projection.gearhead.R.attr.flexDirection, com.google.android.projection.gearhead.R.attr.flexWrap, com.google.android.projection.gearhead.R.attr.justifyContent, com.google.android.projection.gearhead.R.attr.maxLine, com.google.android.projection.gearhead.R.attr.showDivider, com.google.android.projection.gearhead.R.attr.showDividerHorizontal, com.google.android.projection.gearhead.R.attr.showDividerVertical};
+    public static final int[] b = {com.google.android.projection.gearhead.R.attr.layout_alignSelf, com.google.android.projection.gearhead.R.attr.layout_flexBasisPercent, com.google.android.projection.gearhead.R.attr.layout_flexGrow, com.google.android.projection.gearhead.R.attr.layout_flexShrink, com.google.android.projection.gearhead.R.attr.layout_maxHeight, com.google.android.projection.gearhead.R.attr.layout_maxWidth, com.google.android.projection.gearhead.R.attr.layout_minHeight, com.google.android.projection.gearhead.R.attr.layout_minWidth, com.google.android.projection.gearhead.R.attr.layout_order, com.google.android.projection.gearhead.R.attr.layout_wrapBefore};
+}

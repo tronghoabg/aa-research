@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <padding
+                android:left="@dimen/coolwalk_ime_shadow_top_padding"
+                android:top="@dimen/coolwalk_ime_shadow_top_padding"
+                android:right="@dimen/coolwalk_ime_shadow_top_padding"
+                android:bottom="@dimen/coolwalk_ime_shadow_top_padding"/>
+            <solid android:color="@color/projection_keyboard_shadow_layer_0"/>
+            <corners android:radius="@dimen/coolwalk_ime_background_inset_radius_gm3"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:left="@dimen/coolwalk_ime_shadow_top_padding"
+                android:top="@dimen/coolwalk_ime_shadow_top_padding"
+                android:right="@dimen/coolwalk_ime_shadow_top_padding"
+                android:bottom="@dimen/coolwalk_ime_shadow_top_padding"/>
+            <solid android:color="@color/projection_keyboard_shadow_layer_1"/>
+            <corners android:radius="@dimen/coolwalk_ime_background_inset_radius_gm3"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:left="@dimen/coolwalk_ime_shadow_top_padding"
+                android:top="@dimen/coolwalk_ime_shadow_top_padding"
+                android:right="@dimen/coolwalk_ime_shadow_top_padding"
+                android:bottom="@dimen/coolwalk_ime_shadow_top_padding"/>
+            <solid android:color="@color/projection_keyboard_shadow_layer_2"/>
+            <corners android:radius="@dimen/coolwalk_ime_background_inset_radius_gm3"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <padding
+                android:left="@dimen/coolwalk_ime_shadow_top_padding"
+                android:top="@dimen/coolwalk_ime_shadow_top_padding"
+                android:right="@dimen/coolwalk_ime_shadow_top_padding"
+                android:bottom="@dimen/coolwalk_ime_shadow_top_padding"/>
+            <solid android:color="@color/projection_keyboard_shadow_layer_3"/>
+            <corners android:radius="@dimen/coolwalk_ime_background_inset_radius_gm3"/>
+        </shape>
+    </item>
+    <item android:id="@+id/background_layer">
+        <shape>
+            <solid android:color="@color/projection_keyboard_shadow_layer_0"/>
+            <corners android:radius="@dimen/coolwalk_ime_background_inset_radius_gm3"/>
+        </shape>
+    </item>
+</layer-list>

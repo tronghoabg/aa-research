@@ -1,0 +1,17 @@
+package androidx.camera.core.impl;
+
+/* compiled from: WazeSource */
+/* loaded from: classes2.dex */
+public abstract class OutputSurfaceConfiguration {
+    public static OutputSurfaceConfiguration create(OutputSurface outputSurface, OutputSurface outputSurface2, OutputSurface outputSurface3, OutputSurface outputSurface4) {
+        return new AutoValue_OutputSurfaceConfiguration(outputSurface, outputSurface2, outputSurface3, outputSurface4);
+    }
+
+    public abstract OutputSurface getImageAnalysisOutputSurface();
+
+    public abstract OutputSurface getImageCaptureOutputSurface();
+
+    public abstract OutputSurface getPostviewOutputSurface();
+
+    public abstract OutputSurface getPreviewOutputSurface();
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_gravity="center_horizontal"
+        android:id="@android:id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_sheet_title_margin_top"
+        android:layout_marginBottom="@dimen/bottom_sheet_title_margin_bottom"
+        android:text="@string/settings_connection_option_dialog_title"
+        style="@style/Base.TextAppearance.AppCompat.Title"/>
+    <TextView
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@android:id/summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_sheet_body_margin_bottom"
+        android:text="@string/settings_connection_option_dialog_body"
+        android:layout_marginStart="@dimen/bottom_sheet_body_margin_start"
+        android:layout_marginEnd="@dimen/bottom_sheet_body_margin_end"
+        style="@style/Base.TextAppearance.AppCompat.Body2"/>
+    <ImageView
+        android:id="@android:id/icon"
+        android:background="@color/settings_connection_option_image_background"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:srcCompat="@drawable/hero_connect_a_car_options"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_gravity="end"
+        android:id="@android:id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/bottom_sheet_button_margin_top"
+        android:layout_marginBottom="@dimen/bottom_sheet_button_margin_bottom"
+        android:text="@string/settings_connection_option_dialog_button"
+        android:paddingStart="@dimen/bottom_sheet_button_padding_start"
+        android:paddingEnd="@dimen/bottom_sheet_button_padding_end"
+        android:layout_marginStart="@dimen/bottom_sheet_button_margin_start"
+        android:layout_marginEnd="@dimen/bottom_sheet_button_margin_end"
+        style="@style/Widget.GoogleMaterial3.Button.ElevatedButton"/>
+</LinearLayout>

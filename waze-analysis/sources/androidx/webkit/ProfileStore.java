@@ -1,0 +1,29 @@
+package androidx.webkit;
+
+import androidx.webkit.internal.ProfileStoreImpl;
+import androidx.webkit.internal.WebViewFeatureInternal;
+import java.util.List;
+
+/* compiled from: WazeSource */
+/* loaded from: classes4.dex */
+public interface ProfileStore {
+
+    /* compiled from: WazeSource */
+    /* renamed from: androidx.webkit.ProfileStore$-CC, reason: invalid class name */
+    public final /* synthetic */ class CC {
+        public static ProfileStore getInstance() {
+            if (WebViewFeatureInternal.MULTI_PROFILE.isSupportedByWebView()) {
+                return ProfileStoreImpl.getInstance();
+            }
+            throw WebViewFeatureInternal.getUnsupportedOperationException();
+        }
+    }
+
+    boolean deleteProfile(String str);
+
+    List<String> getAllProfileNames();
+
+    Profile getOrCreateProfile(String str);
+
+    Profile getProfile(String str);
+}

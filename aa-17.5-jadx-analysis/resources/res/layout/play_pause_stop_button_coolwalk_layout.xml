@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.ui.media.PlayPauseStopCoolwalkButton xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:id="@+id/play_pause"
+    android:padding="@dimen/play_button_padding"
+    android:layout_width="@dimen/play_button_width_height"
+    android:layout_height="@dimen/play_button_width_height"
+    android:insetLeft="@dimen/gearhead_baseline_grid_1.5x"
+    android:insetRight="@dimen/gearhead_baseline_grid_1.5x"
+    android:insetTop="@dimen/gearhead_baseline_grid_1.5x"
+    android:insetBottom="@dimen/gearhead_baseline_grid_1.5x"
+    android:foregroundGravity="center"
+    app:focusRingInset="@dimen/play_button_focus_ring_inset"
+    app:icon="@drawable/ic_play_pause_stop_solid"
+    style="@style/Widget.Gearhead.Coolwalk.Button.IconButton"/>

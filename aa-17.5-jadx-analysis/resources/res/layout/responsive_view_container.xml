@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.navigation.ResponsiveTurnCardViewContainer xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <FrameLayout
+        android:id="@+id/responsive_step_view_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <include
+        android:id="@+id/responsive_message_view"
+        android:visibility="gone"
+        layout="@layout/responsive_message_view"/>
+    <FrameLayout
+        android:id="@+id/lanes_image_container"
+        android:background="?attr/templateRoutingLanesImageBackgroundColor"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/templateRoutingLanesImageContainerHeight"
+        android:paddingHorizontal="?attr/templateRoutingLanesImageContainerHorizontalPadding"
+        android:paddingVertical="?attr/templateRoutingLanesImageContainerVerticalPadding">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/lanes_image"
+            android:focusable="false"
+            android:clickable="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"/>
+    </FrameLayout>
+</com.google.android.apps.auto.components.apphost.view.widgets.navigation.ResponsiveTurnCardViewContainer>

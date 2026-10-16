@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="boardwalk_assistant_mic_icon_unavailable_opacity">0.4</dimen>
+    <dimen name="boardwalk_launcher_text_opacity">0.88</dimen>
+    <dimen name="boardwalk_opacity1">0.88</dimen>
+    <dimen name="boardwalk_opacity2">0.6</dimen>
+    <dimen name="boardwalk_opacity3">0.5</dimen>
+    <dimen name="boardwalk_opacity4">0.2</dimen>
+    <dimen name="gearhead_hun_close_icon_opacity">0.5</dimen>
+    <dimen name="gearhead_notification_center_helper_icon_opacity">0.5</dimen>
+    <dimen name="gearhead_notification_center_primary_text_opacity">0.88</dimen>
+    <dimen name="gearhead_notification_center_secondary_text_opacity">0.5</dimen>
+    <dimen name="media_image_scrim_alpha">0.8</dimen>
+    <dimen name="rail_icon_alpha_normal">0.6</dimen>
+</resources>

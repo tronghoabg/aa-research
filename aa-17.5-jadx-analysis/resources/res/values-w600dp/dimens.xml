@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="car_frx_title_margin_top">112dp</dimen>
+    <dimen name="common_action_bar_subtitle_text_size">14dp</dimen>
+    <dimen name="common_action_bar_subtitle_top_margin">-3dp</dimen>
+    <dimen name="common_action_bar_title_text_size">18dp</dimen>
+    <dimen name="frx_branching_info_title_margin_top">48dp</dimen>
+    <dimen name="gearhead_edge_column_width_padded">100dp</dimen>
+    <dimen name="gearhead_width_keyline_0">8dp</dimen>
+    <dimen name="gearhead_width_keyline_1">16dp</dimen>
+    <dimen name="gearhead_width_keyline_2">24dp</dimen>
+    <dimen name="gearhead_width_keyline_3">32dp</dimen>
+</resources>

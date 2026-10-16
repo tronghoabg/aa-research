@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.common.InputSignInView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.apps.auto.components.support.CarRestrictedEditText
+        android:id="@+id/input_sign_in_box"
+        android:background="?attr/templateEditTextRoundedCornerBackground"
+        android:focusable="true"
+        android:focusableInTouchMode="false"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/templateEditTextHeight"
+        android:drawablePadding="@dimen/template_padding_1"
+        android:inputType="text"
+        android:imeOptions="actionGo"
+        android:textSelectHandle="@drawable/empty"
+        android:textCursorDrawable="@null"
+        android:paddingStart="@dimen/template_padding_4"
+        android:paddingEnd="@dimen/template_padding_1"
+        style="?attr/templateEditTextStyle"/>
+    <TextView
+        android:layout_gravity="start"
+        android:id="@+id/input_sign_in_error_message"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/template_padding_0"
+        android:layout_marginStart="@dimen/template_padding_3"
+        style="?attr/templateSignInErrorMessageStyle"/>
+</com.google.android.apps.auto.components.apphost.view.widgets.common.InputSignInView>

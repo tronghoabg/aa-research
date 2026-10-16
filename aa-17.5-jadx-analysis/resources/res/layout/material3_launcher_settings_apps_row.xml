@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:id="@+id/content"
+    android:background="@drawable/material3_ripple"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/launcher_app_settings_row_height"
+    android:paddingStart="@dimen/launcher_app_settings_row_start_padding"
+    android:paddingEnd="@dimen/launcher_app_settings_row_spacing">
+    <include layout="@layout/material3_launcher_settings_draggable_item_row"/>
+    <CheckBox
+        android:layout_gravity="end|center_vertical"
+        android:id="@+id/enable_disable_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,16 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class adjv {
+    public final java.lang.Object a;
+    private final java.lang.String b;
+
+    public adjv(java.lang.String str, java.lang.Object obj) {
+        this.b = str;
+        this.a = obj;
+    }
+
+    public final java.lang.String toString() {
+        return this.b;
+    }
+}

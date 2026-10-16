@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.car.libraries.apphost.map.widgets.ProgressView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/template_padding_2"
+    android:layout_marginRight="@dimen/template_padding_2">
+    <ProgressBar
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/progress_indicator"
+        android:layout_width="?attr/templateRoutingReroutingIconSize"
+        android:layout_height="?attr/templateRoutingReroutingIconSize"
+        style="?attr/templateLoadingSpinnerStyle"/>
+</com.android.car.libraries.apphost.map.widgets.ProgressView>

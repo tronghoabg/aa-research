@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_window_focused="true"
+        android:state_hovered="true">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="@dimen/gearhead_focus_ring_stroke_width_hovered"
+                android:color="?attr/gearheadFocusAccentColor"/>
+            <corners
+                android:topLeftRadius="@dimen/gearhead_hun_corner_radius"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="@dimen/gearhead_hun_corner_radius"
+                android:bottomRightRadius="0dp"/>
+        </shape>
+    </item>
+    <item
+        android:state_focused="true"
+        android:state_window_focused="true">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="@dimen/gearhead_focus_ring_stroke_width_focused"
+                android:color="?attr/gearheadFocusAccentColor"/>
+            <corners
+                android:topLeftRadius="@dimen/gearhead_hun_corner_radius"
+                android:topRightRadius="0dp"
+                android:bottomLeftRadius="@dimen/gearhead_hun_corner_radius"
+                android:bottomRightRadius="0dp"/>
+        </shape>
+    </item>
+</selector>

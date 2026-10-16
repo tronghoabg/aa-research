@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.ui.media.SeekableLinearProgressIndicator xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_gravity="center_vertical"
+        android:id="@+id/progress_indicator"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/material_seek_bar_tap_target_height"
+        app:indicatorColor="?attr/colorOnSurface"
+        app:trackColor="?attr/colorSurfaceVariant"
+        app:trackCornerRadius="@fraction/seek_bar_corner_radius_fragment"
+        app:trackThickness="@dimen/material_seek_bar_height"/>
+    <ImageView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/indicator_thumb"
+        android:layout_width="@dimen/material_seek_bar_thumb_diameter"
+        android:layout_height="@dimen/material_seek_bar_tap_target_height"
+        android:src="@drawable/material_seekable_linear_progress_indicator_thumb"/>
+    <View
+        android:layout_gravity="center_vertical"
+        android:id="@+id/focus_layer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/seek_bar_focus_outline_height"
+        android:layout_marginLeft="@dimen/seek_bar_focus_outline_horizontal_margin"
+        android:layout_marginRight="@dimen/seek_bar_focus_outline_horizontal_margin"
+        android:foreground="@drawable/seekable_linear_progress_indicator_foreground"/>
+</com.google.android.apps.auto.components.ui.media.SeekableLinearProgressIndicator>

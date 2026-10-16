@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/gearhead_tutorial_button_background"
+    android:inset="@dimen/gearhead_tutorial_arrow_button_inset"/>

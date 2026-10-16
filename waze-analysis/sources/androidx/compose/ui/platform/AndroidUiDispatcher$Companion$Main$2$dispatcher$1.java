@@ -1,0 +1,40 @@
+package androidx.compose.ui.platform;
+
+import android.view.Choreographer;
+import e.b.c;
+import h.ab;
+import h.c.a.a;
+import h.c.b.a.g;
+import h.c.e;
+import h.g.a.p;
+import kotlinx.coroutines.af;
+
+/* compiled from: WazeSource */
+/* loaded from: classes.dex */
+final class AndroidUiDispatcher$Companion$Main$2$dispatcher$1 extends g implements p<af, e<? super Choreographer>, Object> {
+    int label;
+
+    AndroidUiDispatcher$Companion$Main$2$dispatcher$1(e<? super AndroidUiDispatcher$Companion$Main$2$dispatcher$1> eVar) {
+        super(2, eVar);
+    }
+
+    @Override // h.c.b.a.a
+    public final e<ab> create(Object obj, e<?> eVar) {
+        return new AndroidUiDispatcher$Companion$Main$2$dispatcher$1(eVar);
+    }
+
+    @Override // h.g.a.p
+    public final Object invoke(af afVar, e<? super Choreographer> eVar) {
+        return ((AndroidUiDispatcher$Companion$Main$2$dispatcher$1) create(afVar, eVar)).invokeSuspend(ab.f48028a);
+    }
+
+    @Override // h.c.b.a.a
+    public final Object invokeSuspend(Object obj) {
+        a aVar = a.f48038a;
+        if (this.label != 0) {
+            throw new IllegalStateException("call to 'resume' before 'invoke' with coroutine");
+        }
+        c.b(obj);
+        return Choreographer.getInstance();
+    }
+}

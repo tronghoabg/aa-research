@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title=""
+        android:key="key_power_preference_main_category">
+        <SwitchPreference
+            android:title="@string/settings_power_saving"
+            android:key="key_power_preference_advanced_category_switch"
+            android:summary=""
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/settings_power_saving_advanced"
+        android:key="key_power_preference_advanced_category">
+        <ListPreference
+            android:title="@string/settings_power_saving_advanced_secondary_displays"
+            android:key="key_secondary_display_power_saving_options"
+            android:entryValues="@array/audio_guidance_sample_rate_labels"/>
+    </PreferenceCategory>
+</PreferenceScreen>

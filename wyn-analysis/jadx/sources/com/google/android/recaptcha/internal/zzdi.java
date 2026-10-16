@@ -1,0 +1,58 @@
+package com.google.android.recaptcha.internal;
+
+import Ef.E;
+import Fe.e;
+import ef.C2515C;
+import java.util.Timer;
+import jf.InterfaceC3103c;
+import kf.a;
+import lf.AbstractC3471j;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+import tf.p;
+
+/* loaded from: classes4.dex */
+final class zzdi extends AbstractC3471j implements p {
+    final /* synthetic */ zzdk zza;
+
+    /* JADX WARN: 'super' call moved to the top of the method (can break code semantics) */
+    public zzdi(zzdk zzdkVar, InterfaceC3103c interfaceC3103c) {
+        super(2, interfaceC3103c);
+        this.zza = zzdkVar;
+    }
+
+    @Override // lf.AbstractC3462a
+    @NotNull
+    public final InterfaceC3103c create(@Nullable Object obj, @NotNull InterfaceC3103c interfaceC3103c) {
+        return new zzdi(this.zza, interfaceC3103c);
+    }
+
+    @Override // tf.p
+    public final /* bridge */ /* synthetic */ Object invoke(Object obj, Object obj2) {
+        return ((zzdi) create((E) obj, (InterfaceC3103c) obj2)).invokeSuspend(C2515C.f34653a);
+    }
+
+    @Override // lf.AbstractC3462a
+    @Nullable
+    public final Object invokeSuspend(@NotNull Object obj) {
+        a aVar = a.f39711a;
+        e.U(obj);
+        zzdk zzdkVar = this.zza;
+        synchronized (zzdg.class) {
+            try {
+                zzda zzdaVar = zzdkVar.zze;
+                if (zzdaVar != null && zzdaVar.zzb() == 0) {
+                    Timer timer = zzdk.zza;
+                    if (timer != null) {
+                        timer.cancel();
+                    }
+                    zzdk.zza = null;
+                }
+                zzdkVar.zzg();
+            } catch (Throwable th) {
+                throw th;
+            }
+        }
+        return C2515C.f34653a;
+    }
+}

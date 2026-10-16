@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="turn_card_show_travel_estimate">true</bool>
+</resources>

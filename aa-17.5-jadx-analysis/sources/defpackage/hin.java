@@ -1,0 +1,40 @@
+package defpackage;
+
+/* loaded from: classes2.dex */
+public final class hin {
+    public final uy a;
+    public int b;
+    private final int c;
+    private final int d;
+
+    public hin(int i, int i2, int i3, uy uyVar) {
+        d(i, i2, i3);
+        this.c = i;
+        this.d = i2;
+        this.b = i3;
+        this.a = uyVar;
+    }
+
+    private static void d(int i, int i2, int i3) {
+        if (i3 < i || i3 > i2) {
+            throw new IndexOutOfBoundsException("Selected index " + i3 + " not within bounds of [" + i + ", " + i2 + "]");
+        }
+    }
+
+    public final int a(int i) {
+        return i - this.c;
+    }
+
+    public final void b(int i) {
+        d(this.c, this.d, i);
+        this.b = i;
+    }
+
+    public final boolean c(int i) {
+        return i == this.b;
+    }
+
+    public final String toString() {
+        return "[start: " + this.c + ", end: " + this.d + ", selected: " + this.b + "]";
+    }
+}

@@ -1,0 +1,29 @@
+package kotlin.reflect.jvm.internal.impl.load.kotlin;
+
+import ff.v;
+import java.util.List;
+import kotlin.jvm.internal.AbstractC3340k;
+import org.jetbrains.annotations.NotNull;
+
+/* loaded from: classes5.dex */
+public interface PackagePartProvider {
+
+    public static final class Empty implements PackagePartProvider {
+
+        @NotNull
+        public static final Empty INSTANCE = new Empty();
+
+        private Empty() {
+        }
+
+        @Override // kotlin.reflect.jvm.internal.impl.load.kotlin.PackagePartProvider
+        @NotNull
+        public List<String> findPackageParts(@NotNull String packageFqName) {
+            AbstractC3340k.e(packageFqName, "packageFqName");
+            return v.f35432a;
+        }
+    }
+
+    @NotNull
+    List<String> findPackageParts(@NotNull String str);
+}

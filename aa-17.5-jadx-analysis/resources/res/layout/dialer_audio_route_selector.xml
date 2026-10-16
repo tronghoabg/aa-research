@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <ImageButton
+        android:layout_gravity="center"
+        android:id="@+id/dialer_audio_route_button"
+        android:layout_width="@dimen/un_ar_icon_size"
+        android:layout_height="@dimen/un_ar_icon_size"
+        android:src="@drawable/ic_bluetooth"
+        style="?attr/gearheadActionPanelButton"/>
+    <ImageView
+        android:layout_gravity="end|center_vertical"
+        android:id="@+id/dialer_audio_route_chevron"
+        android:layout_width="@dimen/dialer_incall_button_chevron_width"
+        android:layout_height="@dimen/telecom_button_size"
+        android:src="@drawable/ic_arrow_drop_down"
+        android:layout_marginEnd="?attr/gearheadDialerChevronMargin"
+        style="?attr/gearheadDialerChevron"/>
+</FrameLayout>

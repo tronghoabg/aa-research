@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gearhead_legacy_facet_bar_icon_focus_lr_inset">18dp</dimen>
+    <dimen name="gearhead_legacy_facet_bar_icon_padding_x">42dp</dimen>
+    <dimen name="gearhead_notification_corner_radius">16dp</dimen>
+    <dimen name="gearhead_sdk_drawer_margin_right">320dp</dimen>
+    <dimen name="legacy_facet_bar_icon_margin_end">164dp</dimen>
+    <dimen name="legacy_facet_bar_icon_margin_start">164dp</dimen>
+    <dimen name="legacy_facet_bar_icon_padding_x">34dp</dimen>
+    <dimen name="legacy_facet_bar_touch_target_width">112dp</dimen>
+</resources>

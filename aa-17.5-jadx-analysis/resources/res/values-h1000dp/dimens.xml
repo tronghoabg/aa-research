@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_bar_height">104dp</dimen>
+    <dimen name="gearhead_height_keyline_0">8dp</dimen>
+    <dimen name="gearhead_height_keyline_1">16dp</dimen>
+    <dimen name="gearhead_height_keyline_2">24dp</dimen>
+    <dimen name="gearhead_height_keyline_3">32dp</dimen>
+    <dimen name="metadata_image_size">248dp</dimen>
+    <dimen name="metadata_small_image_size">200dp</dimen>
+    <dimen name="metadata_subtitle_text_size">@dimen/boardwalk_display3_text_size</dimen>
+    <dimen name="metadata_tertiary_text_size">@dimen/boardwalk_body1_text_size</dimen>
+    <dimen name="metadata_title_text_size">@dimen/boardwalk_display2_text_size</dimen>
+</resources>

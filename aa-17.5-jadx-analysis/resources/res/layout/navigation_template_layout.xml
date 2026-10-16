@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/Theme.Template.Card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/nav_card_container"
+        layout="@layout/steps_card_container"/>
+    <include
+        android:visibility="invisible"
+        layout="@layout/travel_estimate_card_container"/>
+    <include
+        android:id="@+id/pan_overlay"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/pan_overlay"/>
+    <include
+        android:id="@+id/action_strip"
+        layout="@layout/action_strip_view_floating"/>
+    <include
+        android:id="@+id/map_action_strip"
+        layout="@layout/map_action_strip_view_floating"/>
+    <include
+        android:id="@+id/alert_card_container"
+        android:visibility="gone"
+        layout="@layout/alert_card_container"/>
+</android.support.constraint.ConstraintLayout>

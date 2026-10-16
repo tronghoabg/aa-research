@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="ic_play_deprecated"
+    android:height="44dp"
+    android:width="44dp"
+    android:viewportWidth="44"
+    android:viewportHeight="44">
+    <group
+        android:name="group"
+        android:scaleX="0.0889"
+        android:scaleY="0.0889"
+        android:rotation="90"
+        android:translateX="25.025"
+        android:translateY="22">
+        <group
+            android:name="group_pivot"
+            android:translateX="0.3042"
+            android:translateY="-2.9951">
+            <group android:name="rectangle_02">
+                <path
+                    android:name="rectangle_02_path"
+                    android:fillColor="#ff000000"
+                    android:pathData="M -0.25,-112.634796143 c 0.0,0.0 -26.3583984375,231.259857178 -26.3583984375,231.259857178 c 0.0,0.0 172.608398438,-0.00005 172.608398438,-0.00005 c 0.0,0.0 -146.125,-231.259750366 -146.125,-231.259750366 c 0.0,0.0 -0.125,-0.00006 -0.125,-0.00006 Z"/>
+            </group>
+            <group
+                android:name="rectangle_01"
+                android:translateX="-138.9834">
+                <path
+                    android:name="rectangle_01_path"
+                    android:fillColor="#ff000000"
+                    android:pathData="M 138.5,-112.634811401 c 0.0,0.0 -146.125,231.259811401 -146.125,231.259811401 c 0.0,0.0 172.608398438,-0.00005 172.608398438,-0.00005 c 0.0,0.0 -26.3583984375,-231.25970459 -26.3583984375,-231.25970459 c 0.0,0.0 -0.125,-0.00006 -0.125,-0.00006 Z"/>
+            </group>
+        </group>
+    </group>
+</vector>

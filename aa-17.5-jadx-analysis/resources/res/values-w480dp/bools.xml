@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="common_stream_item_active_action_invisible_on_empty">false</bool>
+</resources>

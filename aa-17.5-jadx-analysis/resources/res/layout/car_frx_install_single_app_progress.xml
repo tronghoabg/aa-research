@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:id="@+id/install_bar"
+    android:paddingTop="@dimen/car_frx_margin_edge"
+    android:paddingBottom="@dimen/car_frx_margin_edge"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/car_frx_margin"
+    android:paddingEnd="@dimen/car_frx_margin">
+    <FrameLayout
+        android:layout_width="@dimen/car_frx_app_item_size"
+        android:layout_height="@dimen/car_frx_app_item_size">
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no"/>
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:max="100"
+            android:indeterminate="false"
+            android:indeterminateOnly="false"/>
+    </FrameLayout>
+    <TextView
+        android:gravity="center"
+        android:id="@+id/caption"
+        android:paddingTop="@dimen/car_frx_app_icon_margin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.FrxBody.Medium"/>
+</LinearLayout>

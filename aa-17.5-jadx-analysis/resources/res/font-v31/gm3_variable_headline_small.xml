@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:fontProviderAuthority="com.google.android.gms.fonts"
+    app:fontProviderCerts="@array/com_google_android_gms_fonts_certs"
+    app:fontProviderPackage="com.google.android.gms"
+    app:fontProviderSystemFontFamily="variable-headline-small">
+    <fallback
+        app:fontProviderQuery="Google Sans Flex"
+        app:fontProviderSystemFontFamily="google-sans-flex"
+        app:fontVariationSettings="&apos;CRSV&apos; 0, &apos;FILL&apos; 0, &apos;GRAD&apos; 0, &apos;HEXP&apos; 0, &apos;ROND&apos; 0, &apos;opsz&apos; 24, &apos;slnt&apos; 0, &apos;wdth&apos; 100, &apos;wght&apos; 400"/>
+    <fallback
+        app:fontProviderQuery="Google Sans"
+        app:fontProviderSystemFontFamily="google-sans"/>
+</font-family>

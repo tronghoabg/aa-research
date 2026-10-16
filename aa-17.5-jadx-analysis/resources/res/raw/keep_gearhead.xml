@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="
+        @drawable/android_auto_logo_large,
+        @drawable/car_headunit_illustration,
+        @drawable/gearhead_sdk_ic_error,
+        @dimension/car_ime_height,
+        @xml/input_keyboard_layout,
+        @xml/rotary_keyboard_layout,
+        @xml/input_keyboard_layout_alpha,
+        @xml/input_keyboard_layout_num,
+        @bool/release"/>
+

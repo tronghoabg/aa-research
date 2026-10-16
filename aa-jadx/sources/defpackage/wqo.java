@@ -1,0 +1,6 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class wqo {
+    public static final int[] a = {com.google.android.projection.gearhead.R.attr.focusRingColor, com.google.android.projection.gearhead.R.attr.focusRingInnerInset, com.google.android.projection.gearhead.R.attr.focusRingInnerRingColor, com.google.android.projection.gearhead.R.attr.focusRingInset, com.google.android.projection.gearhead.R.attr.focusRingInsetBottom, com.google.android.projection.gearhead.R.attr.focusRingInsetLeft, com.google.android.projection.gearhead.R.attr.focusRingInsetRight, com.google.android.projection.gearhead.R.attr.focusRingInsetTop, com.google.android.projection.gearhead.R.attr.focusRingsEnabled, com.google.android.projection.gearhead.R.attr.focusRingsInnerStrokeColor, com.google.android.projection.gearhead.R.attr.focusRingsInnerStrokeInset, com.google.android.projection.gearhead.R.attr.focusRingsInnerStrokeWidth, com.google.android.projection.gearhead.R.attr.focusRingsInset, com.google.android.projection.gearhead.R.attr.focusRingsOuterStrokeColor, com.google.android.projection.gearhead.R.attr.focusRingsOuterStrokeWidth, com.google.android.projection.gearhead.R.attr.focusRingsRadius, com.google.android.projection.gearhead.R.attr.focusRingsShapeAppearance, com.google.android.projection.gearhead.R.attr.focusRingsStateSet};
+}

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.gearhead.demand.ActionProgressIndicatorView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/action_progress_indicator"
+        android:paddingTop="@dimen/demand_space_action_plate_padding_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

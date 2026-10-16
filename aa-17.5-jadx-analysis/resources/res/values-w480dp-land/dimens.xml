@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="telecom_button_size">96dp</dimen>
+    <dimen name="vn_dialer_dialpad_number_horizontal_margin">0dp</dimen>
+    <dimen name="vn_metadata_primary_text_margin_top">24dp</dimen>
+</resources>

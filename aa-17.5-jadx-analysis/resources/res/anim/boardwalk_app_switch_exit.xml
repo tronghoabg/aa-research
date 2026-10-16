@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/fast_out_slow_in"
+    android:duration="@integer/boardwalk_app_switch_duration"
+    android:shareInterpolator="true"
+    android:fillBefore="true"
+    android:fillAfter="true"
+    android:fromAlpha="1"
+    android:toAlpha="0"
+    android:fillEnabled="true"/>

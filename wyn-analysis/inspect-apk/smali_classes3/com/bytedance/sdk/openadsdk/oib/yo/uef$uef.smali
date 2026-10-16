@@ -1,0 +1,19 @@
+.class public interface abstract Lcom/bytedance/sdk/openadsdk/oib/yo/uef$uef;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/bytedance/sdk/openadsdk/oib/yo/uef;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "uef"
+.end annotation
+
+
+# virtual methods
+.method public abstract ivm()Lcom/bytedance/sdk/openadsdk/oib/yo/uef;
+.end method

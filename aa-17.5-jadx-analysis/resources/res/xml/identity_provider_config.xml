@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<provider-config>
+    <visibility-scope device_to_device_visibility_scope_type="SELF"/>
+    <visibility-scope device_to_device_visibility_scope_type="CONTACTS"/>
+</provider-config>

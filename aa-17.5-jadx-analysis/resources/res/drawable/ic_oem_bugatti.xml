@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="72dp"
+    android:width="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <path
+        android:fillColor="@drawable/_ic_oem_bugatti__0_res_0x7f080017"
+        android:pathData="M0,0h72v72h-72z"/>
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M46.818,46.134C49.244,46.134 50.679,44.404 50.679,42.271C50.679,40.137 49.231,38.407 46.818,38.407H38.967V46.121H46.818V46.134ZM46.818,32.683C48.944,32.683 50.249,31.147 50.249,29.261C50.249,27.375 48.957,25.84 46.818,25.84H38.967V32.67H46.818V32.683ZM27.92,38.42V40.332H23.056V30.77H27.92V32.683H32.563V25.853H20.865V28.272H16V25.853V21H46.818C51.644,21 55.557,24.903 55.557,29.716C55.557,31.915 54.735,33.918 53.392,35.454C55.009,37.106 56,39.356 56,41.841C56,46.902 51.892,51 46.831,51H16V46.147V43.715H20.865V46.147H32.55V38.433H27.907L27.92,38.42Z"/>
+</vector>

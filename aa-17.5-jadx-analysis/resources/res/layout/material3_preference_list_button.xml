@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/common_settings_margin_vertical"
+    android:paddingBottom="@dimen/common_settings_margin_vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/settings_button_margin_horizontal"
+    android:paddingEnd="@dimen/settings_button_margin_horizontal">
+    <com.google.android.material.button.MaterialButton
+        android:layout_gravity="start|center_vertical"
+        android:id="@+id/preference_button"
+        android:paddingTop="@dimen/settings_button_padding_vertical"
+        android:paddingBottom="@dimen/settings_button_padding_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="@dimen/settings_button_icon_padding"
+        android:drawableStart="0x7f0809a6"
+        android:paddingStart="@dimen/settings_button_padding_start"
+        android:paddingEnd="@dimen/settings_button_padding_end"
+        app:icon="@drawable/ic_add_shortcut"
+        style="@style/Widget.GoogleMaterial3.Button.Icon"/>
+</FrameLayout>

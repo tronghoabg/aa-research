@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" android:drawable="@drawable/ic_play_deprecated">
+    <target
+        android:name="group"
+        android:animation="@anim/pauseplay_group_animation"/>
+    <target
+        android:name="rectangle_02_path"
+        android:animation="@anim/pauseplay_rectangle02_path_animation"/>
+    <target
+        android:name="rectangle_01_path"
+        android:animation="@anim/pauseplay_rectangle01_path_animation"/>
+</animated-vector>

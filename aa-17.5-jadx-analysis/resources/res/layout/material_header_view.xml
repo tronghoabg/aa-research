@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:focusable="false"
+    android:descendantFocusability="afterDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/templateHeaderHeight"
+    android:baselineAligned="false">
+    <com.google.android.apps.auto.components.apphost.basewidgets.action.ui.MaterialActionButtonView
+        android:layout_gravity="center_vertical"
+        android:id="@+id/leading_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/center_content_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:baselineAligned="false"
+        android:layout_weight="1"/>
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:id="@+id/trailing_actions_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"/>
+</LinearLayout>

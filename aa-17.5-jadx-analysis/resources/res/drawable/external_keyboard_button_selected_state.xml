@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/use_external_keybord_background_selected_state"/>
+            <size
+                android:height="@dimen/use_external_keyboard_circle"
+                android:width="@dimen/use_external_keyboard_circle"/>
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="0x7f080ade"
+            android:tint="@color/use_external_keybord_icon"
+            android:height="@dimen/use_external_keyboard_icon"
+            android:width="@dimen/use_external_keyboard_icon"/>
+    </item>
+</layer-list>

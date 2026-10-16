@@ -1,0 +1,32 @@
+package M6;
+
+/* loaded from: classes3.dex */
+public enum b {
+    UNKNOWN(0),
+    /* JADX INFO: Fake field, exist only in values array */
+    INVALID_DATA_SOURCE(1),
+    /* JADX INFO: Fake field, exist only in values array */
+    EXTREME_LOW(2),
+    /* JADX INFO: Fake field, exist only in values array */
+    VERY_LOW(3),
+    /* JADX INFO: Fake field, exist only in values array */
+    LOW(4),
+    /* JADX INFO: Fake field, exist only in values array */
+    MID(5),
+    /* JADX INFO: Fake field, exist only in values array */
+    MID_PLUS(6),
+    /* JADX INFO: Fake field, exist only in values array */
+    HIGH(7),
+    /* JADX INFO: Fake field, exist only in values array */
+    VERY_HIGH(8),
+    /* JADX INFO: Fake field, exist only in values array */
+    EXTREME_HIGH(9);
+
+
+    /* renamed from: a, reason: collision with root package name */
+    public final int f7519a;
+
+    b(int i5) {
+        this.f7519a = i5;
+    }
+}

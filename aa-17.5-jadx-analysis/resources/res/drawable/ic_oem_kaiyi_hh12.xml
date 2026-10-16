@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="108dp"
+    android:width="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="@drawable/_ic_oem_kaiyi_hh12__0_res_0x7f08003b"
+        android:pathData="M0,0 H108 V108 H-108"
+        android:strokeColor="#00000000"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="#ededed"
+        android:pathData="M36.4,41.4L63.94,41.4C73.6,41.4 81.42,49.22 81.42,58.88L81.42,60.67C81.42,69.34 74.4,76.36 65.73,76.36L65.73,76.36L65.73,76.36L65.73,63.22C65.73,59.84 63,57.11 59.62,57.11L36.4,57.11L36.4,57.11L36.4,41.4Z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="#ffffff"
+        android:pathData="M28.97,45.43L46.19,32.6C48.35,31 51.41,31.45 53.01,33.61C53.64,34.45 53.98,35.47 53.98,36.52L53.98,62.16C53.98,64.86 51.79,67.04 49.1,67.04C48.05,67.04 47.03,66.71 46.19,66.08L28.97,53.26C26.81,51.65 26.36,48.59 27.96,46.43C28.21,46.1 28.5,45.8 28.83,45.54L28.97,45.43Z"
+        android:strokeColor="#00000000"
+        android:strokeWidth="1"
+        android:fillType="evenOdd"/>
+</vector>

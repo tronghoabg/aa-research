@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:ordering="together">
+    <objectAnimator
+        android:interpolator="@interpolator/playpausestop_interpolator_1"
+        android:duration="333"
+        android:startOffset="0"
+        android:valueFrom="M8.09 11.09 C8.09,11.09 18.1,11.1 18.1,11.1 C18.1,11.1 18.11,13.1 18.11,13.1 C18.11,13.1 8.08,13.13 8.08,13.13 C8.08,13.13 8.09,11.09 8.09,11.09c M6.1 15.09 C6.1,15.09 20.1,15.1 20.1,15.1 C20.1,15.1 20.1,9.1 20.1,9.1 C20.1,9.1 6.1,9.1 6.1,9.1 C6.1,9.1 6.1,15.09 6.1,15.09c "
+        android:valueTo="M10 8.64 C10,8.64 15.27,12 15.27,12 C15.27,12 15.27,12 15.27,12 C15.27,12 10,15.36 10,15.36 C10,15.36 10,8.64 10,8.64c M8 19 C8,19 19,12 19,12 C19,12 19,12 19,12 C19,12 8,5 8,5 C8,5 8,19 8,19c "
+        android:valueType="pathType"
+        android:propertyName="pathData"/>
+</set>

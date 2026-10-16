@@ -1,0 +1,11 @@
+package androidx.constraintlayout.widget;
+
+/* compiled from: WazeSource */
+/* loaded from: classes3.dex */
+public abstract class ConstraintsChangedListener {
+    public void postLayoutChange(int i2, int i3) {
+    }
+
+    public void preLayoutChange(int i2, int i3) {
+    }
+}

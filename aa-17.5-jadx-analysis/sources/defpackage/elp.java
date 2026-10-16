@@ -1,0 +1,48 @@
+package defpackage;
+
+import android.graphics.Rect;
+import android.view.Gravity;
+import android.view.View;
+import android.view.accessibility.AccessibilityEvent;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+/* loaded from: classes2.dex */
+public final class elp extends dzp {
+    final /* synthetic */ DrawerLayout a;
+
+    public elp(DrawerLayout drawerLayout) {
+        this.a = drawerLayout;
+        new Rect();
+    }
+
+    @Override // defpackage.dzp
+    public final void b(View view, AccessibilityEvent accessibilityEvent) {
+        super.b(view, accessibilityEvent);
+        accessibilityEvent.setClassName("androidx.drawerlayout.widget.DrawerLayout");
+    }
+
+    @Override // defpackage.dzp
+    public final void c(View view, edg edgVar) {
+        super.c(view, edgVar);
+        edgVar.r("androidx.drawerlayout.widget.DrawerLayout");
+        edgVar.z(false);
+        edgVar.A(false);
+        edgVar.ab(edf.a);
+        edgVar.ab(edf.b);
+    }
+
+    @Override // defpackage.dzp
+    public final boolean g(View view, AccessibilityEvent accessibilityEvent) {
+        if (accessibilityEvent.getEventType() != 32) {
+            return super.g(view, accessibilityEvent);
+        }
+        accessibilityEvent.getText();
+        DrawerLayout drawerLayout = this.a;
+        View viewE = drawerLayout.e();
+        if (viewE == null) {
+            return true;
+        }
+        Gravity.getAbsoluteGravity(drawerLayout.b(viewE), drawerLayout.getLayoutDirection());
+        return true;
+    }
+}

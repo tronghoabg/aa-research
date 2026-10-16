@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_activated="true">
+        <set>
+            <objectAnimator
+                android:interpolator="@android:interpolator/linear"
+                android:duration="?attr/templateTabAlphaAnimationDurationMilliseconds"
+                android:valueFrom="?attr/templateTabInactiveAlpha"
+                android:valueTo="?attr/templateTabActiveAlpha"
+                android:valueType="floatType"
+                android:propertyName="alpha"/>
+        </set>
+    </item>
+    <item android:state_activated="false">
+        <set>
+            <objectAnimator
+                android:interpolator="@android:interpolator/linear"
+                android:duration="?attr/templateTabAlphaAnimationDurationMilliseconds"
+                android:valueFrom="?attr/templateTabActiveAlpha"
+                android:valueTo="?attr/templateTabInactiveAlpha"
+                android:valueType="floatType"
+                android:propertyName="alpha"/>
+        </set>
+    </item>
+</selector>

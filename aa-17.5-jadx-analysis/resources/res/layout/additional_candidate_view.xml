@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Button xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:id="@+id/additional_candidate"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:lines="1"
+    android:singleLine="true"
+    android:textAllCaps="false"/>

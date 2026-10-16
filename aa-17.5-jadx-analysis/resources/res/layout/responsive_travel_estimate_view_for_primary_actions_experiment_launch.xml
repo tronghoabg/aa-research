@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.navigation.ResponsiveTravelEstimateView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom|center_horizontal"
+    android:id="@+id/responsive_travel_estimate_view_for_primary_actions_experiment_launch"
+    android:focusable="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="1dp"
+    app:cardWidthFraction="0"
+    app:isCarBorderBlendColor="true"
+    style="?attr/templateCardRoutingContentContainerStyle">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/template_padding_2">
+        <FrameLayout
+            android:layout_gravity="center_vertical"
+            android:id="@+id/stop_nav_action_container"
+            android:paddingTop="1dp"
+            android:focusable="true"
+            android:clickable="true"
+            android:addStatesFromChildren="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/template_padding_1">
+            <ImageView
+                android:id="@+id/stop_nav_action_icon"
+                android:layout_width="?attr/templateActionIconSize"
+                android:layout_height="?attr/templateActionIconSize"
+                android:scaleType="fitCenter"/>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/template_padding_1"
+            android:paddingEnd="@dimen/template_padding_2"
+            android:paddingVertical="@dimen/template_padding_2">
+            <TextView
+                android:id="@+id/responsive_travel_estimate_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.Template.Text.Body3"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.apps.auto.components.apphost.view.widgets.navigation.ResponsiveTravelEstimateView>

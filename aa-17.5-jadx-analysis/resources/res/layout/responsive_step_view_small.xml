@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/responsive_step_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/template_padding_3"
+    android:layout_marginVertical="@dimen/template_padding_1">
+    <ImageView
+        android:id="@+id/turn_symbol"
+        android:layout_width="?attr/templateResponsiveNavCardImageSizeSmall"
+        android:layout_height="?attr/templateResponsiveNavCardImageSizeSmall"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_marginEnd="@dimen/template_padding_3"/>
+    <com.google.android.apps.auto.components.apphost.view.widgets.common.CarTextView
+        android:id="@+id/distance_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Template.Text.Body3.Medium"/>
+    <com.google.android.apps.auto.components.apphost.view.widgets.common.CarTextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        style="@style/Widget.Template.Text.Body3"/>
+</LinearLayout>

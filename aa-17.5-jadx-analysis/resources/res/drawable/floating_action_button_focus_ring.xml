@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_window_focused="true"
+        android:state_hovered="true">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="?attr/templateFocusStrokeWidthHovered"
+                android:color="?attr/templateFocusAccentColor"/>
+            <corners android:radius="@dimen/template_floating_action_corner_radius"/>
+        </shape>
+    </item>
+    <item
+        android:state_focused="true"
+        android:state_window_focused="true">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="?attr/templateFocusStrokeWidthFocused"
+                android:color="?attr/templateFocusAccentColor"/>
+            <corners android:radius="@dimen/template_floating_action_corner_radius"/>
+        </shape>
+    </item>
+</selector>

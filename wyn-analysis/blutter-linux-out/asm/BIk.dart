@@ -1,0 +1,12 @@
+// lib: , url: bIk
+
+// class id: 1049835, size: 0x8
+class :: {
+}
+
+// class id: 5882, size: 0x14, field offset: 0x14
+enum qs extends _Enum {
+
+  _Mint field_8;
+  _OneByteString field_10;
+}

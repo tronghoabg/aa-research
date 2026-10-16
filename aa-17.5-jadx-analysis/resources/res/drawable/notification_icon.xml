@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:height="@dimen/notifications_icon_background_size"
+        android:width="@dimen/notifications_icon_background_size">
+        <shape android:shape="oval">
+            <solid android:color="@color/notification_icon_background"/>
+        </shape>
+    </item>
+    <item>
+        <bitmap
+            android:gravity="center"
+            android:src="0x7f080ad7"/>
+    </item>
+</layer-list>

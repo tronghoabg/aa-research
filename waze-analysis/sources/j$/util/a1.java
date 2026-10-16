@@ -1,0 +1,12 @@
+package j$.util;
+
+/* compiled from: r8-map-id-ef3156dd11616e3312fa97d164663e876a378324a977203425f20cc125230e5c */
+/* loaded from: classes10.dex */
+public interface a1 extends Spliterator {
+    void forEachRemaining(Object obj);
+
+    boolean tryAdvance(Object obj);
+
+    @Override // j$.util.Spliterator
+    a1 trySplit();
+}

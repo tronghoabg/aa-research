@@ -1,0 +1,592 @@
+0x74b500: tbnz     w0, #4, #0x74b524
+0x74b504: ldur     d0, [x29, #-0x28]
+0x74b508: ldur     x0, [x29, #-0x18]
+0x74b50c: ldur     d1, [x0, #7]
+0x74b510: fadd     d2, d1, d0
+0x74b514: mov      v0.16b, v2.16b
+0x74b518: mov      x15, x29
+0x74b51c: ldp      x29, x30, [x15], #0x10
+0x74b520: ret      
+0x74b524: ldur     d0, [x29, #-0x28]
+0x74b528: ldur     x0, [x29, #-0x18]
+0x74b52c: ldur     x16, [x29, #-8]
+0x74b530: ldur     x30, [x29, #-0x10]
+0x74b534: stp      x30, x16, [x15, #8]
+0x74b538: add      x16, x27, #8, lsl #12 ; [pp+0x8f50] String: "s"
+0x74b53c: ldr      x16, [x16, #0xf50]
+0x74b540: str      x16, [x15]
+0x74b544: bl       #0x2fa790
+0x74b548: tbnz     w0, #4, #0x74b570
+0x74b54c: ldur     d2, [x29, #-0x20]
+0x74b550: ldur     d1, [x29, #-0x28]
+0x74b554: ldur     x0, [x29, #-0x18]
+0x74b558: ldur     d3, [x0, #7]
+0x74b55c: fmul     d4, d3, d2
+0x74b560: fadd     d0, d4, d1
+0x74b564: mov      x15, x29
+0x74b568: ldp      x29, x30, [x15], #0x10
+0x74b56c: ret      
+0x74b570: eor      v0.16b, v0.16b, v0.16b
+0x74b574: mov      x15, x29
+0x74b578: ldp      x29, x30, [x15], #0x10
+0x74b57c: ret      
+0x74b580: bl       #0xb29cc0
+0x74b584: b        #0x74b470
+0x74b588: stp      x29, x30, [x15, #-0x10]!
+0x74b58c: mov      x29, x15
+0x74b590: ldr      x16, [x26, #0x38]
+0x74b594: cmp      x15, x16
+0x74b598: b.ls     #0x74b5b0
+0x74b59c: ldr      x1, [x29, #0x10]
+0x74b5a0: bl       #0x74b5b8
+0x74b5a4: mov      x15, x29
+0x74b5a8: ldp      x29, x30, [x15], #0x10
+0x74b5ac: ret      
+0x74b5b0: bl       #0xb29c40
+0x74b5b4: b        #0x74b59c
+0x74b5b8: stp      x29, x30, [x15, #-0x10]!
+0x74b5bc: mov      x29, x15
+0x74b5c0: sub      x15, x15, #0x28
+0x74b5c4: stur     x1, [x29, #-8]
+0x74b5c8: ldr      x16, [x26, #0x38]
+0x74b5cc: cmp      x15, x16
+0x74b5d0: b.ls     #0x74b784
+0x74b5d4: ldr      x0, [x26, #0x68]
+0x74b5d8: ldr      x0, [x0, #0x28a8]
+0x74b5dc: ldr      x16, [x27, #0x40]
+0x74b5e0: cmp      w0, w16
+0x74b5e4: b.ne     #0x74b5f4
+0x74b5e8: add      x2, x27, #9, lsl #12 ; [pp+0x9c90] Field <::.eSg>: static late final (offset: 0x1454)
+0x74b5ec: ldr      x2, [x2, #0xc90]
+0x74b5f0: bl       #0xb27cbc
+0x74b5f4: stur     x0, [x29, #-0x10]
+0x74b5f8: add      x16, x27, #0x11, lsl #12 ; [pp+0x116e8] TypeArguments: <dkb>
+0x74b5fc: ldr      x16, [x16, #0x6e8]
+0x74b600: stp      x0, x16, [x15]
+0x74b604: ldr      x4, [x27, #0x148]
+0x74b608: bl       #0x7058d0
+0x74b60c: tbnz     w0, #4, #0x74b770
+0x74b610: add      x16, x27, #0x11, lsl #12 ; [pp+0x116e8] TypeArguments: <dkb>
+0x74b614: ldr      x16, [x16, #0x6e8]
+0x74b618: ldur     x30, [x29, #-0x10]
+0x74b61c: stp      x30, x16, [x15]
+0x74b620: ldr      x4, [x27, #0x148]
+0x74b624: bl       #0x346fb4
+0x74b628: ldur     w1, [x0, #0x23]
+0x74b62c: add      x1, x1, x28, lsl #32
+0x74b630: ldur     w0, [x1, #0x47]
+0x74b634: add      x0, x0, x28, lsl #32
+0x74b638: tbnz     w0, #4, #0x74b770
+0x74b63c: ldur     x0, [x29, #-8]
+0x74b640: ldur     w1, [x0, #0x23]
+0x74b644: add      x1, x1, x28, lsl #32
+0x74b648: ldr      x16, [x27, #0x40]
+0x74b64c: cmp      w1, w16
+0x74b650: b.eq     #0x74b78c
+0x74b654: add      x2, x27, #0x17, lsl #12 ; [pp+0x17320] String: "v1.camera_alert_level"
+0x74b658: ldr      x2, [x2, #0x320]
+0x74b65c: bl       #0x3466dc
+0x74b660: cmp      w0, w22
+0x74b664: b.ne     #0x74b674
+0x74b668: add      x1, x27, #0x17, lsl #12 ; [pp+0x172f8] String: "200m"
+0x74b66c: ldr      x1, [x1, #0x2f8]
+0x74b670: b        #0x74b678
+0x74b674: mov      x1, x0
+0x74b678: stur     x1, [x29, #-8]
+0x74b67c: ldur     x0, [x1, #-1]
+0x74b680: ubfx     x0, x0, #0xc, #0x14
+0x74b684: add      x16, x27, #0x17, lsl #12 ; [pp+0x172d0] String: "none"
+0x74b688: ldr      x16, [x16, #0x2d0]
+0x74b68c: stp      x16, x1, [x15]
+0x74b690: mov      x30, x0
+0x74b694: ldr      x30, [x21, x30, lsl #3]
+0x74b698: blr      x30
+0x74b69c: tbnz     w0, #4, #0x74b6b4
+0x74b6a0: add      x0, x27, #0x17, lsl #12 ; [pp+0x172d0] String: "none"
+0x74b6a4: ldr      x0, [x0, #0x2d0]
+0x74b6a8: mov      x15, x29
+0x74b6ac: ldp      x29, x30, [x15], #0x10
+0x74b6b0: ret      
+0x74b6b4: add      x16, x27, #0x11, lsl #12 ; [pp+0x116e8] TypeArguments: <dkb>
+0x74b6b8: ldr      x16, [x16, #0x6e8]
+0x74b6bc: ldur     x30, [x29, #-0x10]
+0x74b6c0: stp      x30, x16, [x15]
+0x74b6c4: ldr      x4, [x27, #0x148]
+0x74b6c8: bl       #0x346fb4
+0x74b6cc: ldur     w1, [x0, #0x23]
+0x74b6d0: add      x1, x1, x28, lsl #32
+0x74b6d4: ldur     x0, [x1, #0x4b]
+0x74b6d8: ldur     x1, [x29, #-8]
+0x74b6dc: stur     x0, [x29, #-0x18]
+0x74b6e0: eor      v0.16b, v0.16b, v0.16b
+0x74b6e4: eor      v1.16b, v1.16b, v1.16b
+0x74b6e8: bl       #0x74b44c
+0x74b6ec: fcmp     d0, d0
+0x74b6f0: b.vs     #0x74b798
+0x74b6f4: fcvtzs   x0, d0
+0x74b6f8: asr      x16, x0, #0x1e
+0x74b6fc: cmp      x16, x0, asr #63
+0x74b700: b.ne     #0x74b798
+0x74b704: lsl      x0, x0, #1
+0x74b708: sbfx     x1, x0, #1, #0x1f
+0x74b70c: tbz      w0, #0, #0x74b714
+0x74b710: ldur     x1, [x0, #7]
+0x74b714: ldur     x0, [x29, #-0x18]
+0x74b718: cmp      x0, x1
+0x74b71c: csel     x2, x1, x0, gt
+0x74b720: sbfiz    x0, x2, #1, #0x1f
+0x74b724: cmp      x2, x0, asr #1
+0x74b728: b.eq     #0x74b734
+0x74b72c: bl       #0xb29dc0
+0x74b730: stur     x2, [x0, #7]
+0x74b734: mov      x1, x22
+0x74b738: mov      x2, #4
+0x74b73c: stur     x0, [x29, #-8]
+0x74b740: bl       #0xb29b38
+0x74b744: mov      x1, x0
+0x74b748: ldur     x0, [x29, #-8]
+0x74b74c: stur     w0, [x1, #0xf]
+0x74b750: add      x16, x27, #0xb, lsl #12 ; [pp+0xbb40] String: "m"
+0x74b754: ldr      x16, [x16, #0xb40]
+0x74b758: stur     w16, [x1, #0x13]
+0x74b75c: str      x1, [x15]
+0x74b760: bl       #0x2e80cc
+0x74b764: mov      x15, x29
+0x74b768: ldp      x29, x30, [x15], #0x10
+0x74b76c: ret      
+0x74b770: add      x0, x27, #0x17, lsl #12 ; [pp+0x172f8] String: "200m"
+0x74b774: ldr      x0, [x0, #0x2f8]
+0x74b778: mov      x15, x29
+0x74b77c: ldp      x29, x30, [x15], #0x10
+0x74b780: ret      
+0x74b784: bl       #0xb29c40
+0x74b788: b        #0x74b5d4
+0x74b78c: add      x9, x27, #9, lsl #12 ; [pp+0x9d10] Field <Qjb._pCh@1796148846>: late (offset: 0x24)
+0x74b790: ldr      x9, [x9, #0xd10]
+0x74b794: bl       #0xb2a470
+0x74b798: str      q0, [x15, #-0x10]!
+0x74b79c: mov      x0, #0x4a
+0x74b7a0: ldr      x30, [x27, #0xab0]
+0x74b7a4: ldur     x30, [x30, #7]
+0x74b7a8: blr      x30
+0x74b7ac: ldr      q0, [x15], #0x10
+0x74b7b0: b        #0x74b708
+0x74b7b4: ldr      x2, [x15]
+0x74b7b8: ldur     w3, [x2, #0x23]
+0x74b7bc: add      x3, x3, x28, lsl #32
+0x74b7c0: ldur     x2, [x3, #0x4b]
+0x74b7c4: sbfiz    x0, x2, #1, #0x1f
+0x74b7c8: cmp      x2, x0, asr #1
+0x74b7cc: b.eq     #0x74b7e8
+0x74b7d0: stp      x29, x30, [x15, #-0x10]!
+0x74b7d4: mov      x29, x15
+0x74b7d8: bl       #0xb29dc0
+0x74b7dc: mov      x15, x29
+0x74b7e0: ldp      x29, x30, [x15], #0x10
+0x74b7e4: stur     x2, [x0, #7]
+0x74b7e8: ret      
+0x74b7ec: ldr      x1, [x15]
+0x74b7f0: ldur     w2, [x1, #0x23]
+0x74b7f4: add      x2, x2, x28, lsl #32
+0x74b7f8: ldur     w0, [x2, #0x47]
+0x74b7fc: add      x0, x0, x28, lsl #32
+0x74b800: ret      
+0x74b804: stp      x29, x30, [x15, #-0x10]!
+0x74b808: mov      x29, x15
+0x74b80c: sub      x15, x15, #0x48
+0x74b810: mov      x0, x2
+0x74b814: stur     x2, [x29, #-8]
+0x74b818: ldr      x16, [x26, #0x38]
+0x74b81c: cmp      x15, x16
+0x74b820: b.ls     #0x74bab0
+0x74b824: add      x1, x27, #0x3a, lsl #12 ; [pp+0x3a4f8] AnonymousClosure: (0x7482ec), of [gWk] _gnb
+0x74b828: ldr      x1, [x1, #0x4f8]
+0x74b82c: mov      x2, x22
+0x74b830: bl       #0xb28e6c
+0x74b834: add      x16, x27, #0x35, lsl #12 ; [pp+0x356e8] TypeArguments: <Qjb, String>
+0x74b838: ldr      x16, [x16, #0x6e8]
+0x74b83c: stp      x0, x16, [x15]
+0x74b840: ldr      x4, [x27, #0x2e58]
+0x74b844: bl       #0x5f1e74
+0x74b848: add      x1, x27, #0x3a, lsl #12 ; [pp+0x3a500] AnonymousClosure: (0x74bcb4), of [UVk] _Jmb
+0x74b84c: ldr      x1, [x1, #0x500]
+0x74b850: mov      x2, x22
+0x74b854: stur     x0, [x29, #-0x10]
+0x74b858: bl       #0xb28e6c
+0x74b85c: add      x16, x27, #0x35, lsl #12 ; [pp+0x356e8] TypeArguments: <Qjb, String>
+0x74b860: ldr      x16, [x16, #0x6e8]
+0x74b864: stp      x0, x16, [x15]
+0x74b868: ldr      x4, [x27, #0x2e58]
+0x74b86c: bl       #0x5f1e74
+0x74b870: ldur     x1, [x29, #-8]
+0x74b874: stur     x0, [x29, #-0x18]
+0x74b878: bl       #0x5f4c00
+0x74b87c: cmp      w0, w22
+0x74b880: b.eq     #0x74bab8
+0x74b884: ldur     x1, [x0, #-1]
+0x74b888: ubfx     x1, x1, #0xc, #0x14
+0x74b88c: mov      x16, x0
+0x74b890: mov      x0, x1
+0x74b894: mov      x1, x16
+0x74b898: mov      x17, #0x3f0c
+0x74b89c: add      x30, x0, x17
+0x74b8a0: ldr      x30, [x21, x30, lsl #3]
+0x74b8a4: blr      x30
+0x74b8a8: ldr      x1, [x27, #0xf60]
+0x74b8ac: stur     x0, [x29, #-0x20]
+0x74b8b0: bl       #0xaac6a0
+0x74b8b4: mov      x2, x0
+0x74b8b8: add      x0, x27, #0x12, lsl #12 ; [pp+0x12338] String: "all"
+0x74b8bc: ldr      x0, [x0, #0x338]
+0x74b8c0: stur     x2, [x29, #-0x28]
+0x74b8c4: stur     w0, [x2, #0xb]
+0x74b8c8: ldur     x0, [x29, #-0x20]
+0x74b8cc: stur     w0, [x2, #0xf]
+0x74b8d0: add      x0, x22, #0x30
+0x74b8d4: stur     w0, [x2, #0x1b]
+0x74b8d8: stur     w0, [x2, #0x1f]
+0x74b8dc: stur     w0, [x2, #0x33]
+0x74b8e0: ldur     x1, [x29, #-8]
+0x74b8e4: bl       #0x5f4c00
+0x74b8e8: cmp      w0, w22
+0x74b8ec: b.eq     #0x74babc
+0x74b8f0: ldur     x1, [x0, #-1]
+0x74b8f4: ubfx     x1, x1, #0xc, #0x14
+0x74b8f8: mov      x16, x0
+0x74b8fc: mov      x0, x1
+0x74b900: mov      x1, x16
+0x74b904: mov      x17, #0x441e
+0x74b908: add      x30, x0, x17
+0x74b90c: ldr      x30, [x21, x30, lsl #3]
+0x74b910: blr      x30
+0x74b914: ldr      x1, [x27, #0xf60]
+0x74b918: stur     x0, [x29, #-0x20]
+0x74b91c: bl       #0xaac6a0
+0x74b920: mov      x2, x0
+0x74b924: add      x0, x27, #0x16, lsl #12 ; [pp+0x160c0] String: "ahead"
+0x74b928: ldr      x0, [x0, #0xc0]
+0x74b92c: stur     x2, [x29, #-0x30]
+0x74b930: stur     w0, [x2, #0xb]
+0x74b934: ldur     x0, [x29, #-0x20]
+0x74b938: stur     w0, [x2, #0xf]
+0x74b93c: add      x0, x22, #0x30
+0x74b940: stur     w0, [x2, #0x1b]
+0x74b944: stur     w0, [x2, #0x1f]
+0x74b948: stur     w0, [x2, #0x33]
+0x74b94c: ldur     x1, [x29, #-8]
+0x74b950: bl       #0x5f4c00
+0x74b954: cmp      w0, w22
+0x74b958: b.eq     #0x74bac0
+0x74b95c: ldur     x1, [x0, #-1]
+0x74b960: ubfx     x1, x1, #0xc, #0x14
+0x74b964: mov      x16, x0
+0x74b968: mov      x0, x1
+0x74b96c: mov      x1, x16
+0x74b970: mov      x17, #0x3e0a
+0x74b974: add      x30, x0, x17
+0x74b978: ldr      x30, [x21, x30, lsl #3]
+0x74b97c: blr      x30
+0x74b980: ldr      x1, [x27, #0xf60]
+0x74b984: stur     x0, [x29, #-0x20]
+0x74b988: bl       #0xaac6a0
+0x74b98c: mov      x3, x0
+0x74b990: add      x0, x27, #0x16, lsl #12 ; [pp+0x160d0] String: "both"
+0x74b994: ldr      x0, [x0, #0xd0]
+0x74b998: stur     x3, [x29, #-0x38]
+0x74b99c: stur     w0, [x3, #0xb]
+0x74b9a0: ldur     x0, [x29, #-0x20]
+0x74b9a4: stur     w0, [x3, #0xf]
+0x74b9a8: add      x0, x22, #0x30
+0x74b9ac: stur     w0, [x3, #0x1b]
+0x74b9b0: stur     w0, [x3, #0x1f]
+0x74b9b4: stur     w0, [x3, #0x33]
+0x74b9b8: mov      x1, x22
+0x74b9bc: mov      x2, #6
+0x74b9c0: bl       #0xb29b38
+0x74b9c4: mov      x2, x0
+0x74b9c8: ldur     x0, [x29, #-0x28]
+0x74b9cc: stur     x2, [x29, #-0x20]
+0x74b9d0: stur     w0, [x2, #0xf]
+0x74b9d4: ldur     x0, [x29, #-0x30]
+0x74b9d8: stur     w0, [x2, #0x13]
+0x74b9dc: ldur     x0, [x29, #-0x38]
+0x74b9e0: stur     w0, [x2, #0x17]
+0x74b9e4: add      x1, x27, #0x39, lsl #12 ; [pp+0x39640] TypeArguments: <WAa<String>>
+0x74b9e8: ldr      x1, [x1, #0x640]
+0x74b9ec: bl       #0xb28a6c
+0x74b9f0: mov      x2, x0
+0x74b9f4: ldur     x0, [x29, #-0x20]
+0x74b9f8: stur     x2, [x29, #-0x28]
+0x74b9fc: stur     w0, [x2, #0xf]
+0x74ba00: mov      x0, #6
+0x74ba04: stur     w0, [x2, #0xb]
+0x74ba08: ldr      x1, [x27, #0xf60]
+0x74ba0c: bl       #0xa90304
+0x74ba10: mov      x2, x0
+0x74ba14: ldur     x0, [x29, #-0x10]
+0x74ba18: stur     x2, [x29, #-0x20]
+0x74ba1c: stur     w0, [x2, #0xb]
+0x74ba20: ldur     x1, [x29, #-8]
+0x74ba24: bl       #0x5f4c00
+0x74ba28: cmp      w0, w22
+0x74ba2c: b.eq     #0x74bac4
+0x74ba30: ldur     x1, [x0, #-1]
+0x74ba34: ubfx     x1, x1, #0xc, #0x14
+0x74ba38: mov      x16, x0
+0x74ba3c: mov      x0, x1
+0x74ba40: mov      x1, x16
+0x74ba44: sub      x30, x0, #0xcba
+0x74ba48: ldr      x30, [x21, x30, lsl #3]
+0x74ba4c: blr      x30
+0x74ba50: add      x1, x27, #0x3a, lsl #12 ; [pp+0x3a508] AnonymousClosure: (0x74bc3c), of [UVk] _Jmb
+0x74ba54: ldr      x1, [x1, #0x508]
+0x74ba58: mov      x2, x22
+0x74ba5c: stur     x0, [x29, #-8]
+0x74ba60: bl       #0xb28e6c
+0x74ba64: add      x1, x27, #0x3a, lsl #12 ; [pp+0x3a510] AnonymousClosure: (0x74bac8), of [UVk] _Jmb
+0x74ba68: ldr      x1, [x1, #0x510]
+0x74ba6c: mov      x2, x22
+0x74ba70: stur     x0, [x29, #-0x10]
+0x74ba74: bl       #0xb28e6c
+0x74ba78: ldur     x16, [x29, #-0x20]
+0x74ba7c: str      x16, [x15]
+0x74ba80: ldur     x2, [x29, #-0x28]
+0x74ba84: ldur     x3, [x29, #-0x10]
+0x74ba88: ldur     x5, [x29, #-0x18]
+0x74ba8c: mov      x6, x0
+0x74ba90: ldur     x7, [x29, #-8]
+0x74ba94: ldr      x1, [x27, #0xf60]
+0x74ba98: add      x4, x27, #0x39, lsl #12 ; [pp+0x39658] List(7) [0, 0x7, 0x1, 0x6, "key", 0x6, Null]
+0x74ba9c: ldr      x4, [x4, #0x658]
+0x74baa0: bl       #0x705138
+0x74baa4: mov      x15, x29
+0x74baa8: ldp      x29, x30, [x15], #0x10
+0x74baac: ret      
+0x74bab0: bl       #0xb29c40
+0x74bab4: b        #0x74b824
+0x74bab8: bl       #0xb2a1e8
+0x74babc: bl       #0xb2a1e8
+0x74bac0: bl       #0xb2a1e8
+0x74bac4: bl       #0xb2a1e8
+0x74bac8: stp      x29, x30, [x15, #-0x10]!
+0x74bacc: mov      x29, x15
+0x74bad0: sub      x15, x15, #0x48
+0x74bad4: ldr      x16, [x26, #0x38]
+0x74bad8: cmp      x15, x16
+0x74badc: b.ls     #0x74bc2c
+0x74bae0: ldr      x1, [x29, #0x18]
+0x74bae4: bl       #0x5f4c00
+0x74bae8: cmp      w0, w22
+0x74baec: b.eq     #0x74bc34
+0x74baf0: ldur     x1, [x0, #-1]
+0x74baf4: ubfx     x1, x1, #0xc, #0x14
+0x74baf8: mov      x16, x0
+0x74bafc: mov      x0, x1
+0x74bb00: mov      x1, x16
+0x74bb04: sub      x30, x0, #0xcba
+0x74bb08: ldr      x30, [x21, x30, lsl #3]
+0x74bb0c: blr      x30
+0x74bb10: stur     x0, [x29, #-8]
+0x74bb14: bl       #0xa904ac
+0x74bb18: mov      x1, x0
+0x74bb1c: ldur     x0, [x29, #-8]
+0x74bb20: stur     x1, [x29, #-0x10]
+0x74bb24: stur     w0, [x1, #0xb]
+0x74bb28: add      x0, x27, #0x36, lsl #12 ; [pp+0x36d38] Obj!ju@560d51 : {
+0x74bb2c: ldr      x0, [x0, #0xd38]
+0x74bb30: stur     w0, [x1, #0x13]
+0x74bb34: ldr      x2, [x29, #0x10]
+0x74bb38: ldur     w0, [x2, #0xb]
+0x74bb3c: add      x0, x0, x28, lsl #32
+0x74bb40: cmp      w0, w22
+0x74bb44: b.eq     #0x74bc38
+0x74bb48: ldur     w3, [x0, #0x2b]
+0x74bb4c: add      x3, x3, x28, lsl #32
+0x74bb50: ldur     w0, [x3, #0x33]
+0x74bb54: add      x0, x0, x28, lsl #32
+0x74bb58: cmp      w0, w22
+0x74bb5c: b.ne     #0x74bb68
+0x74bb60: mov      x0, x22
+0x74bb64: b        #0x74bb74
+0x74bb68: ldur     w3, [x0, #0xf]
+0x74bb6c: add      x3, x3, x28, lsl #32
+0x74bb70: mov      x0, x3
+0x74bb74: cmp      w0, w22
+0x74bb78: b.ne     #0x74bb80
+0x74bb7c: ldr      x0, [x27, #0x49a0]
+0x74bb80: stur     x0, [x29, #-8]
+0x74bb84: bl       #0xa904ac
+0x74bb88: mov      x1, x0
+0x74bb8c: ldur     x0, [x29, #-8]
+0x74bb90: stur     x1, [x29, #-0x18]
+0x74bb94: stur     w0, [x1, #0xb]
+0x74bb98: add      x0, x27, #0x36, lsl #12 ; [pp+0x36d40] Obj!ju@560ce1 : {
+0x74bb9c: ldr      x0, [x0, #0xd40]
+0x74bba0: stur     w0, [x1, #0x13]
+0x74bba4: bl       #0xa913cc
+0x74bba8: stur     x0, [x29, #-8]
+0x74bbac: add      x16, x27, #0x1f, lsl #12 ; [pp+0x1fce8] Double: 48
+0x74bbb0: ldr      x16, [x16, #0xce8]
+0x74bbb4: add      x30, x27, #0x1f, lsl #12 ; [pp+0x1fce8] Double: 48
+0x74bbb8: ldr      x30, [x30, #0xce8]
+0x74bbbc: stp      x30, x16, [x15]
+0x74bbc0: mov      x1, x0
+0x74bbc4: add      x2, x27, #0x3a, lsl #12 ; [pp+0x3a518] String: "assets/images/components/settings/camera_dir.png"
+0x74bbc8: ldr      x2, [x2, #0x518]
+0x74bbcc: add      x4, x27, #0x35, lsl #12 ; [pp+0x35780] List(9) [0, 0x4, 0x2, 0x2, "Sn", 0x3, "wjc", 0x2, Null]
+0x74bbd0: ldr      x4, [x4, #0x780]
+0x74bbd4: bl       #0x5edb70
+0x74bbd8: ldr      x1, [x27, #0xf60]
+0x74bbdc: bl       #0xaa37d0
+0x74bbe0: stur     x0, [x29, #-0x20]
+0x74bbe4: ldur     x16, [x29, #-0x10]
+0x74bbe8: ldur     x30, [x29, #-0x18]
+0x74bbec: stp      x30, x16, [x15, #0x18]
+0x74bbf0: add      x16, x22, #0x20
+0x74bbf4: ldur     x30, [x29, #-8]
+0x74bbf8: stp      x30, x16, [x15, #8]
+0x74bbfc: add      x16, x27, #0x36, lsl #12 ; [pp+0x36d50] Obj!Gqa@567221 : {
+0x74bc00: ldr      x16, [x16, #0xd50]
+0x74bc04: str      x16, [x15]
+0x74bc08: mov      x1, x0
+0x74bc0c: ldr      x2, [x29, #0x10]
+0x74bc10: add      x4, x27, #0x3a, lsl #12 ; [pp+0x3a520] List(15) [0, 0x7, 0x5, 0x2, "Rfg", 0x4, "iPc", 0x2, "oqc", 0x5, "vDd", 0x6, "value", 0x3, Null]
+0x74bc14: ldr      x4, [x4, #0x520]
+0x74bc18: bl       #0x6d0ba4
+0x74bc1c: ldur     x0, [x29, #-0x20]
+0x74bc20: mov      x15, x29
+0x74bc24: ldp      x29, x30, [x15], #0x10
+0x74bc28: ret      
+0x74bc2c: bl       #0xb29c40
+0x74bc30: b        #0x74bae0
+0x74bc34: bl       #0xb2a1e8
+0x74bc38: bl       #0xb2a1e8
+0x74bc3c: stp      x29, x30, [x15, #-0x10]!
+0x74bc40: mov      x29, x15
+0x74bc44: sub      x15, x15, #0x18
+0x74bc48: ldr      x16, [x26, #0x38]
+0x74bc4c: cmp      x15, x16
+0x74bc50: b.ls     #0x74bcac
+0x74bc54: ldr      x0, [x26, #0x68]
+0x74bc58: ldr      x0, [x0, #0x28a8]
+0x74bc5c: ldr      x16, [x27, #0x40]
+0x74bc60: cmp      w0, w16
+0x74bc64: b.ne     #0x74bc74
+0x74bc68: add      x2, x27, #9, lsl #12 ; [pp+0x9c90] Field <::.eSg>: static late final (offset: 0x1454)
+0x74bc6c: ldr      x2, [x2, #0xc90]
+0x74bc70: bl       #0xb27cbc
+0x74bc74: add      x16, x27, #9, lsl #12 ; [pp+0x9c98] TypeArguments: <Qjb>
+0x74bc78: ldr      x16, [x16, #0xc98]
+0x74bc7c: stp      x0, x16, [x15]
+0x74bc80: ldr      x4, [x27, #0x148]
+0x74bc84: bl       #0x346fb4
+0x74bc88: ldr      x1, [x29, #0x10]
+0x74bc8c: stur     x0, [x29, #-8]
+0x74bc90: bl       #0x705c94
+0x74bc94: ldur     x1, [x29, #-8]
+0x74bc98: mov      x2, x0
+0x74bc9c: bl       #0xad6d0c
+0x74bca0: mov      x15, x29
+0x74bca4: ldp      x29, x30, [x15], #0x10
+0x74bca8: ret      
+0x74bcac: bl       #0xb29c40
+0x74bcb0: b        #0x74bc54
+0x74bcb4: stp      x29, x30, [x15, #-0x10]!
+0x74bcb8: mov      x29, x15
+0x74bcbc: ldr      x16, [x26, #0x38]
+0x74bcc0: cmp      x15, x16
+0x74bcc4: b.ls     #0x74bd08
+0x74bcc8: ldr      x0, [x29, #0x10]
+0x74bccc: ldur     w1, [x0, #0x23]
+0x74bcd0: add      x1, x1, x28, lsl #32
+0x74bcd4: ldr      x16, [x27, #0x40]
+0x74bcd8: cmp      w1, w16
+0x74bcdc: b.eq     #0x74bd10
+0x74bce0: add      x2, x27, #0x17, lsl #12 ; [pp+0x17328] String: "v1.camera_detect_dir"
+0x74bce4: ldr      x2, [x2, #0x328]
+0x74bce8: bl       #0x3466dc
+0x74bcec: cmp      w0, w22
+0x74bcf0: b.ne     #0x74bcfc
+0x74bcf4: add      x0, x27, #0x12, lsl #12 ; [pp+0x12338] String: "all"
+0x74bcf8: ldr      x0, [x0, #0x338]
+0x74bcfc: mov      x15, x29
+0x74bd00: ldp      x29, x30, [x15], #0x10
+0x74bd04: ret      
+0x74bd08: bl       #0xb29c40
+0x74bd0c: b        #0x74bcc8
+0x74bd10: add      x9, x27, #9, lsl #12 ; [pp+0x9d10] Field <Qjb._pCh@1796148846>: late (offset: 0x24)
+0x74bd14: ldr      x9, [x9, #0xd10]
+0x74bd18: bl       #0xb2a470
+0x74bd1c: stp      x29, x30, [x15, #-0x10]!
+0x74bd20: mov      x29, x15
+0x74bd24: sub      x15, x15, #0x40
+0x74bd28: mov      x0, x1
+0x74bd2c: stur     x1, [x29, #-8]
+0x74bd30: mov      x1, x2
+0x74bd34: stur     x2, [x29, #-0x10]
+0x74bd38: ldr      x16, [x26, #0x38]
+0x74bd3c: cmp      x15, x16
+0x74bd40: b.ls     #0x74bf34
+0x74bd44: mov      x1, #3
+0x74bd48: bl       #0xb28aa8
+0x74bd4c: mov      x3, x0
+0x74bd50: ldur     x0, [x29, #-8]
+0x74bd54: stur     x3, [x29, #-0x18]
+0x74bd58: stur     w0, [x3, #0xf]
+0x74bd5c: add      x1, x27, #0x3a, lsl #12 ; [pp+0x3a4b0] AnonymousClosure: (0x74c52c), of [WVk] _Lmb
+0x74bd60: ldr      x1, [x1, #0x4b0]
+0x74bd64: mov      x2, x22
+0x74bd68: bl       #0xb28e6c
+0x74bd6c: add      x16, x27, #0x27, lsl #12 ; [pp+0x275d8] TypeArguments: <dkb, bool>
+0x74bd70: ldr      x16, [x16, #0x5d8]
+0x74bd74: stp      x0, x16, [x15]
+0x74bd78: ldr      x4, [x27, #0x2e58]
+0x74bd7c: bl       #0x5f1e74
+0x74bd80: mov      x1, x0
+0x74bd84: ldur     x0, [x29, #-0x18]
+0x74bd88: stur     w1, [x0, #0x13]
+0x74bd8c: add      x1, x27, #0x3a, lsl #12 ; [pp+0x3a4b8] AnonymousClosure: (0x74c4f4), of [WVk] _Lmb
+0x74bd90: ldr      x1, [x1, #0x4b8]
+0x74bd94: mov      x2, x22
+0x74bd98: bl       #0xb28e6c
+0x74bd9c: add      x16, x27, #0x3a, lsl #12 ; [pp+0x3a350] TypeArguments: <dkb, int>
+0x74bda0: ldr      x16, [x16, #0x350]
+0x74bda4: stp      x0, x16, [x15]
+0x74bda8: ldr      x4, [x27, #0x2e58]
+0x74bdac: bl       #0x5f1e74
+0x74bdb0: mov      x3, x0
+0x74bdb4: ldur     x0, [x29, #-0x18]
+0x74bdb8: stur     x3, [x29, #-8]
+0x74bdbc: stur     w3, [x0, #0x17]
+0x74bdc0: add      x1, x27, #0x3a, lsl #12 ; [pp+0x3a4c0] AnonymousClosure: (0x7482ec), of [gWk] _gnb
+0x74bdc4: ldr      x1, [x1, #0x4c0]
+0x74bdc8: mov      x2, x22
+0x74bdcc: bl       #0xb28e6c
+0x74bdd0: add      x16, x27, #0x35, lsl #12 ; [pp+0x356e8] TypeArguments: <Qjb, String>
+0x74bdd4: ldr      x16, [x16, #0x6e8]
+0x74bdd8: stp      x0, x16, [x15]
+0x74bddc: ldr      x4, [x27, #0x2e58]
+0x74bde0: bl       #0x5f1e74
+0x74bde4: add      x1, x27, #0x3a, lsl #12 ; [pp+0x3a4c8] AnonymousClosure: (0x74c32c), of [WVk] _Lmb
+0x74bde8: ldr      x1, [x1, #0x4c8]
+0x74bdec: mov      x2, x22
+0x74bdf0: stur     x0, [x29, #-0x20]
+0x74bdf4: bl       #0xb28e6c
+0x74bdf8: add      x16, x27, #0x35, lsl #12 ; [pp+0x356e8] TypeArguments: <Qjb, String>
+0x74bdfc: ldr      x16, [x16, #0x6e8]
+0x74be00: stp      x0, x16, [x15]
+0x74be04: ldr      x4, [x27, #0x2e58]
+0x74be08: bl       #0x5f1e74
+0x74be0c: mov      x1, x22
+0x74be10: mov      x2, #6
+0x74be14: stur     x0, [x29, #-0x28]
+0x74be18: bl       #0xb29b38
+0x74be1c: mov      x1, x0
+0x74be20: ldur     x0, [x29, #-0x20]
+0x74be24: stur     w0, [x1, #0xf]
+0x74be28: ldr      x16, [x27, #0x49a0]
+0x74be2c: stur     w16, [x1, #0x13]
+0x74be30: ldur     x0, [x29, #-8]
+0x74be34: stur     w0, [x1, #0x17]
+0x74be38: str      x1, [x15]
+0x74be3c: bl       #0x2e80cc

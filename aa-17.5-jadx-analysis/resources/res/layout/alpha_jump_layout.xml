@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.apps.auto.components.drawer.AlphaJumpFab
+        android:layout_gravity="end|top"
+        android:id="@+id/alpha_jump_fab"
+        android:visibility="gone"
+        android:layout_width="@dimen/alpha_jump_fab_width_height"
+        android:layout_height="@dimen/alpha_jump_fab_width_height"
+        android:layout_marginTop="@dimen/alpha_jump_fab_margin_top"
+        android:layout_marginEnd="@dimen/alpha_jump_fab_margin_end"
+        android:elevation="@dimen/fab_elevation"/>
+    <com.google.android.apps.auto.components.drawer.AlphaJumpKeyboard
+        android:id="@+id/alpha_jump_keyboard"
+        android:background="@color/gearhead_sdk_card"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/alpha_jump_keyboard_margin_top"
+        app:mode="fixed"
+        app:use_appdecor_drawer_keyboard="true"/>
+</FrameLayout>

@@ -1,0 +1,9 @@
+package com.waze.map;
+
+/* compiled from: WazeSource */
+/* loaded from: classes6.dex */
+public interface aq {
+    boolean a();
+
+    boolean b();
+}

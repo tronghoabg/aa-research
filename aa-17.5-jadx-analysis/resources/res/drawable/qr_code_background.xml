@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="@dimen/template_sign_in_qr_code_focus_ring_inset"
+    android:insetRight="@dimen/template_sign_in_qr_code_focus_ring_inset"
+    android:insetBottom="@dimen/template_sign_in_qr_code_focus_ring_inset">
+    <selector>
+        <item
+            android:state_window_focused="true"
+            android:state_hovered="true">
+            <shape android:shape="rectangle">
+                <stroke
+                    android:width="?attr/templateFocusStrokeWidthHovered"
+                    android:color="?attr/templateFocusNoContentAccentColor"/>
+                <corners android:radius="?attr/templateNoContentFocusCornerRadius"/>
+            </shape>
+        </item>
+        <item
+            android:state_focused="true"
+            android:state_window_focused="true">
+            <shape android:shape="rectangle">
+                <stroke
+                    android:width="?attr/templateFocusStrokeWidthFocused"
+                    android:color="?attr/templateFocusNoContentAccentColor"/>
+                <corners android:radius="?attr/templateNoContentFocusCornerRadius"/>
+            </shape>
+        </item>
+    </selector>
+</inset>

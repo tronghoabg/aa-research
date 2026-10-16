@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.sdk.ui.FocusClusterLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:forceFieldType="multimoveModal">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/fixed_keyboard_margin_bottom"
+        android:layout_marginStart="@dimen/gearhead_sdk_card_margin"
+        android:layout_marginEnd="@dimen/gearhead_sdk_card_margin">
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/alpha_jump_keyboard_grid_layout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:columnCount="@integer/fixed_keyboard_column_count"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_max="@dimen/fixed_keyboard_max_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1"
+            app:useDefaultMargins="false">
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+            <Button style="@style/AlphaJumpFixedKeyboardKey"/>
+        </androidx.gridlayout.widget.GridLayout>
+    </android.support.constraint.ConstraintLayout>
+</com.google.android.apps.auto.sdk.ui.FocusClusterLayout>

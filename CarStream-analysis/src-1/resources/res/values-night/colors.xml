@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg">#14100f</color>
+    <color name="carColorBlue">#ff3674e0</color>
+    <color name="carColorGreen">#ff448b47</color>
+    <color name="carColorRed">#ffc5221f</color>
+    <color name="carColorYellow">#ffd5792d</color>
+    <color name="organic_accent">#f6a06b</color>
+    <color name="organic_accent2">#aebf92</color>
+    <color name="organic_accent2_200">#3d472b</color>
+    <color name="organic_accent2_700">#ccdbb2</color>
+    <color name="organic_accent_600">#d67f48</color>
+    <color name="organic_accent_700">#b2622d</color>
+    <color name="organic_bg">#14100f</color>
+    <color name="organic_neutral_100">#2e2b25</color>
+    <color name="organic_neutral_300">#474238</color>
+    <color name="organic_neutral_400">#645c50</color>
+    <color name="organic_neutral_600">#a19786</color>
+    <color name="organic_neutral_700">#c0b6a5</color>
+    <color name="organic_neutral_800">#dcd3c4</color>
+    <color name="organic_neutral_900">#f9f4ed</color>
+    <color name="organic_surface">#221a17</color>
+    <color name="organic_text">#f9f4ed</color>
+    <color name="surface">#221a17</color>
+</resources>

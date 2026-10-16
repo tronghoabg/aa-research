@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="bottom_align_vertical_hotseat_double_row_status_bar_with_etc_and_resize">true</bool>
+</resources>

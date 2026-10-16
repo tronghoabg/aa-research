@@ -1,0 +1,103 @@
+package org.apache.tika.language.detect;
+
+import A0.f;
+import j$.util.List;
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import org.apache.tika.config.ServiceLoader;
+
+/* loaded from: classes5.dex */
+public abstract class LanguageDetector {
+    private static final int BUFFER_LENGTH = 4096;
+    private static final ServiceLoader DEFAULT_SERVICE_LOADER = new ServiceLoader();
+    protected boolean mixedLanguages = false;
+    protected boolean shortText = false;
+
+    public static LanguageDetector getDefaultLanguageDetector() {
+        List<LanguageDetector> languageDetectors = getLanguageDetectors();
+        if (languageDetectors.isEmpty()) {
+            throw new IllegalStateException("No language detectors available");
+        }
+        return languageDetectors.get(0);
+    }
+
+    public static List<LanguageDetector> getLanguageDetectors() {
+        return getLanguageDetectors(DEFAULT_SERVICE_LOADER);
+    }
+
+    public void addText(CharSequence charSequence) {
+        int length = charSequence.length();
+        if (length < 4096) {
+            char[] charArray = charSequence.toString().toCharArray();
+            addText(charArray, 0, charArray.length);
+            return;
+        }
+        int i5 = 0;
+        while (!hasEnoughText() && i5 < length) {
+            int i10 = i5 + 4096;
+            char[] charArray2 = charSequence.subSequence(i5, Math.min(i10, length)).toString().toCharArray();
+            addText(charArray2, 0, charArray2.length);
+            i5 = i10;
+        }
+    }
+
+    public abstract void addText(char[] cArr, int i5, int i10);
+
+    public LanguageResult detect() {
+        return detectAll().get(0);
+    }
+
+    public abstract List<LanguageResult> detectAll();
+
+    public List<LanguageResult> detectAll(String str) {
+        reset();
+        addText(str);
+        return detectAll();
+    }
+
+    public boolean hasEnoughText() {
+        return false;
+    }
+
+    public abstract boolean hasModel(String str);
+
+    public boolean isMixedLanguages() {
+        return this.mixedLanguages;
+    }
+
+    public boolean isShortText() {
+        return this.shortText;
+    }
+
+    public abstract LanguageDetector loadModels() throws IOException;
+
+    public abstract LanguageDetector loadModels(Set<String> set) throws IOException;
+
+    public abstract void reset();
+
+    public LanguageDetector setMixedLanguages(boolean z2) {
+        this.mixedLanguages = z2;
+        return this;
+    }
+
+    public abstract LanguageDetector setPriors(Map<String, Float> map) throws IOException;
+
+    public LanguageDetector setShortText(boolean z2) {
+        this.shortText = z2;
+        return this;
+    }
+
+    public static List<LanguageDetector> getLanguageDetectors(ServiceLoader serviceLoader) {
+        List<LanguageDetector> listLoadStaticServiceProviders = serviceLoader.loadStaticServiceProviders(LanguageDetector.class);
+        List.EL.sort(listLoadStaticServiceProviders, new f(28));
+        return listLoadStaticServiceProviders;
+    }
+
+    public LanguageResult detect(CharSequence charSequence) {
+        reset();
+        addText(charSequence);
+        return detect();
+    }
+}

@@ -1,0 +1,6 @@
+package com.google.android.gms.ads.nativead;
+
+/* loaded from: classes3.dex */
+public interface d {
+    void onNativeAdLoaded(NativeAd nativeAd);
+}

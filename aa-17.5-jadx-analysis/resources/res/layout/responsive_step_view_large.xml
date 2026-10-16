@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="start"
+    android:orientation="vertical"
+    android:id="@+id/responsive_step_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/template_padding_3"
+    android:layout_marginBottom="@dimen/template_padding_3"
+    android:layout_marginHorizontal="@dimen/template_padding_3">
+    <LinearLayout
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/turn_symbol"
+            android:layout_width="?attr/templateResponsiveNavCardImageSizeLarge"
+            android:layout_height="?attr/templateResponsiveNavCardImageSizeLarge"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_marginEnd="@dimen/template_padding_3"/>
+        <com.google.android.apps.auto.components.apphost.view.widgets.common.CarTextView
+            android:id="@+id/distance_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.Template.Text.Display3"/>
+    </LinearLayout>
+    <com.google.android.apps.auto.components.apphost.view.widgets.common.CarTextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/template_padding_0"
+        style="@style/Widget.Template.Text.Body2"/>
+</LinearLayout>

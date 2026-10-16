@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha
+        android:interpolator="@android:interpolator/decelerate_cubic"
+        android:duration="@integer/drawer_animation_duration_ms"
+        android:fillBefore="true"
+        android:fillAfter="true"
+        android:fromAlpha="@dimen/drawer_highest_animated_alpha"
+        android:toAlpha="@dimen/drawer_lowest_animated_alpha"
+        android:fillEnabled="true"/>
+    <translate
+        android:interpolator="@android:interpolator/decelerate_cubic"
+        android:duration="@integer/drawer_animation_duration_ms"
+        android:fillBefore="true"
+        android:fillAfter="true"
+        android:fromYDelta="@dimen/drawer_translate_delta_rest_percentage"
+        android:toYDelta="@dimen/drawer_translate_delta_percentage_negative"
+        android:fillEnabled="true"/>
+</set>

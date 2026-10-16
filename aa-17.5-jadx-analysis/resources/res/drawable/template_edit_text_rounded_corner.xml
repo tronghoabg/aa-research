@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/template_edit_text_background_color_selector"/>
+            <corners android:radius="?attr/templateEditTextCornerRadius"/>
+        </shape>
+    </item>
+    <item
+        android:left="?attr/templateEditTextFocusRingPadding"
+        android:top="?attr/templateEditTextFocusRingPadding"
+        android:right="?attr/templateEditTextFocusRingPadding"
+        android:bottom="?attr/templateEditTextFocusRingPadding">
+        <selector>
+            <item
+                android:state_window_focused="true"
+                android:state_hovered="true">
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="?attr/templateFocusStrokeWidthHovered"
+                        android:color="?attr/templateFocusAccentColor"/>
+                    <corners android:radius="?attr/templateEditTextFocusRingRadius"/>
+                </shape>
+            </item>
+            <item
+                android:state_focused="true"
+                android:state_window_focused="true">
+                <shape android:shape="rectangle">
+                    <stroke
+                        android:width="?attr/templateFocusStrokeWidthFocused"
+                        android:color="?attr/templateFocusAccentColor"/>
+                    <corners android:radius="?attr/templateEditTextFocusRingRadius"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+</layer-list>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animator xmlns:android="http://schemas.android.com/apk/res/android"
+    android:duration="@integer/gearhead_sdk_scroll_bar_thumb_elements_crossfade_duration"
+    android:valueFrom="0"
+    android:valueTo="1"
+    android:valueType="floatType"/>

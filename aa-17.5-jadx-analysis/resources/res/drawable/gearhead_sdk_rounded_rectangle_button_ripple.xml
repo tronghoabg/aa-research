@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/gearhead_sdk_ripple">
+    <item android:id="@+id/rounded_rectangle_shape">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/gearhead_sdk_button_background"/>
+            <corners android:radius="@dimen/material_dialer_action_panel_fab_corner"/>
+            <size
+                android:height="@dimen/material_dialer_action_panel_fab_height"
+                android:width="@dimen/material_dialer_action_panel_fab_width"/>
+        </shape>
+    </item>
+</ripple>

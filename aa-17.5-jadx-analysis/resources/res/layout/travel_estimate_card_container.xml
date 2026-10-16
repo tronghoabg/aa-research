@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.common.BleedingCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/travel_estimate_card_container"
+    android:focusable="false"
+    android:layout_width="?attr/templateRoutingStepsCardContentContainerDefaultWidth"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="?attr/templateTravelEstimateContainerMarginBottom"
+    android:layout_marginStart="?attr/templateCardContentContainerStartMargin"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    style="?attr/templateCardRoutingContentContainerStyle">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:layout_gravity="center_vertical"
+            android:id="@+id/travel_estimate_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/travel_estimate_view"/>
+    </FrameLayout>
+</com.google.android.apps.auto.components.apphost.view.widgets.common.BleedingCardView>

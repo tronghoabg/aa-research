@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/container"
+    android:background="?attr/colorSurface"
+    android:fitsSystemWindows="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/error_icon"
+        android:layout_width="42dp"
+        android:layout_height="50dp"
+        android:src="@drawable/gs_warning_vd_theme_24"
+        android:tint="?attr/colorOnSurfaceVariant"/>
+    <TextView
+        android:textSize="26dp"
+        android:textColor="?attr/colorOnSurface"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:id="@+id/error_text"
+        android:paddingTop="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/map_issue_text"
+        android:maxLines="2"
+        android:fontFamily="?attr/bodyFontFamily"
+        android:paddingHorizontal="16dp"/>
+    <com.google.android.apps.auto.components.coolwalk.compose.viewcompat.CarButton
+        android:label="@string/retry_button_text"
+        android:layout_gravity="center"
+        android:id="@+id/retry_button"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/gearhead_baseline_grid_8x"
+        android:layout_marginTop="36dp"
+        app:carButtonType="filled"/>
+</LinearLayout>

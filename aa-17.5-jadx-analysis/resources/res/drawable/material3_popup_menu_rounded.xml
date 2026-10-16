@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <corners
+                android:topLeftRadius="@dimen/gearhead_baseline_grid_3.5x"
+                android:topRightRadius="@dimen/gearhead_baseline_grid_3.5x"
+                android:bottomLeftRadius="@dimen/gearhead_baseline_grid_3.5x"
+                android:bottomRightRadius="@dimen/gearhead_baseline_grid_3.5x"/>
+            <solid android:color="?attr/colorSurface"/>
+        </shape>
+    </item>
+    <item>
+        <shape>
+            <corners
+                android:topLeftRadius="@dimen/gearhead_baseline_grid_3.5x"
+                android:topRightRadius="@dimen/gearhead_baseline_grid_3.5x"
+                android:bottomLeftRadius="@dimen/gearhead_baseline_grid_3.5x"
+                android:bottomRightRadius="@dimen/gearhead_baseline_grid_3.5x"/>
+            <padding
+                android:top="@dimen/gearhead_padding_1"
+                android:bottom="@dimen/gearhead_padding_1"/>
+            <solid android:color="@color/m3_popupmenu_overlay_color"/>
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="@color/action_panel_scrim_start_gradient"
+        android:endColor="@color/action_panel_scrim_end_gradient"
+        android:angle="270"
+        android:centerColor="@color/action_panel_scrim_center_gradient"/>
+</shape>

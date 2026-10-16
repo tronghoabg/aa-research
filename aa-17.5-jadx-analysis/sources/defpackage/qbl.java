@@ -1,0 +1,88 @@
+package defpackage;
+
+/* loaded from: classes2.dex */
+public final class qbl {
+    public static final qbv A;
+    public static final qbu B;
+    public static final qbu C;
+    public static final qbu D;
+    public static final qbu a = new qbu("TilesCorruptFromChecksumMismatch", qbt.ae);
+    public static final qbu b = new qbu("TilesDeletedFromInvalidCacheTime", qbt.ae);
+    public static final qbu c = new qbu("TilesExpiredFromDiskCache", qbt.ae);
+    public static final qbu d = new qbu("TileStoreTileReadErrors", qbt.ae);
+    public static final qbu e = new qbu("TileStoreTileWriteErrors", qbt.ae);
+    public static final qbz f;
+    public static final qbr g;
+    public static final qbr h;
+    public static final qbr i;
+    public static final qbr j;
+    public static final qbu k;
+    public static final qbz l;
+    public static final qbv m;
+    public static final qbz n;
+    public static final qbv o;
+    public static final qbu p;
+    public static final qbr q;
+    public static final qbv r;
+    public static final qbv s;
+    public static final qbz t;
+    public static final qbv u;
+    public static final qbv v;
+    public static final qbv w;
+    public static final qbv x;
+    public static final qbz y;
+    public static final qbv z;
+
+    static {
+        qbt qbtVar = qbt.ae;
+        int i2 = qbj.a;
+        f = new qbz("DiskCacheFlushWritesTime", qbtVar, null);
+        g = new qbr("DiskCacheResourceReadErrors", qbt.ae);
+        h = new qbr("DiskCacheResourceWriteErrors", qbt.ae);
+        i = new qbr("DiskCacheResourceChecksumMismatch", qbt.ae);
+        j = new qbr("DiskCacheOpenFailures", qbt.ae);
+        k = new qbu("DiskCacheOpenFailureErrorCode", qbt.ae);
+        l = new qbz("DiskCacheCompactTime", qbt.ae, null);
+        m = new qbv("DiskCacheCompactTotalTime", qbt.ae, null);
+        n = new qbz("DiskCacheDeleteExpiredTilesTime", qbt.ae, null);
+        o = new qbv("DiskCacheDeleteExpiredTilesTotalTime", qbt.ae, null);
+        p = new qbu("DiskCacheDeleted", qbt.ae);
+        q = new qbr("DiskCacheRecreateFailures", qbt.ae);
+        r = new qbv("DiskCacheSizeOnStartup", qbt.ae, null);
+        qbt qbtVar2 = qbt.ae;
+        sid sidVar = sio.a;
+        s = new qbv("DiskCacheMaxDatabaseSize", qbtVar2, null);
+        t = new qbz("DiskCacheWriteResourceTime", qbt.ae, null);
+        u = new qbv("DiskCacheWriteTileTime", qbt.ae, null);
+        new qbz("DiskCacheDeleteEmptyTilesTime", qbt.ae, null);
+        v = new qbv("DiskCacheMinPriorityQueryTime", qbt.ae, null);
+        w = new qbv("DiskCacheResourceTableTrimTime", qbt.ae, null);
+        x = new qbv("DiskCacheTileTableTrimTime", qbt.ae, null);
+        y = new qbz("DiskCacheVacuumTime", qbt.ae, null);
+        new qbz("ResourceDiskCacheFlushWritesTime", qbt.ae, null);
+        new qbr("ResourceDiskCacheReadErrors", qbt.ae);
+        new qbr("ResourceDiskCacheWriteErrors", qbt.ae);
+        new qbr("ResourceDiskCacheChecksumMismatch", qbt.ae);
+        new qbr("ResourceDiskCacheOpenFailures", qbt.ae);
+        new qbu("ResourceDiskCacheOpenFailureErrorCode", qbt.ae);
+        new qbz("ResourceDiskCacheCompactTime", qbt.ae, null);
+        new qbv("ResourceDiskCacheCompactTotalTime", qbt.ae, null);
+        new qbz("ResourceDiskCacheDeleteExpiredTime", qbt.ae, null);
+        new qbv("ResourceDiskCacheDeleteExpiredTotalTime", qbt.ae, null);
+        new qbu("ResourceDiskCacheDeleted", qbt.ae);
+        new qbr("ResourceDiskCacheRecreateFailures", qbt.ae);
+        new qbv("ResourceDiskCacheSizeOnStartup", qbt.ae, null);
+        new qbz("ResourceDiskCacheWriteTime", qbt.ae, null);
+        new qbv("ResourceDiskCacheMinPriorityQueryTime", qbt.ae, null);
+        new qbv("ResourceDiskCacheTableTrimTime", qbt.ae, null);
+        new qbz("ResourceDiskCacheVacuumTime", qbt.ae, null);
+        new qbu("ResourceDiskCacheFileLocation", qbt.ae);
+        new qbu("ResourceDiskCacheAvailableSpaceRestricted", qbt.ae);
+        new qbu("ResourceDiskCacheCreationResult", qbt.ae);
+        z = new qbv("DiskCacheSizeOnCompactionCheck", qbt.ae, null);
+        A = new qbv("DiskOnlineCacheStartupTime", qbt.ae, null);
+        B = new qbu("DiskCacheFileLocation", qbt.ae);
+        C = new qbu("DiskCacheAvailableSpaceRestricted", qbt.ae);
+        D = new qbu("DiskOnlineCacheCreationResult", qbt.ae);
+    }
+}

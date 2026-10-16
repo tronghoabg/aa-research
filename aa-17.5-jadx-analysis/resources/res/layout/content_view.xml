@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.common.ContentView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.apps.auto.sdk.ui.FocusClusterLayout
+        android:id="@+id/container"
+        android:clipChildren="true"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:forceFieldType="multimoveModal"/>
+</com.google.android.apps.auto.components.apphost.view.widgets.common.ContentView>

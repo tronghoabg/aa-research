@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="?attr/templateRippleColor">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="?attr/templateRowSecondaryActionBackgroundColor"/>
+            <corners android:radius="@dimen/template_row_action_corner_radius"/>
+        </shape>
+    </item>
+    <item
+        android:gravity="center"
+        android:id="@android:id/mask">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/template_ripple_color_selector"/>
+            <corners android:radius="@dimen/template_row_action_corner_radius"/>
+        </shape>
+    </item>
+</ripple>

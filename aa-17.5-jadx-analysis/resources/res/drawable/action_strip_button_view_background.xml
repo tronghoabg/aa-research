@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <inset android:inset="@dimen/template_action_inset">
+            <shape android:shape="rectangle">
+                <solid android:color="?attr/templateActionStripButtonBackgroundColor"/>
+                <corners android:radius="?attr/templateActionStripButtonCornerRadius"/>
+                <stroke
+                    android:width="?attr/templateActionButtonSecondaryBorderWidth"
+                    android:color="?attr/templateActionButtonSecondaryBorderColor"/>
+            </shape>
+        </inset>
+    </item>
+    <item android:drawable="@drawable/action_strip_button_ripple"/>
+</layer-list>

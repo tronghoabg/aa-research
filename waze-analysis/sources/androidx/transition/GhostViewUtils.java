@@ -1,0 +1,20 @@
+package androidx.transition;
+
+import android.graphics.Matrix;
+import android.view.View;
+import android.view.ViewGroup;
+
+/* compiled from: WazeSource */
+/* loaded from: classes4.dex */
+class GhostViewUtils {
+    private GhostViewUtils() {
+    }
+
+    static GhostView addGhost(View view, ViewGroup viewGroup, Matrix matrix) {
+        return GhostViewPort.addGhost(view, viewGroup, matrix);
+    }
+
+    static void removeGhost(View view) {
+        GhostViewPort.removeGhost(view);
+    }
+}

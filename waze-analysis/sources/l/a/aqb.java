@@ -1,0 +1,59 @@
+package l.a;
+
+/* compiled from: WazeSource */
+/* loaded from: classes9.dex */
+public enum aqb implements com.google.v.eg {
+    SUBTYPE_UNSPECIFIED(0),
+    CAMERA_SPEED(1),
+    CAMERA_RED_LIGHT(2),
+    CAMERA_DUMMY(3),
+    CAMERA_RAILROAD(4),
+    CAMERA_HOV_LANE(5),
+    CAMERA_BUS_LANE(6),
+    CAMERA_CARPOOL_LANE(7),
+    CAMERA_RED_LIGHT_AND_SPEED(8),
+    CAMERA_PHONE_ENFORCEMENT(9),
+    CAMERA_SEATBELT_ENFORCEMENT(10),
+    CAMERA_DISTANCE_BETWEEN_VEHICLES_ENFORCEMENT(11),
+    CAMERA_STOP_SIGN_ENFORCEMENT(12),
+    CAMERA_ROAD_SAFETY_ENFORCEMENT_NOISE_ENFORCEMENT(13),
+    CAMERA_AVG_SPEED_CAMERA(14),
+    CAMERA_SPEED_ENFORCEMENT_ZONE(15),
+    CAMERA_LOW_EMISSION_ZONE(16),
+    CAMERA_ULTRA_LOW_EMISSION_ZONE(17),
+    CAMERA_CITY_HISTORICAL_CENTER(18),
+    CAMERA_CLEAN_AIR_ZONE(19),
+    CAMERA_NATIONAL_PARK(20),
+    CAMERA_CONGESTION_CHARGE_ZONE(21),
+    CAMERA_LIMITED_TRAFFIC_ZONE(22),
+    PERMANENT_HAZARD_SPEED_BUMP(23),
+    PERMANENT_HAZARD_TOPES(24),
+    PERMANENT_HAZARD_TOLL_BOOTH(25),
+    PERMANENT_HAZARD_DANGEROUS_CURVE(26),
+    PERMANENT_HAZARD_FORK(27),
+    PERMANENT_HAZARD_LANES_MERGING(28),
+    PERMANENT_HAZARD_INTERSECTION(29),
+    PERMANENT_HAZARD_SCHOOL_ZONE(30),
+    GUARDIAN_LONG(31),
+    GUARDIAN_SHORT(32),
+    SPEED_LIMIT_DECREASE_DEFAULT(33),
+    DANGER_ZONE_HIGH_RISK_AREA(34),
+    DANGER_ZONE_CRIME_AREA(35),
+    UNRECOGNIZED(-1);
+
+    private final int M;
+
+    aqb(int i2) {
+        this.M = i2;
+    }
+
+    @Override // com.google.v.eg
+    public final int getNumber() {
+        return this == UNRECOGNIZED ? com.google.v.ep.b() : this.M;
+    }
+
+    @Override // java.lang.Enum
+    public final String toString() {
+        return Integer.toString(this.M);
+    }
+}

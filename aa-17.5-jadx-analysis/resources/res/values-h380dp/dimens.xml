@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dashboard_card_badge_size">@dimen/gearhead_baseline_grid_3.5x</dimen>
+    <dimen name="dashboard_card_icon_size">@dimen/gearhead_baseline_grid_12x</dimen>
+    <dimen name="dashboard_card_primary_target_spacer_margin_bottom">14dp</dimen>
+    <dimen name="dashboard_media_album_art_size">128dp</dimen>
+    <dimen name="media_bottom_space">4dp</dimen>
+</resources>

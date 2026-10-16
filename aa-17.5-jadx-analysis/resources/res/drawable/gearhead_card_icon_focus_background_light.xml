@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/gearhead_oval_focus_background_light"
+    android:inset="@dimen/gearhead_rail_button_focus_inset"/>

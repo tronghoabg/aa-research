@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="?attr/templateTabContainerHorizontalPadding"
+    android:paddingRight="?attr/templateTabContainerHorizontalPadding"
+    android:paddingBottom="?attr/templateTabContainerBottomPadding"
+    android:focusable="false"
+    android:clickable="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?attr/templateHeaderHeight"
+    android:layout_weight="1">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:stateListAnimator="@animator/tab_animator">
+        <ImageView
+            android:id="@+id/tab_icon"
+            android:layout_width="?attr/templateTabIconSize"
+            android:layout_height="?attr/templateTabIconSize"
+            android:layout_marginBottom="?attr/templateTabIconMarginBottom"
+            android:tint="?attr/templateTabIconTint"
+            android:tintMode="src_in"/>
+        <TextView
+            android:textAppearance="@style/TextAppearance.Tab.Title"
+            android:gravity="center"
+            android:id="@+id/tab_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:includeFontPadding="false"
+            style="@style/Widget.Template.TextView.Body3"/>
+    </LinearLayout>
+</FrameLayout>

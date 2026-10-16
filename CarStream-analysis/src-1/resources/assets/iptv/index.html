@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>IPTV</title>
+<link rel="stylesheet" href="iptv.css">
+</head>
+<body>
+
+<!--
+  Trang IPTV chạy NGAY TRONG APP (file:///android_asset), không phải trang web
+  ngoài. Nhờ vậy nó dùng lại được nguyên bộ khung của màn hình xe: thanh điều
+  khiển, nút vô lăng, toàn màn hình, bong bóng tốc độ, mục "đang phát" của
+  Android Auto — y hệt YouTube hay VTVgo, không phải viết lại gì.
+
+  Danh sách kênh KHÔNG do trang này tải: phía Java tải và phân tích file M3U
+  rồi gọi window.__cntIptvSet(...). Xem core/iptv/M3u.java để biết vì sao.
+-->
+
+<!--
+  MOT KHUNG boc het: video, dong bao, lop chon kenh.
+
+  Toan man hinh xin cho KHUNG NAY, khong xin cho <video> va cung khong xin cho
+  ca trang - xem ghi chu "TOAN MAN HINH" trong iptv.js.
+-->
+<div id="khung">
+
+<video id="v" playsinline webkit-playsinline></video>
+
+<!-- Dòng báo: đang tải, lỗi luồng, chưa có danh sách kênh... -->
+<div id="bao" class="an"></div>
+
+<!-- Lớp chọn kênh. Bấm nút "kênh" trên thanh điều khiển là bung lớp này. -->
+<div id="luoi" class="an">
+  <div id="dau">
+    <div id="tieu">Kênh</div>
+    <!-- O loc KHONG phai o nhap that: xem ghi chu "BAN PHIM" trong iptv.js -->
+    <div id="tim" class="rong">Lọc theo tên kênh</div>
+    <div id="dong" class="nut">Đóng</div>
+  </div>
+  <div id="nhom"></div>
+  <div id="o"></div>
+  <div id="phim" class="an"></div>
+</div>
+
+</div><!-- #khung -->
+
+<!--
+  hls.min.js: thu vien cong khai, de nguyen trong assets.
+
+  Con phan LOGIC cua trang (chon kenh, phat, ban phim loc) KHONG nam o day: no
+  la res/raw/iptv_page.js, do may chu giao rieng cho tung may qua ScriptVault va
+  duoc app tiem vao - giong het cach YouTube/TikTok/VTVgo lam. Ban dong goi chi
+  con mot cai vo rong, xem md/app/cap-nhat-script.md.
+-->
+<script src="hls.min.js"></script>
+</body>
+</html>

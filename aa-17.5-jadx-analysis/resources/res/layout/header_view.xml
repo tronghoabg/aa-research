@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:layout_gravity="center_vertical"
+        android:id="@+id/primary_header_action"
+        android:layout_width="@dimen/template_edge_column_width"
+        android:layout_height="@dimen/template_edge_column_width"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        layout="@layout/header_action_view"/>
+    <TextView
+        android:textAppearance="@style/TextAppearance.Template.Body3"
+        android:ellipsize="end"
+        android:gravity="start|center_vertical"
+        android:layout_gravity="center"
+        android:id="@+id/header_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:textAlignment="textStart"
+        android:paddingStart="@dimen/template_width_keyline_0"
+        android:paddingEnd="@dimen/template_width_keyline_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/secondary_header_actions"
+        app:layout_constraintStart_toEndOf="@+id/primary_header_action"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/secondary_header_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</android.support.constraint.ConstraintLayout>

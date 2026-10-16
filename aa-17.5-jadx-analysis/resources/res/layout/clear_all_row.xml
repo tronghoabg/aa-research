@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/gearhead_notification_center_left_margin"
+    android:layout_marginTop="@dimen/gearhead_baseline_grid_1x">
+    <FrameLayout
+        android:id="@+id/clear_all"
+        android:paddingLeft="@dimen/gearhead_baseline_grid_2x"
+        android:paddingTop="@dimen/gearhead_baseline_grid_1x"
+        android:paddingRight="@dimen/gearhead_baseline_grid_2x"
+        android:paddingBottom="@dimen/gearhead_baseline_grid_1x"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

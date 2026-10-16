@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:top="@dimen/boardwalk_in_line_text_icon_top_padding">
+        <vector
+            android:height="@dimen/boardwalk_in_line_text_icon_size"
+            android:width="@dimen/boardwalk_in_line_text_icon_size"
+            android:viewportWidth="24"
+            android:viewportHeight="24">
+            <path
+                android:fillColor="@android:color/white"
+                android:pathData="M8,19V5L19,12ZM10,12ZM10,15.35 L15.25,12 10,8.65Z"
+                android:fillAlpha="@dimen/boardwalk_opacity2"/>
+        </vector>
+    </item>
+</layer-list>

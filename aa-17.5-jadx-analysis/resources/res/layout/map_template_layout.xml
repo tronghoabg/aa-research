@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/Theme.Template.Card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/content_container"
+        layout="@layout/card_container"/>
+    <include
+        android:id="@+id/action_strip"
+        layout="@layout/action_strip_view_floating"/>
+</android.support.constraint.ConstraintLayout>

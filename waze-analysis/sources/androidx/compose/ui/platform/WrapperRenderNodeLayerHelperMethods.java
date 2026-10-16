@@ -1,0 +1,21 @@
+package androidx.compose.ui.platform;
+
+import android.view.ViewParent;
+
+/* compiled from: WazeSource */
+/* loaded from: classes.dex */
+public final class WrapperRenderNodeLayerHelperMethods {
+    public static final int $stable = 0;
+    public static final WrapperRenderNodeLayerHelperMethods INSTANCE = new WrapperRenderNodeLayerHelperMethods();
+
+    private WrapperRenderNodeLayerHelperMethods() {
+    }
+
+    public final void onDescendantInvalidated(AndroidComposeView androidComposeView) {
+        ViewParent parent = androidComposeView.getParent();
+        if (parent != null) {
+            AndroidComposeView androidComposeView2 = androidComposeView;
+            parent.onDescendantInvalidated(androidComposeView2, androidComposeView2);
+        }
+    }
+}

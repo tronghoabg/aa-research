@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/gearhead_sdk_grey_300"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/exit_button"
+        android:background="@drawable/gearhead_sdk_header_button_background"
+        android:focusable="false"
+        android:layout_width="@dimen/gearhead_sdk_drawer_header_menu_button_size"
+        android:layout_height="@dimen/gearhead_sdk_drawer_header_height"
+        android:src="0x7f080505"
+        android:scaleType="center"/>
+    <TextView
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:id="@+id/search_term"
+        android:focusable="false"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/gearhead_sdk_drawer_header_height"
+        android:singleLine="true"
+        android:layout_marginStart="@dimen/gearhead_sdk_drawer_header_height"
+        style="@style/GearheadSdkBody2"/>
+    <com.google.android.apps.auto.sdk.ui.PagedListView
+        android:id="@+id/list_view"
+        android:clipChildren="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/demand_search_suggestion_margin_top"
+        app:listMaxWidth="0dp"
+        app:rightGutterEnabled="true"/>
+</FrameLayout>

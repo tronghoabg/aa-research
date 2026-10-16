@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/drag_handle"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_material_drag_handle"
+        android:tint="?android:attr/textColorPrimary"/>
+    <include
+        android:layout_gravity="start|center_vertical"
+        android:id="@+id/app_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:layout_marginStart="@dimen/launcher_app_settings_row_icon_start_padding"
+        layout="@layout/launcher_settings_app_icon"/>
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="?android:attr/textColorPrimary"
+        android:ellipsize="end"
+        android:layout_gravity="start|center_vertical"
+        android:id="@+id/app_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:singleLine="false"
+        android:layout_weight="1"
+        android:textAlignment="viewStart"
+        android:layout_marginStart="@dimen/launcher_app_settings_row_spacing"/>
+</merge>

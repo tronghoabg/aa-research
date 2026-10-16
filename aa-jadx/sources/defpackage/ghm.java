@@ -1,0 +1,8 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes2.dex */
+public final class ghm extends defpackage.ghn {
+    public ghm(java.lang.String str) {
+        super(str);
+    }
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.gridlayout.widget.GridLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/alpha_jump_keyboard_grid_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/fixed_keyboard_margin_bottom_deprecated"
+    android:layout_marginStart="@dimen/fixed_keyboard_margin_start_deprecated"
+    android:layout_marginEnd="@dimen/fixed_keyboard_margin_end_deprecated"
+    app:columnCount="@integer/fixed_keyboard_column_count"
+    app:useDefaultMargins="false">
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+    <Button style="@style/AlphaJumpFixedKeyboardKeyDeprecated"/>
+</androidx.gridlayout.widget.GridLayout>

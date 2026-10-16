@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="dashboard_media_include_font_padding">false</bool>
+</resources>

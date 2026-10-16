@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:visibility="invisible"
+    android:layout_width="0dp"
+    android:layout_height="@dimen/launcher_app_settings_icon_container_diameter"
+    android:layout_weight="1"
+    android:contentDescription="@null">
+    <ImageView
+        android:id="@+id/icon"
+        android:background="@drawable/launcher_app_settings_icon_outline"
+        android:padding="@dimen/launcher_app_settings_padding_for_outline"
+        android:layout_width="@dimen/launcher_app_settings_icon_diameter"
+        android:layout_height="@dimen/launcher_app_settings_icon_diameter"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/badge_background"
+        android:layout_width="@dimen/launcher_app_settings_badge_background_diameter"
+        android:layout_height="@dimen/launcher_app_settings_badge_background_diameter"
+        android:layout_marginLeft="@dimen/launcher_app_settings_badge_background_margin"
+        android:layout_marginTop="@dimen/launcher_app_settings_badge_background_margin"
+        android:contentDescription="@null"
+        app:layout_constraintLeft_toLeftOf="@+id/icon"
+        app:layout_constraintTop_toTopOf="@+id/icon"/>
+    <ImageView
+        android:id="@+id/badge"
+        android:layout_width="@dimen/launcher_app_settings_badge_diameter"
+        android:layout_height="@dimen/launcher_app_settings_badge_diameter"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="@+id/badge_background"
+        app:layout_constraintLeft_toLeftOf="@+id/badge_background"
+        app:layout_constraintRight_toRightOf="@+id/badge_background"
+        app:layout_constraintTop_toTopOf="@+id/badge_background"/>
+    <TextView
+        android:id="@+id/label"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@null"
+        android:alpha="0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon"/>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,52 @@
+package defpackage;
+
+/* JADX INFO: loaded from: D:\AA\aa-apk-unpacked\classes.dex */
+public final class def {
+    public static final defpackage.dej a = new defpackage.dej("ContentDescription", true, new defpackage.abw(20));
+    public static final defpackage.dej b = new defpackage.dej("StateDescription", (byte[]) null);
+    public static final defpackage.dej c = new defpackage.dej("ProgressBarRangeInfo", (byte[]) null);
+    public static final defpackage.dej d = new defpackage.dej("PaneTitle", true, new defpackage.dee(12));
+    public static final defpackage.dej e = new defpackage.dej("SelectableGroup", (byte[]) null);
+    public static final defpackage.dej f = new defpackage.dej("CollectionInfo", (byte[]) null);
+    public static final defpackage.dej g = new defpackage.dej("CollectionItemInfo", (byte[]) null);
+    public static final defpackage.dej h = new defpackage.dej("Heading", (byte[]) null);
+    public static final defpackage.dej i = new defpackage.dej("TextEntryKey", (byte[]) null);
+    public static final defpackage.dej j = new defpackage.dej("Disabled", (byte[]) null);
+    public static final defpackage.dej k = new defpackage.dej("LiveRegion", (byte[]) null);
+    public static final defpackage.dej l = new defpackage.dej("Focused", (byte[]) null);
+    public static final defpackage.dej m = new defpackage.dej("IsContainer", (byte[]) null);
+    public static final defpackage.dej n = new defpackage.dej("IsTraversalGroup");
+    public static final defpackage.dej o = new defpackage.dej("IsSensitiveData");
+    public static final defpackage.dej p = new defpackage.dej("InvisibleToUser", new defpackage.dee(13));
+    public static final defpackage.dej q = new defpackage.dej("HideFromAccessibility", new defpackage.dee(14));
+    public static final defpackage.dej r = new defpackage.dej("ContentType", new defpackage.dee(1));
+    public static final defpackage.dej s = new defpackage.dej("ContentDataType", new defpackage.dee(0));
+    public static final defpackage.dej t = new defpackage.dej("FillableData", new defpackage.dee(2));
+    public static final defpackage.dej u = new defpackage.dej("TraversalIndex", new defpackage.dee(3));
+    public static final defpackage.dej v = new defpackage.dej("HintText", (byte[]) null);
+    public static final defpackage.dej w = new defpackage.dej("HorizontalScrollAxisRange", (byte[]) null);
+    public static final defpackage.dej x = new defpackage.dej("VerticalScrollAxisRange", (byte[]) null);
+    public static final defpackage.dej y = new defpackage.dej("IsPopup", true, new defpackage.dee(4));
+    public static final defpackage.dej z = new defpackage.dej("IsDialog", true, new defpackage.dee(5));
+    public static final defpackage.dej A = new defpackage.dej("Role", true, new defpackage.dee(6));
+    public static final defpackage.dej B = new defpackage.dej("TestTag", false, new defpackage.dee(7));
+    public static final defpackage.dej C = new defpackage.dej("LinkTestMarker", false, new defpackage.dee(8));
+    public static final defpackage.dej D = new defpackage.dej("Text", true, new defpackage.dee(9));
+    public static final defpackage.dej E = new defpackage.dej("TextSubstitution");
+    public static final defpackage.dej F = new defpackage.dej("IsShowingTextSubstitution");
+    public static final defpackage.dej G = new defpackage.dej("InputText", (byte[]) null);
+    public static final defpackage.dej H = new defpackage.dej("EditableText", (byte[]) null);
+    public static final defpackage.dej I = new defpackage.dej("TextSelectionRange", (byte[]) null);
+    public static final defpackage.dej J = new defpackage.dej("TextCompositionRange", (byte[]) null);
+    public static final defpackage.dej K = new defpackage.dej("ImeAction", (byte[]) null);
+    public static final defpackage.dej L = new defpackage.dej("Selected", (byte[]) null);
+    public static final defpackage.dej M = new defpackage.dej("ToggleableState", (byte[]) null);
+    public static final defpackage.dej N = new defpackage.dej("InputTextSuggestionState", (byte[]) null);
+    public static final defpackage.dej O = new defpackage.dej("Password", (byte[]) null);
+    public static final defpackage.dej P = new defpackage.dej("Error", (byte[]) null);
+    public static final defpackage.dej Q = new defpackage.dej("IndexForKey");
+    public static final defpackage.dej R = new defpackage.dej("IsEditable");
+    public static final defpackage.dej S = new defpackage.dej("MaxTextLength");
+    public static final defpackage.dej T = new defpackage.dej("BackgroundColor", new defpackage.dee(10));
+    public static final defpackage.dej U = new defpackage.dej("Shape", false, new defpackage.dee(11));
+}

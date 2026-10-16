@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <level-list>
+            <item
+                android:drawable="@drawable/gs_signal_cellular_0_bar_vd_theme_24"
+                android:maxLevel="0"/>
+            <item
+                android:drawable="@drawable/gs_signal_cellular_1_bar_vd_theme_24"
+                android:maxLevel="1"/>
+            <item
+                android:drawable="@drawable/gs_signal_cellular_2_bar_vd_theme_24"
+                android:maxLevel="2"/>
+            <item
+                android:drawable="@drawable/gs_signal_cellular_3_bar_vd_theme_24"
+                android:maxLevel="3"/>
+            <item
+                android:drawable="@drawable/gs_signal_cellular_4_bar_vd_theme_24"
+                android:maxLevel="4"/>
+        </level-list>
+    </item>
+</layer-list>

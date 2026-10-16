@@ -1,0 +1,60 @@
+package androidx.camera.video;
+
+import androidx.camera.core.SurfaceRequest;
+import androidx.camera.video.StreamInfo;
+
+/* compiled from: WazeSource */
+/* loaded from: classes2.dex */
+final class AutoValue_StreamInfo extends StreamInfo {
+    private final int id;
+    private final SurfaceRequest.TransformationInfo inProgressTransformationInfo;
+    private final StreamInfo.StreamState streamState;
+
+    AutoValue_StreamInfo(int i2, StreamInfo.StreamState streamState, SurfaceRequest.TransformationInfo transformationInfo) {
+        this.id = i2;
+        if (streamState == null) {
+            throw new NullPointerException("Null streamState");
+        }
+        this.streamState = streamState;
+        this.inProgressTransformationInfo = transformationInfo;
+    }
+
+    public boolean equals(Object obj) {
+        SurfaceRequest.TransformationInfo transformationInfo;
+        if (obj == this) {
+            return true;
+        }
+        if (obj instanceof StreamInfo) {
+            StreamInfo streamInfo = (StreamInfo) obj;
+            if (this.id == streamInfo.getId() && this.streamState.equals(streamInfo.getStreamState()) && ((transformationInfo = this.inProgressTransformationInfo) != null ? transformationInfo.equals(streamInfo.getInProgressTransformationInfo()) : streamInfo.getInProgressTransformationInfo() == null)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override // androidx.camera.video.StreamInfo
+    public int getId() {
+        return this.id;
+    }
+
+    @Override // androidx.camera.video.StreamInfo
+    public SurfaceRequest.TransformationInfo getInProgressTransformationInfo() {
+        return this.inProgressTransformationInfo;
+    }
+
+    @Override // androidx.camera.video.StreamInfo
+    public StreamInfo.StreamState getStreamState() {
+        return this.streamState;
+    }
+
+    public int hashCode() {
+        int iHashCode = ((this.id ^ 1000003) * 1000003) ^ this.streamState.hashCode();
+        SurfaceRequest.TransformationInfo transformationInfo = this.inProgressTransformationInfo;
+        return (transformationInfo == null ? 0 : transformationInfo.hashCode()) ^ (iHashCode * 1000003);
+    }
+
+    public String toString() {
+        return "StreamInfo{id=" + this.id + ", streamState=" + this.streamState + ", inProgressTransformationInfo=" + this.inProgressTransformationInfo + "}";
+    }
+}

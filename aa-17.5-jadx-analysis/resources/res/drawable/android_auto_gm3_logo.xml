@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:tint="?attr/colorOnSurface"
+        android:height="@dimen/android_logo_gm3_size"
+        android:width="@dimen/android_logo_gm3_size"
+        android:drawable="@drawable/gs_android_auto_vd_theme_24"/>
+</layer-list>

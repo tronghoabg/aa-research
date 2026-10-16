@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="@dimen/gearhead_tutorial_button_lr_inset"
+    android:insetRight="@dimen/gearhead_tutorial_button_lr_inset"
+    android:insetTop="@dimen/gearhead_tutorial_button_tb_inset"
+    android:insetBottom="@dimen/gearhead_tutorial_button_tb_inset">
+    <ripple android:color="@color/gearhead_sdk_controller_ripple">
+        <item android:id="@android:id/mask">
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/gearhead_common_stream_focus_ring_corner_radius"/>
+                <solid android:color="@color/gearhead_controller_ripple_color_selector"/>
+            </shape>
+        </item>
+        <item>
+            <selector>
+                <item
+                    android:state_window_focused="true"
+                    android:state_hovered="true">
+                    <shape android:shape="rectangle">
+                        <corners android:radius="@dimen/gearhead_common_stream_focus_ring_corner_radius"/>
+                        <stroke
+                            android:width="@dimen/gearhead_focus_ring_stroke_width_hovered"
+                            android:color="@color/gearhead_focus_light_blue"/>
+                    </shape>
+                </item>
+                <item
+                    android:state_focused="true"
+                    android:state_window_focused="true">
+                    <shape android:shape="rectangle">
+                        <corners android:radius="@dimen/gearhead_common_stream_focus_ring_corner_radius"/>
+                        <stroke
+                            android:width="@dimen/gearhead_focus_ring_stroke_width_focused"
+                            android:color="@color/gearhead_focus_light_blue"/>
+                    </shape>
+                </item>
+            </selector>
+        </item>
+    </ripple>
+</inset>

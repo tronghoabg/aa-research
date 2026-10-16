@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android">
+    <targets>
+        <target android:excludeId="@+id/dashboard_top_second"/>
+        <target android:excludeId="@+id/dashboard_top"/>
+    </targets>
+    <fade
+        android:duration="@android:integer/config_mediumAnimTime"
+        android:fadingMode="fade_in_out">
+        <targets>
+            <target android:targetId="@+id/source_badge"/>
+        </targets>
+    </fade>
+    <changeBounds>
+        <targets>
+            <target android:excludeId="@+id/top_card_container"/>
+            <target android:excludeId="@+id/source_badge"/>
+        </targets>
+    </changeBounds>
+    <slide android:slideEdge="top">
+        <targets>
+            <target android:targetId="@+id/top_card_container"/>
+        </targets>
+    </slide>
+</transitionSet>

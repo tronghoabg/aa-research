@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="common_column_grid_card_span_cols">10</integer>
+</resources>

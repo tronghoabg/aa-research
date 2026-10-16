@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:ordering="together">
+    <objectAnimator
+        android:interpolator="@interpolator/playpausestop_interpolator_2"
+        android:duration="433"
+        android:startOffset="0"
+        android:valueFrom="-90"
+        android:valueTo="0"
+        android:valueType="floatType"
+        android:propertyName="rotation"/>
+</set>

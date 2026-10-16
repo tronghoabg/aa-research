@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:focusable="false"
+    android:clickable="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="@dimen/padding_p1"
+    android:paddingEnd="@dimen/padding_p1"
+    android:stateListAnimator="@animator/tab_animator">
+    <FrameLayout
+        android:gravity="center"
+        android:background="@drawable/tab_indicator_background"
+        android:layout_width="?attr/templateTabIndicatorWidth"
+        android:layout_height="?attr/templateTabIndicatorHeight"
+        android:layout_marginBottom="@dimen/padding_p0">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/tab_icon"
+            android:layout_width="?attr/templateTabIconSize"
+            android:layout_height="?attr/templateTabIconSize"
+            android:tint="@color/tab_icon_tint"
+            android:tintMode="src_in"/>
+    </FrameLayout>
+    <TextView
+        android:ellipsize="end"
+        android:id="@+id/tab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:includeFontPadding="false"
+        style="?attr/textAppearanceBodySmall"/>
+</LinearLayout>

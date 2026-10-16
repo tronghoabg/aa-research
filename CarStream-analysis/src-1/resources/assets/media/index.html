@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- Nói với WebView là trang tự lo màu; xem ghi chú color-scheme trong media.css. -->
+<meta name="color-scheme" content="light dark">
+<title>Từ điện thoại</title>
+<link rel="stylesheet" href="media.css">
+</head>
+<body>
+
+<!--
+  Trang "Từ điện thoại" chạy NGAY TRONG APP (file:///android_asset), không phải trang
+  web ngoài. Nhờ vậy nó dùng lại được nguyên bộ khung của màn hình xe: thanh điều
+  khiển, nút vô lăng, toàn màn hình, mục "đang phát" của Android Auto.
+
+  Danh sách KHÔNG do trang này tự đọc: phía Java đọc qua MediaStore rồi gọi
+  window.__cntMediaSet(...). Xem core/media/LocalMedia.java để biết vì sao.
+-->
+
+<!--
+  MỘT KHUNG bọc hết: video, ảnh, lớp chọn tệp, dòng báo.
+
+  Toàn màn hình xin cho KHUNG NÀY, không xin cho <video> và cũng không xin cho cả
+  trang. Đã trả giá ở IPTV: xin cho documentElement thì app ẩn cột nội dung đi, mà
+  đó chính là chỗ trang đang vẽ — luồng chết ngay.
+-->
+<div id="khung">
+
+  <video id="v" playsinline webkit-playsinline></video>
+
+  <!--
+    Ảnh phải có thẻ RIÊNG. Thẻ <video> không hiển thị được ảnh: đưa file .jpg vào
+    src của nó thì chỉ ra một ô đen câm, không báo lỗi gì.
+  -->
+  <img id="anh" alt="">
+
+  <div id="lop">
+    <div class="wrap">
+
+      <div class="head">
+        <div class="head-icon" id="icon-lon"></div>
+        <div class="head-chu">
+          <h1>Tệp trong điện thoại</h1>
+          <div class="duong" id="duong"></div>
+        </div>
+        <!--
+          Ô tìm KHÔNG phải ô nhập thật — giống hệt ô lọc của IPTV.
+
+          Màn hình chiếu của Android Auto không bật được bàn phím hệ thống cho thẻ
+          <input> nằm trong trang. Để là <input> thì trên xe gõ không được, còn khi
+          chạy chế độ Box ngay trên điện thoại thì máy lại bung bàn phím hệ thống
+          đè lên bàn phím tự vẽ. Nên đây là một cái nút: chạm vào thì bung khay
+          phím, chữ do khay phím điền, và con trỏ nháy do trang tự vẽ.
+        -->
+        <div class="tim" id="tim-o">
+          <span class="tim-icon" id="icon-tim"></span>
+          <span id="q" class="rong">Tìm theo tên…</span>
+          <span class="nhay" id="nhay"></span>
+        </div>
+      </div>
+
+      <div class="thanh">
+        <div class="nhom" id="nhom-loc"></div>
+        <div class="dan"></div>
+        <div class="kieu" id="nhom-kieu"></div>
+      </div>
+
+      <div class="muc" id="muc-thumuc">
+        <span class="nhan">Thư mục</span>
+        <div class="thumuc" id="ds-thumuc"></div>
+      </div>
+
+      <div class="muc">
+        <div class="muc-dau">
+          <span class="nhan" id="tieu-tep">Tệp</span>
+          <span class="muc-phu" id="tieu-phu"></span>
+        </div>
+        <div id="ds-tep"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--
+    Bàn phím ảo của CHÍNH TRANG.
+
+    Trên màn hình xe KHÔNG có bàn phím hệ thống cho ô nhập của WebView — chạm vào
+    ô tìm thì không có gì hiện ra. Trang IPTV đã giải bằng cách tự vẽ bàn phím
+    trong trang; ở đây làm y vậy.
+
+    Ô tìm để readonly để máy khỏi cố gọi bàn phím hệ thống (khi chạy chế độ Box
+    trên chính điện thoại thì nó có gọi), còn chữ thì bàn phím này tự điền.
+
+    Các hàng phím do media.js dựng — cùng cách xếp và cùng tên lớp với bàn phím
+    của IPTV để hai chỗ trong app gõ giống hệt nhau.
+  -->
+  <div id="banphim"></div>
+
+  <!-- Dòng báo: chưa cấp quyền / đang đọc / không có gì. -->
+  <div id="bao">Đang đọc danh sách…</div>
+
+</div><!-- #khung -->
+
+<!--
+  KHÔNG có <script src> ở đây: logic của trang nằm ở res/raw/media_page.js và đi
+  qua ScriptVault như mọi script khác — bản đóng gói chỉ có vỏ rỗng, nội dung thật
+  do máy chủ giao riêng từng máy. App tự tiêm khi mở trang (xem Media.SITE).
+-->
+</body>
+</html>

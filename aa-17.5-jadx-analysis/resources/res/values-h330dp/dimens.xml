@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dashboard_card_badge_size">@dimen/gearhead_baseline_grid_3x</dimen>
+    <dimen name="dashboard_card_icon_size">@dimen/gearhead_baseline_grid_8x</dimen>
+</resources>

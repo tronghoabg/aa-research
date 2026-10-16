@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gearhead_car_ongoing_maps">@color/gearhead_car_ongoing_maps_day</color>
+    <color name="gearhead_focus_blue">@color/gearhead_focus_blue_day</color>
+    <color name="gearhead_focus_card_fill">@color/gearhead_focus_card_fill_day</color>
+    <color name="gearhead_focus_green">@color/gearhead_focus_green_day</color>
+    <color name="gearhead_sdk_card_ripple_background">@color/gearhead_sdk_controller_ripple_dark</color>
+    <color name="gearhead_sdk_controller_ripple">@color/gearhead_sdk_controller_ripple_day</color>
+    <color name="gearhead_sdk_ripple">@color/gearhead_sdk_controller_ripple</color>
+    <color name="gearhead_sdk_touch_ripple">@color/gearhead_sdk_touch_ripple_day</color>
+    <color name="rail_ripple">@color/gearhead_sdk_controller_ripple_light</color>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/transparent_black"/>
+            <stroke
+                android:width="2dp"
+                android:color="@color/black"/>
+        </shape>
+    </item>
+    <item android:left="@dimen/metadata_new_icon_tri_state_size_divided_by_2">
+        <shape android:shape="rectangle">
+            <size
+                android:height="@dimen/metadata_new_icon_tri_state_size"
+                android:width="@dimen/metadata_new_icon_tri_state_size_divided_by_2"/>
+            <solid android:color="@color/black"/>
+            <corners
+                android:topRightRadius="@dimen/metadata_new_icon_tri_state_size"
+                android:bottomRightRadius="@dimen/metadata_new_icon_tri_state_size"/>
+        </shape>
+    </item>
+</layer-list>

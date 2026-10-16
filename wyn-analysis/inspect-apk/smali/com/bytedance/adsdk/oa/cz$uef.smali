@@ -1,0 +1,19 @@
+.class interface abstract Lcom/bytedance/adsdk/oa/cz$uef;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Lcom/bytedance/adsdk/oa/cz;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x609
+    name = "uef"
+.end annotation
+
+
+# virtual methods
+.method public abstract uef(Lcom/bytedance/adsdk/oa/xs;)V
+.end method

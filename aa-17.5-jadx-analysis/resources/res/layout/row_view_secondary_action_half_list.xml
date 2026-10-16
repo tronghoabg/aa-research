@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="top"
+    android:id="@+id/row_action_container"
+    android:visibility="gone"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_gravity="top"
+        android:id="@+id/row_action_button"
+        android:background="@drawable/row_action_background_for_half_lists"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:foreground="@drawable/row_action_focus_ring">
+        <ImageView
+            android:layout_gravity="center"
+            android:id="@+id/row_action_button_icon"
+            android:layout_width="?attr/templateRowActionIconSize"
+            android:layout_height="?attr/templateRowActionIconSize"
+            android:layout_margin="@dimen/template_padding_3"
+            android:layout_weight="1"/>
+        <TextView
+            android:textSize="24sp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/row_action_button_text"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/template_padding_2"
+            style="?attr/templateRowSecondaryActionTextStyle"/>
+    </LinearLayout>
+</LinearLayout>

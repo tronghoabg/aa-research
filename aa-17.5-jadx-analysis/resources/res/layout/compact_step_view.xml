@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.navigation.CompactStepView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="start"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="@dimen/template_padding_3"
+    android:paddingVertical="@dimen/template_padding_2">
+    <ImageView
+        android:id="@+id/compact_turn_symbol"
+        android:layout_width="?attr/templateRoutingCompactTurnIconSize"
+        android:layout_height="?attr/templateRoutingCompactTurnIconSize"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:layout_marginEnd="@dimen/template_padding_3"/>
+    <com.google.android.apps.auto.components.apphost.view.widgets.common.CarTextView
+        android:id="@+id/compact_description_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Template.Text.Body3"/>
+</com.google.android.apps.auto.components.apphost.view.widgets.navigation.CompactStepView>

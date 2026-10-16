@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android" android:transitionOrdering="together">
+    <changeBounds
+        android:interpolator="@android:interpolator/fast_out_slow_in"
+        android:duration="250">
+        <targets>
+            <target android:excludeId="@+id/large_icon"/>
+            <target android:excludeId="@+id/badge"/>
+            <target android:excludeId="@+id/icon_ripple_container"/>
+        </targets>
+    </changeBounds>
+    <fade
+        android:interpolator="@android:interpolator/accelerate_quad"
+        android:duration="67"
+        android:fadingMode="fade_out"/>
+    <fade
+        android:interpolator="@android:interpolator/decelerate_quad"
+        android:duration="83"
+        android:fadingMode="fade_in"
+        android:startDelay="100"/>
+</transitionSet>

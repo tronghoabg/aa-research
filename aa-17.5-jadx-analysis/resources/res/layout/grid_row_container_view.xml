@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.common.GridRowContainerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="?attr/templateGridRowHorizontalPadding"
+    android:paddingRight="?attr/templateGridRowHorizontalPadding"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:layout_gravity="top"
+        android:orientation="horizontal"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</com.google.android.apps.auto.components.apphost.view.widgets.common.GridRowContainerView>

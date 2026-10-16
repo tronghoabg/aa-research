@@ -1,0 +1,21 @@
+package androidx.camera.video.internal.compat.quirk;
+
+import android.os.Build;
+import androidx.camera.core.internal.compat.quirk.SurfaceProcessingQuirk;
+
+/* compiled from: WazeSource */
+/* loaded from: classes2.dex */
+public class ExtraSupportedResolutionQuirk implements SurfaceProcessingQuirk {
+    private static boolean isMotoE5Play() {
+        return "motorola".equalsIgnoreCase(Build.BRAND) && "moto e5 play".equalsIgnoreCase(Build.MODEL);
+    }
+
+    static boolean load() {
+        return isMotoE5Play();
+    }
+
+    @Override // androidx.camera.core.internal.compat.quirk.SurfaceProcessingQuirk
+    public /* synthetic */ boolean workaroundBySurfaceProcessing() {
+        return true;
+    }
+}

@@ -1,0 +1,43 @@
+AMD RS880 (DRM 2.50.0 / 4.19.80-android-x86-g914c6a3, LLVM 9.0.0)
+AMD STONEY (DRM 3.27.0, 4.14.221-37010-g61523ee5d009, LLVM 9.0.0)
+Adreno (TM) 220
+Adreno (TM) 305
+Adreno (TM) 320
+Intel(R) HD Graphics for Atom(TM) x5/x7
+Intel(R) HD Graphics for BayTrail
+Mali-400 MP
+Mali-400 MP2
+Mali-450 MP
+Mali-450 MP4
+Mali-T604
+Mali-T628
+Mali-T830
+Mesa DRI Intel(R) 945G 
+Mesa DRI Intel(R) Bay Trail 
+Mesa DRI Intel(R) Broadwell GT1 
+Mesa DRI Intel(R) HD Graphics (Cherrytrail) 
+Mesa DRI Intel(R) HD Graphics 400 (Braswell) 
+Mesa DRI Intel(R) HD Graphics 500 (Broxton 2x6) 
+Mesa DRI Intel(R) HD Graphics 505 (Broxton) 
+Mesa DRI Intel(R) HD Graphics 510 (Skylake GT1) 
+Mesa DRI Intel(R) HD Graphics 515 (Skylake GT2) 
+Mesa DRI Intel(R) HD Graphics 520 (Skylake GT2) 
+Mesa DRI Intel(R) HD Graphics 5500 (Broadwell GT2) 
+Mesa DRI Intel(R) HD Graphics 615 (Kaby Lake GT2) 
+Mesa DRI Intel(R) HD Graphics 620 (Kaby Lake GT2) 
+Mesa DRI Intel(R) Haswell Mobile 
+Mesa DRI Intel(R) UHD Graphics (EHL)
+Mesa DRI Intel(R) UHD Graphics 600 (Geminilake 2x6) 
+Mesa DRI Intel(R) UHD Graphics 610 (CML GT1)
+Mesa DRI Intel(R) UHD Graphics 630 (CML GT2)
+Mesa Intel(R) UHD Graphics (JSL)
+NVIDIA Tegra
+NVIDIA Tegra 3
+PowerVR Rogue G6430
+PowerVR Rogue GX6250
+PowerVR SGX 540
+PowerVR SGX 544
+PowerVR SGX 544MP
+PowerVR SGX 544MP2
+UNKNOWN
+Vivante GC7000NanoUltra

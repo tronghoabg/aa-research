@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/engineer_settings_ui"
+        android:key="ui_settings">
+        <CheckBoxPreference
+            android:title="@string/engineer_force_verbose_logging_title"
+            android:key="vn_force_verbose_logging"
+            android:defaultValue="@bool/engineer_force_verbose_logging_default"/>
+        <EditTextPreference
+            android:title="@string/engineer_log_buffer_size_title"
+            android:key="vn_log_buffer_size"
+            android:defaultValue="@integer/engineer_log_buffer_size_default"
+            android:inputType="number"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/engineer_settings_education"
+        android:key="education_settings">
+        <Preference
+            android:title="@string/engineer_reset_education"
+            android:key="vn_reset_education_history"/>
+    </PreferenceCategory>
+</PreferenceScreen>

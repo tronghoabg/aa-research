@@ -1,0 +1,114 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class qvv extends defpackage.ijv implements defpackage.qvx {
+    public qvv(android.os.IBinder iBinder) {
+        super(iBinder, "com.google.android.gms.car.ICarAudio");
+    }
+
+    @Override // defpackage.qvx
+    public final int b(int i, int i2) throws android.os.RemoteException {
+        throw null;
+    }
+
+    @Override // defpackage.qvx
+    public final int c(int i, int i2) throws android.os.RemoteException {
+        throw null;
+    }
+
+    @Override // defpackage.qvx
+    public final com.google.android.gms.car.CarAudioConfiguration d(int i, int i2) throws android.os.RemoteException {
+        throw null;
+    }
+
+    @Override // defpackage.qvx
+    public final com.google.android.gms.car.CarAudioConfiguration f(int i, int i2) throws android.os.RemoteException {
+        throw null;
+    }
+
+    @Override // defpackage.qvx
+    public final void g(defpackage.qwj qwjVar) throws android.os.RemoteException {
+        android.os.Parcel parcelFp = fp();
+        defpackage.ijx.i(parcelFp, qwjVar);
+        fr(13, parcelFp);
+    }
+
+    @Override // defpackage.qvx
+    public final void h(defpackage.qyc qycVar) throws android.os.RemoteException {
+        android.os.Parcel parcelFp = fp();
+        defpackage.ijx.i(parcelFp, qycVar);
+        fr(15, parcelFp);
+    }
+
+    @Override // defpackage.qvx
+    public final void k(defpackage.qwj qwjVar) throws android.os.RemoteException {
+        android.os.Parcel parcelFp = fp();
+        defpackage.ijx.i(parcelFp, qwjVar);
+        fr(14, parcelFp);
+    }
+
+    @Override // defpackage.qvx
+    public final void l(defpackage.qyc qycVar) throws android.os.RemoteException {
+        android.os.Parcel parcelFp = fp();
+        defpackage.ijx.i(parcelFp, qycVar);
+        fr(16, parcelFp);
+    }
+
+    @Override // defpackage.qvx
+    public final boolean m(long j) throws android.os.RemoteException {
+        throw null;
+    }
+
+    @Override // defpackage.qvx
+    public final boolean n(long j) throws android.os.RemoteException {
+        throw null;
+    }
+
+    @Override // defpackage.qvx
+    public final int[] o() throws android.os.RemoteException {
+        android.os.Parcel parcelFq = fq(2, fp());
+        int[] iArrCreateIntArray = parcelFq.createIntArray();
+        parcelFq.recycle();
+        return iArrCreateIntArray;
+    }
+
+    @Override // defpackage.qvx
+    public final int[] p() throws android.os.RemoteException {
+        throw null;
+    }
+
+    @Override // defpackage.qvx
+    public final com.google.android.gms.car.CarAudioConfiguration[] q(int i) throws android.os.RemoteException {
+        throw null;
+    }
+
+    @Override // defpackage.qvx
+    public final com.google.android.gms.car.CarAudioConfiguration[] r(int i) throws android.os.RemoteException {
+        throw null;
+    }
+
+    @Override // defpackage.qvx
+    public final defpackage.qwd s(defpackage.qwa qwaVar, int i) throws android.os.RemoteException {
+        defpackage.qwd qwbVar;
+        android.os.Parcel parcelFp = fp();
+        defpackage.ijx.i(parcelFp, qwaVar);
+        parcelFp.writeInt(0);
+        parcelFp.writeInt(0);
+        parcelFp.writeInt(defpackage.sp.AUDIO_CONTENT_BUFFER_SIZE);
+        android.os.Parcel parcelFq = fq(10, parcelFp);
+        android.os.IBinder strongBinder = parcelFq.readStrongBinder();
+        if (strongBinder == null) {
+            qwbVar = null;
+        } else {
+            android.os.IInterface iInterfaceQueryLocalInterface = strongBinder.queryLocalInterface("com.google.android.gms.car.ICarAudioRecord");
+            qwbVar = iInterfaceQueryLocalInterface instanceof defpackage.qwd ? (defpackage.qwd) iInterfaceQueryLocalInterface : new defpackage.qwb(strongBinder);
+        }
+        parcelFq.recycle();
+        return qwbVar;
+    }
+
+    @Override // defpackage.qvx
+    public final defpackage.qwk t() throws android.os.RemoteException {
+        throw null;
+    }
+}

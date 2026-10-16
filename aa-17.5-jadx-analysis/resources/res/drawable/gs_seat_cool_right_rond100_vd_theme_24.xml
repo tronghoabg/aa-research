@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tint="?attr/colorControlNormal"
+    android:height="24dp"
+    android:width="24dp"
+    android:viewportWidth="960"
+    android:viewportHeight="960">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M339,840q-25,0-42.5-17.5T279,780t17.5-42.5T339,720H564q21,0 40,8t36,19V703q0-70 18.5-137T706,436l20-42q11-25 7.5-51.5T711,296q-8-8-12-18t-4-21q0-23 17-40t40-17q20,0 36.5,10.5T814,239q13,25 19.5,52t6.5,55q0,16-2,31.5T831,408L735,781q-8,26-29,42.5T658,840H339Zm-0.5-248.5Q330,583 330,570V512l-48,48q-9,9-21,9t-21-9t-9-21t9-21l90-90V390H292l-90,90q-9,9-21,9t-21-9t-9-21t9-21l48-48H150q-13,0-21.5-8.5T120,360t8.5-21.5T150,330h58l-48-48q-9-9-9-21t9-21t21-9t21,9l90,90h38V292l-90-90q-9-9-9-21t9-21t21-9t21,9l48,48V150q0-13 8.5-21.5T360,120t21.5,8.5T390,150v58l48-48q9-9 21-9t21,9t9,21t-9,21l-90,90v38h38l90-90q9-9 21-9t21,9t9,21t-9,21l-48,48h58q13,0 21.5,8.5T600,360t-8.5,21.5T570,390H512l48,48q9,9 9,21t-9,21t-21,9t-21-9l-90-90H390v38l90,90q9,9 9,21t-9,21t-21,9t-21-9l-48-48v58q0,13-8.5,21.5T360,600t-21.5-8.5Z"/>
+</vector>

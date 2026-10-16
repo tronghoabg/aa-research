@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.navigation.MessageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/template_padding_2"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <ImageView
+        android:layout_gravity="start"
+        android:id="@+id/message_image"
+        android:visibility="gone"
+        android:layout_width="?attr/templateRoutingMessageImageSize"
+        android:layout_height="?attr/templateRoutingMessageImageSize"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"/>
+    <com.google.android.apps.auto.components.apphost.view.widgets.common.CarTextView
+        android:layout_gravity="start|center_vertical"
+        android:id="@+id/message_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/template_padding_1"
+        style="?attr/templateRoutingMessagePrimaryStyle"/>
+    <com.google.android.apps.auto.components.apphost.view.widgets.common.CarTextView
+        android:id="@+id/message_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/template_padding_1"
+        style="?attr/templateRoutingMessageSecondaryStyle"/>
+</com.google.android.apps.auto.components.apphost.view.widgets.navigation.MessageView>

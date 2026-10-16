@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:textAppearance="?attr/textAppearanceHeadlineLarge"
+        android:textColor="@color/material_dialpad_key_primary_text_color_selector"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/primary_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/material_dialpad_key_primary_text_height"
+        android:layout_marginTop="@dimen/material_dialpad_key_primary_text_top_margin"/>
+    <TextView
+        android:textSize="@dimen/material_dialpad_key_secondary_text_size"
+        android:textColor="@color/material_dialpad_key_secondary_text_color_selector"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/secondary_text_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/material_dialpad_key_secondary_element_height"
+        android:layout_marginTop="@dimen/material_dialpad_key_secondary_element_top_margin"
+        android:letterSpacing="@dimen/material_dialpad_key_secondary_text_line_spacing"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/secondary_image_view"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/material_dialpad_key_secondary_element_height"
+        android:layout_marginTop="@dimen/material_dialpad_key_secondary_element_top_margin"
+        android:tint="?android:attr/textColorSecondary"
+        android:foregroundGravity="center"/>
+</FrameLayout>

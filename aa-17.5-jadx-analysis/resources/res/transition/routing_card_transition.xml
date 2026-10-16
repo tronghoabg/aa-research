@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android" android:transitionOrdering="together">
+    <targets>
+        <target android:targetId="@+id/nav_card_container"/>
+        <target android:targetId="@+id/travel_estimate_card_container"/>
+        <target android:targetId="@+id/pan_overlay"/>
+    </targets>
+    <fade
+        android:duration="@integer/routing_card_animation_duration_millis"
+        android:fadingMode="fade_in_out">
+        <targets>
+            <target android:excludeId="@+id/detailed_step_view"/>
+            <target android:excludeId="@+id/travel_estimate_card_container"/>
+        </targets>
+    </fade>
+    <changeBounds
+        android:interpolator="@interpolator/fast_out_slow_in"
+        android:duration="@integer/routing_card_animation_duration_millis"/>
+</transitionSet>

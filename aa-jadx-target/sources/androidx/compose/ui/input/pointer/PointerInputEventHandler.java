@@ -1,0 +1,7 @@
+package androidx.compose.ui.input.pointer;
+
+/* JADX INFO: loaded from: D:\AA\aa-apk-unpacked\classes.dex */
+@kotlin.Metadata(d1 = {"\u0000\u0016\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\bæ\u0080\u0001\u0018\u00002\u00020\u0001ø\u0001\u0000\u0082\u0002\u0006\n\u0004\b!0\u0001¨\u0006\u0006À\u0006\u0001"}, d2 = {"Landroidx/compose/ui/input/pointer/PointerInputEventHandler;", "", "invoke", "", "Landroidx/compose/ui/input/pointer/PointerInputScope;", "(Landroidx/compose/ui/input/pointer/PointerInputScope;Lkotlin/coroutines/Continuation;)Ljava/lang/Object;", "ui"}, k = 1, mv = {defpackage.eie.FLOAT_FIELD_NUMBER, 1, defpackage.abnt.b}, xi = 48)
+public interface PointerInputEventHandler {
+    java.lang.Object invoke(defpackage.cri criVar, defpackage.afdk<? super defpackage.afbk> afdkVar);
+}

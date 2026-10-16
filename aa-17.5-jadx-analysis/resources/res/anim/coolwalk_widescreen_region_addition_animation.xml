@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:fillAfter="true">
+    <alpha
+        android:interpolator="@interpolator/coolwalk_accelerate_decelerate_interpolator"
+        android:duration="@integer/coolwalk_app_switch_duration"
+        android:zAdjustment="bottom"
+        android:fromAlpha="0"
+        android:toAlpha="1"/>
+    <translate
+        android:interpolator="@interpolator/coolwalk_accelerate_decelerate_interpolator"
+        android:duration="@integer/coolwalk_app_reveal_duration"
+        android:fromXDelta="-100%"
+        android:toXDelta="0"/>
+</set>

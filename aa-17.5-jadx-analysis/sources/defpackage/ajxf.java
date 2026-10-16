@@ -1,0 +1,6 @@
+package defpackage;
+
+/* loaded from: classes2.dex */
+public final class ajxf extends IllegalStateException {
+    private static final long serialVersionUID = 5868657401162844497L;
+}

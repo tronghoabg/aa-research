@@ -1,0 +1,12 @@
+package com.waze.reports_v2.c;
+
+/* compiled from: WazeSource */
+/* loaded from: classes7.dex */
+public class y {
+    public /* synthetic */ y(byte[] bArr) {
+    }
+
+    private y() {
+        throw null;
+    }
+}

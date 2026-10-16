@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="letter_tile_colors">
+        <item>#c53929</item>
+        <item>#c2185b</item>
+        <item>#7b1fa2</item>
+        <item>#512da8</item>
+        <item>#303f9f</item>
+        <item>#3367d6</item>
+        <item>#0277bd</item>
+        <item>#006064</item>
+        <item>#00796b</item>
+        <item>#0b8043</item>
+        <item>#33691e</item>
+        <item>#e65100</item>
+        <item>#e64a19</item>
+        <item>#424242</item>
+    </array>
+</resources>

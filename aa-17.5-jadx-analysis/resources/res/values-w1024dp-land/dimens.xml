@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="gearhead_facet_bar_app_icon_to_app_icon_margin">70dp</dimen>
+    <dimen name="gearhead_facet_bar_icon_to_app_icon_margin">64dp</dimen>
+</resources>

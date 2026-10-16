@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/gearhead_sdk_controller_ripple_night">
+    <item>
+        <shape>
+            <solid android:color="@color/alpha_jump_keyboard_key_background"/>
+            <corners android:radius="@dimen/alpha_jump_keyboard_key_round_corner"/>
+        </shape>
+    </item>
+</ripple>

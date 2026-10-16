@@ -1,0 +1,20 @@
+package com.google.android.material.internal;
+
+import android.text.Editable;
+import android.text.TextWatcher;
+
+/* compiled from: WazeSource */
+/* loaded from: classes4.dex */
+public class m implements TextWatcher {
+    @Override // android.text.TextWatcher
+    public void afterTextChanged(Editable editable) {
+    }
+
+    @Override // android.text.TextWatcher
+    public void beforeTextChanged(CharSequence charSequence, int i2, int i3, int i4) {
+    }
+
+    @Override // android.text.TextWatcher
+    public void onTextChanged(CharSequence charSequence, int i2, int i3, int i4) {
+    }
+}

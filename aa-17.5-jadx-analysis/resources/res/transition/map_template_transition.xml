@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transitionSet xmlns:android="http://schemas.android.com/apk/res/android" android:transitionOrdering="together">
+    <targets>
+        <target android:excludeId="@+id/map_container"/>
+    </targets>
+    <fade
+        android:duration="300"
+        android:fadingMode="fade_in_out"/>
+    <changeBounds
+        android:interpolator="@interpolator/fast_out_slow_in"
+        android:duration="300"/>
+</transitionSet>

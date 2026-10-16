@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="gearhead_notification_center_close_background_delay">300</integer>
+    <integer name="gearhead_notification_center_open_alpha_duration_ms">233</integer>
+    <integer name="gearhead_notification_center_open_translation_duration_ms">500</integer>
+</resources>

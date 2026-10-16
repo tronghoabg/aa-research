@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="@color/template_standard_yellow"/>
+    <size
+        android:height="@dimen/app_quality_test_report_icon_height"
+        android:width="@dimen/app_quality_test_report_icon_width"/>
+</shape>

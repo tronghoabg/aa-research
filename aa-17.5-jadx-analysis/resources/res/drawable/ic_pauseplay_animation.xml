@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android" android:drawable="@drawable/ic_pause">
+    <target
+        android:name="_R_G_L_1_G_D_0_P_0"
+        android:animation="@anim/pauseplay_anim_1"/>
+    <target
+        android:name="_R_G_L_1_G_T_1"
+        android:animation="@anim/pauseplay_anim_2"/>
+    <target
+        android:name="_R_G_L_1_G_T_1"
+        android:animation="@anim/pauseplay_anim_3"/>
+    <target
+        android:name="_R_G_L_0_G_D_0_P_0"
+        android:animation="@anim/pauseplay_anim_4"/>
+    <target
+        android:name="_R_G_L_0_G_T_1"
+        android:animation="@anim/pauseplay_anim_5"/>
+    <target
+        android:name="_R_G_L_0_G_T_1"
+        android:animation="@anim/pauseplay_anim_6"/>
+    <target
+        android:name="time_group"
+        android:animation="@anim/pauseplay_anim_7"/>
+</animated-vector>

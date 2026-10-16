@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <gradient
+        android:startColor="@color/gearhead_hun_scrim_gradient_start_color"
+        android:endColor="@color/gearhead_hun_scrim_gradient_end_color"
+        android:angle="270"
+        android:type="linear"
+        android:centerColor="@color/gearhead_hun_scrim_gradient_center_color"/>
+</shape>

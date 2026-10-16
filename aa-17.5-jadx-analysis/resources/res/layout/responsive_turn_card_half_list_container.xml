@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.common.BleedingCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:focusable="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="?attr/templateCardContentContainerBottomMargin"
+    android:layout_marginStart="@dimen/template_padding_2"
+    android:layout_marginEnd="@dimen/template_padding_2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHeight_default="wrap"
+    app:layout_constraintHorizontal_bias="0"
+    app:layout_constraintStart_toEndOf="@+id/content_container"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintVertical_bias="0"
+    app:layout_constraintWidth_max="?attr/templateRoutingResponsiveStepsCardMaxWidth"
+    style="?attr/templateCardRoutingContentContainerStyle">
+    <include
+        android:layout_gravity="center"
+        android:id="@+id/progress_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/template_padding_2"
+        android:layout_marginBottom="@dimen/template_padding_2"
+        layout="@layout/progress_view"/>
+    <include
+        android:id="@+id/responsive_step_container"
+        layout="@layout/responsive_view_container"/>
+</com.google.android.apps.auto.components.apphost.view.widgets.common.BleedingCardView>

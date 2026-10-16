@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.telecom.dialpad.StandardDialpadView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialpad_view"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false">
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <FrameLayout
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/dialpad_landscape_keypad_padding_start">
+                <include layout="@layout/standard_keypad_3x4"/>
+            </FrameLayout>
+        </FrameLayout>
+        <FrameLayout
+            android:background="?attr/gearheadDialerDialpadDivider"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0"/>
+        <com.google.android.apps.auto.sdk.ui.FocusClusterLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:requestFocusDescendantFocusability="afterDescendants">
+            <RelativeLayout
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dialpad_landscape_number_container_height"
+                    android:layout_alignParentTop="true">
+                    <include layout="@layout/standard_dialed_number_container"/>
+                </FrameLayout>
+                <com.google.android.apps.auto.sdk.ui.FloatingActionButton
+                    android:id="@+id/call"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    android:layout_marginBottom="@dimen/dialpad_landscape_call_fab_margin_bottom"
+                    android:foreground="?attr/gearheadPanelFabFocusBackground"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    style="@style/FabStyle.Large"/>
+            </RelativeLayout>
+        </com.google.android.apps.auto.sdk.ui.FocusClusterLayout>
+    </LinearLayout>
+</com.google.android.apps.auto.components.telecom.dialpad.StandardDialpadView>

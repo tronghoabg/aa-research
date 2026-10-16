@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/gs_mic_off_vd_theme_24"
+    android:inset="@dimen/material_dialer_incall_activatable_button_icon_inset"/>

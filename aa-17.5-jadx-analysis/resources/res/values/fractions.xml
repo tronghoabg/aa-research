@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <fraction name="cluster_media_progress_radius_fraction">50%</fraction>
+    <fraction name="dashboard_card_appear_pivot">50%</fraction>
+    <fraction name="dashboard_card_appear_scale">75%</fraction>
+    <fraction name="dashboard_media_progress_radius_fraction">50%</fraction>
+    <fraction name="dashboard_media_sourceBadge_bias">1</fraction>
+    <fraction name="dashboard_media_text_container_bias">1</fraction>
+    <fraction name="letter_to_tile_ratio">67%</fraction>
+    <fraction name="seek_bar_corner_radius_fragment">50%</fraction>
+</resources>

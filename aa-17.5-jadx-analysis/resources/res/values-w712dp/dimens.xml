@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="message_text_margin">@dimen/common_keyline_2</dimen>
+</resources>

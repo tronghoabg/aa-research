@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.ui.listview.GhListView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/gh_list_view"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/gearhead_sdk_drawer_header_height"
+    app:inertialScrollingEnabled="true"
+    app:listMaxWidth="0dp"
+    app:rightGutterEnabled="true"/>

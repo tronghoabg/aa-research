@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/launcher_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+    <com.google.android.apps.auto.components.system.layout.FadePaddingFrameLayout
+        android:id="@+id/status_bar_background_protection"
+        android:background="@android:color/transparent"
+        android:paddingTop="@dimen/status_bar_height"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.apps.auto.sdk.ui.PagedListView
+            android:id="@+id/paged_list_view"
+            android:paddingTop="@dimen/gearhead_launcher_top_padding"
+            android:paddingRight="@dimen/gearhead_launcher_right_padding"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:listMaxWidth="@dimen/app_launcher_grid_max_width"
+            app:offsetRows="false"
+            app:scrollBarWidthOverride="@dimen/gearhead_edge_column_width_padded"
+            app:scrollToPositionFocusRequestEnabled="true"/>
+    </com.google.android.apps.auto.components.system.layout.FadePaddingFrameLayout>
+</FrameLayout>

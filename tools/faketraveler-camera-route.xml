@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8' standalone='yes' ?>
+<map>
+    <long name="lng" value="4637163575636715368" />
+    <long name="dLat" value="-4591138345127510016" />
+    <boolean name="mockSpeed" value="true" />
+    <long name="zoom" value="4622945017495814144" />
+    <int name="mockFrequency" value="1" />
+    <long name="endTime" value="0" />
+    <int name="mockCount" value="80" />
+    <int name="version" value="0" />
+    <long name="lat" value="4626651057776674996" />
+    <long name="dLng" value="0" />
+    <string name="mapProvider">OpenStreetMap</string>
+</map>

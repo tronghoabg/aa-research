@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phenotype-registrations>
+    <phenotype-registration>
+        <configuration-package>com.google.android.gms.maps
+        </configuration-package>
+        <log-sources>
+            <log-source>GMM_REALTIME_COUNTERS
+            </log-source>
+            <log-source>MAPS_API
+            </log-source>
+        </log-sources>
+        <auto-subpackage>true
+        </auto-subpackage>
+    </phenotype-registration>
+</phenotype-registrations>

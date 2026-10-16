@@ -1,0 +1,18 @@
+package defpackage;
+
+/* loaded from: classes3.dex */
+public final class aagk extends aagj {
+    public final int e;
+    public final int f;
+
+    public aagk(String str, int i, int i2, int i3, int i4, int i5) {
+        super(str, i, i2, i3);
+        this.e = i4;
+        this.f = i5;
+    }
+
+    @Override // defpackage.aagj
+    public final String toString() {
+        return String.format("TileKey[%s@x%s,y%s,z%s]:[W%s,H%s]px", this.a, Integer.valueOf(this.b), Integer.valueOf(this.c), Integer.valueOf(this.d), Integer.valueOf(this.e), Integer.valueOf(this.f));
+    }
+}

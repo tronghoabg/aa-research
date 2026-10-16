@@ -1,0 +1,70 @@
+package androidx.compose.foundation.text;
+
+import androidx.compose.ui.layout.IntrinsicMeasureScope;
+import androidx.compose.ui.layout.Measurable;
+import androidx.compose.ui.layout.MeasurePolicy;
+import androidx.compose.ui.layout.MeasureResult;
+import androidx.compose.ui.layout.MeasureScope;
+import androidx.compose.ui.layout.Placeable;
+import androidx.compose.ui.unit.Constraints;
+import androidx.compose.ui.unit.IntOffset;
+import h.ab;
+import h.g.a.a;
+import h.g.a.l;
+import h.k;
+import java.util.List;
+
+/* compiled from: WazeSource */
+/* loaded from: classes.dex */
+final class LinksTextMeasurePolicy implements MeasurePolicy {
+    private final a<Boolean> shouldMeasureLinks;
+
+    public LinksTextMeasurePolicy(a<Boolean> aVar) {
+        this.shouldMeasureLinks = aVar;
+    }
+
+    static final ab measure_3p2s80s$lambda$0(List list, LinksTextMeasurePolicy linksTextMeasurePolicy, Placeable.PlacementScope placementScope) {
+        List listMeasureWithTextRangeMeasureConstraints = BasicTextKt.measureWithTextRangeMeasureConstraints(list, linksTextMeasurePolicy.shouldMeasureLinks);
+        if (listMeasureWithTextRangeMeasureConstraints != null) {
+            int size = listMeasureWithTextRangeMeasureConstraints.size();
+            for (int i2 = 0; i2 < size; i2++) {
+                k kVar = (k) listMeasureWithTextRangeMeasureConstraints.get(i2);
+                Placeable placeable = (Placeable) kVar.a();
+                a aVar = (a) kVar.b();
+                Placeable.PlacementScope.m9813place70tqf50$default(placementScope, placeable, aVar != null ? ((IntOffset) aVar.invoke()).m11305unboximpl() : IntOffset.Companion.m11307getZeronOccac(), 0.0f, 2, null);
+            }
+        }
+        return ab.f48028a;
+    }
+
+    @Override // androidx.compose.ui.layout.MeasurePolicy
+    public /* synthetic */ int maxIntrinsicHeight(IntrinsicMeasureScope intrinsicMeasureScope, List list, int i2) {
+        return MeasurePolicy.CC.$default$maxIntrinsicHeight(this, intrinsicMeasureScope, list, i2);
+    }
+
+    @Override // androidx.compose.ui.layout.MeasurePolicy
+    public /* synthetic */ int maxIntrinsicWidth(IntrinsicMeasureScope intrinsicMeasureScope, List list, int i2) {
+        return MeasurePolicy.CC.$default$maxIntrinsicWidth(this, intrinsicMeasureScope, list, i2);
+    }
+
+    @Override // androidx.compose.ui.layout.MeasurePolicy
+    /* renamed from: measure-3p2s80s */
+    public MeasureResult mo1704measure3p2s80s(MeasureScope measureScope, final List<? extends Measurable> list, long j2) {
+        return MeasureScope.CC.layout$default(measureScope, Constraints.m11107getMaxWidthimpl(j2), Constraints.m11106getMaxHeightimpl(j2), null, new l() { // from class: androidx.compose.foundation.text.LinksTextMeasurePolicy$$ExternalSyntheticLambda0
+            @Override // h.g.a.l
+            public final Object invoke(Object obj) {
+                return LinksTextMeasurePolicy.measure_3p2s80s$lambda$0(list, this, (Placeable.PlacementScope) obj);
+            }
+        }, 4, null);
+    }
+
+    @Override // androidx.compose.ui.layout.MeasurePolicy
+    public /* synthetic */ int minIntrinsicHeight(IntrinsicMeasureScope intrinsicMeasureScope, List list, int i2) {
+        return MeasurePolicy.CC.$default$minIntrinsicHeight(this, intrinsicMeasureScope, list, i2);
+    }
+
+    @Override // androidx.compose.ui.layout.MeasurePolicy
+    public /* synthetic */ int minIntrinsicWidth(IntrinsicMeasureScope intrinsicMeasureScope, List list, int i2) {
+        return MeasurePolicy.CC.$default$minIntrinsicWidth(this, intrinsicMeasureScope, list, i2);
+    }
+}

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="promo_msg_with_hotword">Say \"Ok Google\" or select the mic to get hands-free help while you\'re driving.</string>
+    <string name="promo_msg_without_hotword">Select the mic to send messages and get things done.</string>
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_activated="true">
+        <set>
+            <objectAnimator
+                android:interpolator="@android:interpolator/linear"
+                android:duration="@integer/app_bar_alpha_animation_duration"
+                android:valueFrom="@dimen/app_bar_tab_inactive_alpha"
+                android:valueTo="@dimen/app_bar_tab_active_alpha"
+                android:valueType="floatType"
+                android:propertyName="alpha"/>
+        </set>
+    </item>
+    <item android:state_activated="false">
+        <set>
+            <objectAnimator
+                android:interpolator="@android:interpolator/linear"
+                android:duration="@integer/app_bar_alpha_animation_duration"
+                android:valueFrom="@dimen/app_bar_tab_active_alpha"
+                android:valueTo="@dimen/app_bar_tab_inactive_alpha"
+                android:valueType="floatType"
+                android:propertyName="alpha"/>
+        </set>
+    </item>
+</selector>

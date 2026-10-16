@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="dashboard_top_card_weight">1</integer>
+    <integer name="legacy_vertical_hotseat_items_double_row_status_bar_with_etc">4</integer>
+    <integer name="vertical_hotseat_items_double_row_status_bar_with_etc">4</integer>
+    <integer name="vertical_hotseat_items_double_row_status_bar_with_resize">4</integer>
+    <integer name="vertical_hotseat_items_single_row_status_bar_with_resize">4</integer>
+</resources>

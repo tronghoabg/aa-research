@@ -1,0 +1,2701 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:sharedUserId="com.google.android.projection.gearhead"
+    android:versionCode="175663214"
+    android:versionName="17.5.663214-release"
+    android:compileSdkVersion="37"
+    android:compileSdkVersionCodename="DEV"
+    android:requiredSplitTypes="base__abi,base__density"
+    android:splitTypes=""
+    package="com.google.android.projection.gearhead"
+    platformBuildVersionCode="37"
+    platformBuildVersionName="DEV">
+    <uses-sdk
+        android:minSdkVersion="32"
+        android:targetSdkVersion="37"/>
+    <permission
+        android:name="com.google.android.projection.gearhead.permission.START_PROJECTED_ACTIVITY"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.google.android.projection.gearhead.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_BASIC_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MICROPHONE"/>
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.google.android.finsky.permission.GEARHEAD_SERVICE"/>
+    <uses-permission android:name="androidx.car.app.NAVIGATION_TEMPLATES"/>
+    <uses-permission android:name="androidx.car.app.ACCESS_SURFACE"/>
+    <uses-permission android:name="android.permission.REQUEST_OBSERVE_COMPANION_DEVICE_PRESENCE"/>
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
+    <uses-permission android:name="android.permission.QUERY_ADVANCED_PROTECTION_MODE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
+    <uses-permission android:name="android.permission.READ_CONTACTS"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="com.google.android.gms.permission.CAR_SPEED"/>
+    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT"/>
+    <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCAL_NETWORK"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACTIVITY_EMBEDDING"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+    <uses-permission android:name="android.permission.COMPANION_APPROVE_WIFI_CONNECTIONS"/>
+    <uses-permission android:name="android.permission.LOCATION_HARDWARE"/>
+    <uses-permission android:name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
+    <uses-permission android:name="android.permission.DUMP"/>
+    <uses-permission android:name="android.permission.ENTER_CAR_MODE_PRIORITIZED"/>
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS"/>
+    <uses-permission android:name="android.permission.MANAGE_USB"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_ROUTING"/>
+    <uses-permission android:name="android.permission.MODIFY_DAY_NIGHT_MODE"/>
+    <uses-permission android:name="android.permission.READ_PRIVILEGED_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_SELF_MANAGED"/>
+    <uses-permission android:name="android.permission.START_ACTIVITIES_FROM_BACKGROUND"/>
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS"/>
+    <uses-permission android:name="android.permission.POWER_SAVER"/>
+    <uses-permission android:name="android.permission.TETHER_PRIVILEGED"/>
+    <uses-permission android:name="android.permission.MANAGE_USERS"/>
+    <uses-permission android:name="android.permission.BIND_APPWIDGET"/>
+    <uses-permission android:name="android.permission.PERSONAL_CONTEXT_PUBLISH_HINTS"/>
+    <uses-permission android:name="android.permission.PERSONAL_CONTEXT_READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.PERSONAL_CONTEXT_RECEIVE_INSIGHTS"/>
+    <uses-permission android:name="com.google.android.projection.gearhead.permission.START_PROJECTED_ACTIVITY"/>
+    <uses-permission android:name="com.google.android.projection.gearhead.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"/>
+    <uses-permission android:name="android.permission.ADD_ALWAYS_UNLOCKED_DISPLAY"/>
+    <uses-permission android:name="android.permission.CREATE_VIRTUAL_DEVICE"/>
+    <uses-permission android:name="android.permission.TOGGLE_AUTOMOTIVE_PROJECTION"/>
+    <uses-permission android:name="android.permission.REQUEST_COMPANION_PROFILE_AUTOMOTIVE_PROJECTION"/>
+    <uses-permission android:name="android.permission.ADD_TRUSTED_DISPLAY"/>
+    <uses-permission android:name="android.permission.ASSOCIATE_COMPANION_DEVICES"/>
+    <uses-permission android:name="android.permission.RECEIVE_SENSITIVE_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT"/>
+    <uses-permission android:name="android.permission.GET_INTENT_SENDER_INTENT"/>
+    <uses-permission android:name="android.permission.WIFI_ACCESS_COEX_UNSAFE_CHANNELS"/>
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_PROFILES"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-feature android:name="android.hardware.usb.accessory"/>
+    <uses-feature
+        android:name="android.software.companion_device_setup"
+        android:required="false"/>
+    <supports-screens
+        android:smallScreens="true"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="true"/>
+    <permission
+        android:name="androidx.car.app.ACCESS_SURFACE"
+        android:protectionLevel="normal"/>
+    <permission
+        android:name="androidx.car.app.NAVIGATION_TEMPLATES"
+        android:protectionLevel="normal"/>
+    <permission
+        android:name="androidx.car.app.MAP_TEMPLATES"
+        android:protectionLevel="normal"/>
+    <queries>
+        <provider
+            android:name="androidx.test.services.storage.outputfiles.ExportedContentProvider"
+            android:exported="false"
+            android:authorities="androidx.test.services.storage.outputfiles"
+            android:grantUriPermissions="true"
+            android:directBootAware="true"/>
+        <package android:name="com.google.android.apps.maps"/>
+        <intent>
+            <action android:name="interprocess.ACTION"/>
+            <data android:scheme="channelFactoryClassName"/>
+        </intent>
+        <provider
+            android:name="androidx.car.app.connection.provider"
+            android:authorities="androidx.car.app.connection"/>
+        <intent>
+            <action android:name="androidx.window.extensions.layout.EngagementModeService"/>
+        </intent>
+    </queries>
+    <uses-feature
+        android:glEsVersion="0x20000"
+        android:required="true"/>
+    <application
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_launcher_auto"
+        android:name="com.google.android.projection.gearhead.GhApplication"
+        android:process=":projection"
+        android:backupAgent="com.google.android.apps.auto.components.settings.backup.SettingsBackupAgent"
+        android:allowBackup="true"
+        android:restoreAnyVersion="true"
+        android:hardwareAccelerated="true"
+        android:supportsRtl="false"
+        android:extractNativeLibs="false"
+        android:resizeableActivity="false"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="0x7f080543"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:gwpAsanMode="always"
+        android:enableOnBackInvokedCallback="false"
+        android:allowCrossUidActivitySwitchFromBelow="false">
+        <profileable android:shell="true"/>
+        <activity
+            android:theme="@style/CompanionAppCardsTheme"
+            android:name="com.google.android.projection.gearhead.companion.AndroidAutoActivity"
+            android:exported="true"
+            android:process=":projection"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/GearheadSdkAppTheme.CustomSettingsTheme"
+            android:label="@string/settings"
+            android:name="com.google.android.projection.gearhead.companion.settings.SettingsActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:documentLaunchMode="always"
+            android:resizeableActivity="true"/>
+        <activity
+            android:theme="@style/Theme.Gearhead.Material3"
+            android:label="@string/settings"
+            android:name="com.google.android.projection.gearhead.companion.settings.Material3SettingsActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:resizeableActivity="true"/>
+        <activity
+            android:theme="@style/GearheadSdkAppTheme.CustomSettingsTheme"
+            android:label="@string/settings"
+            android:name="com.google.android.projection.gearhead.companion.settings.DefaultSettingsActivity"
+            android:exported="true"
+            android:process=":projection"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="com.google.android.projection.gearhead.SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.APPLICATION_PREFERENCES"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.android.settings.action.SETTINGS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.device"/>
+            <meta-data
+                android:name="com.android.settings.title"
+                android:resource="@string/app_name"/>
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/system_settings_summary"/>
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/gs_android_auto_vd_theme_24"/>
+            <meta-data
+                android:name="com.android.settings.icon_tintable"
+                android:value="true"/>
+            <meta-data
+                android:name="com.android.settings.profile"
+                android:value="primary_profile_only"/>
+        </activity>
+        <activity
+            android:theme="@style/Theme.Gearhead.Material3"
+            android:name="com.google.android.projection.gearhead.companion.settings.LegalInfoActivity"
+            android:exported="false"
+            android:process=":projection"/>
+        <activity
+            android:theme="@style/CompanionAppCompatTheme"
+            android:name="com.google.android.projection.gearhead.companion.settings.LauncherAppSettingsActivity"
+            android:exported="false"
+            android:process=":projection"/>
+        <activity
+            android:theme="@style/Theme.Gearhead.Material3"
+            android:name="com.google.android.apps.auto.components.widgets.EarthPickerActivity"
+            android:exported="true"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:resizeableActivity="true"/>
+        <activity
+            android:theme="@style/Theme.Gearhead.Material3"
+            android:name="com.google.android.apps.auto.components.widgets.EarthCompanionActivity"
+            android:exported="true"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:resizeableActivity="true"/>
+        <activity
+            android:theme="@style/Theme.Gearhead.Material3"
+            android:name="com.google.android.projection.gearhead.companion.settings.AddAssistantShortcutActivity"
+            android:exported="false"
+            android:process=":projection"/>
+        <activity
+            android:theme="@style/GhCarFrx"
+            android:label="@string/permission_dialog_title"
+            android:name="com.google.android.projection.gearhead.companion.RequestManifestPermissionsActivity"
+            android:exported="true"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="com.google.android.projection.gearhead.REQUEST_PERMISSION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/GhCarFrx"
+            android:label="@string/permission_dialog_title"
+            android:name="com.google.android.projection.gearhead.companion.RequestNotificationAccessActivity"
+            android:exported="true"
+            android:process=":projection"/>
+        <activity
+            android:theme="@style/CompanionAppCompatTheme"
+            android:label="@string/developer_settings_title"
+            android:name="com.google.android.projection.gearhead.companion.devsettings.DeveloperSettingsActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:parentActivityName="com.google.android.projection.gearhead.companion.AndroidAutoActivity"/>
+        <activity
+            android:theme="@style/CompanionAppCompatTheme"
+            android:label="@string/app_quality_tester_title"
+            android:name="com.google.android.projection.gearhead.companion.devsettings.AppQualityTesterActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:parentActivityName="com.google.android.projection.gearhead.companion.AndroidAutoActivity"/>
+        <activity
+            android:theme="@style/CarFrx"
+            android:name="com.google.android.projection.gearhead.frx.SetupActivity"
+            android:exported="true"
+            android:process=":projection"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.CAR_PROJECTION"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.google.android.apps.auto.client.activity.ghost.GhostActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:taskAffinity=""
+            android:excludeFromRecents="true"
+            android:allowEmbedded="true"/>
+        <activity
+            android:theme="@style/CompanionAppTheme"
+            android:label="@string/feedback_list_activity_name"
+            android:name="com.google.android.projection.gearhead.companion.feedback.FeedbackListActivity"
+            android:exported="false"
+            android:process=":projection"/>
+        <activity
+            android:theme="@style/CompanionAppTheme"
+            android:label="@string/feedback_editor_activity_name"
+            android:name="com.google.android.projection.gearhead.companion.feedback.FeedbackEditorActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:theme="@style/VnNoUITheme"
+            android:name="com.google.android.gearhead.vanagon.VnLaunchPadInternalActivity"
+            android:exported="true"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:configChanges="uiMode"
+            android:showWhenLocked="true">
+            <intent-filter android:priority="1">
+                <action android:name="com.google.android.gearhead.LAUNCH_ANDROID_AUTO_PHONE"/>
+                <action android:name="com.google.android.gearhead.LAUNCH_ANDROID_AUTO_INTO_GMM"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter android:priority="1">
+                <action android:name="com.google.android.gearhead.LAUNCH_GMM"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity-alias
+            android:name="com.google.android.gearhead.vanagon.VnLaunchPadActivity"
+            android:enabled="false"
+            android:exported="true"
+            android:targetActivity="com.google.android.gearhead.vanagon.VnLaunchPadInternalActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity-alias>
+        <activity
+            android:theme="@style/VnNoUITheme"
+            android:name="com.google.android.gearhead.vanagon.VnDrivingModeLauncherActivity"
+            android:permission="com.google.android.gms.carsetup.DRIVING_MODE_MANAGER"
+            android:exported="true"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:configChanges="uiMode">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.drivingMode.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:theme="@style/CompanionAppTheme"
+            android:label="@string/engineer_settings_title"
+            android:name="com.google.android.projection.gearhead.companion.settings.EngineerSettingsActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:parentActivityName="com.google.android.projection.gearhead.companion.AndroidAutoActivity"/>
+        <activity
+            android:theme="@style/KeyboardActivityTheme"
+            android:label="@string/keyboard_label"
+            android:name="com.google.android.apps.auto.components.externalkeyboard.phone.PhoneKeyboardActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:configChanges="uiMode"
+            android:keepScreenOn="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"
+            android:noHistory="true"
+            android:resizeableActivity="true"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"/>
+        <provider
+            android:name="com.google.android.projection.gearhead.companion.devsettings.DeveloperSettingsFileProvider"
+            android:exported="false"
+            android:process=":projection"
+            android:authorities="com.google.android.projection.gearhead.devsettings.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths"/>
+        </provider>
+        <provider
+            android:name="com.google.android.projection.gearhead.companion.settings.SettingsSearchProvider"
+            android:permission="android.permission.READ_SEARCH_INDEXABLES"
+            android:exported="true"
+            android:process=":projection"
+            android:multiprocess="false"
+            android:authorities="com.google.android.projection.gearhead"
+            android:grantUriPermissions="true">
+            <intent-filter>
+                <action android:name="android.content.action.SEARCH_INDEXABLES_PROVIDER"/>
+            </intent-filter>
+        </provider>
+        <provider
+            android:name="com.google.android.apps.auto.components.projectionstate.ProjectionStateProvider"
+            android:exported="true"
+            android:process=":provider"
+            android:authorities="androidx.car.app.connection"/>
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:process=":shared"
+            android:authorities="com.google.android.projection.gearhead.androidx-startup"/>
+        <receiver
+            android:name="com.google.android.apps.auto.components.telecom.impl.DoNotDisturbCallManagerImpl.NotificationBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":shared"/>
+        <receiver
+            android:name="com.google.android.apps.auto.components.telecom.impl.VoipUtilsImpl.VoipSettingsBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":projection"/>
+        <receiver
+            android:name="com.google.android.apps.auto.components.system.GhPendingIntentReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="com.google.android.apps.auto.components.system.INTENT_ACTION"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.gearhead.feedback.CrashReporterReceiver"
+            android:exported="false"
+            android:process=":shared"/>
+        <receiver
+            android:name="com.google.android.libraries.appdoctor.AppDoctorReceiver"
+            android:permission="com.google.android.gms.permission.INTERNAL_BROADCAST"
+            android:exported="true"
+            android:process=":shared">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.appdoctor.ACTION_TELE_DOCTOR_FIX"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.libraries.phenotype.client.stable.PhenotypeUpdateBackgroundBroadcastReceiver"
+            android:permission="com.google.android.gms.permission.PHENOTYPE_UPDATE_BROADCAST"
+            android:exported="true"
+            android:process=":shared">
+            <intent-filter>
+                <action android:name="com.google.android.gms.phenotype.UPDATE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.projection.gearhead.setup.SetupService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.placeholder.PlaceholderService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.service.GearheadService"
+            android:exported="false"
+            android:process=":projection"/>
+        <service
+            android:name="com.google.android.projection.gearhead.system.GhLifecycleService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.CATEGORY_PROJECTION_LIFECYCLE_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.system.RecoveryLifecycleService"
+            android:exported="false"
+            android:process=":watchdog">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.CATEGORY_PROJECTION_LIFECYCLE_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.apps.auto.components.lifetime.service.GhLifetimeService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.CATEGORY_PROJECTION_LIFETIME_SERVICE"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.system.applauncher.GhAppLauncherService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.system.ProjectionTrampolineInitialService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.Fullscreen"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.system.ProjectionTrampolineFallbackService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.Fullscreen"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.apps.auto.components.system.navigation.fallback.NavigationFallbackCarActivityService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.system.secondary.SecondaryScreenTurnCardCarActivityService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.system.auxiliarydisplay.PrototypeAuxiliaryDisplayNavigationCarActivityService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.system.auxiliarydisplay.PrototypeAuxiliaryDisplayTurnCardCarActivityService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.system.auxiliarydisplay.AuxiliaryDisplayTurnCardCarActivityService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.system.auxiliarydisplay.AuxiliaryDisplayNavigationCarActivityService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.system.cluster.ClusterTurnCardCarActivityService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:label="@string/phone_app_name"
+            android:icon="0x7f08091c"
+            android:name="com.google.android.projection.gearhead.telecom.TelecomService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:label="@string/music_app_name"
+            android:name="com.google.android.projection.gearhead.media.MediaService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.media.action.MEDIA_PLAY_FROM_SEARCH"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:label="@string/gearhead_on_phone_activity_settings_label"
+            android:icon="@drawable/ic_settings_applauncher"
+            android:name="com.google.android.apps.auto.components.settings.ui.CarSettingsService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.apps.auto.components.system.applauncher.LauncherCarAppService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:label="@string/calendar_app_name"
+            android:icon="@drawable/ic_calendar_app_icon"
+            android:name="com.google.android.apps.auto.components.calendar.CalendarCarAppService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:label="@string/car_controls_app_name"
+            android:icon="0x7f080507"
+            android:name="com.google.android.apps.auto.components.carcontrol.demo.CarControlCarAppService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.apps.auto.components.hvac.HvacCarActivityService"
+            android:exported="false"
+            android:process=":projection"/>
+        <service
+            android:name="com.google.android.apps.auto.components.integratedoverlay.IntegratedOverlayService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+        </service>
+        <service
+            android:label="@string/gamesnacks_launcher_app_title"
+            android:icon="@drawable/ic_gamesnacks"
+            android:name="com.google.android.apps.auto.components.gearsnacks.GearSnacksService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:label="@string/media_search_template_label"
+            android:name="com.google.android.apps.auto.components.media.template.MediaSearchTemplateService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.apphost.TemplateService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.apphost.TemplateNavigationService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.apphost.TemplateFullScreenImmersiveService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.apphost.TemplatePartialImmersiveService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.apphost.TemplateClusterService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.apphost.TemplateAuxiliaryDisplayService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:label="UX Prototype"
+            android:name="com.google.android.projection.gearhead.ux.PrototypeService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.GHOST_ACTIVITY"
+                android:value="com.google.android.apps.auto.client.activity.ghost.GhostActivity"/>
+        </service>
+        <service
+            android:label="@string/sms_app_name"
+            android:icon="@drawable/sms_app_icon"
+            android:name="com.google.android.projection.gearhead.messaging.SmsMessagingService"
+            android:exported="false"
+            android:process=":projection"/>
+        <service
+            android:label="@string/oem_exit_app_name"
+            android:name="com.google.android.projection.gearhead.oem.OEMExitService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION_OEM"/>
+            </intent-filter>
+            <meta-data
+                android:name="icon"
+                android:resource="0x7f080507"/>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected"/>
+        </service>
+        <service
+            android:label="@string/all_car_apps_app_name"
+            android:name="com.google.android.projection.gearhead.oem.AllCarAppsService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION_OEM"/>
+            </intent-filter>
+            <meta-data
+                android:name="icon"
+                android:resource="0x7f0806f8"/>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected"/>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.input.TouchInputMethodService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.input.RotaryInputMethodService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.projection.gearhead.companion.DeveloperHeadUnitNetworkService"
+            android:exported="false"
+            android:process=":projection"
+            android:foregroundServiceType="connectedDevice"/>
+        <service
+            android:name="com.google.android.projection.gearhead.service.CarSystemUiControllerService"
+            android:exported="true"
+            android:process=":projection"/>
+        <service
+            android:name="com.google.android.gearhead.appdecor.AppDecorService"
+            android:exported="true"
+            android:process=":projection"/>
+        <service
+            android:name="com.google.android.gearhead.demand.DemandClientService"
+            android:exported="true"
+            android:process=":projection"/>
+        <service
+            android:name="com.google.android.gearhead.feedback.CrashReporterReceiver$CollectFeedbackService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"
+            android:process=":shared"/>
+        <service
+            android:name="com.google.android.apps.auto.components.projectionstate.ProjectionStateService"
+            android:exported="false"
+            android:process=":provider"/>
+        <service
+            android:name="com.google.android.enterprise.connectedapps.CrossProfileConnector_Service"
+            android:exported="false"
+            android:process=":crossprofile"/>
+        <meta-data
+            android:name="com.google.android.gms.car.application"
+            android:resource="@xml/automotive_app_desc"/>
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.22"/>
+        <meta-data
+            android:name="com.google.android.projection.gearhead.WINDOW_ANIMATION_STYLE"
+            android:resource="@style/Animation.Projection.Activity"/>
+        <meta-data
+            android:name="androidx.car.app.minCarApiLevel"
+            android:value="1"/>
+        <meta-data
+            android:name="androidx.car.app.minApiLevel"
+            android:value="1"/>
+        <receiver
+            android:name="com.google.android.gearhead.telemetry.InstallReferrerReceiver"
+            android:exported="true"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="com.android.vending.INSTALL_REFERRER"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.gearhead.service.SharedService"
+            android:exported="true"
+            android:process=":shared"/>
+        <service
+            android:name="com.google.android.gearhead.feedback.hats.HatsLapseDetector.LapseService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"
+            android:process=":shared"/>
+        <service
+            android:name="com.google.android.gms.analytics.CampaignTrackingService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":projection"/>
+        <service
+            android:name="com.google.android.gearhead.notifications.SharedNotificationListenerManager$ListenerService"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":projection"
+            android:singleUser="true">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.service.notification.default_autobind_listenerservice"
+                android:value="false"/>
+        </service>
+        <activity
+            android:name="com.google.android.apps.auto.carservice.car.window.composition.ProjectionRootActivity"
+            android:exported="false"
+            android:process=":car"
+            android:launchMode="standard"
+            android:configChanges="fontScale|layoutDirection|density|smallestScreenSize|screenSize|uiMode|screenLayout|orientation|navigation|keyboardHidden|keyboard|locale"/>
+        <service
+            android:name="com.google.android.apps.auto.components.ace.AceInsightRendererService"
+            android:permission="android.permission.BIND_CONTEXT_COMPONENT_SERVICE"
+            android:enabled="false"
+            android:exported="true"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.service.personalcontext.renderer.InsightRendererService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.service.personalcontext.renderer.receive_notification_insights"
+                android:value="true"/>
+        </service>
+        <service
+            android:name="com.google.android.apps.auto.components.calendar.CalendarNotificationActionService"
+            android:exported="false"
+            android:process=":projection"/>
+        <activity
+            android:theme="@style/CarHomeTheme"
+            android:name="com.google.android.apps.auto.components.carhome.ProjectedHomeActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:configChanges="uiMode"/>
+        <service
+            android:name="com.google.android.apps.auto.components.carhome.ProjectedHomeService"
+            android:exported="false"
+            android:process=":projection"/>
+        <receiver
+            android:name="com.google.android.apps.auto.components.config.phenotype.receiver.FlagUpdaterReceiver"
+            android:exported="true"
+            android:process=":shared">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.apps.auto.components.connectivity.impl.ConnectivityEventHandlerImpl.ConnectivityEventBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":shared">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED"/>
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED"/>
+                <action android:name="android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"/>
+                <action android:name="android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED"/>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"/>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE"/>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_DETACHED"/>
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED"/>
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED"/>
+                <action android:name="com.google.android.gms.car.CONNECTIVITY_EVENT"/>
+                <action android:name="com.google.android.gms.car.FIRST_ACTIVITY"/>
+                <action android:name="com.google.android.gms.car.CONNECTIVITY_STAGE_REACHED"/>
+                <action android:name="com.google.android.gms.car.VERSION_NEGOTIATION"/>
+                <action android:name="com.google.android.gms.car.SSL_NEGOTIATION"/>
+                <action android:name="com.google.android.gms.car.SDP_NEGOTIATION"/>
+                <action android:name="com.google.android.gms.car.AUTHORIZATION"/>
+                <action android:name="com.google.android.gms.car.DB_MIGRATION"/>
+                <action android:name="com.google.android.gms.car.SETTINGS_MIGRATION"/>
+                <action android:name="com.google.android.gms.car.CONNECTION_HANDOFF"/>
+                <action android:name="com.google.android.gms.car.FRX"/>
+                <action android:name="com.google.android.gms.car.CAR_SETUP_SERVICE"/>
+                <action android:name="com.google.android.gms.car.CONNECTION_TRANSFER"/>
+                <action android:name="com.google.android.gms.car.CAR_SERVICE_ENDPOINTS"/>
+                <action android:name="com.google.android.gms.car.CAR_SERVICE_ENDPOINTS_LOCAL"/>
+                <action android:name="com.google.android.gms.car.CAR_SERVICE_ENDPOINTS_REMOTE"/>
+                <action android:name="com.google.android.gms.car.GEARHEAD_ENDPOINTS"/>
+                <action android:name="com.google.android.gms.car.PROJECTION_STATE_CHANGED"/>
+                <action android:name="com.google.android.gms.car.PROJECTION_STARTED"/>
+                <action android:name="com.google.android.gms.car.PROJECTION_ENDED"/>
+                <action android:name="com.google.android.gms.car.PROJECTION_WINDOW_MANAGER"/>
+                <action android:name="com.google.android.gms.car.GEARHEAD_CONNECTED"/>
+                <action android:name="com.google.android.gms.car.PROCESS_STATE_CACHED"/>
+                <action android:name="com.google.android.gms.car.USB_STATE_CHANGED"/>
+                <action android:name="com.google.android.gms.car.USB_ISSUE_FOUND"/>
+                <action android:name="com.google.android.gms.car.CAR_STARTUP_NOTIFICATION"/>
+                <action android:name="com.google.android.gms.car.USB_MONITOR_LIFETIME"/>
+                <action android:name="com.google.android.gms.car.USB_RESET"/>
+                <action android:name="com.google.android.gms.car.WIRELESS_SOCKET_CONNECTION"/>
+                <action android:name="com.google.android.gms.car.STARTUP_LATENCY_MEASUREMENT_EVENT"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.apps.auto.components.connectivity.impl.ConnectivityEventHandlerImpl.ConnectivityEventBroadcastReceiverNonExported"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":shared">
+            <intent-filter>
+                <action android:name="com.google.android.apps.auto.components.connectivity.ACTION_SESSION_EXPIRED"/>
+                <action android:name="com.google.android.apps.auto.components.connectivity.ACTION_LOG_WIRELESS_EVENT"/>
+                <action android:name="com.google.android.apps.auto.components.connectivity.ACTION_LOG_WIRELESS_STATE"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.google.android.apps.auto.components.crossprofile.CrossProfilePermissionFlowTrampolineActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:noHistory="true"/>
+        <receiver
+            android:name="com.google.android.apps.auto.components.crossprofile.CrossProfileNotificationPromptManager.NotificationActionHandler"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":projection"/>
+        <receiver
+            android:name="com.google.android.apps.auto.components.demand.suggestions.PendingIntentFactory.AssistantSuggestionActionBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":projection"/>
+        <receiver
+            android:name="com.google.android.apps.auto.components.firstdrive.FirstDriveNotificationManager.Receiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":shared"/>
+        <service
+            android:name="com.google.android.apps.auto.components.frx.frxrewind.FrxRewindJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"
+            android:process=":projection"/>
+        <activity
+            android:theme="@style/Theme.Gearhead.Material3.Dark.Bottomsheet"
+            android:name="com.google.android.apps.auto.components.frx.phonescreen.TapHeadUnitActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:autoRemoveFromRecents="true"
+            android:resizeableActivity="true"/>
+        <activity
+            android:theme="@style/Theme.Gearhead.Material3.Dark.Bottomsheet"
+            android:name="com.google.android.apps.auto.components.frx.phonescreen.WirelessConnectingActivity"
+            android:exported="true"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:noHistory="true"
+            android:autoRemoveFromRecents="true"
+            android:resizeableActivity="true"/>
+        <activity
+            android:theme="@style/Theme.Gearhead.Material3.Dark.Bottomsheet"
+            android:name="com.google.android.apps.auto.components.frx.phonescreen.WirelessPreflightActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:autoRemoveFromRecents="true"
+            android:resizeableActivity="true"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true">
+            <intent-filter>
+                <action android:name="com.google.android.apps.auto.components.frx.phonescreen.TapHeadUnitActivity.CLOSE"/>
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="com.google.android.apps.auto.components.headunit.HeadUnitUpdateManager.NotificationActionBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":shared"/>
+        <service
+            android:name="com.google.android.apps.auto.components.messaging.intentservice.ProjectedProxyMessagingService"
+            android:exported="false"
+            android:process=":projection"/>
+        <service
+            android:name="com.google.android.apps.auto.components.messaging.smartactions.template.SmartReplyConfirmationService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.apps.auto.components.messaging.template.MessagingRemoteScreenService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService"/>
+                <category android:name="androidx.car.app.category.MESSAGING"/>
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.google.android.apps.auto.components.messaging.template.MessagingCarAppService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService"/>
+                <category android:name="androidx.car.app.category.MESSAGING"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.google.android.apps.auto.components.permission.impl.RecordPermissionsReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":shared">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.apps.auto.components.permission.impl.PermissionPollerImpl.KeepAliveService"
+            android:exported="false"
+            android:process=":projection"
+            android:foregroundServiceType="shortService"/>
+        <activity
+            android:name="com.google.android.apps.auto.components.permission.prompt.PermissionPromptPhoneActivity"
+            android:exported="false"
+            android:process=":projection"/>
+        <activity
+            android:theme="@style/GearheadSdkAppTheme.Settings"
+            android:label="@string/android_auto_connect_a_car"
+            android:name="com.google.android.apps.auto.components.settings.connectacar.ConnectACarActivity"
+            android:exported="false"
+            android:process=":projection"/>
+        <activity
+            android:theme="@style/GearheadSdkAppTheme.Settings"
+            android:label="@string/android_auto_connect_a_car"
+            android:name="com.google.android.apps.auto.components.settings.connectacar.CarDetailsActivity"
+            android:exported="false"
+            android:process=":projection"/>
+        <activity
+            android:theme="@style/GearheadSdkAppTheme.Settings"
+            android:label="@string/settings_troubleshooter_title"
+            android:name="com.google.android.apps.auto.components.settings.troubleshooter.TroubleshooterActivity"
+            android:exported="false"
+            android:process=":projection"/>
+        <receiver
+            android:name="com.google.android.apps.auto.components.softminversion.SoftMinversionManager.NotificationActionBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":shared"/>
+        <service
+            android:name="com.google.android.apps.auto.components.system.notification.quickfeedback.QuickFeedbackNotificationService"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":projection"/>
+        <service
+            android:label="local_incall_service"
+            android:name="com.google.android.apps.auto.components.telecom.service.NonCarInCallServiceImpl"
+            android:permission="android.permission.BIND_INCALL_SERVICE"
+            android:enabled="false"
+            android:exported="true"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.telecom.InCallService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.telecom.INCLUDE_SELF_MANAGED_CALLS"
+                android:value="true"/>
+        </service>
+        <service
+            android:label="local_incall_service"
+            android:name="com.google.android.apps.auto.components.telecom.service.CarProjectionInCallServiceImpl"
+            android:permission="android.permission.BIND_INCALL_SERVICE"
+            android:enabled="false"
+            android:exported="true"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.telecom.InCallService"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.telecom.INCLUDE_SELF_MANAGED_CALLS"
+                android:value="true"/>
+            <meta-data
+                android:name="android.telecom.IN_CALL_SERVICE_CAR_MODE_UI"
+                android:value="true"/>
+        </service>
+        <provider
+            android:name="com.google.android.apps.auto.components.demand.audio.GhMicrophoneContentProvider"
+            android:exported="true"
+            android:process=":projection"
+            android:authorities="com.google.android.projection.gearhead.provider"/>
+        <provider
+            android:name="com.google.android.apps.auto.components.config.preferences.contentprovider.SharedPreferencesProvider"
+            android:exported="true"
+            android:process=":shared"
+            android:authorities="com.google.android.gearhead.shared_preferences_provider"/>
+        <provider
+            android:name="com.google.android.apps.auto.components.troubleshooter.contentprovider.TroubleshooterContentProvider"
+            android:exported="true"
+            android:process=":shared"
+            android:authorities="com.google.android.projection.gearhead.troubleshooter_provider"/>
+        <provider
+            android:name="com.google.android.apps.auto.components.coolwalk.provider.CoolwalkColorsProvider"
+            android:exported="true"
+            android:process=":projection"
+            android:authorities="com.google.android.projection.gearhead.color_provider"/>
+        <activity
+            android:name="com.google.android.apps.auto.wireless.setup.service.impl.WirelessStartupActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true"/>
+        <service
+            android:name="com.google.android.apps.auto.wireless.setup.service.impl.WirelessSetupSharedService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":car"
+            android:foregroundServiceType="connectedDevice|location"/>
+        <service
+            android:name="com.google.android.apps.auto.wireless.setup.service.impl.WirelessSetupSharedCarService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":car"
+            android:foregroundServiceType="connectedDevice|location"/>
+        <service
+            android:name="com.google.android.libraries.assistant.auto.aaptransport.callbacks.CarAssistantCallbacksService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":projection"/>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyB2UEsa6oy8B3qvFVVs3vTgm--7vHNutdk"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.projection.gearhead"
+            android:resource="@xml/com_google_android_projection_gearhead_phenotype_release"/>
+        <service
+            android:name="com.google.android.libraries.phenotype.registration.PhenotypeMetadataHolderService"
+            android:enabled="false"
+            android:exported="false"
+            android:process="">
+            <intent-filter>
+                <action android:name="com.google.android.libraries.phenotype.registration.PhenotypeMetadataHolderService"/>
+            </intent-filter>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.projection.gearhead"
+                android:resource="@raw/com_google_android_projection_gearhead_registration_info_release"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.accountsettings"
+                android:resource="@raw/com_google_android_gms_accountsettings_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.actionlearner"
+                android:resource="@raw/com_google_android_gms_actionlearner_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.actionlearner"
+                android:resource="@raw/com_google_android_gms_actionlearner_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.trustagent.activeunlock.common"
+                android:resource="@raw/com_google_android_gms_trustagent_activeunlock_common_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.adsidentity"
+                android:resource="@raw/com_google_android_gms_adsidentity_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.analytics"
+                android:resource="@raw/com_google_android_gms_analytics_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.appevents"
+                android:resource="@raw/com_google_android_gms_appevents_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.appevents"
+                android:resource="@raw/com_google_android_gms_appevents_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.appfunctions"
+                android:resource="@raw/com_google_android_gms_appfunctions_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.appfunctions"
+                android:resource="@raw/com_google_android_gms_appfunctions_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.appinvite"
+                android:resource="@raw/com_google_android_gms_appinvite_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.appsearch"
+                android:resource="@raw/com_google_android_gms_appsearch_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.appset"
+                android:resource="@raw/com_google_android_gms_appset_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.appset"
+                android:resource="@raw/com_google_android_gms_appset_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.audit"
+                android:resource="@raw/com_google_android_gms_audit_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth_account"
+                android:resource="@raw/com_google_android_gms_auth_account_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth_account_client"
+                android:resource="@raw/com_google_android_gms_auth_account_client_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.auth_account_client"
+                android:resource="@raw/com_google_android_gms_auth_account_client_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth.api.credentials"
+                android:resource="@raw/com_google_android_gms_auth_api_credentials_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth_api_early_update"
+                android:resource="@raw/com_google_android_gms_auth_api_early_update_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth_api_phone"
+                android:resource="@raw/com_google_android_gms_auth_api_phone_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth_authzen"
+                android:resource="@raw/com_google_android_gms_auth_authzen_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth.blockstore"
+                android:resource="@raw/com_google_android_gms_auth_blockstore_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth_cryptauth"
+                android:resource="@raw/com_google_android_gms_auth_cryptauth_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth.easyunlock"
+                android:resource="@raw/com_google_android_gms_auth_easyunlock_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth_folsom"
+                android:resource="@raw/com_google_android_gms_auth_folsom_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth_managed"
+                android:resource="@raw/com_google_android_gms_auth_managed_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.auth.proximity"
+                android:resource="@raw/com_google_android_gms_auth_proximity_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.autofill"
+                android:resource="@raw/com_google_android_gms_autofill_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.backup"
+                android:resource="@raw/com_google_android_gms_backup_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.blindauth"
+                android:resource="@raw/com_google_android_gms_blindauth_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.blindauth"
+                android:resource="@raw/com_google_android_gms_blindauth_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.camera_low_light"
+                android:resource="@raw/com_google_android_gms_camera_low_light_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.camera_low_light"
+                android:resource="@raw/com_google_android_gms_camera_low_light_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.car"
+                android:resource="@raw/com_google_android_gms_car_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.cast"
+                android:resource="@raw/com_google_android_gms_cast_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.castauth"
+                android:resource="@raw/com_google_android_gms_castauth_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.castauth"
+                android:resource="@raw/com_google_android_gms_castauth_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.checkin"
+                android:resource="@raw/com_google_android_gms_checkin_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.chromesync"
+                android:resource="@raw/com_google_android_gms_chromesync_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.clearcut_client"
+                android:resource="@raw/com_google_android_gms_clearcut_client_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.clearcut_client"
+                android:resource="@raw/com_google_android_gms_clearcut_client_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.cobalt"
+                android:resource="@raw/com_google_android_gms_cobalt_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.cobalt"
+                android:resource="@raw/com_google_android_gms_cobalt_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.consentverifier"
+                android:resource="@raw/com_google_android_libraries_consentverifier_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.consentverifier"
+                android:resource="@raw/com_google_android_libraries_consentverifier_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.constellation"
+                android:resource="@raw/com_google_android_gms_constellation_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.contactinteractions"
+                android:resource="@raw/com_google_android_gms_contactinteractions_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.contactkeys"
+                android:resource="@raw/com_google_android_gms_contactkeys_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.contactkeys"
+                android:resource="@raw/com_google_android_gms_contactkeys_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms"
+                android:resource="@raw/com_google_android_gms_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.credential_manager"
+                android:resource="@raw/com_google_android_gms_credential_manager_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.crisisalerts"
+                android:resource="@raw/com_google_android_gms_crisisalerts_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.crisisalerts"
+                android:resource="@raw/com_google_android_gms_crisisalerts_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.dck"
+                android:resource="@raw/com_google_android_gms_dck_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.droidguard"
+                android:resource="@raw/com_google_android_gms_droidguard_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.dtdi"
+                android:resource="@raw/com_google_android_gms_dtdi_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.dtdi"
+                android:resource="@raw/com_google_android_gms_dtdi_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.esim"
+                android:resource="@raw/com_google_android_gms_esim_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.esim"
+                android:resource="@raw/com_google_android_gms_esim_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.family"
+                android:resource="@raw/com_google_android_gms_family_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.feedback"
+                android:resource="@raw/com_google_android_gms_feedback_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.feedback.car"
+                android:resource="@raw/com_google_android_gms_feedback_car_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.fido"
+                android:resource="@raw/com_google_android_gms_fido_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.filamentsupportchecker"
+                android:resource="@raw/com_google_android_gms_filamentsupportchecker_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.filamentsupportchecker"
+                android:resource="@raw/com_google_android_gms_filamentsupportchecker_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.findmydevice"
+                android:resource="@raw/com_google_android_gms_findmydevice_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.fitness"
+                android:resource="@raw/com_google_android_gms_fitness_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.fonts"
+                android:resource="@raw/com_google_android_gms_fonts_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.fraudprotect"
+                android:resource="@raw/com_google_android_gms_fraudprotect_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.fraudprotect"
+                android:resource="@raw/com_google_android_gms_fraudprotect_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.gaia_experiments"
+                android:resource="@raw/com_google_android_gms_gaia_experiments_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.gaia_experiments"
+                android:resource="@raw/com_google_android_gms_gaia_experiments_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.gass"
+                android:resource="@raw/com_google_android_gms_gass_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.gcm"
+                android:resource="@raw/com_google_android_gms_gcm_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.geocoding"
+                android:resource="@raw/com_google_android_gms_geocoding_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.geocoding"
+                android:resource="@raw/com_google_android_gms_geocoding_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.geotimezone"
+                android:resource="@raw/com_google_android_gms_geotimezone_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.gmscompliance"
+                android:resource="@raw/com_google_android_gms_gmscompliance_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.gmslogger"
+                android:resource="@raw/com_google_android_gms_gmslogger_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.gmslogger"
+                android:resource="@raw/com_google_android_gms_gmslogger_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.gmsplatform"
+                android:resource="@raw/com_google_android_gms_gmsplatform_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.gmsplatform"
+                android:resource="@raw/com_google_android_gms_gmsplatform_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.googlehelp"
+                android:resource="@raw/com_google_android_gms_googlehelp_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.googleone"
+                android:resource="@raw/com_google_android_gms_googleone_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.googleone"
+                android:resource="@raw/com_google_android_gms_googleone_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.googlesettings"
+                android:resource="@raw/com_google_android_gms_googlesettings_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.googlesettings"
+                android:resource="@raw/com_google_android_gms_googlesettings_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.growth"
+                android:resource="@raw/com_google_android_gms_growth_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.growth.upgradeparty"
+                android:resource="@raw/com_google_android_gms_growth_upgradeparty_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.homegraph"
+                android:resource="@raw/com_google_android_gms_homegraph_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.homegraph"
+                android:resource="@raw/com_google_android_gms_homegraph_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.icing"
+                android:resource="@raw/com_google_android_gms_icing_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.identitycredentials"
+                android:resource="@raw/com_google_android_gms_identitycredentials_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.identitycredentials"
+                android:resource="@raw/com_google_android_gms_identitycredentials_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.instantapps"
+                android:resource="@raw/com_google_android_gms_instantapps_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.ipa"
+                android:resource="@raw/com_google_android_gms_ipa_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.kids.common"
+                android:resource="@raw/com_google_android_gms_kids_common_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.kids.common"
+                android:resource="@raw/com_google_android_gms_kids_common_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.kidssettings"
+                android:resource="@raw/com_google_android_gms_kidssettings_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.kidssettings"
+                android:resource="@raw/com_google_android_gms_kidssettings_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.location"
+                android:resource="@raw/com_google_android_location_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.locationsharingreporter"
+                android:resource="@raw/com_google_android_gms_locationsharingreporter_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.magictether"
+                android:resource="@raw/com_google_android_gms_magictether_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.maps"
+                android:resource="@raw/com_google_android_gms_maps_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.maps3d"
+                android:resource="@raw/com_google_android_gms_maps3d_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.mdisync"
+                android:resource="@raw/com_google_android_gms_mdisync_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.media_effect_enhancement"
+                android:resource="@raw/com_google_android_gms_media_effect_enhancement_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.media_effect_enhancement"
+                android:resource="@raw/com_google_android_gms_media_effect_enhancement_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.mlbenchmark"
+                android:resource="@raw/com_google_android_gms_mlbenchmark_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.mlbenchmark"
+                android:resource="@raw/com_google_android_gms_mlbenchmark_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.mobile_data_plan"
+                android:resource="@raw/com_google_android_gms_mobile_data_plan_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.motion"
+                android:resource="@raw/com_google_android_gms_motion_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.motion"
+                android:resource="@raw/com_google_android_gms_motion_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.motionsicknessassist"
+                android:resource="@raw/com_google_android_gms_motionsicknessassist_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.motionsicknessassist"
+                android:resource="@raw/com_google_android_gms_motionsicknessassist_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.multidevice"
+                android:resource="@raw/com_google_android_gms_multidevice_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.multidevice"
+                android:resource="@raw/com_google_android_gms_multidevice_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.nearby"
+                android:resource="@raw/com_google_android_gms_nearby_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.notifications"
+                android:resource="@raw/com_google_android_gms_notifications_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.notificationscapping"
+                android:resource="@raw/com_google_android_gms_notificationscapping_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.notificationscapping"
+                android:resource="@raw/com_google_android_gms_notificationscapping_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.notificationsregistration"
+                android:resource="@raw/com_google_android_gms_notificationsregistration_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.notificationsregistration"
+                android:resource="@raw/com_google_android_gms_notificationsregistration_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.octarine"
+                android:resource="@raw/com_google_android_gms_octarine_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.onboardingconsent"
+                android:resource="@raw/com_google_android_gms_onboardingconsent_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.onboardingconsent"
+                android:resource="@raw/com_google_android_gms_onboardingconsent_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.update"
+                android:resource="@raw/com_google_android_gms_update_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.pay"
+                android:resource="@raw/com_google_android_gms_pay_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.people"
+                android:resource="@raw/com_google_android_gms_people_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.permissions"
+                android:resource="@raw/com_google_android_gms_permissions_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.phenotype"
+                android:resource="@raw/com_google_android_gms_phenotype_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.phonesky_recovery"
+                android:resource="@raw/com_google_android_gms_phonesky_recovery_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.places"
+                android:resource="@raw/com_google_android_gms_places_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.play_cloud_search"
+                android:resource="@raw/com_google_android_gms_play_cloud_search_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.play_cloud_search"
+                android:resource="@raw/com_google_android_gms_play_cloud_search_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.potokens"
+                android:resource="@raw/com_google_android_gms_potokens_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.presencemanager"
+                android:resource="@raw/com_google_android_gms_presencemanager_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.pseudonymous"
+                android:resource="@raw/com_google_android_gms_pseudonymous_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.pseudonymous"
+                android:resource="@raw/com_google_android_gms_pseudonymous_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.quickstart"
+                android:resource="@raw/com_google_android_gms_quickstart_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.quickstart"
+                android:resource="@raw/com_google_android_gms_quickstart_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.restrictednetwork"
+                android:resource="@raw/com_google_android_gms_restrictednetwork_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.restrictednetwork"
+                android:resource="@raw/com_google_android_gms_restrictednetwork_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.romanesco"
+                android:resource="@raw/com_google_android_gms_romanesco_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.security.safebrowsing"
+                android:resource="@raw/com_google_android_gms_security_safebrowsing_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.security.safebrowsing"
+                android:resource="@raw/com_google_android_gms_security_safebrowsing_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.security"
+                android:resource="@raw/com_google_android_gms_security_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.security.fmd"
+                android:resource="@raw/com_google_android_gms_security_fmd_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.security.fmd"
+                android:resource="@raw/com_google_android_gms_security_fmd_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.semanticlocation"
+                android:resource="@raw/com_google_android_gms_semanticlocation_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.setupservices"
+                android:resource="@raw/com_google_android_gms_setupservices_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.significant_places"
+                android:resource="@raw/com_google_android_gms_significant_places_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.significant_places"
+                android:resource="@raw/com_google_android_gms_significant_places_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.signin"
+                android:resource="@raw/com_google_android_gms_signin_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.smartdevice"
+                android:resource="@raw/com_google_android_gms_smartdevice_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.tapandpay"
+                android:resource="@raw/com_google_android_gms_tapandpay_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.threadnetwork"
+                android:resource="@raw/com_google_android_gms_threadnetwork_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.threadnetwork"
+                android:resource="@raw/com_google_android_gms_threadnetwork_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.thunderbird"
+                android:resource="@raw/com_google_android_gms_thunderbird_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.trustagent"
+                android:resource="@raw/com_google_android_gms_trustagent_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.gms.trustagent"
+                android:resource="@raw/com_google_android_gms_trustagent_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.udc"
+                android:resource="@raw/com_google_android_gms_udc_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.ulr"
+                android:resource="@raw/com_google_android_gms_ulr_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.usagereporting"
+                android:resource="@raw/com_google_android_gms_usagereporting_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.vehicle"
+                android:resource="@raw/com_google_android_gms_vehicle_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.vision"
+                android:resource="@raw/com_google_android_gms_vision_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.gms.wearable"
+                android:resource="@raw/com_google_android_gms_wearable_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.heterodyne_info.binarypb:com.google.android.libraries.performance.primes"
+                android:resource="@raw/com_google_android_libraries_performance_primes_heterodyne_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.performance.primes"
+                android:resource="@raw/com_google_android_libraries_performance_primes_registration_info"/>
+            <meta-data
+                android:name="com.google.android.gms.phenotype.registration.binarypb:com.google.android.libraries.surveys"
+                android:resource="@raw/com_google_android_libraries_surveys_registration_info"/>
+        </service>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.actionlearner"
+            android:resource="@xml/com_google_android_gms_actionlearner_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.trustagent.activeunlock.common"
+            android:resource="@xml/com_google_android_gms_trustagent_activeunlock_common_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.appevents"
+            android:resource="@xml/com_google_android_gms_appevents_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.appfunctions"
+            android:resource="@xml/com_google_android_gms_appfunctions_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.appsearch"
+            android:resource="@xml/com_google_android_gms_appsearch_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.appset"
+            android:resource="@xml/com_google_android_gms_appset_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.auth_account_client"
+            android:resource="@xml/com_google_android_gms_auth_account_client_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.blindauth"
+            android:resource="@xml/com_google_android_gms_blindauth_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.camera_low_light"
+            android:resource="@xml/com_google_android_gms_camera_low_light_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.castauth"
+            android:resource="@xml/com_google_android_gms_castauth_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.clearcut_client"
+            android:resource="@xml/com_google_android_gms_clearcut_client_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.cobalt"
+            android:resource="@xml/com_google_android_gms_cobalt_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.consentverifier"
+            android:resource="@xml/com_google_android_libraries_consentverifier_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.contactkeys"
+            android:resource="@xml/com_google_android_gms_contactkeys_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.crisisalerts"
+            android:resource="@xml/com_google_android_gms_crisisalerts_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.dtdi"
+            android:resource="@xml/com_google_android_gms_dtdi_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.esim"
+            android:resource="@xml/com_google_android_gms_esim_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.filamentsupportchecker"
+            android:resource="@xml/com_google_android_gms_filamentsupportchecker_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.fraudprotect"
+            android:resource="@xml/com_google_android_gms_fraudprotect_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.gaia_experiments"
+            android:resource="@xml/com_google_android_gms_gaia_experiments_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.geocoding"
+            android:resource="@xml/com_google_android_gms_geocoding_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.gmslogger"
+            android:resource="@xml/com_google_android_gms_gmslogger_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.gmsplatform"
+            android:resource="@xml/com_google_android_gms_gmsplatform_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.googleone"
+            android:resource="@xml/com_google_android_gms_googleone_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.googlesettings"
+            android:resource="@xml/com_google_android_gms_googlesettings_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.homegraph"
+            android:resource="@xml/com_google_android_gms_homegraph_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.identitycredentials"
+            android:resource="@xml/com_google_android_gms_identitycredentials_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.kids.common"
+            android:resource="@xml/com_google_android_gms_kids_common_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.kidssettings"
+            android:resource="@xml/com_google_android_gms_kidssettings_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.maps"
+            android:resource="@xml/com_google_android_gms_maps_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.maps3d"
+            android:resource="@xml/com_google_android_gms_maps3d_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.media_effect_enhancement"
+            android:resource="@xml/com_google_android_gms_media_effect_enhancement_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.mlbenchmark"
+            android:resource="@xml/com_google_android_gms_mlbenchmark_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.motion"
+            android:resource="@xml/com_google_android_gms_motion_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.motionsicknessassist"
+            android:resource="@xml/com_google_android_gms_motionsicknessassist_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.multidevice"
+            android:resource="@xml/com_google_android_gms_multidevice_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.notificationscapping"
+            android:resource="@xml/com_google_android_gms_notificationscapping_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.notificationsregistration"
+            android:resource="@xml/com_google_android_gms_notificationsregistration_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.onboardingconsent"
+            android:resource="@xml/com_google_android_gms_onboardingconsent_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.play_cloud_search"
+            android:resource="@xml/com_google_android_gms_play_cloud_search_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.pseudonymous"
+            android:resource="@xml/com_google_android_gms_pseudonymous_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.quickstart"
+            android:resource="@xml/com_google_android_gms_quickstart_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.restrictednetwork"
+            android:resource="@xml/com_google_android_gms_restrictednetwork_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.security.safebrowsing"
+            android:resource="@xml/com_google_android_gms_security_safebrowsing_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.security.fmd"
+            android:resource="@xml/com_google_android_gms_security_fmd_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.significant_places"
+            android:resource="@xml/com_google_android_gms_significant_places_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.threadnetwork"
+            android:resource="@xml/com_google_android_gms_threadnetwork_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.gms.trustagent"
+            android:resource="@xml/com_google_android_gms_trustagent_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.performance.primes"
+            android:resource="@xml/com_google_android_libraries_performance_primes_phenotype"/>
+        <meta-data
+            android:name="com.google.android.gms.phenotype.registration.xml:com.google.android.libraries.surveys"
+            android:resource="@xml/com_google_android_libraries_surveys_phenotype"/>
+        <activity
+            android:name="com.google.android.apps.auto.carservice.car.activity.virtualdevice.CarVirtualDeviceActivity"
+            android:exported="false"
+            android:process=":car"
+            android:taskAffinity="com.google.android.apps.auto.carservice.car.activity.virtualdevice"
+            android:stateNotNeeded="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:allowEmbedded="true"
+            android:resizeableActivity="true"/>
+        <service
+            android:name="com.google.android.apps.auto.carservice.companion.CarProcessCompanionDeviceService"
+            android:permission="android.permission.BIND_COMPANION_DEVICE_SERVICE"
+            android:exported="true"
+            android:process=":car">
+            <intent-filter>
+                <action android:name="android.companion.CompanionDeviceService"/>
+            </intent-filter>
+            <property
+                android:name="android.companion.PROPERTY_PRIMARY_COMPANION_DEVICE_SERVICE"
+                android:value="true"/>
+        </service>
+        <receiver
+            android:name="com.google.android.apps.auto.carservice.frx.FrxReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":car">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/Theme.Gearhead.Material3.Dark.Bottomsheet"
+            android:name="com.google.android.apps.auto.carservice.frx.phonescreen.PhonescreenFrxActivity"
+            android:exported="false"
+            android:process=":car"
+            android:noHistory="true"
+            android:resizeableActivity="true"/>
+        <service
+            android:name="com.google.android.apps.auto.carservice.gmscorecompat.CarSetupServiceImpl"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":car"
+            android:foregroundServiceType="connectedDevice"/>
+        <service
+            android:name="com.google.android.apps.auto.carservice.gmscorecompat.CarStartupServiceImpl"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":car"
+            android:foregroundServiceType="connectedDevice">
+            <intent-filter>
+                <action android:name="com.google.android.gms.car.wifi.BT_START"/>
+                <action android:name="com.google.android.gms.car_setup.START_USB_PROJECTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@style/CarWindowDisablePreview.Transparent"
+            android:label="@string/car_app_name"
+            android:icon="0x7f08018f"
+            android:name="com.google.android.apps.auto.carservice.gmscorecompat.FirstActivityImpl"
+            android:enabled="false"
+            android:exported="true"
+            android:process=":car"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:configChanges="screenSize|uiMode|orientation|keyboardHidden|keyboard"
+            android:showWhenLocked="true"
+            android:turnScreenOn="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"/>
+                <action android:name="com.google.android.gms.car.usb.USB_ACCESSORY_FORCE_START"/>
+                <action android:name="com.google.android.gms.carsetup.START_DUPLEX"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                android:resource="@xml/car_usb_accessory_filter"/>
+        </activity>
+        <activity
+            android:theme="@style/CarFrx"
+            android:label="@string/car_app_name"
+            android:icon="0x7f08018f"
+            android:name="com.google.android.gms.carsetup.SetupActivityImpl"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":car"/>
+        <activity
+            android:theme="@android:style/Theme.Material.NoActionBar"
+            android:label="@string/car_app_name"
+            android:icon="0x7f08018f"
+            android:name="com.google.android.gms.carsetup.CarErrorDisplayActivityImpl"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":shared"
+            android:taskAffinity=""
+            android:launchMode="singleTask"
+            android:autoRemoveFromRecents="true"/>
+        <service
+            android:name="com.google.android.apps.auto.carservice.gmscorecompat.CarChimeraService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":car"
+            android:foregroundServiceType="microphone|connectedDevice|location">
+            <intent-filter>
+                <action android:name="com.google.android.gms.car.service.START"/>
+            </intent-filter>
+        </service>
+        <receiver
+            android:name="com.google.android.apps.auto.carservice.gmscorecompat.CarBluetoothReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":car">
+            <intent-filter>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED"/>
+                <action android:name="android.bluetooth.device.action.ACL_DISCONNECTED"/>
+                <action android:name="android.bluetooth.device.action.UUID"/>
+                <action android:name="android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"/>
+                <action android:name="android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.apps.auto.carservice.gmscorecompat.CarUsbReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":car">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_STATE"/>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.hardware.usb.action.USB_ACCESSORY_ATTACHED"
+                android:resource="@xml/car_usb_accessory_filter"/>
+        </receiver>
+        <receiver
+            android:name="com.google.android.apps.auto.carservice.gmscorecompat.CarUsbReceiverTPlus"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":car">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.apps.auto.carservice.gmscorecompat.ComponentInitReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":car">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/Theme.Gearhead.Material3.Dark.Bottomsheet"
+            android:label="@string/car_app_name"
+            android:icon="0x7f08018f"
+            android:name="com.google.android.apps.auto.carservice.gmscorecompat.PreSetupActivityImpl"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":car"
+            android:taskAffinity=""
+            android:screenOrientation="portrait"
+            android:autoRemoveFromRecents="true"
+            android:resizeableActivity="true"/>
+        <service
+            android:name="com.google.android.apps.auto.carservice.service.impl.GearheadCarStartupService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":car"/>
+        <receiver
+            android:name="com.google.android.apps.auto.carservice.service.impl.GearheadCarServiceCallbacks.CarModeBroadcastReceiver"
+            android:exported="false"
+            android:process=":car">
+            <intent-filter>
+                <action android:name="com.google.android.apps.auto.carservice.service.impl.ACTION_STOP_PROJECTION"/>
+                <action android:name="android.app.action.ENTER_CAR_MODE"/>
+                <action android:name="android.app.action.EXIT_CAR_MODE"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.apps.auto.components.bugreport.BugreporterReceiver"
+            android:exported="false"
+            android:process=":shared">
+            <intent-filter>
+                <action android:name="android.intent.action.BUG_REPORT"/>
+                <action android:name="android.intent.action.ATTACH_DATA"/>
+            </intent-filter>
+        </receiver>
+        <provider
+            android:name="com.google.android.apps.auto.components.bugreport.BugreportFileProvider"
+            android:exported="false"
+            android:process=":shared"
+            android:authorities="com.google.android.apps.auto.components.bugreport.fileprovider"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/bugreport_file_provider_paths"/>
+        </provider>
+        <activity
+            android:name="com.google.android.apps.auto.components.bugreport.BugreportHandlerActivity"
+            android:enabled="false"
+            android:exported="true"
+            android:process=":shared"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND_MULTIPLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="application/vnd.android.bugreport"/>
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="com.google.android.apps.auto.components.bugreport.BugreporterReceiver.ShowToastReceiver"
+            android:exported="false"
+            android:process=":projection"/>
+        <receiver
+            android:name="com.google.android.apps.auto.components.bugreport.BugreportProjectionNotificationReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="START_NOTIFICATION"/>
+                <action android:name="CLOSE_NOTIFICATION"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.apps.auto.components.bugreport.BugreportTitleTranscriptionReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":projection"/>
+        <receiver
+            android:name="com.google.android.apps.auto.components.bugreport.BugreportRequester.RetrieveBugreportReceiver"
+            android:exported="false"
+            android:process=":shared"/>
+        <service
+            android:name="com.google.android.apps.auto.components.bugreport.BugreportRequester.BugreportProgressService"
+            android:exported="false"
+            android:process=":shared"
+            android:foregroundServiceType="connectedDevice"/>
+        <service
+            android:label="@string/car_local_media_service_label"
+            android:icon="@mipmap/ic_car_media_app_icon"
+            android:name="com.google.android.apps.auto.components.carlocalmedia.CarLocalMediaBrowserService"
+            android:enabled="false"
+            android:exported="true"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+            </intent-filter>
+            <meta-data
+                android:name="androidx.car.app.TintableAttributionIcon"
+                android:resource="@drawable/gs_directions_car_fill1_vd_theme_24"/>
+            <meta-data
+                android:name="com.google.android.gms.car.media.CarLocalMedia"
+                android:value="true"/>
+        </service>
+        <receiver
+            android:name="com.google.android.apps.auto.components.connectivity.reset.ConnectionResetReceiver"
+            android:exported="false"
+            android:process=":watchdog">
+            <intent-filter>
+                <action android:name="com.google.android.projection.gearhead.RESET_USB_PORT"/>
+                <action android:name="com.google.android.projection.gearhead.RESET_USB_GADGET"/>
+                <action android:name="com.google.android.projection.gearhead.RESET_USB_ROLES"/>
+                <action android:name="com.google.android.projection.gearhead.RESET_USB_FUNCTION"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.apps.auto.components.connectivity.usbtrigger.CarUsbTriggerReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:process=":car">
+            <intent-filter>
+                <action android:name="android.hardware.usb.action.USB_STATE"/>
+                <action android:name="android.hardware.usb.action.USB_ACCESSORY_HANDSHAKE"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:label="Compose Catalog"
+            android:name="com.google.android.apps.auto.components.coolwalk.compose.catalog.ComposeCatalogCarActivityService"
+            android:enabled="false"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION_OEM"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentWindow"/>
+        </service>
+        <activity
+            android:theme="@style/Theme.GoogleMaterial3.DayNight.Dialog"
+            android:name="com.google.android.apps.auto.components.feedback.csat.postdrive.CsatPostdriveActivity"
+            android:exported="false"
+            android:process=":shared"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:autoRemoveFromRecents="true"
+            android:resizeableActivity="true"/>
+        <activity
+            android:theme="@style/Theme.GoogleMaterial3.DayNight.Dialog"
+            android:name="com.google.android.apps.auto.components.feedback.csat.postdrive.LegacyCsatPostdriveActivity"
+            android:exported="false"
+            android:process=":shared"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:autoRemoveFromRecents="true"
+            android:resizeableActivity="true"/>
+        <service
+            android:name="com.google.android.apps.auto.components.feedback.hats.HatsDownloadService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"
+            android:process=":shared"/>
+        <activity
+            android:theme="@style/Theme.GoogleMaterial.Dark.NoActionBar"
+            android:name="com.google.android.apps.auto.components.feedback.hats.HatsSurveyActivity"
+            android:exported="false"
+            android:process=":shared"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:theme="@style/SurveysTransparentActivity"
+            android:name="com.google.android.libraries.surveys.internal.view.SurveyActivity"
+            android:exported="false"
+            android:process=":shared"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:configChanges="screenSize|screenLayout|orientation|keyboardHidden"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="distractionOptimized"
+                android:value="true"/>
+        </activity>
+        <receiver
+            android:name="com.google.android.apps.auto.components.feedback.impl.FeedbackNotificationHelper.NotificationCancelReceiver"
+            android:exported="false"
+            android:process=":shared">
+            <intent-filter>
+                <action android:name="com.google.android.gearhead.feedback.TIMEOUT_HATS_NOTIFICATION"/>
+                <action android:name="com.google.android.gearhead.feedback.DISMISS_HATS_NOTIFICATION"/>
+                <action android:name="com.google.android.gearhead.feedback.DISMISS_RATING_PROMPT_NOTIFICATION"/>
+                <action android:name="com.google.android.gearhead.feedback.CSAT_TIMEOUT"/>
+                <action android:name="com.google.android.gearhead.feedback.CSAT_DISMISS"/>
+                <action android:name="com.google.android.gearhead.feedback.CSAT_THUMBS_UP"/>
+                <action android:name="com.google.android.gearhead.feedback.CSAT_THUMBS_DOWN"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.apps.auto.components.media.app.MediaCarAppService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService"/>
+            </intent-filter>
+        </service>
+        <service
+            android:label="@string/phone_app_name"
+            android:icon="0x7f08091c"
+            android:name="com.google.android.apps.auto.components.phone.PhoneCarAppService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="androidx.car.app.CarAppService"/>
+            </intent-filter>
+        </service>
+        <activity
+            android:theme="@style/Theme.Gearhead.Material3.Dark.Bottomsheet"
+            android:label="CakewalkPhoneActivity"
+            android:name="com.google.android.apps.auto.components.preflight.phone.PreflightPhoneErrorActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:autoRemoveFromRecents="true"
+            android:resizeableActivity="true"/>
+        <activity
+            android:theme="@style/Theme.Gearhead.Material3.Dark.Bottomsheet"
+            android:label="CakewalkPhoneActivity"
+            android:name="com.google.android.apps.auto.components.preflight.phone.PreflightPhoneWelcomeActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:autoRemoveFromRecents="true"
+            android:resizeableActivity="true"/>
+        <activity
+            android:theme="@style/CarFrxTheme.Cakewalk.Phone"
+            android:label="CakewalkPhoneActivity"
+            android:name="com.google.android.apps.auto.components.preflight.phone.PreflightPhonePermissionsActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:autoRemoveFromRecents="true"
+            android:resizeableActivity="true"/>
+        <activity
+            android:theme="@style/CarFrxTheme.Cakewalk.Phone"
+            android:label="CakewalkPhoneActivity"
+            android:name="com.google.android.apps.auto.components.preflight.phone.PreflightPhoneDataNoticeActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:autoRemoveFromRecents="true"
+            android:resizeableActivity="true"/>
+        <receiver
+            android:name="com.google.android.apps.auto.components.preflight.phone.PreflightPhoneWelcomeActivity.RestoreNotificationReceiver"
+            android:exported="false"
+            android:process=":projection"/>
+        <service
+            android:name="com.google.android.apps.auto.components.preflight.PreflightCarActivityService"
+            android:exported="false"
+            android:process=":projection">
+            <intent-filter>
+                <category android:name="com.google.android.gms.car.category.CATEGORY_PROJECTION"/>
+            </intent-filter>
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected"/>
+            <meta-data
+                android:name="com.google.android.projection.gearhead.LIFETIME_REQUIRED"
+                android:value="false"/>
+        </service>
+        <service
+            android:label="@string/radio_service_label"
+            android:icon="@mipmap/radio_icon"
+            android:name="com.google.android.apps.auto.components.radio.RadioMediaBrowserService"
+            android:enabled="false"
+            android:exported="true"
+            android:process=":projection">
+            <intent-filter>
+                <action android:name="android.media.browse.MediaBrowserService"/>
+            </intent-filter>
+            <meta-data
+                android:name="androidx.car.app.TintableAttributionIcon"
+                android:resource="@drawable/gs_radio_vd_theme_24"/>
+            <meta-data
+                android:name="com.google.android.gms.car.media.CarLocalMedia"
+                android:value="true"/>
+            <meta-data
+                android:name="com.google.android.gms.car.application.theme"
+                android:resource="@style/Theme.Gearhead.Coolwalk.DayNight"/>
+        </service>
+        <activity
+            android:theme="@style/InteractiveTroubleshooter"
+            android:label="@string/interactive_troubleshooter_title"
+            android:name="com.google.android.apps.auto.components.settings.interactivetroubleshooter.InteractiveTroubleshooterActivity"
+            android:exported="false"
+            android:process=":projection"
+            android:screenOrientation="portrait"/>
+        <service
+            android:name="com.google.android.apps.auto.components.system.cluster.media.MiniMediaClusterCarActivityService"
+            android:exported="false"
+            android:process=":projection">
+            <meta-data
+                android:name="android.app.theme"
+                android:resource="@style/Theme.Gearhead.Projected.TranslucentStatus"/>
+        </service>
+        <receiver
+            android:name="com.google.android.apps.auto.wireless.bluetooth.WifiBluetoothReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":shared">
+            <intent-filter android:priority="1">
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"/>
+                <action android:name="android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED"/>
+                <action android:name="android.bluetooth.device.action.ACL_CONNECTED"/>
+                <action android:name="com.google.android.projection.gearhead.START_WIRELESS_PROJECTION"/>
+                <action android:name="com.google.android.projection.gearhead.START_WIRELESS_PROJECTION_WPP"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.apps.auto.wireless.bluetooth.WifiBluetoothReceiver.WifiBluetoothReceiverNonExported"
+            android:enabled="true"
+            android:exported="false"
+            android:process=":shared">
+            <intent-filter>
+                <action android:name="com.google.android.projection.gearhead.RESCAN_AFTER_WELCOME_DOWNLOAD"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:name="com.google.android.apps.auto.wireless.deeplink.DeepLinkResolver"
+            android:exported="true"
+            android:process=":car">
+            <intent-filter
+                android:label="android_auto_qr"
+                android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:scheme="https"
+                    android:host="androidauto.com"
+                    android:pathPattern="/projection/.*"/>
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="com.google.android.apps.auto.wireless.setup.receiver.WirelessStartupReceiver"
+            android:enabled="false"
+            android:exported="true"
+            android:process=":car">
+            <intent-filter>
+                <action android:name="com.google.android.apps.auto.wireless.setup.receiver.wirelessstartup.START"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false"/>
+        <service
+            android:name="com.google.android.gms.car.StagingService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="false"/>
+        <receiver
+            android:name="com.google.android.gms.car.UpdateReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+        <provider
+            android:name="com.google.android.libraries.auto.template.icons.proxy.ProxyContentProvider"
+            android:exported="false"
+            android:process=":projection"
+            android:authorities="com.google.android.projection.gearhead.icons"
+            android:grantUriPermissions="true"/>
+        <activity
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar"
+            android:label="@string/primes_debug_activity_label"
+            android:name="com.google.android.libraries.performance.primes.debug.PrimesEventActivity"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.primes.action.DEBUG_PRIMES_EVENTS"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <receiver
+            android:name="com.google.android.libraries.performance.primes.transmitter.LifeboatReceiver"
+            android:exported="false"
+            android:process=":primes_lifeboat"/>
+        <receiver
+            android:name="com.google.android.libraries.phenotype.client.stable.AccountRemovedBroadcastReceiver"
+            android:exported="true"
+            android:process="">
+            <intent-filter>
+                <action android:name="android.accounts.action.ACCOUNT_REMOVED"/>
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/Theme.Social.Licenses"
+            android:label="@string/preferences_license_title"
+            android:name="com.google.android.libraries.social.licenses.LicenseMenuActivity"
+            android:exported="true"/>
+        <activity
+            android:theme="@style/Theme.Social.Licenses"
+            android:label="@string/preferences_license_title"
+            android:name="com.google.android.libraries.social.licenses.LicenseActivity"
+            android:exported="false"/>
+        <activity
+            android:label="@string/strictmode_stack_trace_title"
+            android:name="com.google.android.libraries.strictmode.penalties.notification.FullStackTraceActivity"
+            android:exported="false">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <action android:name="com.google.android.libraries.strictmode.STRICTMODE_TARGET"/>
+            </intent-filter>
+        </activity>
+        <service
+            android:name="android.net.http.MetaDataHolder"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="android.net.http.EnableTelemetry"
+                android:value="true"/>
+        </service>
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="androidx.car.app.CarAppPermissionActivity"
+            android:exported="false"/>
+        <receiver
+            android:name="androidx.car.app.notification.CarAppNotificationBroadcastReceiver"
+            android:exported="false"/>
+        <service
+            android:name="androidx.car.app.CarAppMetadataHolderService"
+            android:enabled="false"
+            android:exported="false"
+            android:process="">
+            <meta-data
+                android:name="androidx.car.app.CarAppMetadataHolderService.CAR_HARDWARE_MANAGER"
+                android:value="androidx.car.app.hardware.ProjectedCarHardwareManager"/>
+        </service>
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
+            android:exported="true"/>
+        <receiver
+            android:name="androidx.core.telecom.internal.MuteStateReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.media.action.MICROPHONE_MUTE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="androidx.core.telecom.internal.JetpackConnectionService"
+            android:permission="android.permission.BIND_TELECOM_CONNECTION_SERVICE"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.telecom.ConnectionService"/>
+            </intent-filter>
+        </service>
+        <provider
+            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+            android:exported="false"
+            android:multiprocess="true"
+            android:authorities="com.google.android.projection.gearhead.lifecycle-process"/>
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:exported="false"
+            android:directBootAware="true"/>
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false"/>
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false"/>
+        <service
+            android:name="androidx.work.impl.background.systemjob.SystemJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="@bool/enable_system_job_service_default"
+            android:exported="true"
+            android:directBootAware="false"/>
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:enabled="@bool/enable_system_foreground_service_default"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.utils.ForceStopRunnable.BroadcastReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:directBootAware="false"/>
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:enabled="false"
+            android:exported="false"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="androidx.work.impl.diagnostics.DiagnosticsReceiver"
+            android:permission="android.permission.DUMP"
+            android:enabled="true"
+            android:exported="true"
+            android:directBootAware="false">
+            <intent-filter>
+                <action android:name="androidx.work.diagnostics.REQUEST_DIAGNOSTICS"/>
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.build.data.PropertiesServiceHolder"
+            android:enabled="false"
+            android:exported="false"
+            android:process="">
+            <intent-filter>
+                <action android:name="com.google.android.build.data.Properties"/>
+            </intent-filter>
+            <meta-data
+                android:name="com.google.android.build.data.properties"
+                android:resource="@raw/build_data"/>
+        </service>
+        <meta-data
+            android:name="com.android.vending.splits.required"
+            android:value="true"/>
+        <meta-data
+            android:name="com.android.stamp.source"
+            android:value="https://play.google.com/store"/>
+        <meta-data
+            android:name="com.android.stamp.type"
+            android:value="STAMP_TYPE_DISTRIBUTION_APK"/>
+        <meta-data
+            android:name="com.android.vending.splits"
+            android:resource="@xml/splits0"/>
+        <meta-data
+            android:name="com.android.vending.derived.apk.id"
+            android:value="3"/>
+    </application>
+</manifest>

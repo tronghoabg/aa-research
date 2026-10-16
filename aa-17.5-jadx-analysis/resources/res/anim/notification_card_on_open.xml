@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <alpha
+        android:duration="@integer/gearhead_notification_center_open_top_card_alpha_duration_ms"
+        android:startOffset="@integer/gearhead_notification_center_open_top_card_alpha_delay_ms"
+        android:fromAlpha="0"
+        android:toAlpha="1"/>
+    <translate
+        android:interpolator="@android:interpolator/decelerate_quad"
+        android:duration="@integer/gearhead_notification_center_open_top_card_alpha_duration_ms"
+        android:fromYDelta="-30%"
+        android:toYDelta="0"/>
+</set>

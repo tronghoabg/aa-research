@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:right="@dimen/scroll_bar_thumb_inset">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/scroll_bar_thumb_color_selector"/>
+            <corners android:radius="@dimen/scroll_bar_thumb_radius"/>
+            <size
+                android:height="@dimen/scroll_bar_thumb_width"
+                android:width="@dimen/scroll_bar_thumb_width"/>
+        </shape>
+    </item>
+</layer-list>

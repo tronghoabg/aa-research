@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android">
+    <Group>
+        <Key
+            android:codes="@integer/keycode_done"
+            android:keyIcon="0x7f08077c"
+            default="true"/>
+        <Key
+            android:codes="@integer/keycode_mode_change"
+            android:keyIcon="0x7f080531"/>
+    </Group>
+</Keyboard>

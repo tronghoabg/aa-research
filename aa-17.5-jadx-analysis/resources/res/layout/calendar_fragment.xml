@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/full_facet"
+    android:background="@color/calendar_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/content_forward_view"/>
+    <FrameLayout
+        android:id="@+id/permission_parent"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/app_bar_height"/>
+    <com.google.android.apps.auto.components.ui.appbar.AppBarImpl
+        android:id="@+id/app_bar"
+        android:background="@color/calendar_background_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</FrameLayout>

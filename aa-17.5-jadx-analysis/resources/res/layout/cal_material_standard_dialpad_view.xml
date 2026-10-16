@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.telecom.dialpad.MaterialStandardDialpadView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:id="@+id/dialpad_view"
+    android:paddingBottom="@dimen/padding_p4"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="@dimen/padding_p5">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        layout="@layout/material_standard_dialed_number_container"/>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/material_standard_keypad_3x4"/>
+    <FrameLayout
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="@dimen/material_dialpad_call_width"
+        android:layout_height="@dimen/material_dialpad_call_height"
+        android:layout_weight="1">
+        <com.google.android.apps.auto.components.apphost.basewidgets.action.ui.MaterialActionButtonView
+            android:layout_gravity="center"
+            android:id="@+id/call"
+            android:focusable="true"
+            android:clickable="true"
+            android:addStatesFromChildren="true"
+            android:layout_width="@dimen/material_dialpad_call_width"
+            android:layout_height="@dimen/material_dialpad_call_height"
+            android:layout_marginBottom="@dimen/padding_p4"/>
+    </FrameLayout>
+</com.google.android.apps.auto.components.apphost.telecom.dialpad.MaterialStandardDialpadView>

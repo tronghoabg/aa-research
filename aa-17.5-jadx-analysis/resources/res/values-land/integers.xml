@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="demand_space_action_progress_indicator_text_max_lines">1</integer>
+    <integer name="mtrl_bottom_drawer_default_open_state">@integer/state_expanded</integer>
+    <integer name="mtrl_calendar_header_orientation">0</integer>
+    <integer name="mtrl_calendar_selection_text_lines">6</integer>
+</resources>

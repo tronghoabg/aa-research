@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.common.ActionButtonView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="?attr/templateFloatingActionHeight"
+    android:layout_height="?attr/templateFloatingActionHeight"
+    style="?attr/templateFloatingActionButtonStyle">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/action_container"
+        android:padding="@dimen/template_action_inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.google.android.apps.auto.components.apphost.view.widgets.common.ActionButtonView>

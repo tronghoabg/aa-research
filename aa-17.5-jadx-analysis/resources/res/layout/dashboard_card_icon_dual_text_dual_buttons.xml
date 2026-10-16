@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.system.dashboard.design.DashboardCardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dashboard_card_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icon"
+        android:focusable="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_placement"
+        app:layout_constraintEnd_toEndOf="@+id/icon_placement"
+        app:layout_constraintStart_toStartOf="@+id/icon_placement"
+        app:layout_constraintTop_toTopOf="@+id/icon_placement"
+        app:shapeAppearance="@style/CircleShapeAppearance"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/source_badge"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/round_icon_badge_placement"
+        app:layout_constraintEnd_toEndOf="@+id/round_icon_badge_placement"
+        app:layout_constraintStart_toStartOf="@+id/round_icon_badge_placement"
+        app:layout_constraintTop_toTopOf="@+id/round_icon_badge_placement"
+        style="@style/Widget.Dashboard.Badge"/>
+    <include layout="@layout/dashboard_card_text_area"/>
+    <Space
+        android:id="@+id/action_container_spacer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dashboard_card_primary_target_spacer_margin_bottom"
+        app:layout_constraintBottom_toTopOf="@+id/action_container"/>
+    <com.google.android.apps.auto.components.coolwalk.focusring.FocusInterceptor
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/action_container_spacer"
+        app:layout_constraintEnd_toStartOf="@+id/close_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.apps.auto.components.coolwalk.focusring.TappableRegion
+            android:id="@+id/primary_target"
+            android:focusable="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:focusRingInset="@dimen/gearhead_padding_0"
+            style="@style/Widget.Dashboard.PrimaryTarget"/>
+    </com.google.android.apps.auto.components.coolwalk.focusring.FocusInterceptor>
+    <include layout="@layout/dashboard_card_two_button"/>
+</com.google.android.apps.auto.components.system.dashboard.design.DashboardCardView>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <bool name="animate_notification_badge_double_row_status_bar_with_resize">false</bool>
+    <bool name="animate_notification_badge_single_row_status_bar_with_etc_and_resize">false</bool>
+    <bool name="bottom_align_vertical_hotseat_single_row_status_bar">false</bool>
+</resources>

@@ -1,0 +1,15 @@
+package com.waze.ap.b.a.a;
+
+import com.google.v.fj;
+
+/* compiled from: WazeSource */
+/* loaded from: classes6.dex */
+public final class bf extends com.google.v.dm<bg, bf> implements fj {
+    /* synthetic */ bf(byte[] bArr) {
+        super(bg.DEFAULT_INSTANCE);
+    }
+
+    private bf() {
+        throw null;
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phenotype-registrations>
+    <phenotype-registration>
+        <configuration-package>com.google.android.gms.threadnetwork
+        </configuration-package>
+        <log-sources>
+            <log-source>GMSCORE_CHIP
+            </log-source>
+            <log-source>GMSCORE_THREADNETWORK
+            </log-source>
+        </log-sources>
+        <auto-subpackage>true
+        </auto-subpackage>
+    </phenotype-registration>
+</phenotype-registrations>

@@ -1,0 +1,15 @@
+package androidx.core.widget;
+
+import android.view.View;
+import android.widget.PopupMenu;
+
+/* compiled from: WazeSource */
+/* loaded from: classes3.dex */
+public final class PopupMenuCompat {
+    private PopupMenuCompat() {
+    }
+
+    public static View.OnTouchListener getDragToOpenListener(Object obj) {
+        return ((PopupMenu) obj).getDragToOpenListener();
+    }
+}

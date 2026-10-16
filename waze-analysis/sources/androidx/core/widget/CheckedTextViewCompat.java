@@ -1,0 +1,36 @@
+package androidx.core.widget;
+
+import android.content.res.ColorStateList;
+import android.graphics.PorterDuff;
+import android.graphics.drawable.Drawable;
+import android.widget.CheckedTextView;
+import androidx.annotation.ReplaceWith;
+
+/* compiled from: WazeSource */
+/* loaded from: classes3.dex */
+public final class CheckedTextViewCompat {
+    private CheckedTextViewCompat() {
+    }
+
+    @ReplaceWith(expression = "textView.getCheckMarkDrawable()")
+    @Deprecated
+    public static Drawable getCheckMarkDrawable(CheckedTextView checkedTextView) {
+        return checkedTextView.getCheckMarkDrawable();
+    }
+
+    public static ColorStateList getCheckMarkTintList(CheckedTextView checkedTextView) {
+        return checkedTextView.getCheckMarkTintList();
+    }
+
+    public static PorterDuff.Mode getCheckMarkTintMode(CheckedTextView checkedTextView) {
+        return checkedTextView.getCheckMarkTintMode();
+    }
+
+    public static void setCheckMarkTintList(CheckedTextView checkedTextView, ColorStateList colorStateList) {
+        checkedTextView.setCheckMarkTintList(colorStateList);
+    }
+
+    public static void setCheckMarkTintMode(CheckedTextView checkedTextView, PorterDuff.Mode mode) {
+        checkedTextView.setCheckMarkTintMode(mode);
+    }
+}

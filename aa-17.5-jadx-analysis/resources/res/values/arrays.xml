@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="CALLOUT_ALPHABETIC_LABELS">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+    </array>
+    <array name="DISTANCE_UNIT_ENTRIES">
+        <item>@string/UNITS_AUTOMATIC</item>
+        <item>@string/UNITS_METRIC</item>
+        <item>@string/UNITS_IMPERIAL</item>
+    </array>
+    <array name="DISTANCE_UNIT_VALUES">
+        <item />
+        <item>KILOMETERS</item>
+        <item>MILES</item>
+    </array>
+    <array name="SHOW_SCALEBAR_ENTRIES">
+        <item>When zooming in and out</item>
+        <item>Always</item>
+    </array>
+    <array name="SHOW_SCALEBAR_VALUES">
+        <item>fade</item>
+        <item>always</item>
+    </array>
+    <array name="VOICE_LEVEL_VALUES">
+        <item>LOUDER</item>
+        <item>NORMAL</item>
+        <item>SOFTER</item>
+    </array>
+    <array name="audio_guidance_sample_rate_labels">
+        <item>Allow negotiation</item>
+        <item>Allow only 48KHz (No effect if head unit does not support it)</item>
+        <item>Allow only 16KHz</item>
+    </array>
+    <array name="car_app_mode_labels">
+        <item>Release</item>
+        <item>Developer</item>
+        <item>Retail</item>
+        <item>X-Ray</item>
+    </array>
+    <array name="car_audio_codec_labels">
+        <item>Allow standard negotiation</item>
+        <item>Prefer PCM</item>
+        <item>Prefer AAC-LC</item>
+        <item>Prefer AAC-LC with ADTS headers</item>
+    </array>
+    <array name="car_video_resolution_labels">
+        <item>Allow car and phone to negotiate</item>
+        <item>Allow only 800x480</item>
+        <item>Allow up to 1280x720 or 720x1280</item>
+        <item>Allow up to 1920x1080 or 1080x1920</item>
+        <item>Allow up to 1440x2560 or 2560x1440</item>
+        <item>Allow up to 2160x3840 or 3840x2160</item>
+    </array>
+    <array name="com_google_android_gms_fonts_certs">
+        <item>@array/com_google_android_gms_fonts_certs_dev</item>
+        <item>@array/com_google_android_gms_fonts_certs_prod</item>
+    </array>
+    <array name="com_google_android_gms_fonts_certs_dev">
+        <item>MIIEqDCCA5CgAwIBAgIJANWFuGx90071MA0GCSqGSIb3DQEBBAUAMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTAeFw0wODA0MTUyMzM2NTZaFw0zNTA5MDEyMzM2NTZaMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbTCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBANbOLggKv+IxTdGNs8/TGFy0PTP6DHThvbbR24kT9ixcOd9W+EaBPWW+wPPKQmsHxajtWjmQwWfna8mZuSeJS48LIgAZlKkpFeVyxW0qMBujb8X8ETrWy550NaFtI6t9+u7hZeTfHwqNvacKhp1RbE6dBRGWynwMVX8XW8N1+UjFaq6GCJukT4qmpN2afb8sCjUigq0GuMwYXrFVee74bQgLHWGJwPmvmLHC69EH6kWr22ijx4OKXlSIx2xT1AsSHee70w5iDBiK4aph27yH3TxkXy9V89TDdexAcKk/cVHYNnDBapcavl7y0RiQ4biu8ymM8Ga/nmzhRKya6G0cGw8CAQOjgfwwgfkwHQYDVR0OBBYEFI0cxb6VTEM8YYY6FbBMvAPyT+CyMIHJBgNVHSMEgcEwgb6AFI0cxb6VTEM8YYY6FbBMvAPyT+CyoYGapIGXMIGUMQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEQMA4GA1UEChMHQW5kcm9pZDEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDEiMCAGCSqGSIb3DQEJARYTYW5kcm9pZEBhbmRyb2lkLmNvbYIJANWFuGx90071MAwGA1UdEwQFMAMBAf8wDQYJKoZIhvcNAQEEBQADggEBABnTDPEF+3iSP0wNfdIjIz1AlnrPzgAIHVvXxunW7SBrDhEglQZBbKJEk5kT0mtKoOD1JMrSu1xuTKEBahWRbqHsXclaXjoBADb0kkjVEJu/Lh5hgYZnOjvlba8Ld7HCKePCVePoTJBdI4fvugnL8TsgK05aIskyY0hKI9L8KfqfGTl1lzOv2KoWD0KWwtAWPoGChZxmQ+nBli+gwYMzM1vAkP+aayLe0a1EQimlOalO762r0GXO0ks+UeXde2Z4e+8S/pf7pITEI/tP+MxJTALw9QUWEv9lKTk+jkbqxbsh8nfBUapfKqYn0eidpwq2AzVp3juYl7//fKnaPhJD9gs=</item>
+    </array>
+    <array name="com_google_android_gms_fonts_certs_prod">
+        <item>MIIEQzCCAyugAwIBAgIJAMLgh0ZkSjCNMA0GCSqGSIb3DQEBBAUAMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDAeFw0wODA4MjEyMzEzMzRaFw0zNjAxMDcyMzEzMzRaMHQxCzAJBgNVBAYTAlVTMRMwEQYDVQQIEwpDYWxpZm9ybmlhMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtHb29nbGUgSW5jLjEQMA4GA1UECxMHQW5kcm9pZDEQMA4GA1UEAxMHQW5kcm9pZDCCASAwDQYJKoZIhvcNAQEBBQADggENADCCAQgCggEBAKtWLgDYO6IIrgqWbxJOKdoR8qtW0I9Y4sypEwPpt1TTcvZApxsdyxMJZ2JORland2qSGT2y5b+3JKkedxiLDmpHpDsz2WCbdxgxRczfey5YZnTJ4VZbH0xqWVW/8lGmPav5xVwnIiJS6HXk+BVKZF+JcWjAsb/GEuq/eFdpuzSqeYTcfi6idkyugwfYwXFU1+5fZKUaRKYCwkkFQVfcAs1fXA5V+++FGfvjJ/CxURaSxaBvGdGDhfXE28LWuT9ozCl5xw4Yq5OGazvV24mZVSoOO0yZ31j7kYvtwYK6NeADwbSxDdJEqO4k//0zOHKrUiGYXtqw/A0LFFtqoZKFjnkCAQOjgdkwgdYwHQYDVR0OBBYEFMd9jMIhF1Ylmn/Tgt9r45jk14alMIGmBgNVHSMEgZ4wgZuAFMd9jMIhF1Ylmn/Tgt9r45jk14aloXikdjB0MQswCQYDVQQGEwJVUzETMBEGA1UECBMKQ2FsaWZvcm5pYTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLR29vZ2xlIEluYy4xEDAOBgNVBAsTB0FuZHJvaWQxEDAOBgNVBAMTB0FuZHJvaWSCCQDC4IdGZEowjTAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBBAUAA4IBAQBt0lLO74UwLDYKqs6Tm8/yzKkEu116FmH4rkaymUIE0P9KaMftGlMexFlaYjzmB2OxZyl6euNXEsQH8gjwyxCUKRJNexBiGcCEyj6z+a1fuHHvkiaai+KL8W1EyNmgjmyy8AW7P+LLlkR+ho5zEHatRbM/YAnqGcFh5iZBqpknHf1SKMXFh4dd239FJ1jWYfbMDMy3NS5CTMQ2XFI1MvcyUTdZPErjQfTbQe3aDQsQcafEQPD+nqActifKZ0Np0IS9L9kR/wbNvyz6ENwPiTrjV2KRkEjH78ZMcUQXg0L3BYHJ3lc69Vs5Ddf9uUGGMYldX3WfMBEmh/9iFBDAaTCK</item>
+    </array>
+    <array name="common_activity_embedding_hosts">
+        <item>1975B2F17177BC89A5DFF31F9E64A6CAE281A53DC1D1D59B1D147FE1C82AFA00</item>
+        <item>F0FD6C5B410F25CB25C3B53346C8972FAE30F8EE7411DF910480AD6B2D60DB83</item>
+    </array>
+    <array name="energy_primary_tokens">
+        <item>@android:color/system_primary_light</item>
+        <item>@android:color/system_on_primary_light</item>
+        <item>@android:color/system_primary_dark</item>
+        <item>@android:color/system_on_primary_dark</item>
+        <item>@android:color/system_primary_container_light</item>
+        <item>@android:color/system_on_primary_container_light</item>
+        <item>@android:color/system_primary_container_dark</item>
+        <item>@android:color/system_on_primary_container_dark</item>
+        <item>@android:color/SIM_color_blue</item>
+        <item>@android:color/SIM_color_cyan</item>
+        <item>@android:color/SIM_dark_mode_color_blue</item>
+        <item>@android:color/SIM_dark_mode_color_cyan</item>
+    </array>
+    <array name="energy_secondary_tokens">
+        <item>@android:color/system_secondary_light</item>
+        <item>@android:color/system_on_secondary_light</item>
+        <item>@android:color/system_secondary_dark</item>
+        <item>@android:color/system_on_secondary_dark</item>
+        <item>@android:color/system_secondary_container_light</item>
+        <item>@android:color/system_on_secondary_container_light</item>
+        <item>@android:color/system_secondary_container_dark</item>
+        <item>@android:color/system_on_secondary_container_dark</item>
+    </array>
+    <array name="energy_surface_tokens">
+        <item>@android:color/system_surface_light</item>
+        <item>@android:color/system_on_surface_variant_light</item>
+        <item>@android:color/system_surface_dark</item>
+        <item>@android:color/system_on_surface_variant_dark</item>
+        <item>@android:color/system_background_light</item>
+        <item>@android:color/system_on_background_light</item>
+        <item>@android:color/system_background_dark</item>
+        <item>@android:color/system_on_background_dark</item>
+        <item>@android:color/system_surface_variant_light</item>
+        <item>@android:color/system_on_surface_variant_light</item>
+        <item>@android:color/system_surface_variant_dark</item>
+        <item>@android:color/system_on_surface_variant_dark</item>
+        <item>@android:color/system_surface_bright_light</item>
+        <item>@android:color/system_on_surface_variant_light</item>
+        <item>@android:color/system_surface_bright_dark</item>
+        <item>@android:color/system_on_surface_variant_dark</item>
+        <item>@android:color/system_surface_dim_light</item>
+        <item>@android:color/system_on_surface_variant_light</item>
+        <item>@android:color/system_surface_dim_dark</item>
+        <item>@android:color/system_on_surface_variant_dark</item>
+        <item>@android:color/system_surface_container_light</item>
+        <item>@android:color/system_on_surface_variant_light</item>
+        <item>@android:color/system_surface_container_dark</item>
+        <item>@android:color/system_on_surface_variant_dark</item>
+        <item>@android:color/system_surface_container_high_light</item>
+        <item>@android:color/system_on_surface_variant_light</item>
+        <item>@android:color/system_surface_container_high_dark</item>
+        <item>@android:color/system_on_surface_variant_dark</item>
+        <item>@android:color/system_surface_container_highest_light</item>
+        <item>@android:color/system_on_surface_variant_light</item>
+        <item>@android:color/system_surface_container_highest_dark</item>
+        <item>@android:color/system_on_surface_variant_dark</item>
+        <item>@android:color/system_surface_container_low_light</item>
+        <item>@android:color/system_on_surface_variant_light</item>
+        <item>@android:color/system_surface_container_low_dark</item>
+        <item>@android:color/system_on_surface_variant_dark</item>
+        <item>@android:color/system_surface_container_lowest_light</item>
+        <item>@android:color/system_on_surface_variant_light</item>
+        <item>@android:color/system_surface_container_lowest_dark</item>
+        <item>@android:color/system_on_surface_variant_dark</item>
+        <item>@android:color/SIM_color_cyan</item>
+        <item>@android:color/GM2_grey_800</item>
+        <item>@android:color/SIM_dark_mode_color_cyan</item>
+        <item>@android:color/SIM_color_purple</item>
+    </array>
+    <array name="energy_tertiary_tokens">
+        <item>@android:color/system_tertiary_light</item>
+        <item>@android:color/system_on_tertiary_light</item>
+        <item>@android:color/system_tertiary_dark</item>
+        <item>@android:color/system_on_tertiary_dark</item>
+        <item>@android:color/system_tertiary_container_light</item>
+        <item>@android:color/system_on_tertiary_container_light</item>
+        <item>@android:color/system_tertiary_container_dark</item>
+        <item>@android:color/system_on_tertiary_container_dark</item>
+    </array>
+    <array name="gm3_progressindicator_branded_colors">
+        <item>@color/gm3_ref_brand_color_blue</item>
+        <item>@color/gm3_ref_brand_color_red</item>
+        <item>@color/gm3_ref_brand_color_yellow</item>
+        <item>@color/gm3_ref_brand_color_green</item>
+    </array>
+    <array name="google_progressindicator_branded_colors">
+        <item>@color/google_blue500</item>
+        <item>@color/google_red500</item>
+        <item>@color/google_yellow500</item>
+        <item>@color/google_green500</item>
+    </array>
+    <array name="hosts_allowlist_sample">
+        <item>fdb00c43dbde8b51cb312aa81d3b5fa17713adb94b28f598d77f8eb89daceedf, com.google.android.projection.gearhead</item>
+        <item>70811a3eacfd2e83e18da9bfede52df16ce91f2e69a44d21f18ab66991130771, com.google.android.projection.gearhead</item>
+        <item>1975b2f17177bc89a5dff31f9e64a6cae281a53dc1d1d59b1d147fe1c82afa00, com.google.android.projection.gearhead</item>
+        <item>c241ffbc8e287c4e9a4ad19632ba1b1351ad361d5177b7d7b29859bd2b7fc631, com.google.android.apps.automotive.templates.host</item>
+        <item>dd66deaf312d8daec7adbe85a218ecc8c64f3b152f9b5998d5b29300c2623f61, com.google.android.apps.automotive.templates.host</item>
+        <item>50e603d333c6049a37bd751375d08f3bd0abebd33facd30bd17b64b89658b421, com.google.android.apps.automotive.templates.host</item>
+    </array>
+    <array name="letter_tile_colors">
+        <item>#db4437</item>
+        <item>#e91e63</item>
+        <item>#9c27b0</item>
+        <item>#673ab7</item>
+        <item>#3f51b5</item>
+        <item>#4285f4</item>
+        <item>#039be5</item>
+        <item>#0097a7</item>
+        <item>#009688</item>
+        <item>#0f9d58</item>
+        <item>#689f38</item>
+        <item>#ef6c00</item>
+        <item>#ff5722</item>
+        <item>#757575</item>
+    </array>
+    <array name="maps_compass_directions">
+        <item>N</item>
+        <item>NE</item>
+        <item>E</item>
+        <item>SE</item>
+        <item>S</item>
+        <item>SW</item>
+        <item>W</item>
+        <item>NW</item>
+    </array>
+    <array name="maps_full_compass_directions">
+        <item>north</item>
+        <item>northeast</item>
+        <item>east</item>
+        <item>southeast</item>
+        <item>south</item>
+        <item>southwest</item>
+        <item>west</item>
+        <item>northwest</item>
+    </array>
+    <array name="material_google_colors">
+        <item>@color/quantum_googblue</item>
+        <item>@color/quantum_googred</item>
+        <item>@color/quantum_googyellow</item>
+        <item>@color/quantum_googgreen</item>
+    </array>
+    <array name="preloaded_google_sans_fonts">
+    </array>
+    <array name="settings_carmode_screen_on_entry_names">
+        <item>Always on</item>
+        <item>When charging</item>
+        <item>Use device default</item>
+    </array>
+    <array name="settings_carmode_screen_on_entry_values">
+        <item>SCREEN_ON_POLICY_ALWAYS_ON</item>
+        <item>SCREEN_ON_POLICY_ALWAYS_ON_WHEN_CHARGING</item>
+        <item>SCREEN_ON_POLICY_SYSTEM</item>
+    </array>
+    <array name="settings_dashboard_alignment_labels">
+        <item>Media closer to driver</item>
+        <item>Navigation closer to driver</item>
+    </array>
+    <array name="settings_day_night_mode_labels">
+        <item>Day</item>
+        <item>Night</item>
+        <item>Automatic</item>
+    </array>
+    <array name="settings_displaymode_list_display_mode_names">
+        <item>Automatic</item>
+        <item>Forced Night Mode</item>
+        <item>Forced Day Mode</item>
+    </array>
+    <array name="settings_displaymode_list_display_mode_values">
+        <item>MODE_NIGHT_AUTO</item>
+        <item>MODE_NIGHT_YES</item>
+        <item>MODE_NIGHT_NO</item>
+    </array>
+    <array name="settings_edit_driver_position_labels">
+        <item>Default (set by the vehicle)</item>
+        <item>Left</item>
+        <item>Right</item>
+    </array>
+    <array name="settings_initial_focus_mode_labels">
+        <item>Always</item>
+        <item>If used on the last drive</item>
+        <item>Default (set by the vehicle)</item>
+    </array>
+    <array name="settings_theme_labels">
+        <item>Automatic</item>
+        <item>Light</item>
+        <item>Dark</item>
+    </array>
+</resources>

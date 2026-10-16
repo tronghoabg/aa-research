@@ -1,0 +1,148 @@
+package androidx.work;
+
+import android.util.Log;
+
+/* compiled from: WazeSource */
+/* loaded from: classes4.dex */
+public abstract class Logger {
+    private static final int MAX_PREFIXED_TAG_LENGTH = 20;
+    private static final int MAX_TAG_LENGTH = 23;
+    private static final String TAG_PREFIX = "WM-";
+    private static final Object sLock = new Object();
+    private static volatile Logger sLogger;
+
+    public Logger(int i2) {
+    }
+
+    public static Logger get() {
+        Logger logger;
+        synchronized (sLock) {
+            if (sLogger == null) {
+                sLogger = new LogcatLogger(3);
+            }
+            logger = sLogger;
+        }
+        return logger;
+    }
+
+    public static void setLogger(Logger logger) {
+        synchronized (sLock) {
+            if (sLogger == null) {
+                sLogger = logger;
+            }
+        }
+    }
+
+    public static String tagWithPrefix(String str) {
+        int length = str.length();
+        StringBuilder sb = new StringBuilder(23);
+        sb.append(TAG_PREFIX);
+        int i2 = MAX_PREFIXED_TAG_LENGTH;
+        if (length >= i2) {
+            sb.append(str.substring(0, i2));
+        } else {
+            sb.append(str);
+        }
+        return sb.toString();
+    }
+
+    public abstract void debug(String str, String str2);
+
+    public abstract void debug(String str, String str2, Throwable th);
+
+    public abstract void error(String str, String str2);
+
+    public abstract void error(String str, String str2, Throwable th);
+
+    public abstract void info(String str, String str2);
+
+    public abstract void info(String str, String str2, Throwable th);
+
+    public abstract void verbose(String str, String str2);
+
+    public abstract void verbose(String str, String str2, Throwable th);
+
+    public abstract void warning(String str, String str2);
+
+    public abstract void warning(String str, String str2, Throwable th);
+
+    /* compiled from: WazeSource */
+    public class LogcatLogger extends Logger {
+        private final int mLoggingLevel;
+
+        public LogcatLogger(int i2) {
+            super(i2);
+            this.mLoggingLevel = i2;
+        }
+
+        @Override // androidx.work.Logger
+        public void debug(String str, String str2) {
+            if (this.mLoggingLevel <= 3) {
+                Log.d(str, str2);
+            }
+        }
+
+        @Override // androidx.work.Logger
+        public void error(String str, String str2) {
+            if (this.mLoggingLevel <= 6) {
+                Log.e(str, str2);
+            }
+        }
+
+        @Override // androidx.work.Logger
+        public void info(String str, String str2) {
+            if (this.mLoggingLevel <= 4) {
+                Log.i(str, str2);
+            }
+        }
+
+        @Override // androidx.work.Logger
+        public void verbose(String str, String str2) {
+            if (this.mLoggingLevel <= 2) {
+                Log.v(str, str2);
+            }
+        }
+
+        @Override // androidx.work.Logger
+        public void warning(String str, String str2) {
+            if (this.mLoggingLevel <= 5) {
+                Log.w(str, str2);
+            }
+        }
+
+        @Override // androidx.work.Logger
+        public void debug(String str, String str2, Throwable th) {
+            if (this.mLoggingLevel <= 3) {
+                Log.d(str, str2, th);
+            }
+        }
+
+        @Override // androidx.work.Logger
+        public void error(String str, String str2, Throwable th) {
+            if (this.mLoggingLevel <= 6) {
+                Log.e(str, str2, th);
+            }
+        }
+
+        @Override // androidx.work.Logger
+        public void info(String str, String str2, Throwable th) {
+            if (this.mLoggingLevel <= 4) {
+                Log.i(str, str2, th);
+            }
+        }
+
+        @Override // androidx.work.Logger
+        public void verbose(String str, String str2, Throwable th) {
+            if (this.mLoggingLevel <= 2) {
+                Log.v(str, str2, th);
+            }
+        }
+
+        @Override // androidx.work.Logger
+        public void warning(String str, String str2, Throwable th) {
+            if (this.mLoggingLevel <= 5) {
+                Log.w(str, str2, th);
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="car_frx_illustration_size">370dp</dimen>
+    <dimen name="car_frx_illustration_small_size">275dp</dimen>
+    <dimen name="car_frx_illustration_wrapper_margin_bottom">24dp</dimen>
+</resources>

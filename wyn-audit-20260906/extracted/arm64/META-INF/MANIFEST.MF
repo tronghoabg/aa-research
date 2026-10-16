@@ -1,0 +1,107 @@
+Manifest-Version: 1.0
+
+Name: AndroidManifest.xml
+SHA1-Digest: ++eQigFzSpJtIV7Agit74c06KI0=
+
+Name: lib/arm64-v8a/libapminsighta.so
+SHA1-Digest: WNp7Kpo0ydWhrUcJSJKI/PoJBK8=
+
+Name: lib/arm64-v8a/libapminsightb.so
+SHA1-Digest: aYL7yA/hTRNq1yRBR5Ih43Xf070=
+
+Name: lib/arm64-v8a/libapp.so
+SHA1-Digest: rMYlaccm44uCHEP6jnkpKpYlso4=
+
+Name: lib/arm64-v8a/libapplovin-native-crash-reporter.so
+SHA1-Digest: qmJbO8GdFOYTgw5Prbg1Mcj8a2M=
+
+Name: lib/arm64-v8a/libass.so
+SHA1-Digest: yh7qncWbflvLir2ekwzk/ccEotU=
+
+Name: lib/arm64-v8a/libavcodec.so
+SHA1-Digest: qt/0TRm/M2YTKsGyLVs2LGKr3mo=
+
+Name: lib/arm64-v8a/libavdevice.so
+SHA1-Digest: x3bshEHKaoZvgRhzTszzvcA1phk=
+
+Name: lib/arm64-v8a/libavfilter.so
+SHA1-Digest: 9PCoTHTgzn0BEuq/jtjq2Bl7fyk=
+
+Name: lib/arm64-v8a/libavformat.so
+SHA1-Digest: NsUx7Y+8CPrpjRylbrt82PNx9Po=
+
+Name: lib/arm64-v8a/libavutil.so
+SHA1-Digest: c7OwhROftv7kQ9x8ovPyarpQuIk=
+
+Name: lib/arm64-v8a/libbuffer_pgl.so
+SHA1-Digest: o/v79+leONpdRWmXYinBjHFvOvQ=
+
+Name: lib/arm64-v8a/libc++_shared.so
+SHA1-Digest: ygmiIpiV4sbhWoUW/tzi9ywXrb4=
+
+Name: lib/arm64-v8a/libdatastore_shared_counter.so
+SHA1-Digest: CV4WlQQMDBlkJLNYR0xKgZjKOsk=
+
+Name: lib/arm64-v8a/libffmpeg.so
+SHA1-Digest: Dmk6a4Gk8yNVihHBJ0g2VOw83tQ=
+
+Name: lib/arm64-v8a/libffmpegkit.so
+SHA1-Digest: jzgNPPdiULANisG29yBo4dA82iY=
+
+Name: lib/arm64-v8a/libffmpegkit_abidetect.so
+SHA1-Digest: bsVD4tj+h75VKWWLOoL2dMNeHu8=
+
+Name: lib/arm64-v8a/libfile_lock_pgl.so
+SHA1-Digest: +HurTfz9JtX8QM2j4O/xTcKCSMk=
+
+Name: lib/arm64-v8a/libflutter.so
+SHA1-Digest: +UC51WY+rmFVU9VH4uvDP8bWDhI=
+
+Name: lib/arm64-v8a/libflutter_soloud_plugin.so
+SHA1-Digest: kxptWYmX7kHrjT4GAuZsjCHCz38=
+
+Name: lib/arm64-v8a/libfvp_plugin.so
+SHA1-Digest: Rl2M51Es39t3MO2OHqvE0/Al2JE=
+
+Name: lib/arm64-v8a/libmdk.so
+SHA1-Digest: LIi/ML0Snxw5VTMY5hEYpFFaDl8=
+
+Name: lib/arm64-v8a/libnms.so
+SHA1-Digest: TpClRsFPdKG49sKriZWVAZSx2tE=
+
+Name: lib/arm64-v8a/libogg.so
+SHA1-Digest: 9C8p8nFk3W37IjlluWz/elBjWj8=
+
+Name: lib/arm64-v8a/libopus.so
+SHA1-Digest: rYqZoRdiZUO5SW5dakkwQPDPzAQ=
+
+Name: lib/arm64-v8a/libpglarmor.so
+SHA1-Digest: OZme9Ccvhf0B5w1+i+SHAvwZqBY=
+
+Name: lib/arm64-v8a/libsqlcipher.so
+SHA1-Digest: d/p6w8wGLM2bjAhfeHw8kMUsO4w=
+
+Name: lib/arm64-v8a/libswresample.so
+SHA1-Digest: +3V1sojywGViggM1IsXMXTyUUoM=
+
+Name: lib/arm64-v8a/libswscale.so
+SHA1-Digest: OyNxSlthX4P6nIXzSCs8TeyMc28=
+
+Name: lib/arm64-v8a/libtoolChecker.so
+SHA1-Digest: UI20TH8CXzUMLN5X5qiCltiR8DU=
+
+Name: lib/arm64-v8a/libtt_ugen_layout.so
+SHA1-Digest: uobzNFwfpcD8rnJkT28mKCHOMAM=
+
+Name: lib/arm64-v8a/libvorbis.so
+SHA1-Digest: pdTWo7p3Xfaqq4aOC7Hgc2W+KqA=
+
+Name: lib/arm64-v8a/libvorbisfile.so
+SHA1-Digest: rkrI5kNyCWwhqU/q2RjUqLb/h9A=
+
+Name: lib/arm64-v8a/libwynlib.so
+SHA1-Digest: QD7pYGEAkTRvZXmBSAAjuWuyzdc=
+
+Name: stamp-cert-sha256
+SHA1-Digest: 5vTkm69vqAbusD/fho7oWwc7j+I=
+

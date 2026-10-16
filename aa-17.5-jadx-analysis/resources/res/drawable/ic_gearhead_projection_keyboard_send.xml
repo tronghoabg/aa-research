@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/key_oval_background">
+        <inset android:inset="@dimen/projection_keyboard_action_key_inset">
+            <shape android:shape="oval">
+                <solid android:color="?attr/gearheadImeActionCircleColor"/>
+                <size
+                    android:height="@dimen/projection_keyboard_action_circle"
+                    android:width="@dimen/projection_keyboard_action_circle"/>
+            </shape>
+        </inset>
+    </item>
+    <item android:id="@+id/key_icon">
+        <inset android:inset="@dimen/projection_keyboard_action_key_inset">
+            <bitmap
+                android:gravity="center"
+                android:src="0x7f08097e"
+                android:tint="?attr/gearheadImeActionColor"
+                android:height="@dimen/projection_keyboard_action_circle"
+                android:width="@dimen/projection_keyboard_action_circle"/>
+        </inset>
+    </item>
+</layer-list>

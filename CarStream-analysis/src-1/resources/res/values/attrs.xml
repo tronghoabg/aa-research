@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="carColorPrimary" format="color">
+    </attr>
+    <attr name="carColorPrimaryDark" format="color">
+    </attr>
+    <attr name="carColorSecondary" format="color">
+    </attr>
+    <attr name="carColorSecondaryDark" format="color">
+    </attr>
+    <attr name="carPermissionActivityLayout" format="reference">
+    </attr>
+</resources>

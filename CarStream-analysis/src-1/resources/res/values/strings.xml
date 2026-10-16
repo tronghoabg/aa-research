@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CarStream</string>
+    <string name="car_app_library_version">1.7.0</string>
+    <string name="control_name">CarStream Control</string>
+    <string name="gofa_a11y_desc">Đọc tốc độ giới hạn trên bong bóng của app Gofa, Waze hoặc Wyn để vẽ lên màn hình xe. Chỉ đọc, không chạm vào app khác, không gửi gì ra ngoài máy.</string>
+    <string name="gofa_a11y_name">CarStream — đọc Gofa / Waze / Wyn</string>
+    <string name="media_name">CarStream Control</string>
+    <string name="pl_autoplay">Tự động phát</string>
+    <string name="pl_captions">Phụ đề</string>
+    <string name="pl_cc_auto">Tự động dịch</string>
+    <string name="pl_cc_en">English</string>
+    <string name="pl_cc_off">Tắt</string>
+    <string name="pl_cc_vi">Tiếng Việt</string>
+    <string name="pl_fullscreen">Toàn màn hình</string>
+    <string name="pl_mute">Tắt tiếng</string>
+    <string name="pl_next_video">Video tiếp theo</string>
+    <string name="pl_now_playing">Đang phát</string>
+    <string name="pl_pause">Tạm dừng</string>
+    <string name="pl_pip">Thu nhỏ</string>
+    <string name="pl_play">Phát</string>
+    <string name="pl_prev_video">Video trước</string>
+    <string name="pl_q_auto">Tự động</string>
+    <string name="pl_quality">Chất lượng</string>
+    <string name="pl_settings">Cài đặt</string>
+    <string name="pl_up_next_in">Phát tiếp sau %1$ds</string>
+    <string name="surf_name">CarStream Full</string>
+    <string name="surf_search_hint">Tim kiem</string>
+    <string name="control_connecting">Đang kết nối phiên phát…</string>
+    <string name="call_watch_name">CarStream — cuộc gọi trên màn hình xe</string>
+</resources>

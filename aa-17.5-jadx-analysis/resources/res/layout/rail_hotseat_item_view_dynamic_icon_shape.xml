@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/large_icon_background"
+        android:padding="@dimen/coolwalk_rail_dock_icon_outline_padding"
+        android:focusable="false"
+        android:visibility="gone"
+        android:layout_width="@dimen/coolwalk_rail_dock_icon_touch_target_size"
+        android:layout_height="@dimen/coolwalk_rail_dock_icon_touch_target_size"
+        android:checkable="false"
+        app:iconTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <ImageView
+        android:id="@+id/large_icon"
+        android:padding="@dimen/coolwalk_rail_dock_icon_padding"
+        android:focusable="true"
+        android:layout_width="@dimen/coolwalk_rail_dock_icon_touch_target_size"
+        android:layout_height="@dimen/coolwalk_rail_dock_icon_touch_target_size"
+        android:checkable="false"
+        android:elevation="@dimen/coolwalk_rail_dock_button_elevation"
+        app:iconTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/badge"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/badge_spacer"
+        app:layout_constraintRight_toLeftOf="@+id/badge_spacer"
+        style="@style/Gearhead.Rail.Hotseat.Icon.Badge"/>
+    <Space
+        android:id="@+id/badge_spacer"
+        android:layout_width="@dimen/rail_hotseat_badge_offset"
+        android:layout_height="@dimen/rail_hotseat_badge_offset"
+        app:layout_constraintBottom_toBottomOf="@+id/large_icon"
+        app:layout_constraintRight_toRightOf="@+id/large_icon"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

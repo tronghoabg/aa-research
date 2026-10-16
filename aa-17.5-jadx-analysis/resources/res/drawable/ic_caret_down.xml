@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="caret_down"
+    android:height="44dp"
+    android:width="44dp"
+    android:viewportWidth="44"
+    android:viewportHeight="44">
+    <group
+        android:name="caret_down"
+        android:translateX="22"
+        android:translateY="22">
+        <group android:name="ic_caret">
+            <path
+                android:name="path"
+                android:pathData="M -10.875,-5.12522888184 c 0.0,0.0 10.75,10.8752288818 10.75,10.8752288818 c 0.0,0.0 10.765625,-10.953125 10.765625,-10.953125"
+                android:strokeColor="#ffffffff"
+                android:strokeWidth="4.1"/>
+        </group>
+    </group>
+</vector>

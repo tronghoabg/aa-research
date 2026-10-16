@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <inset android:inset="@dimen/template_action_inset">
+            <shape android:shape="rectangle">
+                <solid android:color="?attr/templateActionButtonDefaultBackgroundColor"/>
+                <corners android:radius="@dimen/template_action_corner_radius"/>
+            </shape>
+        </inset>
+    </item>
+    <item android:drawable="@drawable/action_button_ripple"/>
+</layer-list>

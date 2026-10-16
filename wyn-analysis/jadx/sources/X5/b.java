@@ -1,0 +1,94 @@
+package X5;
+
+import J5.y;
+import W5.c;
+import W5.e;
+import ic.d;
+import java.nio.ByteBuffer;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+import java.util.Arrays;
+import k8.AbstractC3198g;
+
+/* loaded from: classes3.dex */
+public final class b extends d {
+
+    /* renamed from: b, reason: collision with root package name */
+    public final /* synthetic */ int f16122b;
+
+    @Override // ic.d
+    public final c r(e eVar, ByteBuffer byteBuffer) {
+        boolean z2 = true;
+        switch (this.f16122b) {
+            case 0:
+                if (byteBuffer.get() != 116) {
+                    return null;
+                }
+                y yVar = new y(byteBuffer.array(), byteBuffer.limit(), 6, (byte) 0);
+                int i5 = 12;
+                yVar.t(12);
+                int iF = (yVar.f() + yVar.i(12)) - 4;
+                yVar.t(44);
+                yVar.u(yVar.i(12));
+                yVar.t(16);
+                ArrayList arrayList = new ArrayList();
+                while (yVar.f() < iF) {
+                    yVar.t(48);
+                    int i10 = yVar.i(8);
+                    yVar.t(4);
+                    int iF2 = yVar.f() + yVar.i(i5);
+                    String str = null;
+                    String str2 = null;
+                    while (yVar.f() < iF2) {
+                        int i11 = yVar.i(8);
+                        boolean z10 = z2;
+                        int i12 = yVar.i(8);
+                        int iF3 = yVar.f() + i12;
+                        if (i11 == 2) {
+                            int i13 = yVar.i(16);
+                            yVar.t(8);
+                            if (i13 == 3) {
+                                while (yVar.f() < iF3) {
+                                    int i14 = yVar.i(8);
+                                    Charset charset = AbstractC3198g.f39299a;
+                                    byte[] bArr = new byte[i14];
+                                    yVar.l(i14, bArr);
+                                    String str3 = new String(bArr, charset);
+                                    int i15 = yVar.i(8);
+                                    for (int i16 = 0; i16 < i15; i16++) {
+                                        yVar.u(yVar.i(8));
+                                    }
+                                    str = str3;
+                                }
+                            }
+                        } else if (i11 == 21) {
+                            Charset charset2 = AbstractC3198g.f39299a;
+                            byte[] bArr2 = new byte[i12];
+                            yVar.l(i12, bArr2);
+                            str2 = new String(bArr2, charset2);
+                        }
+                        yVar.q(iF3 * 8);
+                        z2 = z10;
+                    }
+                    boolean z11 = z2;
+                    yVar.q(iF2 * 8);
+                    if (str != null && str2 != null) {
+                        arrayList.add(new a(i10, str.concat(str2)));
+                    }
+                    z2 = z11;
+                    i5 = 12;
+                }
+                if (arrayList.isEmpty()) {
+                    return null;
+                }
+                return new c(arrayList);
+            default:
+                Y4.b bVar = new Y4.b(byteBuffer.array(), byteBuffer.limit());
+                String strL = bVar.l();
+                strL.getClass();
+                String strL2 = bVar.l();
+                strL2.getClass();
+                return new c(new Y5.a(strL, strL2, bVar.k(), bVar.k(), Arrays.copyOfRange(bVar.f16679a, bVar.f16680b, bVar.f16681c)));
+        }
+    }
+}

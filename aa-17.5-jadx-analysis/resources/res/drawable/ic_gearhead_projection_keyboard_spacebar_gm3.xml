@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:insetLeft="@dimen/projection_keyboard_spacebar_horizontal_margin"
+    android:insetRight="@dimen/projection_keyboard_spacebar_horizontal_margin"
+    android:insetTop="@dimen/projection_keyboard_spacebar_vertical_margin"
+    android:insetBottom="@dimen/projection_keyboard_spacebar_vertical_margin">
+    <shape android:shape="rectangle">
+        <size
+            android:height="@dimen/projection_keyboard_spacebar_visual_height"
+            android:width="@dimen/projection_keyboard_spacebar_visual_width"/>
+        <corners android:radius="@dimen/projection_keyboard_spacebar_gm3_rounding"/>
+    </shape>
+</inset>

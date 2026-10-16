@@ -1,0 +1,207 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes.dex */
+public final class abot extends defpackage.abor implements defpackage.abov, defpackage.abdx {
+    public abot(defpackage.abou abouVar) {
+        super(abouVar);
+    }
+
+    private final defpackage.abon bl() {
+        defpackage.abon abonVar = ((defpackage.abou) this.b).w;
+        if (!abonVar.c) {
+            return abonVar;
+        }
+        defpackage.abon abonVarB = abonVar.clone();
+        ((defpackage.abou) this.b).w = abonVarB;
+        return abonVarB;
+    }
+
+    private final void bm(defpackage.aboj abojVar) {
+        if (abojVar.a != this.a) {
+            throw new java.lang.IllegalArgumentException("This extension is for a different message type.  Please make sure that you are not suppressing any generics type warnings.");
+        }
+    }
+
+    @Override // defpackage.abor, defpackage.abpx
+    /* JADX INFO: renamed from: aX, reason: merged with bridge method [inline-methods] */
+    public final defpackage.abou r() {
+        if (!((defpackage.abou) this.b).T()) {
+            return (defpackage.abou) this.b;
+        }
+        ((defpackage.abou) this.b).w.e();
+        return (defpackage.abou) super.r();
+    }
+
+    @Override // defpackage.abov
+    public final java.lang.Object aY(defpackage.aboj abojVar) {
+        defpackage.abou abouVar = (defpackage.abou) this.b;
+        abouVar.j(abojVar);
+        java.lang.Object objJ = abouVar.w.j(abojVar.d);
+        return objJ == null ? abojVar.b : abojVar.c(objJ);
+    }
+
+    @Override // defpackage.abov
+    public final boolean aZ(defpackage.aboj abojVar) {
+        defpackage.abou abouVar = (defpackage.abou) this.b;
+        abouVar.j(abojVar);
+        return abouVar.w.m(abojVar.d);
+    }
+
+    @Override // defpackage.abdx
+    public final defpackage.abdr b() {
+        defpackage.abdr abdrVar = ((defpackage.abdv) this.b).c;
+        return abdrVar == null ? defpackage.abdr.a : abdrVar;
+    }
+
+    public final void ba(defpackage.aboj abojVar, java.lang.Object obj) {
+        bm(abojVar);
+        t();
+        bl().k(abojVar.d, abojVar.e(obj));
+    }
+
+    public final void bb(defpackage.aboj abojVar) {
+        int i = defpackage.abox.am;
+        bm(abojVar);
+        t();
+        defpackage.abon abonVarBl = bl();
+        defpackage.abow abowVar = abojVar.d;
+        defpackage.abqs abqsVar = abonVarBl.b;
+        abqsVar.remove(abowVar);
+        if (abqsVar.isEmpty()) {
+            abonVarBl.d = false;
+        }
+    }
+
+    public final void bc(defpackage.aboj abojVar, java.lang.Object obj) {
+        int i = defpackage.abox.am;
+        bm(abojVar);
+        t();
+        defpackage.abon abonVarBl = bl();
+        defpackage.abow abowVar = abojVar.d;
+        if (!abowVar.d) {
+            obj = abojVar.e(obj);
+        } else if (abowVar.a() == defpackage.abrg.h) {
+            java.util.ArrayList arrayList = new java.util.ArrayList();
+            java.util.Iterator it = ((java.util.List) obj).iterator();
+            while (it.hasNext()) {
+                arrayList.add(abojVar.e(it.next()));
+            }
+            obj = arrayList;
+        }
+        abonVarBl.l(abowVar, obj);
+    }
+
+    public final void bd(defpackage.abdq abdqVar) {
+        t();
+        defpackage.abdr abdrVar = (defpackage.abdr) this.b;
+        defpackage.abdr abdrVar2 = defpackage.abdr.a;
+        abdqVar.getClass();
+        defpackage.abpj abpjVar = abdrVar.c;
+        if (!abpjVar.c()) {
+            abdrVar.c = defpackage.abox.I(abpjVar);
+        }
+        abdrVar.c.add(abdqVar);
+    }
+
+    /* JADX WARN: Multi-variable type inference failed */
+    public final defpackage.abhg be(int i) {
+        return (defpackage.abhg) ((defpackage.abhm) this.b).d.get(i);
+    }
+
+    public final void bf(defpackage.abhw abhwVar) {
+        t();
+        defpackage.abhm abhmVar = (defpackage.abhm) this.b;
+        defpackage.abhm abhmVar2 = defpackage.abhm.a;
+        abhwVar.getClass();
+        defpackage.abpj abpjVar = abhmVar.c;
+        if (!abpjVar.c()) {
+            abhmVar.c = defpackage.abox.I(abpjVar);
+        }
+        abhmVar.c.add(abhwVar);
+    }
+
+    public final void bg(defpackage.abbe abbeVar) {
+        defpackage.abbe abbeVar2;
+        t();
+        defpackage.abhm abhmVar = (defpackage.abhm) this.b;
+        defpackage.abhm abhmVar2 = defpackage.abhm.a;
+        abbeVar.getClass();
+        defpackage.abox aboxVar = abhmVar.j;
+        if (aboxVar != null && aboxVar != (abbeVar2 = defpackage.abbe.a)) {
+            defpackage.abot abotVar = (defpackage.abot) abbeVar2.o(aboxVar);
+            abotVar.w(abbeVar);
+            abbeVar = (defpackage.abbe) abotVar.r();
+        }
+        abhmVar.j = abbeVar;
+        abhmVar.b |= 2097152;
+    }
+
+    public final void bh(int i, defpackage.abhg abhgVar) {
+        t();
+        defpackage.abhm abhmVar = (defpackage.abhm) this.b;
+        defpackage.abhm abhmVar2 = defpackage.abhm.a;
+        abhgVar.getClass();
+        abhmVar.b();
+        abhmVar.d.set(i, abhgVar);
+    }
+
+    public final void bi(defpackage.abic abicVar) {
+        t();
+        defpackage.abid abidVar = (defpackage.abid) this.b;
+        defpackage.abid abidVar2 = defpackage.abid.a;
+        abicVar.getClass();
+        abidVar.b();
+        abidVar.d.add(abicVar);
+    }
+
+    public final void bj(defpackage.abot abotVar) {
+        t();
+        defpackage.abeu abeuVar = (defpackage.abeu) this.b;
+        defpackage.abdi abdiVar = (defpackage.abdi) abotVar.q();
+        defpackage.abeu abeuVar2 = defpackage.abeu.a;
+        abdiVar.getClass();
+        defpackage.abpj abpjVar = abeuVar.c;
+        if (!abpjVar.c()) {
+            abeuVar.c = defpackage.abox.I(abpjVar);
+        }
+        abeuVar.c.add(abdiVar);
+    }
+
+    @java.lang.Deprecated
+    public final void bk(defpackage.abor aborVar) {
+        t();
+        defpackage.abhg abhgVar = (defpackage.abhg) this.b;
+        defpackage.abhf abhfVar = (defpackage.abhf) aborVar.q();
+        defpackage.abhg abhgVar2 = defpackage.abhg.a;
+        abhfVar.getClass();
+        defpackage.abpj abpjVar = abhgVar.f;
+        if (!abpjVar.c()) {
+            abhgVar.f = defpackage.abox.I(abpjVar);
+        }
+        abhgVar.f.add(abhfVar);
+    }
+
+    @Override // defpackage.abdx
+    public final defpackage.abdr c() {
+        defpackage.abdr abdrVar = ((defpackage.abdv) this.b).d;
+        return abdrVar == null ? defpackage.abdr.a : abdrVar;
+    }
+
+    @Override // defpackage.abdx
+    public final boolean d() {
+        return (((defpackage.abdv) this.b).b & 2) != 0;
+    }
+
+    @Override // defpackage.abor
+    protected final void u() {
+        super.u();
+        if (((defpackage.abou) this.b).w != defpackage.abon.a) {
+            defpackage.abou abouVar = (defpackage.abou) this.b;
+            abouVar.w = abouVar.w.clone();
+        }
+    }
+
+    public abot() {
+        throw null;
+    }
+}

@@ -1,0 +1,45 @@
+package defpackage;
+
+/* loaded from: classes3.dex */
+public final class abbv extends abns implements abnt {
+    public static final abbv a;
+    private int b;
+    private abbu c;
+    private byte d = 2;
+
+    static {
+        abbv abbvVar = new abbv();
+        a = abbvVar;
+        abnv.P(abbv.class, abbvVar);
+    }
+
+    private abbv() {
+        Object[] objArr = abpf.a;
+        abms abmsVar = abms.d;
+    }
+
+    @Override // defpackage.abnv
+    protected final Object a(int i, Object obj) {
+        int i2 = i - 1;
+        if (i2 == 0) {
+            return Byte.valueOf(this.d);
+        }
+        if (i2 == 2) {
+            return new abpg(a, "\u0001\u0001\u0000\u0001\u0002\u0002\u0001\u0000\u0000\u0001\u0002ᐉ\u0000", new Object[]{"b", "c"});
+        }
+        if (i2 == 3) {
+            return new abbv();
+        }
+        if (i2 == 4) {
+            return new abnr(a);
+        }
+        if (i2 == 5) {
+            return a;
+        }
+        if (i2 == 6) {
+            return abnv.L(abbv.class);
+        }
+        this.d = obj == null ? (byte) 0 : (byte) 1;
+        return null;
+    }
+}

@@ -1,0 +1,33 @@
+package defpackage;
+
+/* JADX INFO: loaded from: D:\AA\aa-apk-unpacked\classes.dex */
+public final class ft {
+    public static final int[] a = {2130968680, 2130968687, 2130968688, 2130969070, 2130969071, 2130969072, 2130969073, 2130969074, 2130969075, 2130969127, 2130969165, 2130969166, 2130969211, 2130969535, 2130969543, 2130969550, 2130969551, 2130969571, 2130969595, 2130969640, 2130969828, 2130970043, 2130970223, 2130970246, 2130970247, 2130970463, 2130970470, 2130971033, 2130971056};
+    public static final int[] b = {android.R.attr.layout_gravity};
+    public static final int[] c = {android.R.attr.minWidth};
+    public static final int[] d = {2130968680, 2130968687, 2130968915, 2130969535, 2130970470, 2130971056};
+    public static final int[] e = {android.R.attr.layout, 2130968775, 2130968779, 2130969799, 2130969810, 2130970038, 2130970375, 2130970383};
+    public static final int[] f = {android.R.attr.src, 2130970414, 2130971030, 2130971031};
+    public static final int[] g = {android.R.attr.thumb, 2130971023, 2130971024, 2130971025};
+    public static final int[] h = {android.R.attr.textAppearance, android.R.attr.drawableTop, android.R.attr.drawableBottom, android.R.attr.drawableLeft, android.R.attr.drawableRight, android.R.attr.drawableStart, android.R.attr.drawableEnd};
+    public static final int[] i = {android.R.attr.textAppearance, 2130968668, 2130968669, 2130968670, 2130968671, 2130968672, 2130969187, 2130969188, 2130969189, 2130969190, 2130969192, 2130969193, 2130969194, 2130969195, 2130969220, 2130969317, 2130969382, 2130969392, 2130969685, 2130969789, 2130970899, 2130970982};
+    public static final int[] j = {android.R.attr.windowIsFloating, android.R.attr.windowAnimationStyle, 2130968580, 2130968581, 2130968582, 2130968583, 2130968584, 2130968585, 2130968586, 2130968587, 2130968588, 2130968589, 2130968590, 2130968591, 2130968592, 2130968594, 2130968595, 2130968596, 2130968597, 2130968598, 2130968599, 2130968600, 2130968601, 2130968602, 2130968603, 2130968604, 2130968605, 2130968606, 2130968607, 2130968608, 2130968609, 2130968610, 2130968611, 2130968612, 2130968619, 2130968626, 2130968627, 2130968628, 2130968629, 2130968666, 2130968743, 2130968766, 2130968767, 2130968768, 2130968769, 2130968770, 2130968782, 2130968783, 2130968859, 2130968871, 2130968935, 2130968936, 2130968937, 2130968941, 2130968942, 2130968943, 2130968944, 2130968990, 2130968992, 2130969027, 2130969087, 2130969155, 2130969160, 2130969161, 2130969171, 2130969176, 2130969201, 2130969202, 2130969207, 2130969208, 2130969210, 2130969550, 2130969586, 2130969793, 2130969794, 2130969795, 2130969796, 2130969812, 2130969813, 2130969814, 2130969815, 2130969816, 2130969817, 2130969818, 2130969819, 2130969820, 2130970193, 2130970194, 2130970195, 2130970222, 2130970224, 2130970254, 2130970257, 2130970258, 2130970259, 2130970311, 2130970322, 2130970324, 2130970325, 2130970396, 2130970397, 2130970545, 2130970941, 2130970943, 2130970944, 2130970945, 2130970947, 2130970948, 2130970949, 2130970950, 2130970967, 2130970970, 2130971065, 2130971066, 2130971068, 2130971069, 2130971136, 2130971159, 2130971160, 2130971161, 2130971162, 2130971163, 2130971164, 2130971165, 2130971168, 2130971169, 2130971170};
+    public static final int[] k = {2130968636};
+    public static final int[] l = {android.R.attr.checkMark, 2130968856, 2130968857, 2130968858};
+    public static final int[] m = {android.R.attr.button, 2130968771, 2130968785, 2130968786};
+    public static final int[] n = {2130968660, 2130968661, 2130968709, 2130968934, 2130969191, 2130969404, 2130970395, 2130971004};
+    public static final int[] o = {android.R.attr.gravity, android.R.attr.orientation, android.R.attr.baselineAligned, android.R.attr.baselineAlignedChildIndex, android.R.attr.weightSum, 2130969166, 2130969174, 2130969936, 2130970368};
+    public static final int[] p = {android.R.attr.dropDownHorizontalOffset, android.R.attr.dropDownVerticalOffset};
+    public static final int[] q = {android.R.attr.enabled, android.R.attr.id, android.R.attr.visible, android.R.attr.menuCategory, android.R.attr.orderInCategory, android.R.attr.checkableBehavior};
+    public static final int[] r = {android.R.attr.icon, android.R.attr.enabled, android.R.attr.id, android.R.attr.checked, android.R.attr.visible, android.R.attr.menuCategory, android.R.attr.orderInCategory, android.R.attr.title, android.R.attr.titleCondensed, android.R.attr.alphabeticShortcut, android.R.attr.numericShortcut, android.R.attr.checkable, android.R.attr.onClick, 2130968593, 2130968613, 2130968615, 2130968642, 2130969069, 2130969579, 2130969580, 2130970052, 2130970363, 2130971071};
+    public static final int[] s = {android.R.attr.windowAnimationStyle, android.R.attr.itemTextAppearance, android.R.attr.horizontalDivider, android.R.attr.verticalDivider, android.R.attr.headerBackground, android.R.attr.itemBackground, android.R.attr.itemIconDisabledAlpha, 2130970239, 2130970454};
+    public static final int[] t = {android.R.attr.popupBackground, android.R.attr.popupAnimationStyle, 2130970076};
+    public static final int[] u = {2130970079, 2130970087};
+    public static final int[] v = {android.R.attr.entries, android.R.attr.popupBackground, android.R.attr.prompt, android.R.attr.dropDownWidth, 2130970223};
+    public static final int[] w = {android.R.attr.textOn, android.R.attr.textOff, android.R.attr.thumb, 2130970374, 2130970408, 2130970541, 2130970542, 2130970546, 2130971015, 2130971016, 2130971017, 2130971076, 2130971098, 2130971099};
+    public static final int[] x = {android.R.attr.textSize, android.R.attr.typeface, android.R.attr.textStyle, android.R.attr.textColor, android.R.attr.textColorHint, android.R.attr.textColorLink, android.R.attr.shadowColor, android.R.attr.shadowDx, android.R.attr.shadowDy, android.R.attr.shadowRadius, android.R.attr.fontFamily, android.R.attr.textFontWeight, 2130969382, 2130969392, 2130970899, 2130970982};
+    public static final int[] y = {android.R.attr.gravity, android.R.attr.minHeight, 2130968773, 2130968916, 2130968917, 2130969070, 2130969071, 2130969072, 2130969073, 2130969074, 2130969075, 2130969828, 2130969831, 2130969924, 2130969954, 2130970040, 2130970041, 2130970223, 2130970463, 2130970468, 2130970469, 2130971033, 2130971044, 2130971045, 2130971046, 2130971047, 2130971048, 2130971049, 2130971053, 2130971054};
+    public static final int[] z = {android.R.attr.theme, android.R.attr.focusable, 2130970081, 2130970084, 2130970997};
+    public static final int[] A = {android.R.attr.background, 2130968689, 2130968690};
+    public static final int[] B = {android.R.attr.id, android.R.attr.layout, android.R.attr.inflatedId};
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="common.Widget.Base.ActionBar.GoogleSettings" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+    </style>
+    <style name="common.Widget.Base.ActionBar.Style.GoogleSettings" parent="@style/Widget.AppCompat.ActionBar.Solid">
+    </style>
+    <style name="common.Widget.Base.SwitchBar.GoogleSettings" parent="@style/common.Widget.SwitchBar">
+        <item name="colorAccent">@color/googlesettings_color_accent</item>
+        <item name="colorControlHighlight">@color/ripple_material_dark</item>
+        <item name="textColorOff">@color/material_grey_black_1000</item>
+        <item name="textColorOn">@color/material_grey_black_1000</item>
+    </style>
+</resources>

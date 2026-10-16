@@ -1,0 +1,67 @@
+package defpackage;
+
+import j$.util.Comparator;
+import java.util.function.Function;
+import java.util.function.ToDoubleFunction;
+import java.util.function.ToIntFunction;
+import java.util.function.ToLongFunction;
+
+/* loaded from: classes3.dex */
+final class aeyl implements Comparator, aeyk {
+    final /* synthetic */ java.util.Comparator a;
+
+    public aeyl(java.util.Comparator comparator) {
+        this.a = comparator;
+    }
+
+    @Override // java.util.Comparator
+    /* renamed from: a, reason: merged with bridge method [inline-methods] */
+    public final int compare(Short sh, Short sh2) {
+        return this.a.compare(sh, sh2);
+    }
+
+    @Override // defpackage.aeyk
+    public final int b(short s, short s2) {
+        return this.a.compare(Short.valueOf(s), Short.valueOf(s2));
+    }
+
+    @Override // defpackage.aeyk
+    public final /* synthetic */ aeyk c(aeyk aeykVar) {
+        return new aeyj(this, aeykVar);
+    }
+
+    @Override // j$.util.Comparator, java.util.Comparator
+    public final /* synthetic */ java.util.Comparator reversed() {
+        return aeyp.a(this);
+    }
+
+    @Override // j$.util.Comparator, java.util.Comparator
+    public final /* synthetic */ java.util.Comparator thenComparing(java.util.Comparator comparator) {
+        return adqs.X(this, comparator);
+    }
+
+    @Override // j$.util.Comparator, java.util.Comparator
+    public final /* synthetic */ java.util.Comparator thenComparingDouble(ToDoubleFunction toDoubleFunction) {
+        return Comparator.CC.$default$thenComparingDouble(this, toDoubleFunction);
+    }
+
+    @Override // j$.util.Comparator, java.util.Comparator
+    public final /* synthetic */ java.util.Comparator thenComparingInt(ToIntFunction toIntFunction) {
+        return Comparator.CC.$default$thenComparingInt(this, toIntFunction);
+    }
+
+    @Override // j$.util.Comparator, java.util.Comparator
+    public final /* synthetic */ java.util.Comparator thenComparingLong(ToLongFunction toLongFunction) {
+        return Comparator.CC.$default$thenComparingLong(this, toLongFunction);
+    }
+
+    @Override // j$.util.Comparator, java.util.Comparator
+    public final /* synthetic */ java.util.Comparator thenComparing(Function function) {
+        return Comparator.EL.thenComparing(this, Comparator.CC.comparing(function));
+    }
+
+    @Override // j$.util.Comparator, java.util.Comparator
+    public final /* synthetic */ java.util.Comparator thenComparing(Function function, java.util.Comparator comparator) {
+        return Comparator.EL.thenComparing(this, Comparator.CC.comparing(function, comparator));
+    }
+}

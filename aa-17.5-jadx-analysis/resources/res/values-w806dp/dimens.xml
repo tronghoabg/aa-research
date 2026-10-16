@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="cielo_vertical_rail_width">80dp</dimen>
+    <dimen name="floating_vertical_rail_space_width">96dp</dimen>
+</resources>

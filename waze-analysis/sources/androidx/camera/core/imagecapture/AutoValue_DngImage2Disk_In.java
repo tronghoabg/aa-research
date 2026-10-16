@@ -1,0 +1,63 @@
+package androidx.camera.core.imagecapture;
+
+import androidx.camera.core.ImageCapture;
+import androidx.camera.core.ImageProxy;
+import androidx.camera.core.imagecapture.DngImage2Disk;
+
+/* compiled from: WazeSource */
+/* loaded from: classes2.dex */
+final class AutoValue_DngImage2Disk_In extends DngImage2Disk.In {
+    private final ImageProxy imageProxy;
+    private final ImageCapture.OutputFileOptions outputFileOptions;
+    private final int rotationDegrees;
+
+    AutoValue_DngImage2Disk_In(ImageProxy imageProxy, int i2, ImageCapture.OutputFileOptions outputFileOptions) {
+        if (imageProxy == null) {
+            throw new NullPointerException("Null imageProxy");
+        }
+        this.imageProxy = imageProxy;
+        this.rotationDegrees = i2;
+        if (outputFileOptions == null) {
+            throw new NullPointerException("Null outputFileOptions");
+        }
+        this.outputFileOptions = outputFileOptions;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj == this) {
+            return true;
+        }
+        if (obj instanceof DngImage2Disk.In) {
+            DngImage2Disk.In in = (DngImage2Disk.In) obj;
+            if (this.imageProxy.equals(in.getImageProxy()) && this.rotationDegrees == in.getRotationDegrees() && this.outputFileOptions.equals(in.getOutputFileOptions())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override // androidx.camera.core.imagecapture.DngImage2Disk.In
+    ImageProxy getImageProxy() {
+        return this.imageProxy;
+    }
+
+    @Override // androidx.camera.core.imagecapture.DngImage2Disk.In
+    ImageCapture.OutputFileOptions getOutputFileOptions() {
+        return this.outputFileOptions;
+    }
+
+    @Override // androidx.camera.core.imagecapture.DngImage2Disk.In
+    int getRotationDegrees() {
+        return this.rotationDegrees;
+    }
+
+    public int hashCode() {
+        int iHashCode = this.imageProxy.hashCode() ^ 1000003;
+        ImageCapture.OutputFileOptions outputFileOptions = this.outputFileOptions;
+        return ((this.rotationDegrees ^ (iHashCode * 1000003)) * 1000003) ^ outputFileOptions.hashCode();
+    }
+
+    public String toString() {
+        return "In{imageProxy=" + this.imageProxy + ", rotationDegrees=" + this.rotationDegrees + ", outputFileOptions=" + this.outputFileOptions + "}";
+    }
+}

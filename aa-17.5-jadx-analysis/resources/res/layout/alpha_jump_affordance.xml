@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/expanded_touch_area"
+    android:duplicateParentState="true"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/button_touch_minimum_size"
+    android:minHeight="@dimen/button_touch_minimum_size">
+    <FrameLayout
+        android:layout_gravity="center"
+        android:id="@+id/visible_button"
+        android:background="@drawable/button_secondary_background"
+        android:duplicateParentState="true"
+        android:layout_width="@dimen/alpha_jump_button_size"
+        android:layout_height="@dimen/alpha_jump_button_size"
+        android:foreground="@drawable/button_focus_ring">
+        <TextView
+            android:ellipsize="none"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center"
+            android:id="@+id/button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A•Z"
+            android:textAlignment="center"
+            style="@style/TextAppearance.Boardwalk.Body3"/>
+    </FrameLayout>
+</FrameLayout>

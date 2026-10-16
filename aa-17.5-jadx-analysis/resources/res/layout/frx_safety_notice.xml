@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="?attr/carFrxBackgroundColor"
+    android:paddingLeft="32dp"
+    android:paddingRight="32dp"
+    android:paddingBottom="@dimen/car_margin_medium"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/disclaimer_title"
+        style="@style/TextAppearance.FrxTitle"/>
+    <TextView
+        android:id="@+id/disclaimer_body"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/car_text_spacing"
+        android:text="@string/safety_notice"
+        android:layout_below="@+id/header"
+        style="@style/TextAppearance.FrxAppDescription"/>
+    <TextView
+        android:id="@+id/disclaimer_body_accept_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/car_text_spacing"
+        android:text="@string/safety_notice_accept_text"
+        android:layout_below="@+id/disclaimer_body"
+        style="@style/TextAppearance.FrxAppDescription"/>
+</RelativeLayout>

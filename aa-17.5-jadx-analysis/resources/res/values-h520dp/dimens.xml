@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="alpha_jump_keyboard_key_text_size">@dimen/boardwalk_body1_text_size</dimen>
+    <dimen name="app_bar_height">88dp</dimen>
+    <dimen name="gearhead_height_keyline_0">4dp</dimen>
+    <dimen name="gearhead_height_keyline_1">12dp</dimen>
+    <dimen name="gearhead_height_keyline_2">16dp</dimen>
+    <dimen name="gearhead_height_keyline_3">24dp</dimen>
+    <dimen name="metadata_image_size">188dp</dimen>
+    <dimen name="metadata_small_image_size">154dp</dimen>
+    <dimen name="metadata_subtitle_text_size">@dimen/boardwalk_body1_text_size</dimen>
+    <dimen name="metadata_tertiary_text_size">@dimen/boardwalk_body2_text_size</dimen>
+    <dimen name="metadata_title_text_size">@dimen/boardwalk_display3_text_size</dimen>
+</resources>

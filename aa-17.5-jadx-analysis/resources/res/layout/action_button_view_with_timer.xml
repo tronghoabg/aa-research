@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.common.ActionButtonView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/action_button_with_timer"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/templateActionHeight"
+    app:useViewForDefaultActionButton="true"
+    style="?attr/templateActionButtonTimerStyle">
+    <LinearLayout
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/action_container"
+        android:padding="@dimen/template_action_inset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+</com.google.android.apps.auto.components.apphost.view.widgets.common.ActionButtonView>

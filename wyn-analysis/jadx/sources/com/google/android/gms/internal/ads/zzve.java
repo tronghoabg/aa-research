@@ -1,0 +1,110 @@
+package com.google.android.gms.internal.ads;
+
+import android.content.Context;
+
+/* loaded from: classes3.dex */
+public final class zzve implements zzvk {
+    private final Context zza;
+
+    @Deprecated
+    public zzve() {
+        this.zza = null;
+    }
+
+    /* JADX WARN: Removed duplicated region for block: B:34:0x0091  */
+    @Override // com.google.android.gms.internal.ads.zzvk
+    /*
+        Code decompiled incorrectly, please refer to instructions dump.
+        To view partially-correct add '--show-bad-code' argument
+    */
+    public final com.google.android.gms.internal.ads.zzvm zzc(com.google.android.gms.internal.ads.zzvj r7) throws java.lang.Throwable {
+        /*
+            r6 = this;
+            int r0 = android.os.Build.VERSION.SDK_INT
+            r1 = 31
+            if (r0 < r1) goto L7
+            goto L1c
+        L7:
+            android.content.Context r1 = r6.zza
+            if (r1 == 0) goto L41
+            r2 = 28
+            if (r0 < r2) goto L41
+            android.content.pm.PackageManager r1 = r1.getPackageManager()
+            java.lang.String r2 = "com.amazon.hardware.tv_screen"
+            boolean r1 = r1.hasSystemFeature(r2)
+            if (r1 != 0) goto L1c
+            goto L41
+        L1c:
+            com.google.android.gms.internal.ads.zzv r0 = r7.zzc
+            java.lang.String r0 = r0.zzp
+            int r0 = com.google.android.gms.internal.ads.zzas.zzf(r0)
+            java.lang.String r1 = com.google.android.gms.internal.ads.zzfm.zzU(r0)
+            java.lang.String r2 = "DMCodecAdapterFactory"
+            java.lang.String r3 = "Creating an asynchronous MediaCodec adapter for track type "
+            java.lang.String r1 = r3.concat(r1)
+            com.google.android.gms.internal.ads.zzeh.zzb(r2, r1)
+            com.google.android.gms.internal.ads.zzuw r1 = new com.google.android.gms.internal.ads.zzuw
+            r1.<init>(r0)
+            r0 = 1
+            r1.zza(r0)
+            com.google.android.gms.internal.ads.zzux r7 = r1.zzb(r7)
+            return r7
+        L41:
+            r1 = 0
+            java.lang.String r2 = "createCodec:"
+            com.google.android.gms.internal.ads.zzvp r3 = r7.zza     // Catch: java.lang.RuntimeException -> L8c java.io.IOException -> L8e
+            java.lang.String r4 = r3.zza     // Catch: java.lang.RuntimeException -> L8c java.io.IOException -> L8e
+            java.lang.String r2 = r2.concat(r4)     // Catch: java.lang.RuntimeException -> L8c java.io.IOException -> L8e
+            android.os.Trace.beginSection(r2)     // Catch: java.lang.RuntimeException -> L8c java.io.IOException -> L8e
+            android.media.MediaCodec r2 = android.media.MediaCodec.createByCodecName(r4)     // Catch: java.lang.RuntimeException -> L8c java.io.IOException -> L8e
+            android.os.Trace.endSection()     // Catch: java.lang.RuntimeException -> L8c java.io.IOException -> L8e
+            java.lang.String r4 = "configureCodec"
+            android.os.Trace.beginSection(r4)     // Catch: java.lang.RuntimeException -> L6b java.io.IOException -> L6d
+            android.view.Surface r4 = r7.zzd     // Catch: java.lang.RuntimeException -> L6b java.io.IOException -> L6d
+            r5 = 0
+            if (r4 != 0) goto L6f
+            boolean r3 = r3.zzh     // Catch: java.lang.RuntimeException -> L6b java.io.IOException -> L6d
+            if (r3 == 0) goto L6f
+            r3 = 35
+            if (r0 < r3) goto L6f
+            r5 = 8
+            goto L6f
+        L6b:
+            r7 = move-exception
+            goto L8a
+        L6d:
+            r7 = move-exception
+            goto L8a
+        L6f:
+            android.media.MediaFormat r0 = r7.zzb     // Catch: java.lang.RuntimeException -> L6b java.io.IOException -> L6d
+            r2.configure(r0, r4, r1, r5)     // Catch: java.lang.RuntimeException -> L6b java.io.IOException -> L6d
+            android.os.Trace.endSection()     // Catch: java.lang.RuntimeException -> L6b java.io.IOException -> L6d
+            java.lang.String r0 = "startCodec"
+            android.os.Trace.beginSection(r0)     // Catch: java.lang.RuntimeException -> L6b java.io.IOException -> L6d
+            r2.start()     // Catch: java.lang.RuntimeException -> L6b java.io.IOException -> L6d
+            android.os.Trace.endSection()     // Catch: java.lang.RuntimeException -> L6b java.io.IOException -> L6d
+            com.google.android.gms.internal.ads.zzwj r0 = new com.google.android.gms.internal.ads.zzwj     // Catch: java.lang.RuntimeException -> L6b java.io.IOException -> L6d
+            com.google.android.gms.internal.ads.zzvi r7 = r7.zzf     // Catch: java.lang.RuntimeException -> L6b java.io.IOException -> L6d
+            r0.<init>(r2, r7, r1)     // Catch: java.lang.RuntimeException -> L6b java.io.IOException -> L6d
+            return r0
+        L8a:
+            r1 = r2
+            goto L8f
+        L8c:
+            r7 = move-exception
+            goto L8f
+        L8e:
+            r7 = move-exception
+        L8f:
+            if (r1 == 0) goto L94
+            r1.release()
+        L94:
+            throw r7
+        */
+        throw new UnsupportedOperationException("Method not decompiled: com.google.android.gms.internal.ads.zzve.zzc(com.google.android.gms.internal.ads.zzvj):com.google.android.gms.internal.ads.zzvm");
+    }
+
+    public zzve(Context context, zzguj zzgujVar, zzguj zzgujVar2) {
+        this.zza = context;
+    }
+}

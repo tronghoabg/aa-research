@@ -1,0 +1,36 @@
+package com.fasterxml.jackson.databind.module;
+
+import com.fasterxml.jackson.databind.BeanDescription;
+import com.fasterxml.jackson.databind.DeserializationConfig;
+import com.fasterxml.jackson.databind.JavaType;
+import com.fasterxml.jackson.databind.KeyDeserializer;
+import com.fasterxml.jackson.databind.deser.KeyDeserializers;
+import com.fasterxml.jackson.databind.type.ClassKey;
+import java.io.Serializable;
+import java.util.HashMap;
+
+/* compiled from: WazeSource */
+/* loaded from: classes4.dex */
+public class SimpleKeyDeserializers implements KeyDeserializers, Serializable {
+    private static final long serialVersionUID = 1;
+    protected HashMap<ClassKey, KeyDeserializer> _classMappings = null;
+
+    public SimpleKeyDeserializers addDeserializer(Class<?> cls, KeyDeserializer keyDeserializer) {
+        HashMap<ClassKey, KeyDeserializer> map = this._classMappings;
+        if (map == null) {
+            map = new HashMap<>();
+            this._classMappings = map;
+        }
+        map.put(new ClassKey(cls), keyDeserializer);
+        return this;
+    }
+
+    @Override // com.fasterxml.jackson.databind.deser.KeyDeserializers
+    public KeyDeserializer findKeyDeserializer(JavaType javaType, DeserializationConfig deserializationConfig, BeanDescription beanDescription) {
+        HashMap<ClassKey, KeyDeserializer> map = this._classMappings;
+        if (map == null) {
+            return null;
+        }
+        return map.get(new ClassKey(javaType.getRawClass()));
+    }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:height="@dimen/projection_keyboard_action_icon"
+    android:width="@dimen/projection_keyboard_action_icon"
+    android:drawable="@drawable/gs_arrow_back_vd_24"
+    android:inset="@dimen/projection_keyboard_icon_gm3_inset"/>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.progressindicator.LinearProgressIndicator xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/seek_bar"
+    android:layout_width="0dp"
+    android:layout_height="@dimen/seek_bar_height"
+    app:indicatorColor="@color/boardwalk_white"
+    app:trackColor="@color/boardwalk_gradient_white_24"
+    app:trackCornerRadius="@fraction/seek_bar_corner_radius_fragment"
+    app:trackThickness="@dimen/seek_bar_height"/>

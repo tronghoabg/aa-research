@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/settingslib_preference_ripple_color">
+    <item
+        android:start="?android:attr/listPreferredItemPaddingStart"
+        android:end="?android:attr/listPreferredItemPaddingEnd">
+        <com.google.android.material.focus.FocusRingDrawable>
+            <shape
+                android:tint="?android:attr/colorAccent"
+                android:shape="rectangle">
+                <corners
+                    android:topLeftRadius="4dp"
+                    android:topRightRadius="4dp"
+                    android:bottomLeftRadius="@dimen/settingslib_expressive_radius_large2"
+                    android:bottomRightRadius="@dimen/settingslib_expressive_radius_large2"/>
+                <solid android:color="#42000000"/>
+            </shape>
+        </com.google.android.material.focus.FocusRingDrawable>
+    </item>
+</ripple>

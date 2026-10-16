@@ -1,0 +1,31 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes2.dex */
+@java.lang.Deprecated
+public enum pxf {
+    PROTOCOL_ERROR_INVALID_CONTENT_TYPE(1),
+    PROTOCOL_ERROR_VERSION_MISMATCH(2),
+    HTTP_BAD_REQUEST(3),
+    HTTP_NOT_FOUND(4),
+    HTTP_SERVER_ERROR(5),
+    HTTP_UNKNOWN_STATUS_CODE(6),
+    IO_ERROR(7),
+    NO_CONNECTIVITY(8),
+    INVALID_API_TOKEN(9),
+    INVALID_GAIA_AUTH_TOKEN(10),
+    MALFORMED_MESSAGE(11),
+    SINGLE_REQUEST_ERROR(12),
+    SINGLE_REQUEST_FATAL_ERROR(13),
+    REQUEST_TIMEOUT(14),
+    CAPACITY_LIMIT_EXCEEDED(15),
+    CANCELED(16),
+    UNSUPPORTED_REQUEST_TYPE(17),
+    CANNOT_CREATE_REQUEST(18),
+    HTTP_GONE(19);
+
+    public final int t;
+
+    pxf(int i) {
+        this.t = i;
+    }
+}

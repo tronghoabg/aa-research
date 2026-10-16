@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="?attr/colorSurfaceContainer"/>
+    <corners
+        android:topLeftRadius="@dimen/gm3_dense_popup_radius"
+        android:topRightRadius="@dimen/gm3_dense_popup_radius"
+        android:bottomLeftRadius="@dimen/gm3_dense_popup_radius"
+        android:bottomRightRadius="@dimen/gm3_dense_popup_radius"/>
+    <padding
+        android:top="@dimen/gm3_dense_popup_padding_vertical"
+        android:bottom="@dimen/gm3_dense_popup_padding_vertical"/>
+</shape>

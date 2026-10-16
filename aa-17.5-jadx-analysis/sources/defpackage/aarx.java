@@ -1,0 +1,37 @@
+package defpackage;
+
+/* loaded from: classes3.dex */
+public final class aarx extends abnv implements abox {
+    public static final aarx a;
+
+    static {
+        aarx aarxVar = new aarx();
+        a = aarxVar;
+        abnv.P(aarx.class, aarxVar);
+    }
+
+    private aarx() {
+        Object[] objArr = abpf.a;
+    }
+
+    @Override // defpackage.abnv
+    protected final Object a(int i, Object obj) {
+        int i2 = i - 1;
+        if (i2 == 2) {
+            return new abpg(a, "\u0001\u0000", null);
+        }
+        if (i2 == 3) {
+            return new aarx();
+        }
+        if (i2 == 4) {
+            return new abnp(a);
+        }
+        if (i2 == 5) {
+            return a;
+        }
+        if (i2 != 6) {
+            return null;
+        }
+        return abnv.L(aarx.class);
+    }
+}

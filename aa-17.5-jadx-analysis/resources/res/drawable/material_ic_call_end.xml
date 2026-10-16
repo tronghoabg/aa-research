@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/gs_call_end_vd_theme_48"
+    android:insetLeft="@dimen/material_dialer_incall_fab_button_icon_horizontal_inset"
+    android:insetRight="@dimen/material_dialer_incall_fab_button_icon_horizontal_inset"
+    android:insetTop="@dimen/material_dialer_incall_fab_button_icon_vertical_inset"
+    android:insetBottom="@dimen/material_dialer_incall_fab_button_icon_vertical_inset"/>

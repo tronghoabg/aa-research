@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<accessibility-service xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/gofa_a11y_desc"
+    android:accessibilityEventTypes="typeWindowsChanged|typeWindowContentChanged|typeWindowStateChanged"
+    android:packageNames="com.gofa.mobile,com.waze,com.wynauto.wyn"
+    android:accessibilityFeedbackType="feedbackGeneric"
+    android:notificationTimeout="0"
+    android:accessibilityFlags="flagRetrieveInteractiveWindows|flagReportViewIds|flagIncludeNotImportantViews"
+    android:canRetrieveWindowContent="true"
+    android:canTakeScreenshot="true"/>

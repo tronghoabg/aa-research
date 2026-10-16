@@ -1,0 +1,75 @@
+package androidx.transition;
+
+import android.graphics.Matrix;
+import android.graphics.Rect;
+import android.util.Property;
+import android.view.View;
+import java.lang.reflect.InvocationTargetException;
+
+/* compiled from: WazeSource */
+/* loaded from: classes4.dex */
+class ViewUtils {
+    private static final String TAG = "ViewUtils";
+    private static final ViewUtilsApi19 IMPL = new ViewUtilsApi29();
+    static final Property<View, Float> TRANSITION_ALPHA = new Property<View, Float>(Float.class, "translationAlpha") { // from class: androidx.transition.ViewUtils.1
+        @Override // android.util.Property
+        public Float get(View view) {
+            return Float.valueOf(ViewUtils.getTransitionAlpha(view));
+        }
+
+        @Override // android.util.Property
+        public void set(View view, Float f2) {
+            ViewUtils.setTransitionAlpha(view, f2.floatValue());
+        }
+    };
+    static final Property<View, Rect> CLIP_BOUNDS = new Property<View, Rect>(Rect.class, "clipBounds") { // from class: androidx.transition.ViewUtils.2
+        @Override // android.util.Property
+        public Rect get(View view) {
+            return view.getClipBounds();
+        }
+
+        @Override // android.util.Property
+        public void set(View view, Rect rect) {
+            view.setClipBounds(rect);
+        }
+    };
+
+    private ViewUtils() {
+    }
+
+    static void clearNonTransitionAlpha(View view) {
+        IMPL.clearNonTransitionAlpha(view);
+    }
+
+    static float getTransitionAlpha(View view) {
+        return IMPL.getTransitionAlpha(view);
+    }
+
+    static void saveNonTransitionAlpha(View view) {
+        IMPL.saveNonTransitionAlpha(view);
+    }
+
+    static void setAnimationMatrix(View view, Matrix matrix) {
+        IMPL.setAnimationMatrix(view, matrix);
+    }
+
+    static void setLeftTopRightBottom(View view, int i2, int i3, int i4, int i5) throws IllegalAccessException, NoSuchMethodException, SecurityException, IllegalArgumentException, InvocationTargetException {
+        IMPL.setLeftTopRightBottom(view, i2, i3, i4, i5);
+    }
+
+    static void setTransitionAlpha(View view, float f2) {
+        IMPL.setTransitionAlpha(view, f2);
+    }
+
+    static void setTransitionVisibility(View view, int i2) throws IllegalAccessException, NoSuchFieldException, IllegalArgumentException {
+        IMPL.setTransitionVisibility(view, i2);
+    }
+
+    static void transformMatrixToGlobal(View view, Matrix matrix) {
+        IMPL.transformMatrixToGlobal(view, matrix);
+    }
+
+    static void transformMatrixToLocal(View view, Matrix matrix) {
+        IMPL.transformMatrixToLocal(view, matrix);
+    }
+}

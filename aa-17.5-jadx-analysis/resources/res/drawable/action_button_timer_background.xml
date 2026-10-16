@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <inset android:inset="@dimen/template_action_inset">
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/template_action_corner_radius"/>
+                <solid android:color="?attr/templateActionButtonDefaultBackgroundColor"/>
+            </shape>
+        </inset>
+    </item>
+    <item android:id="@+id/clip_drawable">
+        <clip
+            android:gravity="start"
+            android:clipOrientation="horizontal">
+            <shape android:shape="rectangle">
+                <corners android:radius="@dimen/template_action_corner_radius"/>
+                <solid android:color="?attr/templateActionButtonTimerColor"/>
+            </shape>
+        </clip>
+    </item>
+    <item android:drawable="@drawable/action_button_ripple"/>
+</layer-list>

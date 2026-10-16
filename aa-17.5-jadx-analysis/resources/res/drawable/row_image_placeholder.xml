@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <solid android:color="?attr/templateRowImagePlaceholderColor"/>
+    <corners android:radius="@dimen/template_row_image_placeholder_corner_radius"/>
+</shape>

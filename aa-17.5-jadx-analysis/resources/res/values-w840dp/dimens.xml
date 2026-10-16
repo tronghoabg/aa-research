@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="car_frx_margin">40dp</dimen>
+    <dimen name="car_frx_title_margin_top">172dp</dimen>
+    <dimen name="common_column_grid_gutter">24dp</dimen>
+    <dimen name="common_keyline_1">32dp</dimen>
+    <dimen name="common_keyline_2">140dp</dimen>
+    <dimen name="common_keyline_3">128dp</dimen>
+    <dimen name="common_stream_item_action_icon_edge_padding">18dp</dimen>
+    <dimen name="common_stream_item_center_action_start_end_padding">32dp</dimen>
+    <dimen name="common_stream_item_ongoing_icon_width">108dp</dimen>
+    <dimen name="frx_branching_info_title_margin_top">88dp</dimen>
+    <dimen name="gearhead_app_spaces_button_focus_inset">4dp</dimen>
+    <dimen name="un_ar_icon_size">56dp</dimen>
+    <dimen name="vn_dialer_dialpad_number_horizontal_margin">16dp</dimen>
+</resources>

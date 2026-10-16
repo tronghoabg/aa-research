@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.common.ActionStripView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom|center_horizontal"
+    android:focusable="false"
+    android:clipChildren="false"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_marginStart="@dimen/template_padding_3"
+    app:fabAppearance="?attr/templateActionStripMinimizedStateTemplateFabAppearance">
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            android:id="@+id/action_strip_container"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/templateActionStripHeight"
+            android:layout_marginTop="@dimen/template_minimized_bottom_action_inset_negative"/>
+        <LinearLayout
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            android:id="@+id/action_strip_container_secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="?attr/templateActionStripHeight"/>
+    </LinearLayout>
+</com.google.android.apps.auto.components.apphost.view.widgets.common.ActionStripView>

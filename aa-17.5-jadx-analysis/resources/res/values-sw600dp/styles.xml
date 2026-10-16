@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Widget.Design.TabLayout" parent="@style/Base.Widget.Design.TabLayout">
+        <item name="tabGravity">center</item>
+        <item name="tabMode">fixed</item>
+    </style>
+    <style name="common.Widget.Base.Snackbar" parent="@style/Theme.AppCompat">
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-2</item>
+        <item name="android:maxWidth">568dp</item>
+        <item name="android:minWidth">288dp</item>
+        <item name="windowGravity">bottom|left</item>
+        <item name="windowWidth">wrap_content</item>
+        <item name="windowXOffset">16dp</item>
+        <item name="windowYOffset">16dp</item>
+    </style>
+</resources>

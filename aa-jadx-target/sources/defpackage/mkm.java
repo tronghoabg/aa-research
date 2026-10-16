@@ -1,0 +1,6 @@
+package defpackage;
+
+/* JADX INFO: loaded from: D:\AA\aa-apk-unpacked\classes.dex */
+public interface mkm {
+    defpackage.mkn a(android.content.Context context, defpackage.mkl mklVar);
+}

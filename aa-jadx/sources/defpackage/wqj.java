@@ -1,0 +1,8 @@
+package defpackage;
+
+/* JADX INFO: loaded from: classes3.dex */
+public final class wqj {
+    public static final int[] a = {com.google.android.projection.gearhead.R.attr.behavior_autoHide, com.google.android.projection.gearhead.R.attr.behavior_autoShrink};
+    public static final int[] b = {android.R.attr.enabled, com.google.android.projection.gearhead.R.attr.backgroundTint, com.google.android.projection.gearhead.R.attr.backgroundTintMode, com.google.android.projection.gearhead.R.attr.borderWidth, com.google.android.projection.gearhead.R.attr.buttonType, com.google.android.projection.gearhead.R.attr.elevation, com.google.android.projection.gearhead.R.attr.ensureMinTouchTargetSize, com.google.android.projection.gearhead.R.attr.fabCustomSize, com.google.android.projection.gearhead.R.attr.fabSize, com.google.android.projection.gearhead.R.attr.focusGainedAnimation, com.google.android.projection.gearhead.R.attr.focusLostAnimation, com.google.android.projection.gearhead.R.attr.hideMotionSpec, com.google.android.projection.gearhead.R.attr.hoveredFocusedTranslationZ, com.google.android.projection.gearhead.R.attr.maxImageSize, com.google.android.projection.gearhead.R.attr.pressedTranslationZ, com.google.android.projection.gearhead.R.attr.rippleColor, com.google.android.projection.gearhead.R.attr.shapeAppearance, com.google.android.projection.gearhead.R.attr.shapeAppearanceOverlay, com.google.android.projection.gearhead.R.attr.showMotionSpec, com.google.android.projection.gearhead.R.attr.useCompatPadding};
+    public static final int[] c = {com.google.android.projection.gearhead.R.attr.behavior_autoHide};
+}

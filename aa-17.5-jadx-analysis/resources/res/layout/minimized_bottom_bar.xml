@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/minimized_bottom_bar"
+    android:layout_width="0dp"
+    android:layout_height="@dimen/template_minimized_bottom_bar_height"
+    android:layout_marginBottom="@dimen/template_padding_1"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintWidth_max="@dimen/template_minimized_bottom_bar_max_width">
+    <LinearLayout
+        android:gravity="center"
+        android:id="@+id/minimized_bottom_bar_start_placeholder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="@dimen/template_padding_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/minimized_bottom_bar_end_placeholder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <include
+            android:visibility="gone"
+            layout="@layout/responsive_travel_estimate_view_for_primary_actions_experiment_launch"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/minimized_bottom_bar_end_placeholder"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/template_padding_1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/minimized_bottom_bar_start_placeholder"
+        app:layout_constraintTop_toTopOf="parent">
+        <include
+            android:id="@+id/minimized_primary_action"
+            android:visibility="gone"
+            layout="@layout/action_strip_view_primary_action_only"/>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

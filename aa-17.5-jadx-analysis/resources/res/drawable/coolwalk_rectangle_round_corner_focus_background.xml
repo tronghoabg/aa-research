@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android">
+    <ripple android:color="@color/gearhead_sdk_controller_ripple">
+        <item
+            android:gravity="center"
+            android:id="@android:id/mask">
+            <shape android:shape="rectangle">
+                <solid android:color="@color/gearhead_controller_ripple_color_selector"/>
+                <corners android:radius="@dimen/coolwalk_focus_rectangle_round_corner_radius"/>
+            </shape>
+        </item>
+        <item>
+            <selector>
+                <item
+                    android:state_window_focused="true"
+                    android:state_hovered="true">
+                    <shape android:shape="rectangle">
+                        <stroke
+                            android:width="@dimen/gearhead_focus_ring_stroke_width_hovered"
+                            android:color="?attr/gearheadFocusAccentColor"/>
+                        <corners android:radius="@dimen/coolwalk_focus_rectangle_round_corner_radius"/>
+                    </shape>
+                </item>
+                <item
+                    android:state_focused="true"
+                    android:state_window_focused="true">
+                    <shape android:shape="rectangle">
+                        <stroke
+                            android:width="@dimen/gearhead_focus_ring_stroke_width_focused"
+                            android:color="?attr/gearheadFocusAccentColor"/>
+                        <corners android:radius="@dimen/coolwalk_focus_rectangle_round_corner_radius"/>
+                    </shape>
+                </item>
+            </selector>
+        </item>
+    </ripple>
+</inset>

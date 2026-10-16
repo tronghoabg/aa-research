@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_enabled="false">
+        <shape>
+            <solid android:color="@color/alpha_jump_keyboard_key_background_secondary_night_deprecated"/>
+            <corners android:radius="@dimen/alpha_jump_keyboard_key_round_corner"/>
+        </shape>
+    </item>
+    <item>
+        <ripple android:color="@color/gearhead_sdk_ripple">
+            <item>
+                <shape>
+                    <solid android:color="@color/alpha_jump_keyboard_key_background_deprecated"/>
+                    <corners android:radius="@dimen/alpha_jump_keyboard_key_round_corner"/>
+                </shape>
+            </item>
+        </ripple>
+    </item>
+</selector>

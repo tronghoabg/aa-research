@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.widgets.common.CarTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:id="@+id/action_text"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:maxEms="?attr/templateActionButtonTextMaxEmsWithIcon"
+    android:paddingStart="@dimen/template_padding_1"
+    android:paddingEnd="@dimen/template_padding_4"
+    style="?attr/templateActionButtonTextStyle"/>

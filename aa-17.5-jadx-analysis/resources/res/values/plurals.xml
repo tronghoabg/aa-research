@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="COMPASS_ACCESSIBILITY_BEARING">
+        <item quantity="zero">Map bearing %d degrees.</item>
+        <item quantity="one">Map bearing %d degree.</item>
+        <item quantity="two">Map bearing %d degrees.</item>
+        <item quantity="few">Map bearing %d degrees.</item>
+        <item quantity="many">Map bearing %d degrees.</item>
+        <item quantity="other">Map bearing %d degrees.</item>
+    </plurals>
+    <plurals name="DA_DAYS">
+        <item quantity="zero">%s days</item>
+        <item quantity="one">%s day</item>
+        <item quantity="two">%s days</item>
+        <item quantity="few">%s days</item>
+        <item quantity="many">%s days</item>
+        <item quantity="other">%s days</item>
+    </plurals>
+    <plurals name="DA_DAYS_ABBREVIATED">
+        <item quantity="zero">%s d</item>
+        <item quantity="one">%s d</item>
+        <item quantity="two">%s d</item>
+        <item quantity="few">%s d</item>
+        <item quantity="many">%s d</item>
+        <item quantity="other">%s d</item>
+    </plurals>
+    <plurals name="DA_DAYS_ABBREVIATED_SHORT">
+        <item quantity="zero">%sd</item>
+        <item quantity="one">%sd</item>
+        <item quantity="two">%sd</item>
+        <item quantity="few">%sd</item>
+        <item quantity="many">%sd</item>
+        <item quantity="other">%sd</item>
+    </plurals>
+    <plurals name="DA_DAYS_SHORT">
+        <item quantity="zero">%s days</item>
+        <item quantity="one">%s day</item>
+        <item quantity="two">%s days</item>
+        <item quantity="few">%s days</item>
+        <item quantity="many">%s days</item>
+        <item quantity="other">%s days</item>
+    </plurals>
+    <plurals name="DA_HOURS">
+        <item quantity="zero">%s hours</item>
+        <item quantity="one">%s hour</item>
+        <item quantity="two">%s hours</item>
+        <item quantity="few">%s hours</item>
+        <item quantity="many">%s hours</item>
+        <item quantity="other">%s hours</item>
+    </plurals>
+    <plurals name="DA_HOURS_ABBREVIATED">
+        <item quantity="zero">%s hr</item>
+        <item quantity="one">%s hr</item>
+        <item quantity="two">%s hr</item>
+        <item quantity="few">%s hr</item>
+        <item quantity="many">%s hr</item>
+        <item quantity="other">%s hr</item>
+    </plurals>
+    <plurals name="DA_HOURS_ABBREVIATED_SHORT">
+        <item quantity="zero">%sh</item>
+        <item quantity="one">%sh</item>
+        <item quantity="two">%sh</item>
+        <item quantity="few">%sh</item>
+        <item quantity="many">%sh</item>
+        <item quantity="other">%sh</item>
+    </plurals>
+    <plurals name="DA_MINUTES">
+        <item quantity="zero">%s minutes</item>
+        <item quantity="one">%s minute</item>
+        <item quantity="two">%s minutes</item>
+        <item quantity="few">%s minutes</item>
+        <item quantity="many">%s minutes</item>
+        <item quantity="other">%s minutes</item>
+    </plurals>
+    <plurals name="DA_MINUTES_ABBREVIATED">
+        <item quantity="zero">%s min</item>
+        <item quantity="one">%s min</item>
+        <item quantity="two">%s min</item>
+        <item quantity="few">%s min</item>
+        <item quantity="many">%s min</item>
+        <item quantity="other">%s min</item>
+    </plurals>
+    <plurals name="DA_MINUTES_ABBREVIATED_SHORT">
+        <item quantity="zero">%sm</item>
+        <item quantity="one">%sm</item>
+        <item quantity="two">%sm</item>
+        <item quantity="few">%sm</item>
+        <item quantity="many">%sm</item>
+        <item quantity="other">%sm</item>
+    </plurals>
+    <plurals name="DA_MINUTES_BARE_FOLLOWING_HOURS">
+        <item quantity="zero">%s</item>
+        <item quantity="one">%s</item>
+        <item quantity="two">%s</item>
+        <item quantity="few">%s</item>
+        <item quantity="many">%s</item>
+        <item quantity="other">%s</item>
+    </plurals>
+    <plurals name="DA_SECONDS">
+        <item quantity="zero">%s seconds</item>
+        <item quantity="one">%s second</item>
+        <item quantity="two">%s seconds</item>
+        <item quantity="few">%s seconds</item>
+        <item quantity="many">%s seconds</item>
+        <item quantity="other">%s seconds</item>
+    </plurals>
+    <plurals name="DA_SPEED_FORMAT_KILOMETERS_PER_HOUR_EXTENDED">
+        <item quantity="zero">%s kilometers per hour</item>
+        <item quantity="one">%s kilometer per hour</item>
+        <item quantity="two">%s kilometers per hour</item>
+        <item quantity="few">%s kilometers per hour</item>
+        <item quantity="many">%s kilometers per hour</item>
+        <item quantity="other">%s kilometers per hour</item>
+    </plurals>
+    <plurals name="DA_SPEED_FORMAT_MILES_PER_HOUR_EXTENDED">
+        <item quantity="zero">%s miles per hour</item>
+        <item quantity="one">%s mile per hour</item>
+        <item quantity="two">%s miles per hour</item>
+        <item quantity="few">%s miles per hour</item>
+        <item quantity="many">%s miles per hour</item>
+        <item quantity="other">%s miles per hour</item>
+    </plurals>
+    <plurals name="MORE_LIST_ITEMS">
+        <item quantity="zero">%d more</item>
+        <item quantity="one">%d more</item>
+        <item quantity="two">%d more</item>
+        <item quantity="few">%d more</item>
+        <item quantity="many">%d more</item>
+        <item quantity="other">%d more</item>
+    </plurals>
+    <plurals name="OFFLINE_MAPS_CARD_TITLE">
+        <item quantity="zero">%d offline areas</item>
+        <item quantity="one">%d offline area</item>
+        <item quantity="two">%d offline areas</item>
+        <item quantity="few">%d offline areas</item>
+        <item quantity="many">%d offline areas</item>
+        <item quantity="other">%d offline areas</item>
+    </plurals>
+    <plurals name="PHOTOS">
+        <item quantity="zero">%d photos</item>
+        <item quantity="one">%d photo</item>
+        <item quantity="two">%d photos</item>
+        <item quantity="few">%d photos</item>
+        <item quantity="many">%d photos</item>
+        <item quantity="other">%d photos</item>
+    </plurals>
+    <plurals name="REAL_TIME_DATA_UPDATED_DAYS_AGO_NOTICE">
+        <item quantity="one">Updated %d day ago</item>
+        <item quantity="two">Updated %d days ago</item>
+        <item quantity="few">Updated %d days ago</item>
+        <item quantity="many">Updated %d days ago</item>
+        <item quantity="other">Updated %d days ago</item>
+    </plurals>
+    <plurals name="REAL_TIME_DATA_UPDATED_HOURS_AGO_NOTICE">
+        <item quantity="one">Updated %d hour ago</item>
+        <item quantity="two">Updated %d hours ago</item>
+        <item quantity="few">Updated %d hours ago</item>
+        <item quantity="many">Updated %d hours ago</item>
+        <item quantity="other">Updated %d hours ago</item>
+    </plurals>
+    <plurals name="REAL_TIME_DATA_UPDATED_MINUTES_AGO_CONTENT_DESCRIPTION">
+        <item quantity="one">Updated %d minute ago</item>
+        <item quantity="two">Updated %d minutes ago</item>
+        <item quantity="few">Updated %d minutes ago</item>
+        <item quantity="many">Updated %d minutes ago</item>
+        <item quantity="other">Updated %d minutes ago</item>
+    </plurals>
+    <plurals name="REAL_TIME_DATA_UPDATED_MINUTES_AGO_NOTICE">
+        <item quantity="one">Updated %d min ago</item>
+        <item quantity="two">Updated %d min ago</item>
+        <item quantity="few">Updated %d min ago</item>
+        <item quantity="many">Updated %d min ago</item>
+        <item quantity="other">Updated %d min ago</item>
+    </plurals>
+    <plurals name="REVIEW_THUMBS_UP_PEOPLE_COUNT">
+        <item quantity="zero">%d people</item>
+        <item quantity="one">%d person</item>
+        <item quantity="two">%d people</item>
+        <item quantity="few">%d people</item>
+        <item quantity="many">%d people</item>
+        <item quantity="other">%d people</item>
+    </plurals>
+    <plurals name="TRANSIT_NUM_STOPS">
+        <item quantity="zero">%d stops</item>
+        <item quantity="one">%d stop</item>
+        <item quantity="two">%d stops</item>
+        <item quantity="few">%d stops</item>
+        <item quantity="many">%d stops</item>
+        <item quantity="other">%d stops</item>
+    </plurals>
+    <plurals name="day_ago">
+        <item quantity="one">Yesterday</item>
+        <item quantity="other">%1$d days ago</item>
+    </plurals>
+    <plurals name="developer_settings_steps_count">
+        <item quantity="one">You&apos;re %1$d step away from developer mode.</item>
+        <item quantity="other">You&apos;re %1$d steps away from developer mode.</item>
+    </plurals>
+    <plurals name="min_ago">
+        <item quantity="one">%1$d min ago</item>
+        <item quantity="other">%1$d min ago</item>
+    </plurals>
+    <plurals name="more_messages_in_conversation">
+        <item quantity="one">… and %1$d more</item>
+        <item quantity="other">… and %1$d more</item>
+    </plurals>
+    <plurals name="mtrl_badge_content_description">
+        <item quantity="one">%d new notification</item>
+        <item quantity="other">%d new notifications</item>
+    </plurals>
+    <plurals name="settings_customize_add_shortcut_error_max_shortcuts_reached">
+        <item quantity="one">Only %d shortcut is allowed</item>
+        <item quantity="other">Only %d shortcuts are allowed</item>
+    </plurals>
+    <plurals name="share_imminent_eta_reply_text">
+        <item quantity="one">Arriving in %d minute.</item>
+        <item quantity="other">Arriving in %d minutes.</item>
+    </plurals>
+    <plurals name="sherlog_link_count">
+        <item quantity="one">%d query</item>
+        <item quantity="other">%d queries</item>
+    </plurals>
+    <plurals name="sherlog_minutes">
+        <item quantity="one">%d minute</item>
+        <item quantity="other">%d minutes</item>
+    </plurals>
+    <plurals name="survey_star_rating">
+        <item quantity="one">%1$d star out of %2$d</item>
+        <item quantity="other">%1$d stars out of %2$d</item>
+    </plurals>
+    <plurals name="widgets_count">
+        <item quantity="one">%1$d widget</item>
+        <item quantity="other">%1$d widgets</item>
+    </plurals>
+</resources>

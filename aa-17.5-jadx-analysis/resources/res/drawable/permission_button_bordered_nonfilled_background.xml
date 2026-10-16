@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="@dimen/permission_button_border_stroke_width"
+                android:color="@color/boardwalk_gradient_white_46"/>
+            <corners android:radius="@dimen/permission_button_corner_radius"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/permission_button_ripple_layer"/>
+</layer-list>

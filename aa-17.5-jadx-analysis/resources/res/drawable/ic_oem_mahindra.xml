@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="72.0319dp"
+    android:width="72.003dp"
+    android:viewportWidth="72.003"
+    android:viewportHeight="72.0319">
+    <path
+        android:fillColor="#fff"
+        android:pathData="M0,0h72v72h-72z"/>
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M36.003,36.0319m-36,0a36,36 0,1 1,72 0a36,36 0,1 1,-72 0"/>
+    <path
+        android:fillColor="#fff"
+        android:pathData="M36.003,36.0319m-36,0a36,36 0,1 1,72 0a36,36 0,1 1,-72 0"/>
+    <path
+        android:fillColor="#e31936"
+        android:pathData="M36.003,36.0319m-36,0a36,36 0,1 1,72 0a36,36 0,1 1,-72 0"/>
+    <path
+        android:fillColor="#ff000000"
+        android:pathData="M0,0h72v72h-72z"/>
+    <path
+        android:fillColor="@drawable/_ic_oem_mahindra__0_res_0x7f080045"
+        android:pathData="M7.903,21.4666C9.2298,22.6902 27.7604,38.4221 33.1546,42.9618a2.9045,2.9045 0,0 1,1.3049 2.8942v2.8637S16.8354,35.9547 16.0788,35.3911c-0.5636,-0.6714 -8.5487,-12.0261 -8.7798,-13.1617C7.0016,20.7678 6.6498,20.3108 7.903,21.4666Z"/>
+    <path
+        android:fillColor="@drawable/_ic_oem_mahindra__1_res_0x7f080046"
+        android:pathData="M34.4595,49.5879v-2.2392S17.1616,34.5365 16.4241,33.944C15.7733,33.1178 8.3937,22.737 7.7656,21.745s-0.9631,-1.292 -0.6374,-0.1241c1.1406,4.0894 3.0213,10.7467 5.1119,17.4261 2.6794,8.5603 5.619,17.1409 6.8851,20.2289 0.3503,0.8544 0.7329,0.7528 1.0815,0.7526l2.9856,-0.0014a2.963,2.963 0,0 0,2.5134 -1.0101L33.496,52.0299C34.2666,51.3702 34.4595,51.096 34.4595,49.5879Z"
+        android:strokeColor="@drawable/_ic_oem_mahindra__2_res_0x7f080047"
+        android:strokeWidth="0.113"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"/>
+    <path
+        android:fillColor="@drawable/_ic_oem_mahindra__3_res_0x7f080048"
+        android:pathData="M63.5759,21.4666c-1.3268,1.2236 -19.8574,16.9556 -25.2516,21.4952a2.9045,2.9045 0,0 0,-1.3049 2.8942v2.8637s17.6241,-12.7649 18.3807,-13.3285c0.5636,-0.6714 8.5487,-12.0261 8.7798,-13.1617C64.4773,20.7678 64.8291,20.3108 63.5759,21.4666Z"/>
+    <path
+        android:fillColor="@drawable/_ic_oem_mahindra__4_res_0x7f080049"
+        android:pathData="M37.0194,49.5879v-2.2392S54.3173,34.5365 55.0548,33.944c0.6508,-0.8262 8.0304,-11.207 8.6585,-12.1991s0.9631,-1.292 0.6374,-0.1241c-1.1406,4.0894 -3.0213,10.7467 -5.112,17.4261 -2.6794,8.5603 -5.619,17.1409 -6.8851,20.2289 -0.3503,0.8544 -0.7328,0.7528 -1.0815,0.7526l-2.9856,-0.0014a2.963,2.963 0,0 1,-2.5134 -1.0101l-7.7902,-6.9871C37.2123,51.3702 37.0194,51.096 37.0194,49.5879Z"
+        android:strokeColor="@drawable/_ic_oem_mahindra__5_res_0x7f08004a"
+        android:strokeWidth="0.113"/>
+    <path
+        android:fillColor="@drawable/_ic_oem_mahindra__6_res_0x7f08004b"
+        android:pathData="M52.2259,58.6185 L55.0548,33.944 37.0194,47.3487S45.913,58.621 46.3367,59.1083a1.9951,1.9951 0,0 0,1.5385 0.6635H51.1504C51.9956,59.7718 52.1384,59.3812 52.2259,58.6185Z"
+        android:strokeColor="@drawable/_ic_oem_mahindra__7_res_0x7f08004c"
+        android:strokeWidth="0.113"/>
+    <path
+        android:fillColor="@drawable/_ic_oem_mahindra__8_res_0x7f08004d"
+        android:pathData="M19.253,58.6185 L16.4241,33.944l18.0354,13.4047S25.5659,58.621 25.1422,59.1083a1.9951,1.9951 0,0 1,-1.5385 0.6635H20.3285C19.4833,59.7718 19.3405,59.3812 19.253,58.6185Z"
+        android:strokeColor="@drawable/_ic_oem_mahindra__9_res_0x7f08004e"
+        android:strokeWidth="0.113"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M37.0194,47.3487v2.2392c0,1.508 0.1929,1.7822 0.9635,2.4419l7.7902,6.9871a2.963,2.963 0,0 0,2.5134 1.0101l2.9856,0.0014c0.3487,0.0002 0.7312,0.1018 1.0815,-0.7526 1.2662,-3.088 4.2058,-11.6687 6.8851,-20.2289 0,0 4.6471,-15.7701 4.9412,-16.8175 0.3547,-1.2636 0.6492,-1.9186 -0.6039,-0.7629 -1.3268,1.2236 -19.8574,16.9556 -25.2516,21.4952a2.9045,2.9045 0,0 0,-1.3049 2.8942v1.4928"
+        android:strokeColor="#1b1b1c"
+        android:strokeWidth="0.113"/>
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M34.4595,47.3487v2.2392c0,1.508 -0.193,1.7822 -0.9635,2.4419l-7.7902,6.9871a2.963,2.963 0,0 1,-2.5134 1.0101l-2.9856,0.0014c-0.3487,0.0002 -0.7312,0.1018 -1.0815,-0.7526 -1.2662,-3.088 -4.2058,-11.6687 -6.8851,-20.2289 0,0 -4.6471,-15.7701 -4.9412,-16.8175 -0.3547,-1.2636 -0.6492,-1.9186 0.6039,-0.7629C9.2298,22.6902 27.7604,38.4221 33.1546,42.9618a2.9045,2.9045 0,0 1,1.3049 2.8942v1.4928"
+        android:strokeColor="#1b1b1c"
+        android:strokeWidth="0.113"/>
+</vector>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="1000dp"
+    android:width="1000dp"
+    android:viewportWidth="1000"
+    android:viewportHeight="1000">
+    <path
+        android:fillColor="@drawable/_ic_oem_bentley__0_res_0x7f080016"
+        android:pathData="M0,0h1000v1000h-1000z"/>
+    <path
+        android:fillColor="#fff"
+        android:pathData="M509.2,165.9c131.7,0 316.1,53.5 316.1,181.8 0,95.4 -89.6,133.7 -89.6,133.7S841.1,528.8 841.1,647.1c0,99.3 -105.4,187.1 -321.4,187.1 -152.8,0 -289,-47.3 -353,-112.3 -10.5,-10.7 -10.5,-16 0,-26.7 30.9,-31.4 36.9,-34.7 36.9,-37.4L203.6,358.4c0,-8.9 -25.4,-25.8 -36.9,-37.4q-15.8,-16 0,-32.1C235.3,219.4 367,165.9 509.2,165.9ZM504,219.4c101.2,0 137,56.2 137,125.6s-38,125.6 -137,125.6c-94.5,0 -137,-56.2 -137,-125.6S411,219.4 504,219.4ZM514.5,513.4c110.1,0 147.5,61 147.5,136.3S623.1,786.1 514.5,786.1c-119.9,0 -147.5,-61 -147.5,-136.3S399.1,513.4 514.5,513.4Z"
+        android:fillType="evenOdd"/>
+</vector>

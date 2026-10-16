@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/gearhead_coolwalk_rectangle_with_rounded_corners_focus_background"
+    android:insetLeft="@dimen/coolwalk_turncard_focus_ring_inset_drawable"
+    android:insetRight="@dimen/coolwalk_turncard_focus_ring_inset_drawable"
+    android:insetTop="@dimen/coolwalk_turncard_focus_ring_inset_drawable"
+    android:insetBottom="@dimen/coolwalk_turncard_focus_ring_inset_drawable"/>

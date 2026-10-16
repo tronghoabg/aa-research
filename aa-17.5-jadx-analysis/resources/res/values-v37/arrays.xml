@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="energy_primary_tokens">
+        <item>@android:color/system_primary_light</item>
+        <item>@android:color/system_on_primary_light</item>
+        <item>@android:color/system_primary_dark</item>
+        <item>@android:color/system_on_primary_dark</item>
+        <item>@android:color/system_primary_container_light</item>
+        <item>@android:color/system_on_primary_container_light</item>
+        <item>@android:color/system_primary_container_dark</item>
+        <item>@android:color/system_on_primary_container_dark</item>
+        <item>@android:color/accent_device_default_dark</item>
+        <item>@android:color/system_on_primary_light</item>
+        <item>@android:color/accent_primary_variant_dark_device_default</item>
+        <item>@android:color/system_on_primary_dark</item>
+        <item>@android:color/accessibility_daltonizer_background</item>
+        <item>@android:color/accent_secondary_variant_dark_device_default</item>
+        <item>@android:color/autofilled_highlight</item>
+        <item>@android:color/accessibility_magnification_thumbnail_container_stroke_color</item>
+        <item>@android:color/accessibility_feature_background</item>
+        <item>@android:color/accent_secondary_variant_dark_device_default</item>
+        <item>@android:color/background_cache_hint_selector_device_default</item>
+        <item>@android:color/accessibility_magnification_thumbnail_container_stroke_color</item>
+        <item>@android:color/SIM_color_blue</item>
+        <item>@android:color/SIM_color_cyan</item>
+        <item>@android:color/SIM_dark_mode_color_blue</item>
+        <item>@android:color/SIM_dark_mode_color_cyan</item>
+        <item>?unknown_ref: 1060463</item>
+        <item>@android:color/system_on_surface_light</item>
+        <item>?unknown_ref: 1060462</item>
+        <item>@android:color/system_on_surface_dark</item>
+    </array>
+    <array name="energy_secondary_tokens">
+        <item>@android:color/system_secondary_light</item>
+        <item>@android:color/system_on_secondary_light</item>
+        <item>@android:color/system_secondary_dark</item>
+        <item>@android:color/system_on_secondary_dark</item>
+        <item>@android:color/system_secondary_container_light</item>
+        <item>@android:color/system_on_secondary_container_light</item>
+        <item>@android:color/system_secondary_container_dark</item>
+        <item>@android:color/system_on_secondary_container_dark</item>
+        <item>@android:color/accent_device_default_light</item>
+        <item>@android:color/system_on_secondary_light</item>
+        <item>@android:color/accent_primary_variant_light_device_default</item>
+        <item>@android:color/system_on_secondary_dark</item>
+        <item>@android:color/accessibility_focus_highlight_color</item>
+        <item>@android:color/accent_tertiary_device_default</item>
+        <item>@android:color/background_cache_hint_selector_holo_dark</item>
+        <item>@android:color/activity_embedding_divider_color</item>
+        <item>@android:color/accessibility_magnification_background</item>
+        <item>@android:color/accent_tertiary_device_default</item>
+        <item>@android:color/background_cache_hint_selector_holo_light</item>
+        <item>@android:color/activity_embedding_divider_color</item>
+    </array>
+    <array name="energy_tertiary_tokens">
+        <item>@android:color/system_tertiary_light</item>
+        <item>@android:color/system_on_tertiary_light</item>
+        <item>@android:color/system_tertiary_dark</item>
+        <item>@android:color/system_on_tertiary_dark</item>
+        <item>@android:color/system_tertiary_container_light</item>
+        <item>@android:color/system_on_tertiary_container_light</item>
+        <item>@android:color/system_tertiary_container_dark</item>
+        <item>@android:color/system_on_tertiary_container_dark</item>
+        <item>@android:color/accent_material_dark</item>
+        <item>@android:color/system_on_tertiary_light</item>
+        <item>@android:color/accent_secondary_device_default</item>
+        <item>@android:color/system_on_tertiary_dark</item>
+        <item>@android:color/accessibility_magnification_thumbnail_background_color</item>
+        <item>@android:color/accent_tertiary_variant_light_device_default</item>
+        <item>@android:color/background_cache_hint_selector_material_dark</item>
+        <item>@android:color/autofill_background_material_dark</item>
+        <item>@android:color/accessibility_magnification_thumbnail_container_background_color</item>
+        <item>@android:color/accent_tertiary_variant_light_device_default</item>
+        <item>@android:color/background_cache_hint_selector_material_light</item>
+        <item>@android:color/autofill_background_material_dark</item>
+    </array>
+</resources>

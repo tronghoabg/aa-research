@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/MatchParentContainer">
+    <TextView
+        android:textAppearance="@style/SmallWhiteText"
+        android:id="@+id/orientation_accuracy_textbox"
+        android:background="@color/black_almost_transparent"
+        android:padding="@dimen/textbox_spacer_tiny"
+        android:layout_marginRight="@dimen/mylocation_container_padding"
+        android:layout_marginBottom="@dimen/mylocation_container_padding"
+        android:layout_alignParentRight="true"
+        android:contentDescription=""
+        style="@style/TextBox"/>
+    <TextView
+        android:textAppearance="@style/SmallWhiteText"
+        android:id="@+id/location_accuracy_textbox"
+        android:background="@color/black_almost_transparent"
+        android:padding="@dimen/textbox_spacer_tiny"
+        android:layout_marginRight="@dimen/mylocation_container_padding"
+        android:layout_marginBottom="@dimen/mylocation_container_padding"
+        android:layout_below="@+id/orientation_accuracy_textbox"
+        android:layout_alignParentRight="true"
+        android:contentDescription=""
+        style="@style/TextBox"/>
+    <TextView
+        android:textAppearance="@style/SmallWhiteText"
+        android:id="@+id/current_zoom_textbox"
+        android:background="@color/black_almost_transparent"
+        android:padding="@dimen/textbox_spacer_tiny"
+        android:layout_marginRight="@dimen/mylocation_container_padding"
+        android:layout_marginBottom="@dimen/mylocation_container_padding"
+        android:layout_below="@+id/location_accuracy_textbox"
+        android:layout_alignParentRight="true"
+        android:contentDescription=""
+        style="@style/TextBox"/>
+    <TextView
+        android:textAppearance="@style/SmallWhiteText"
+        android:id="@+id/orientation_blue_dot_textbox"
+        android:background="@color/black_almost_transparent"
+        android:padding="@dimen/textbox_spacer_tiny"
+        android:layout_marginRight="@dimen/mylocation_container_padding"
+        android:layout_marginBottom="@dimen/mylocation_container_padding"
+        android:layout_below="@+id/current_zoom_textbox"
+        android:layout_alignParentRight="true"
+        android:contentDescription=""
+        style="@style/TextBox"/>
+</RelativeLayout>

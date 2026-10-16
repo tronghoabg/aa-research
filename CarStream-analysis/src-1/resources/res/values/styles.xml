@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="CarAppTheme" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:colorBackground">#ff101216</item>
+    </style>
+    <style name="PhoneSplashTheme" parent="@style/PhoneTheme">
+        <item name="android:windowBackground">@color/splash_bg</item>
+    </style>
+    <style name="PhoneTheme" parent="@android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:statusBarColor">@color/bg</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>

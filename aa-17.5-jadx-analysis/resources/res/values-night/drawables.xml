@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="dash_weather_blizzard">?unknown_ref: 7f0808fb</drawable>
+    <drawable name="dash_weather_clear_day">?unknown_ref: 7f080923</drawable>
+    <drawable name="dash_weather_clear_night">?unknown_ref: 7f0808fd</drawable>
+    <drawable name="dash_weather_cloud">?unknown_ref: 7f0808ff</drawable>
+    <drawable name="dash_weather_fog">?unknown_ref: 7f080925</drawable>
+    <drawable name="dash_weather_hail_sleet">?unknown_ref: 7f080914</drawable>
+    <drawable name="dash_weather_haze_fog_dust_smoke">?unknown_ref: 7f08090c</drawable>
+    <drawable name="dash_weather_heavy_rain">?unknown_ref: 7f08090e</drawable>
+    <drawable name="dash_weather_partly_cloudy">?unknown_ref: 7f08091a</drawable>
+    <drawable name="dash_weather_rain">?unknown_ref: 7f08091d</drawable>
+    <drawable name="dash_weather_snow">?unknown_ref: 7f08091f</drawable>
+    <drawable name="dash_weather_thunder">?unknown_ref: 7f080921</drawable>
+    <drawable name="dash_weather_thunderstorm">?unknown_ref: 7f080921</drawable>
+    <drawable name="dash_weather_unknown">?unknown_ref: 7f080918</drawable>
+    <drawable name="dash_weather_wind">?unknown_ref: 7f080925</drawable>
+    <drawable name="dash_weather_wintry_mix">?unknown_ref: 7f080927</drawable>
+    <drawable name="google_g_logo">?unknown_ref: 7f08033c</drawable>
+</resources>

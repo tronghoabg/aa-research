@@ -1,0 +1,13 @@
+package defpackage;
+
+import java.util.List;
+
+/* loaded from: classes2.dex */
+public final class ahz extends ahx {
+    public final List b;
+
+    public ahz(String str, List list) {
+        super(str);
+        this.b = list;
+    }
+}

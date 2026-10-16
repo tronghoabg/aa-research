@@ -1,0 +1,76 @@
+0x7f0804: stp      x29, x30, [x15, #-0x10]!
+0x7f0808: mov      x29, x15
+0x7f080c: ldr      x0, [x29, #0x18]
+0x7f0810: ldur     w1, [x0, #0x17]
+0x7f0814: add      x1, x1, x28, lsl #32
+0x7f0818: ldr      x16, [x26, #0x38]
+0x7f081c: cmp      x15, x16
+0x7f0820: b.ls     #0x7f0838
+0x7f0824: ldr      x2, [x29, #0x10]
+0x7f0828: bl       #0x7ed988
+0x7f082c: mov      x15, x29
+0x7f0830: ldp      x29, x30, [x15], #0x10
+0x7f0834: ret      
+0x7f0838: bl       #0xb29c40
+0x7f083c: b        #0x7f0824
+0x7f0840: stp      x29, x30, [x15, #-0x10]!
+0x7f0844: mov      x29, x15
+0x7f0848: ldr      x16, [x26, #0x38]
+0x7f084c: cmp      x15, x16
+0x7f0850: b.ls     #0x7f0894
+0x7f0854: ldur     w0, [x1, #0x23]
+0x7f0858: add      x0, x0, x28, lsl #32
+0x7f085c: ldr      x16, [x27, #0x40]
+0x7f0860: cmp      w0, w16
+0x7f0864: b.eq     #0x7f089c
+0x7f0868: mov      x1, x0
+0x7f086c: add      x2, x27, #0x17, lsl #12 ; [pp+0x17328] String: "v1.camera_detect_dir"
+0x7f0870: ldr      x2, [x2, #0x328]
+0x7f0874: bl       #0x3466dc
+0x7f0878: cmp      w0, w22
+0x7f087c: b.ne     #0x7f0888
+0x7f0880: add      x0, x27, #0x12, lsl #12 ; [pp+0x12338] String: "all"
+0x7f0884: ldr      x0, [x0, #0x338]
+0x7f0888: mov      x15, x29
+0x7f088c: ldp      x29, x30, [x15], #0x10
+0x7f0890: ret      
+0x7f0894: bl       #0xb29c40
+0x7f0898: b        #0x7f0854
+0x7f089c: add      x9, x27, #9, lsl #12 ; [pp+0x9d10] Field <Qjb._pCh@1796148846>: late (offset: 0x24)
+0x7f08a0: ldr      x9, [x9, #0xd10]
+0x7f08a4: bl       #0xb2a470
+0x7f08a8: stp      x29, x30, [x15, #-0x10]!
+0x7f08ac: mov      x29, x15
+0x7f08b0: sub      x15, x15, #0x30
+0x7f08b4: mov      x0, x1
+0x7f08b8: stur     x1, [x29, #-8]
+0x7f08bc: ldr      x16, [x26, #0x38]
+0x7f08c0: cmp      x15, x16
+0x7f08c4: b.ls     #0x7f0c1c
+0x7f08c8: ldur     w1, [x0, #0x27]
+0x7f08cc: add      x1, x1, x28, lsl #32
+0x7f08d0: bl       #0x749d0c
+0x7f08d4: mov      x1, x0
+0x7f08d8: stur     x1, [x29, #-0x10]
+0x7f08dc: ldur     x0, [x1, #-1]
+0x7f08e0: ubfx     x0, x0, #0xc, #0x14
+0x7f08e4: add      x16, x27, #0x17, lsl #12 ; [pp+0x17330] String: "voice"
+0x7f08e8: ldr      x16, [x16, #0x330]
+0x7f08ec: stp      x16, x1, [x15]
+0x7f08f0: mov      x30, x0
+0x7f08f4: ldr      x30, [x21, x30, lsl #3]
+0x7f08f8: blr      x30
+0x7f08fc: tbnz     w0, #4, #0x7f0b48
+0x7f0900: ldur     x0, [x29, #-8]
+0x7f0904: mov      x1, x22
+0x7f0908: mov      x2, #0x10
+0x7f090c: bl       #0xb29b38
+0x7f0910: add      x16, x27, #0x16, lsl #12 ; [pp+0x16198] String: "en"
+0x7f0914: ldr      x16, [x16, #0x198]
+0x7f0918: stur     w16, [x0, #0xf]
+0x7f091c: add      x16, x27, #0x17, lsl #12 ; [pp+0x17338] String: "please slow down"
+0x7f0920: ldr      x16, [x16, #0x338]
+0x7f0924: stur     w16, [x0, #0x13]
+0x7f0928: add      x16, x27, #0x16, lsl #12 ; [pp+0x161a8] String: "zh"
+0x7f092c: ldr      x16, [x16, #0x1a8]
+0x7f0930: stur     w16, [x0, #0x17]

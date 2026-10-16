@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permgrouplab_notifications">Notifications</string>
+    <string name="permgrouplab_readMediaAural">Music and audio</string>
+    <string name="permgrouplab_readMediaVisual">Photos and videos</string>
+</resources>

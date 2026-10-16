@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:icon="0x7f080950"
+        android:layout="@layout/settings_header_car"
+        android:title="@string/settings_loading_placeholder"
+        android:selectable="false"
+        android:key="key_car_info_header"
+        android:summary="@string/settings_loading_placeholder"/>
+    <Preference
+        android:title="@string/settings_car_details_enable_title"
+        android:key="key_car_info_enabled"
+        app:isPreferenceVisible="false"/>
+    <Preference
+        android:enabled="false"
+        android:title="@string/settings_car_details_forget_vehicle_title"
+        android:key="key_car_info_forget"/>
+    <Preference
+        android:selectable="false"
+        android:key="key_car_info_display"/>
+    <Preference
+        android:icon="0x7f080957"
+        android:selectable="false"
+        android:key="key_car_connection_support"
+        android:summary="This car supports wireless"
+        app:isPreferenceVisible="false"/>
+</PreferenceScreen>

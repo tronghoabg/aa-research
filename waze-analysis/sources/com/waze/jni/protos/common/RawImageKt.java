@@ -1,0 +1,89 @@
+package com.waze.jni.protos.common;
+
+import com.google.v.v;
+import com.waze.jni.protos.common.RawImage;
+import h.g.b.o;
+import h.g.b.x;
+
+/* compiled from: WazeSource */
+/* loaded from: classes6.dex */
+public final class RawImageKt {
+    public static final RawImageKt INSTANCE = new RawImageKt();
+
+    private RawImageKt() {
+    }
+
+    /* compiled from: WazeSource */
+    public final class Dsl {
+        public static final Companion Companion = new Companion(null);
+        private final RawImage.Builder _builder;
+
+        private Dsl(RawImage.Builder builder) {
+            this._builder = builder;
+        }
+
+        public final /* synthetic */ RawImage _build() {
+            RawImage rawImageBuild = this._builder.build();
+            x.e(rawImageBuild, "build(...)");
+            return rawImageBuild;
+        }
+
+        public final void clearData() {
+            this._builder.clearData();
+        }
+
+        public final void clearHeight() {
+            this._builder.clearHeight();
+        }
+
+        public final void clearWidth() {
+            this._builder.clearWidth();
+        }
+
+        public final v getData() {
+            v data = this._builder.getData();
+            x.e(data, "getData(...)");
+            return data;
+        }
+
+        public final int getHeight() {
+            return this._builder.getHeight();
+        }
+
+        public final int getWidth() {
+            return this._builder.getWidth();
+        }
+
+        public final void setData(v vVar) {
+            x.f(vVar, "value");
+            this._builder.setData(vVar);
+        }
+
+        public final void setHeight(int i2) {
+            this._builder.setHeight(i2);
+        }
+
+        public final void setWidth(int i2) {
+            this._builder.setWidth(i2);
+        }
+
+        /* compiled from: WazeSource */
+        public final class Companion {
+            private Companion() {
+            }
+
+            public final /* synthetic */ Dsl _create(RawImage.Builder builder) {
+                x.f(builder, "builder");
+                return new Dsl(builder, null);
+            }
+
+            public /* synthetic */ Companion(o oVar) {
+                this();
+            }
+        }
+
+        public /* synthetic */ Dsl(RawImage.Builder builder, o oVar) {
+            this(builder);
+        }
+    }
+}

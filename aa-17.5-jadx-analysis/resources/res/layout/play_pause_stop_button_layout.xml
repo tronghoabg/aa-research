@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/play_pause_container"
+    android:duplicateParentState="true"
+    android:clipChildren="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:foregroundGravity="center">
+    <com.google.android.apps.auto.components.ui.media.PlayPauseStopImageView
+        android:id="@+id/play_pause"
+        android:duplicateParentState="true"
+        android:src="@drawable/ic_play_pause_stop"
+        android:scaleType="center"
+        style="@style/FabStyle.Large"/>
+</FrameLayout>

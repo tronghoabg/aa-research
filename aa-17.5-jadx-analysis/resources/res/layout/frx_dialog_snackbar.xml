@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/autolaunch_dialog_snack_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/car_snackbar_height"
+    android:paddingStart="@dimen/car_snackbar_button_margin"
+    android:paddingEnd="@dimen/car_snackbar_button_margin"
+    style="@style/CarSnackbar.Dialog">
+    <Button
+        android:enabled="false"
+        android:id="@+id/right_button"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/frx_continue"
+        android:textAllCaps="true"
+        android:layout_marginStart="@dimen/car_snackbar_button_margin_small"
+        android:layout_alignParentEnd="true"
+        style="@style/CarSnackbarButton.Bold.Dialog"/>
+    <Button
+        android:id="@+id/left_button"
+        android:visibility="visible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/frx_no_thanks"
+        android:textAllCaps="true"
+        android:layout_marginStart="@dimen/car_snackbar_button_margin_small"
+        android:layout_toStartOf="@+id/right_button"
+        style="@style/CarSnackbarButton.Dialog"/>
+</RelativeLayout>

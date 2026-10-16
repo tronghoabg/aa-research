@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>Cờ caro</title>
+<!--
+  GAME MAU — dung file nay lam khuon cho bay game con lai.
+
+  Luat choi: hai nguoi mot may, ai noi duoc 5 o lien nhau (ngang, doc, cheo)
+  truoc thi thang. Ban co KHONG phai 3x3 - no rong bang dung khung game.
+
+  Bon quy tac lay tu ban thiet ke, game nao cung phai giu:
+
+    1. Nap carstream-game.js dau tien, va nghe onPause/onResume. Khong nghe
+       thi roi man hinh roi game van chay ngam, diem tu tang.
+    2. Mau lay tu CarGame.theme, khong tu chon. Game tu chon mau thi mo tu
+       danh sach ra la doi ca mot bang mau khac - nguoi dung thay nhu app khac.
+       O day theme duoc do thang vao bien CSS (--bg, --surface, ...), nen ca
+       file chi co MOT cho biet mau.
+    3. O bam >= CarGame.TOUCH_MIN (60px).
+    4. Ban co do CHIEU CAO quyet dinh (khong phai chieu ngang): khung game la
+       1772x616 - rat ngang. Tinh theo be ngang thi ban co tran xuong duoi mat.
+
+  CACH CO BAN CO — giong het luoi the o GameScreen.java: giu CO O gan nhu
+  khong doi, roi de SO HANG / SO COT roi ra theo khung.
+
+      chieu cao -> so hang (5..15)      chieu ngang -> so cot (8..24)
+
+  Man 1772x616 ra ban 18x8; man xe thap 1280x613 ra ban ~11x6; man vuong to ra
+  ban 15 hang. Cung mot game, khong man nao bi cat mat hang duoi, va o luon
+  >= 60px de tren xe bam khong truot.
+-->
+<script src="../carstream-game.js"></script>
+<style>
+  html, body {
+    margin: 0; height: 100%;
+    background: var(--bg, #201E1D); color: var(--text, #F9F4ED);
+    font-family: "Be Vietnam Pro", system-ui, sans-serif;
+    -webkit-user-select: none; user-select: none;
+    overflow: hidden;
+  }
+  #wrap {
+    height: 100%;
+    display: flex; align-items: center; justify-content: center; gap: 48px;
+  }
+  /*
+    --cell / so hang / so cot deu do JS dat vao (xem layout() ben duoi). CSS chi
+    giu hinh thuc, khong quyet dinh cai gi phu thuoc kich thuoc khung.
+  */
+  #board {
+    display: grid;
+    gap: 3px;
+    padding: 3px;
+    border-radius: 10px;
+    background: var(--surface, #2E2B25);   /* khe 3px giua cac o = duong ke ban co */
+  }
+  .cell {
+    border: 0; padding: 0;
+    width: var(--cell); height: var(--cell);
+    background: var(--bg, #201E1D); border-radius: 4px;
+    font-family: inherit; font-size: calc(var(--cell) * 0.62); line-height: 1;
+    font-weight: 700; color: var(--text, #F9F4ED);
+    cursor: pointer; touch-action: manipulation;
+    transition: background .12s;
+  }
+  .cell:hover:not(:disabled) { background: var(--surface, #2E2B25); }
+  .cell:active:not(:disabled) { background: var(--surface, #2E2B25); }
+  .cell:disabled { cursor: default; }
+  .x { color: var(--accent, #C67139); }
+  .o { color: var(--accent2, #8FA073); }
+  /* Nuoc vua di: tren ban rong khong danh dau thi khong tim ra minh vua di dau. */
+  .last { box-shadow: inset 0 0 0 2px var(--dim, #C0B6A5); }
+  /* Duong thang: vien theo dung mau cua nguoi thang (currentColor = .x / .o). */
+  .win { box-shadow: inset 0 0 0 3px currentColor; }
+
+  #side { width: 300px; flex: none; }
+  /*
+    Khung hep (cua so trinh duyet luc lam game, hoac man xe nho): bang ben an
+    het cho cua ban co. Bop bang ben lai - measure() doc offsetWidth that nen
+    khong phai sua so trong JS.
+  */
+  @media (max-width: 1100px) {
+    #wrap { gap: 24px; }
+    #side { width: 200px; }
+    #turn { font-size: 24px; }
+  }
+  #turn { display: flex; align-items: center; gap: 12px; font-size: 30px; font-weight: 700; }
+  #dot { width: 18px; height: 18px; border-radius: 999px; background: var(--accent, #C67139); flex: none; }
+  #tally { font-size: 19px; color: var(--dim, #C0B6A5); margin-top: 10px; }
+  #hint { font-size: 15px; color: var(--dim, #C0B6A5); opacity: .75; margin-top: 4px; }
+  .btn {
+    margin-top: 14px; width: 100%; min-height: 60px;
+    border: 0; border-radius: 999px;
+    font-family: inherit; font-size: 19px; font-weight: 700;
+    cursor: pointer; touch-action: manipulation;
+  }
+  #again { background: var(--accent, #C67139); color: var(--bg, #201E1D); }
+  #again:hover { background: var(--accentSoft, #F6A06B); }
+  #undo { background: var(--surface, #2E2B25); color: var(--text, #F9F4ED); }
+  #undo:hover:not(:disabled) { background: var(--dim, #C0B6A5); color: var(--bg, #201E1D); }
+  #undo:disabled { opacity: .4; cursor: default; }
+</style>
+</head>
+<body>
+
+<div id="wrap">
+  <div id="board"></div>
+  <div id="side">
+    <div id="turn"><span id="dot"></span><span id="turnText">Lượt X</span></div>
+    <div id="tally">X 0 · O 0</div>
+    <div id="hint"></div>
+    <button id="again" class="btn" type="button">Ván mới</button>
+    <button id="undo" class="btn" type="button">Hoàn tác</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var CarGame = window.CarGame;
+
+  var WIN = 5;                       // noi 5 o lien nhau la thang
+  var GAP = 3;                       // khe giua hai o, trung voi CSS
+  var PAD = 3;                       // le trong cua #board, trung voi CSS
+  var MIN_CELL = CarGame.TOUCH_MIN;  // luat 3 - duoi so nay tren xe bam khong trung
+  var MAX_CELL = 92;                 // man to thi them hang/cot, khong phong to o
+  var MIN_ROWS = 5, MAX_ROWS = 15;   // 15 = ban caro tieu chuan, khong can hon
+  // San 5: chi cham toi khi mo bang cua so trinh duyet be lam game. Man xe hep
+  // nhat do that (1280x613) van ra 14 cot - khong bao gio roi xuong day.
+  var MIN_COLS = 5, MAX_COLS = 24;
+
+  var wrap = document.getElementById('wrap');
+  var board = document.getElementById('board');
+  var side = document.getElementById('side');
+  var dot = document.getElementById('dot');
+  var turnText = document.getElementById('turnText');
+  var tallyText = document.getElementById('tally');
+  var hintText = document.getElementById('hint');
+  var undoBtn = document.getElementById('undo');
+
+  var rows = 0, cols = 0, cell = MIN_CELL;
+  var cells = [];                    // nut DOM, cung thu tu voi state
+  var state = [];                    // '' | 'X' | 'O'
+  var moves = [];                    // chi so cac nuoc da di, de hoan tac
+  var turn = 'X';
+  var over = false;
+  var winMark = '';                  // ai thang van nay ('' = chua ai)
+  var winCells = [];
+  var wins = { X: 0, O: 0 };
+
+  var DIRS = [[0, 1], [1, 0], [1, 1], [1, -1]];
+
+  function clamp(lo, v, hi) { return Math.max(lo, Math.min(hi, v)); }
+
+  // Luat 2: do bang mau cua app vao bien CSS. Doi mau app la doi mot cho trong
+  // Organic.java -> carstream-game.js, game khong phai sua.
+  (function theme() {
+    var t = CarGame.theme;
+    for (var k in t) {
+      if (Object.prototype.hasOwnProperty.call(t, k)) {
+        document.documentElement.style.setProperty('--' + k, t[k]);
+      }
+    }
+  }());
+
+  /* ---------------- ban co co theo khung ---------------- */
+
+  function measure() {
+    var wrapGap = parseFloat(getComputedStyle(wrap).columnGap) || 48;
+    // n o chiem n*(o+khe) - khe + 2*le. Tru phan thua ra truoc roi chia deu cho
+    // (o+khe): thieu dong nay la ban co lo ra ngoai khung dung mot vai px.
+    var extra = 2 * PAD - GAP;
+    var availW = Math.max(240, window.innerWidth - side.offsetWidth - wrapGap - 32) - extra;
+    var availH = Math.max(240, window.innerHeight - 32) - extra;
+
+    // Chieu cao chot truoc (luat 4), be ngang chi quyet dinh so cot.
+    var r = clamp(MIN_ROWS, Math.floor(availH / (MIN_CELL + GAP)), MAX_ROWS);
+    var px = clamp(MIN_CELL, Math.floor(availH / r) - GAP, MAX_CELL);
+    var c = clamp(MIN_COLS, Math.floor(availW / (px + GAP)), MAX_COLS);
+    return { rows: r, cols: c, cell: px };
+  }
+
+  function build(d) {
+    // Doi co ban co giua chung van: giu lai phan van co truyen sang ban moi,
+    // dung xoa trang chi vi khung vua doi kich thuoc.
+    var keepRows = Math.min(rows, d.rows);
+    var keepCols = Math.min(cols, d.cols);
+    var oldState = state, oldCols = cols;
+
+    rows = d.rows; cols = d.cols; cell = d.cell;
+
+    board.style.setProperty('--cell', cell + 'px');
+    board.style.gridTemplateColumns = 'repeat(' + cols + ', var(--cell))';
+    board.style.gridTemplateRows = 'repeat(' + rows + ', var(--cell))';
+
+    state = new Array(rows * cols).fill('');
+    for (var r = 0; r < keepRows; r++) {
+      for (var c = 0; c < keepCols; c++) {
+        state[r * cols + c] = oldState[r * oldCols + c];
+      }
+    }
+    // Chi so nuoc di cu tinh theo so cot cu -> khong con dung nua.
+    moves = [];
+
+    board.textContent = '';
+    cells = [];
+    for (var i = 0; i < rows * cols; i++) {
+      var b = document.createElement('button');
+      b.className = 'cell';
+      b.type = 'button';
+      b.dataset.i = i;
+      b.addEventListener('click', onCell);
+      board.appendChild(b);
+      cells.push(b);
+    }
+
+    hintText.textContent = 'Bàn ' + cols + '×' + rows + ' · nối ' + WIN + ' ô là thắng';
+    recheck();
+    paintAll();
+    status();
+  }
+
+  function relayout() {
+    var d = measure();
+    if (d.rows === rows && d.cols === cols) {
+      if (d.cell !== cell) {
+        cell = d.cell;
+        board.style.setProperty('--cell', cell + 'px');
+      }
+      return;
+    }
+    build(d);
+  }
+
+  /* ---------------- luat choi ---------------- */
+
+  function inside(r, c) { return r >= 0 && r < rows && c >= 0 && c < cols; }
+
+  /** Chuoi >= WIN o di qua (r,c), hoac null. Tra ve CA chuoi de to vien. */
+  function lineFrom(r, c) {
+    var mark = state[r * cols + c];
+    if (!mark) { return null; }
+    for (var d = 0; d < DIRS.length; d++) {
+      var dr = DIRS[d][0], dc = DIRS[d][1];
+      var rr = r, cc = c;
+      while (inside(rr - dr, cc - dc) && state[(rr - dr) * cols + (cc - dc)] === mark) {
+        rr -= dr; cc -= dc;
+      }
+      var line = [];
+      while (inside(rr, cc) && state[rr * cols + cc] === mark) {
+        line.push(rr * cols + cc);
+        rr += dr; cc += dc;
+      }
+      if (line.length >= WIN) { return line; }
+    }
+    return null;
+  }
+
+  /** Quet ca ban - chi dung sau khi doi co ban co, luc choi thi xet nuoc vua di. */
+  function recheck() {
+    winCells = []; winMark = ''; over = false;
+    for (var r = 0; r < rows; r++) {
+      for (var c = 0; c < cols; c++) {
+        var line = lineFrom(r, c);
+        if (line) {
+          winCells = line;
+          winMark = state[r * cols + c];
+          over = true;
+          return;
+        }
+      }
+    }
+    over = state.length > 0 && state.every(function (s) { return s; });
+  }
+
+  function onCell(e) {
+    if (over) { return; }
+    var i = +e.currentTarget.dataset.i;
+    if (state[i]) { return; }
+
+    state[i] = turn;
+    moves.push(i);
+
+    var line = lineFrom(Math.floor(i / cols), i % cols);
+    if (line) {
+      winCells = line;
+      winMark = turn;
+      over = true;
+      wins[turn]++;
+      // Diem = so van thang cua nguoi dang dan, de thanh tren co gi de hien.
+      CarGame.score(Math.max(wins.X, wins.O));
+      tally();
+    } else if (state.every(function (s) { return s; })) {
+      over = true;
+    } else {
+      turn = (turn === 'X') ? 'O' : 'X';
+    }
+
+    paintAll();
+    status();
+
+    if (over) {
+      CarGame.over({
+        title: winMark ? (winMark + ' thắng') : 'Hoà',
+        note: 'X ' + wins.X + ' · O ' + wins.O,
+        sub: winMark ? ('Nối được ' + winCells.length + ' ô') : 'Bàn đã kín',
+        again: 'Ván mới',
+        onAgain: reset
+      });
+    }
+  }
+
+  function undo() {
+    if (!moves.length) { return; }
+    CarGame.hideOver();
+    var i = moves.pop();
+    var mark = state[i];
+    state[i] = '';
+
+    // Hoan tac nuoc thang thi phai tra lai ca diem, khong thi bam thang - hoan
+    // tac - danh lai la diem tu cong len.
+    if (winMark) {
+      wins[winMark] = Math.max(0, wins[winMark] - 1);
+      CarGame.score(Math.max(wins.X, wins.O));
+      tally();
+    }
+    over = false; winMark = ''; winCells = [];
+    turn = mark;                       // nguoi vua di duoc di lai
+    paintAll();
+    status();
+  }
+
+  function reset() {
+    CarGame.hideOver();
+    state = new Array(rows * cols).fill('');
+    moves = [];
+    turn = 'X';
+    over = false; winMark = ''; winCells = [];
+    paintAll();
+    status();
+  }
+
+  /* ---------------- ve ---------------- */
+
+  function paintAll() {
+    var last = moves.length ? moves[moves.length - 1] : -1;
+    for (var i = 0; i < cells.length; i++) {
+      var mark = state[i];
+      var cls = 'cell';
+      if (mark) { cls += ' ' + mark.toLowerCase(); }
+      if (i === last && !over) { cls += ' last'; }
+      if (winCells.indexOf(i) >= 0) { cls += ' win'; }
+      if (cells[i].textContent !== mark) { cells[i].textContent = mark; }
+      if (cells[i].className !== cls) { cells[i].className = cls; }
+      cells[i].disabled = !!mark || over;
+    }
+    undoBtn.disabled = !moves.length;
+  }
+
+  function tally() {
+    tallyText.textContent = 'X ' + wins.X + ' · O ' + wins.O;
+  }
+
+  function status() {
+    var mark = winMark || turn;
+    dot.style.background = (mark === 'X') ? CarGame.theme.accent : CarGame.theme.accent2;
+    if (CarGame.isPaused()) {
+      turnText.textContent = 'Tạm dừng';
+    } else if (winMark) {
+      turnText.textContent = winMark + ' thắng';
+    } else if (over) {
+      turnText.textContent = 'Hoà';
+    } else {
+      turnText.textContent = 'Lượt ' + turn;
+    }
+  }
+
+  document.getElementById('again').addEventListener('click', reset);
+  undoBtn.addEventListener('click', undo);
+
+  // Man hinh xe doi kich thuoc (cam lai AA, doi che do) thi tinh lai so hang/cot.
+  var pending = 0;
+  window.addEventListener('resize', function () {
+    clearTimeout(pending);
+    pending = setTimeout(relayout, 120);
+  });
+
+  // Co caro khong co vong lap nen "tam dung" chi la bao ra man hinh. Game co vong
+  // ve (xep hinh, ran, duong dua) phai dung han requestAnimationFrame o day, roi
+  // chay lai trong onResume - khong thi quay lai la no chay bu mot loat frame.
+  CarGame.onPause(status);
+  CarGame.onResume(status);
+
+  build(measure());
+  tally();
+}());
+</script>
+</body>
+</html>

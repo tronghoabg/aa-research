@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <size
+                android:height="68dp"
+                android:width="@dimen/template_row_action_divider_width"/>
+            <solid android:color="?attr/templateRowActionDividerColor"/>
+        </shape>
+    </item>
+</layer-list>

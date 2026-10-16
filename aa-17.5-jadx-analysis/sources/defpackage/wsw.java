@@ -1,0 +1,10 @@
+package defpackage;
+
+import android.R;
+
+/* loaded from: classes3.dex */
+public final class wsw {
+    public static final int[] a = {R.attr.indeterminate, com.google.android.projection.gearhead.R.attr.hideAnimationBehavior, com.google.android.projection.gearhead.R.attr.indeterminateAnimatorDurationScale, com.google.android.projection.gearhead.R.attr.indicatorColor, com.google.android.projection.gearhead.R.attr.indicatorTrackGapSize, com.google.android.projection.gearhead.R.attr.minHideDelay, com.google.android.projection.gearhead.R.attr.showAnimationBehavior, com.google.android.projection.gearhead.R.attr.showDelay, com.google.android.projection.gearhead.R.attr.trackColor, com.google.android.projection.gearhead.R.attr.trackCornerRadius, com.google.android.projection.gearhead.R.attr.trackThickness, com.google.android.projection.gearhead.R.attr.waveAmplitude, com.google.android.projection.gearhead.R.attr.waveAmplitudeRampProgressMax, com.google.android.projection.gearhead.R.attr.waveAmplitudeRampProgressMin, com.google.android.projection.gearhead.R.attr.waveSpeed, com.google.android.projection.gearhead.R.attr.wavelength, com.google.android.projection.gearhead.R.attr.wavelengthDeterminate, com.google.android.projection.gearhead.R.attr.wavelengthIndeterminate};
+    public static final int[] b = {com.google.android.projection.gearhead.R.attr.indeterminateAnimationTypeCircular, com.google.android.projection.gearhead.R.attr.indeterminateTrackVisible, com.google.android.projection.gearhead.R.attr.indicatorDirectionCircular, com.google.android.projection.gearhead.R.attr.indicatorInset, com.google.android.projection.gearhead.R.attr.indicatorSize};
+    public static final int[] c = {com.google.android.projection.gearhead.R.attr.indeterminateAnimationType, com.google.android.projection.gearhead.R.attr.indicatorDirectionLinear, com.google.android.projection.gearhead.R.attr.trackInnerCornerRadius, com.google.android.projection.gearhead.R.attr.trackStopIndicatorPadding, com.google.android.projection.gearhead.R.attr.trackStopIndicatorSize};
+}

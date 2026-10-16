@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.telecom.dialpad.StandardDialpadView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/Theme.Gearhead.Projected"
+    android:orientation="vertical"
+    android:id="@+id/dialpad_view"
+    android:visibility="gone"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        layout="@layout/standard_dialed_number_container"/>
+    <include
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/standard_keypad_3x4"/>
+    <FrameLayout
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <com.google.android.apps.auto.sdk.ui.FloatingActionButton
+            android:layout_gravity="center"
+            android:id="@+id/call"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:foreground="?attr/gearheadPanelFabFocusBackground"
+            style="@style/FabStyle.Large"/>
+    </FrameLayout>
+</com.google.android.apps.auto.components.apphost.telecom.dialpad.StandardDialpadView>

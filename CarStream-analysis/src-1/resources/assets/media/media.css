@@ -1,0 +1,635 @@
+/*
+ * Giao diện mục "Trong máy" — dựng theo bản thiết kế chủ dự án đưa
+ * (file-browser-standalone.html): nền kem, nhấn màu đất nung, thẻ bo tròn lớn.
+ *
+ * ================== PHÔNG LẤY TỪ KHO SẴN CÓ CỦA APP ==================
+ * Bản mẫu nhúng Caprasimo + Figtree. Ở đây dùng Baloo2 và Be Vietnam Pro có sẵn
+ * trong assets/fonts vì hai lý do:
+ *   - Be Vietnam Pro dựng riêng cho tiếng Việt, đủ dấu chồng (ạ, ộ, ữ). Phông
+ *     hiển thị kiểu Caprasimo thường thiếu, ra chữ hộp hoặc rơi về phông khác
+ *     giữa câu.
+ *   - Đã nằm sẵn trong APK, không tốn thêm dung lượng.
+ *
+ * ================== BA LUẬT CỦA MÀN HÌNH XE ==================
+ *   - Ô bấm PHẢI to (>=52px). Người dùng đang lái, không ngắm được.
+ *   - Tương phản cao, chữ lớn. Liếc một cái phải đọc ra.
+ *   - Không hiệu ứng chuyển động dài: mắt bị kéo khỏi đường.
+ *
+ * Bản mẫu vẽ cho trang máy tính (đệm 40/48px, tiêu đề 32px). Màn xe chỉ cao 720px
+ * nên nhịp dọc ở đây bóp lại, còn ô bấm thì giữ nguyên cỡ.
+ */
+
+@font-face {
+  font-family: 'BeVietnamPro';
+  src: url('../fonts/BeVietnamPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'BeVietnamPro';
+  src: url('../fonts/BeVietnamPro-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Baloo2';
+  src: url('../fonts/Baloo2-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
+:root {
+  /*
+   * ================== KHOA MAU SANG, KHONG CHO WEBVIEW TU TOI HOA ==================
+   * App bat setAlgorithmicDarkeningAllowed va chay WebView trong ngu canh che do
+   * dem, nen Chromium TU DAO MAU moi trang khong tu khai bo mau cua no.
+   *
+   * Do that 27/8/2026: getComputedStyle tra ve dung rgb(245,234,216) - tuc CSS
+   * khong sai - nhung anh chup man hinh lai ra nau toi. Mau bi doi o tang ve, sau
+   * khi CSS da tinh xong, nen soi bang computed style se KHONG bao gio thay.
+   *
+   * PHAI khai "light dark", KHONG phai "light" - da thu ca hai 27/8/2026:
+   *
+   *   color-scheme: light       van bi toi hoa. Vi tu-toi-hoa nham vao trang
+   *                             KHONG ho tro che do toi, ma khai "light" chinh la
+   *                             tu nhan "toi khong ho tro toi".
+   *   color-scheme: light dark  het bi dao. Day la cach noi "trang tu lo ca hai
+   *                             che do", va Chromium thoi nhung tay vao.
+   *
+   * Trang nay co dung MOT bo mau kem cho ca hai che do - do la lua chon, khong
+   * phai thieu sot: ban thiet ke la nen kem, doi sang toi la ra mot trang khac han.
+   */
+  color-scheme: light dark;
+
+  --bg:        #F5EAD8;
+  --surface:   #EBDDC5;
+  --text:      #201E1D;
+  --divider:   #DCCBAF;
+  --accent:    #C67139;
+  --accent100: #F6E3D2;
+  --accent200: #EFCDB0;
+  --accent800: #6B3A1C;
+  --xanh200:   #D3D9C1;
+  --xanh800:   #48532F;
+  --n100:      #EDE3D2;
+  --n200:      #DDD0BA;
+  --n600:      #6E665C;
+  --n700:      #544D45;
+  --nhan-mau:  #8A4B24;
+  /* Chu nam tren nen toi mo (nhan thoi luong, dong bao) - GIU sang o ca hai che
+     do, khong duoc buoc vao --bg vi che do toi thi --bg la gan den. */
+  --tren-toi:  #F5EAD8;
+}
+
+/*
+ * ================== CHE DO TOI THEO DIEN THOAI ==================
+ * App dung WebView trong ngu canh che do dem theo lua chon cua may (xem
+ * CarScreen.nightContext), nen prefers-color-scheme o day khop dung voi dien
+ * thoai - do that 27/8/2026: phone isNight=true | webCtxCfg=toi.
+ *
+ * Chi doi BIEN MAU, khong dong den bo cuc: moi lop deu ve qua bien nen doi o day
+ * la ca trang doi theo.
+ *
+ * Giu nguyen VAI TRO cua tung bien. Vi du --accent200 la NEN cua o bieu tuong con
+ * --accent800 la CHU nam tren no; sang che do toi thi hai cai doi cho sang/toi cho
+ * nhau chu vai tro khong doi.
+ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:        #16120F;
+    --surface:   #241D18;
+    --text:      #F3E9DC;
+    --divider:   #3A3028;
+    --accent:    #D98A4A;
+    --accent100: #2B2118;
+    --accent200: #3B2C1E;
+    --accent800: #F0C9A5;
+    --xanh200:   #333B27;
+    --xanh800:   #CBD5B0;
+    --n100:      #1F1915;
+    --n200:      #33291F;
+    --n600:      #9A8D80;
+    --n700:      #C0B3A5;
+    --nhan-mau:  #E0A473;
+  }
+
+  /* Chu tren nen mau nhan: che do toi thi nhan sang hon nen, nen chu phai toi. */
+  .chip.on      { color: #1B140E; }
+  .chip.on .dem { background: rgba(27, 20, 14, .28); color: #1B140E; }
+  .kieu button.on { color: #1B140E; }
+  .hinh .cham     { color: #1B140E; }
+  .phim.nhan { color: #1B140E; }
+  .phim:active { color: #1B140E; }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  background: #000;
+  color: var(--text);
+  font-family: BeVietnamPro, system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+#khung {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+#v {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  object-fit: contain;
+}
+
+/*
+ * Ảnh nằm chồng đúng chỗ video. Mặc định ẩn; media.js bật đúng một trong hai tuỳ
+ * loại tệp — không bao giờ để cả hai cùng hiện.
+ */
+#anh {
+  position: absolute;
+  inset: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #000;
+}
+
+#anh.hien { display: block; }
+#v.an     { display: none; }
+
+/* ------------------------------------------------------------- lớp chọn tệp */
+
+#lop {
+  position: absolute;
+  inset: 0;
+  display: none;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background: var(--bg);
+}
+
+#lop.hien { display: block; }
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 22px 26px 34px;
+}
+
+/* ------------------------------------------------------------------- đầu */
+
+.head { display: flex; align-items: center; gap: 14px; }
+
+.head-icon {
+  width: 52px;
+  height: 52px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  background: var(--accent200);
+  color: var(--accent800);
+}
+
+.head-chu { display: flex; flex-direction: column; gap: 2px; flex: 1; min-width: 0; }
+
+.head h1 {
+  font-family: Baloo2, BeVietnamPro, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1.1;
+}
+
+/* Đường dẫn: chỉ để biết đang đứng đâu, không bấm được. */
+.duong {
+  font-size: 14px;
+  color: var(--n600);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.duong .day { color: var(--n700); font-weight: 600; }
+
+.tim {
+  display: flex;
+  align-items: center;
+  /*
+   * KHÔNG dùng gap chung.
+   *
+   * gap tách ĐỀU mọi con, nên con trỏ bị đẩy ra xa ký tự vừa gõ đúng bằng khoảng
+   * cách giữa biểu tượng và ô chữ — nhìn như nó rời khỏi chữ. Đặt khoảng cách
+   * riêng cho biểu tượng, còn con trỏ thì sát ngay sau chữ.
+   */
+  gap: 0;
+  height: 56px;
+  flex: none;
+  width: 300px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--n600);
+}
+
+.tim .tim-icon { flex: none; margin-right: 12px; display: flex; }
+
+.tim #q {
+  /*
+   * KHÔNG cho giãn hết ô.
+   *
+   * Trước để flex:1 nên ô chữ nuốt hết bề ngang và đẩy con trỏ ra tận mép phải —
+   * nhìn như con trỏ đứng rời một mình ở cuối ô. Gõ văn bản bình thường thì con
+   * trỏ bám ngay sau chữ, nên ô chữ phải co đúng bằng nội dung.
+   */
+  flex: 0 1 auto;
+  min-width: 0;
+  font-size: 16px;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tim #q.rong { color: var(--n600); }
+
+/* Ô đang nhập thì viền sáng lên — nhìn là biết chữ sẽ chạy vào đâu. */
+.tim.dang { outline: 2px solid var(--accent); }
+
+/*
+ * Con trỏ nháy tự vẽ.
+ *
+ * Ô tìm không phải <input> nên KHÔNG có con trỏ của hệ thống. Thiếu nó thì chạm
+ * vào ô, bàn phím bung ra mà ô vẫn đứng im — không có dấu hiệu nào cho biết máy
+ * đang chờ mình gõ.
+ */
+.nhay {
+  flex: none;
+  display: none;
+  margin-left: 2px;      /* sát ngay sau ký tự vừa gõ */
+  width: 2px;
+  height: 24px;
+  background: var(--accent);
+  animation: nhay 1.05s step-end infinite;
+}
+
+.tim.dang .nhay { display: block; }
+
+/*
+ * Ô còn trống thì con trỏ đứng TRƯỚC dòng gợi ý, đúng như ô nhập thật: con trỏ ở
+ * đầu dòng, chữ mờ nằm sau. Đổi thứ tự bằng flex order chứ không đụng vào DOM.
+ */
+.tim.dang #q.rong { order: 1; }
+
+@keyframes nhay {
+  0%, 50%  { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Máy đặt giảm chuyển động thì để con trỏ đứng yên, vẫn thấy được. */
+@media (prefers-reduced-motion: reduce) {
+  .nhay { animation: none; }
+}
+
+/* -------------------------------------------------------------- thanh lọc */
+
+.thanh { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.thanh .dan { flex: 1; }
+
+.nhom, .kieu { display: flex; gap: 8px; }
+
+.chip {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  height: 52px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.chip:active { background: var(--accent200); color: var(--accent800); }
+.chip.on     { background: var(--accent); color: var(--bg); }
+
+.chip .dem {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 999px;
+  background: var(--n200);
+  color: var(--n700);
+}
+
+.chip.on .dem { background: rgba(245, 234, 216, .26); color: var(--bg); }
+
+/* Nhóm đổi kiểu bày: một viên thuốc bọc mấy nút vuông. */
+.kieu {
+  height: 52px;
+  padding: 4px;
+  gap: 4px;
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.kieu button {
+  width: 58px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 0;
+  border-radius: 999px;
+  background: none;
+  color: var(--n700);
+  cursor: pointer;
+}
+
+.kieu button.on { background: var(--accent); color: var(--bg); }
+
+/* ------------------------------------------------------------------ mục */
+
+.muc { display: flex; flex-direction: column; gap: 12px; }
+.muc-dau { display: flex; align-items: baseline; gap: 10px; }
+
+.nhan {
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--nhan-mau);
+  font-weight: 600;
+}
+
+.muc-phu { font-size: 13px; color: var(--n600); }
+
+/* --------------------------------------------------------------- thư mục */
+
+.thumuc {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 12px;
+}
+
+.tm {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  background: var(--surface);
+  cursor: pointer;
+  min-height: 76px;
+}
+
+.tm:active { background: var(--accent100); }
+.tm.chon   { border-color: var(--accent); background: var(--accent100); }
+
+.tm .ic {
+  width: 46px;
+  height: 46px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--accent200);
+  color: var(--accent800);
+}
+
+.tm .chu { min-width: 0; }
+
+.tm .ten {
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tm .phu { font-size: 13px; color: var(--n700); }
+
+/* ------------------------------------------------------------ tệp — lưới */
+
+#ds-tep.luoi, #ds-tep.luoito {
+  display: grid;
+  gap: 14px;
+}
+
+#ds-tep.luoi   { grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+#ds-tep.luoito { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+
+.the {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 22px;
+  overflow: hidden;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.the:active { background: var(--accent100); }
+.the.chon   { border-color: var(--accent); }
+
+.hinh {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  display: grid;
+  place-items: center;
+  background: var(--n100);
+}
+
+.hinh img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* Phim và nhạc không có hình: một chấm tròn mang biểu tượng loại. */
+.hinh .cham {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--accent);
+  color: var(--bg);
+}
+
+.hinh .cham.nhac { background: var(--xanh800); color: var(--xanh200); }
+
+/* Nhãn thời lượng / cỡ tệp, nằm góc dưới phải của hình. */
+.hinh .nhan-nho {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 3px 11px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: rgba(20, 18, 17, .78);
+  color: var(--tren-toi);
+  font-variant-numeric: tabular-nums;
+}
+
+.the .than { display: flex; flex-direction: column; gap: 2px; padding: 12px 16px 14px; min-width: 0; }
+
+.the .ten {
+  font-size: 15px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.the .phu { font-size: 13px; color: var(--n700); }
+
+/* -------------------------------------------------------- tệp — danh sách */
+
+#ds-tep.danhsach { display: flex; flex-direction: column; gap: 6px; }
+
+.hang {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 64px;
+  padding: 8px 18px;
+  border: 2px solid transparent;
+  border-radius: 18px;
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.hang:active { background: var(--accent100); }
+.hang.chon   { border-color: var(--accent); background: var(--accent100); }
+
+.hang .ic {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--accent200);
+  color: var(--accent800);
+}
+
+.hang .ic.nhac { background: var(--xanh200); color: var(--xanh800); }
+
+.hang .ten {
+  flex: 1;
+  min-width: 0;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hang .the-loai {
+  flex: none;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  background: var(--n200);
+  color: var(--n700);
+}
+
+.hang .phu {
+  flex: none;
+  width: 92px;
+  text-align: right;
+  font-size: 14px;
+  color: var(--n700);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ------------------------------------------------------------- bàn phím ảo */
+
+#banphim {
+  position: absolute;
+  inset: auto 0 0 0;
+  display: none;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px 14px 16px;
+  background: var(--surface);
+  border-top: 2px solid var(--divider);
+  /* Nằm trên mọi thứ trong lớp chọn tệp, kể cả dòng báo. */
+  z-index: 5;
+}
+
+#banphim.hien { display: flex; }
+
+/*
+ * Cùng cách chia và cùng tên lớp với bàn phím IPTV (assets/iptv/iptv.css) để hai
+ * chỗ trong app gõ giống hệt nhau. Cỡ tính bằng vmin nên co theo màn — đầu xe nào
+ * cũng vừa, không phải đo từng loại.
+ */
+.hangphim {
+  display: flex;
+  gap: 1.4vmin;
+  justify-content: center;
+}
+
+.phim {
+  flex: 1 1 0;
+  max-width: 12vmin;
+  height: 9.4vmin;
+  min-height: 46px;
+  line-height: 9.4vmin;
+  text-align: center;
+  border-radius: 1.8vmin;
+  border: 2px solid var(--divider);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 19px;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+}
+
+.phim:active { background: var(--accent); color: var(--bg); }
+
+.phim.rong-key { max-width: 26vmin; flex: 2 1 0; }
+.phim.xoa      { max-width: 18vmin; flex: 1.5 1 0; color: var(--accent); }
+.phim.nhan     { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+
+/* --------------------------------------------------------------- dòng báo */
+
+#bao {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 16px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--tren-toi);
+  background: rgba(20, 18, 17, .94);
+}
+
+#bao.an  { display: none; }
+#bao.loi { color: #FFC9B4; }
+
+/*
+ * Màn xe hẹp — và đo ra thì màn xe LUÔN nằm ở đây: khung CSS thật chỉ 786x490px
+ * (đo 27/8/2026), không phải ~1047 như kích thước ảnh chụp.
+ *
+ * Luật cũ đặt .tim thành width:100% + order:3 mà .head lại KHÔNG cho xuống hàng,
+ * nên ô tìm nuốt 734px và .head-chu còn đúng 0px — tiêu đề bị đè lên ô tìm. Phải
+ * cho .head xuống hàng thì order:3 mới có nghĩa.
+ */
+@media (max-width: 900px) {
+  .head { flex-wrap: wrap; }
+  .head-chu { min-width: 200px; }
+  .tim { width: 100%; order: 3; }
+  .hang .the-loai { display: none; }
+}

@@ -1,0 +1,56 @@
+package com.google.android.apps.auto.sdk.nav.state;
+
+import android.os.Bundle;
+import android.os.Parcelable;
+import com.google.android.apps.auto.sdk.AbstractBundleable;
+import j$.util.Objects;
+
+/* loaded from: classes2.dex */
+public final class Distance extends AbstractBundleable {
+    public static final Parcelable.Creator<Distance> CREATOR = new AbstractBundleable.BundleableCreator(Distance.class);
+    public int a;
+    public String b;
+    public int c;
+
+    public Distance() {
+        this.a = -1;
+        this.c = 0;
+    }
+
+    @Override // com.google.android.apps.auto.sdk.AbstractBundleable
+    protected final void b(Bundle bundle) {
+        this.a = bundle.getInt("meters", -1);
+        this.b = bundle.getString("display_value");
+        this.c = bundle.getInt("display_unit", 0);
+    }
+
+    @Override // com.google.android.apps.auto.sdk.AbstractBundleable
+    protected final void d(Bundle bundle) {
+        bundle.putInt("meters", this.a);
+        bundle.putString("display_value", this.b);
+        bundle.putInt("display_unit", this.c);
+    }
+
+    public final boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj != null && getClass() == obj.getClass()) {
+            Distance distance = (Distance) obj;
+            if (this.a == distance.a && Objects.equals(this.b, distance.b) && this.c == distance.c) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public final int hashCode() {
+        return Objects.hash(Integer.valueOf(this.a), this.b, Integer.valueOf(this.c));
+    }
+
+    public Distance(int i, String str, int i2) {
+        this.a = i;
+        this.b = str;
+        this.c = i2;
+    }
+}

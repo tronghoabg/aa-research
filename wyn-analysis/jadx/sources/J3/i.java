@@ -1,0 +1,41 @@
+package J3;
+
+import java.util.concurrent.Executor;
+import kotlin.jvm.internal.AbstractC3340k;
+
+/* JADX WARN: Failed to restore enum class, 'enum' modifier and super class removed */
+/* JADX WARN: Unknown enum class pattern. Please report as an issue! */
+/* loaded from: classes.dex */
+public final class i implements Executor {
+
+    /* renamed from: a, reason: collision with root package name */
+    public static final i f5573a;
+
+    /* renamed from: b, reason: collision with root package name */
+    public static final /* synthetic */ i[] f5574b;
+
+    static {
+        i iVar = new i("INSTANCE", 0);
+        f5573a = iVar;
+        f5574b = new i[]{iVar};
+    }
+
+    public static i valueOf(String str) {
+        return (i) Enum.valueOf(i.class, str);
+    }
+
+    public static i[] values() {
+        return (i[]) f5574b.clone();
+    }
+
+    @Override // java.util.concurrent.Executor
+    public final void execute(Runnable command) {
+        AbstractC3340k.e(command, "command");
+        command.run();
+    }
+
+    @Override // java.lang.Enum
+    public final String toString() {
+        return "DirectExecutor";
+    }
+}

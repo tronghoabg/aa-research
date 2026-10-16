@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:tint="@color/white"
+    android:height="108dp"
+    android:width="108dp">
+    <item
+        android:gravity="center"
+        android:height="56dp"
+        android:width="56dp"
+        android:drawable="@drawable/gs_videocam_fill1_vd_theme_24"/>
+</layer-list>

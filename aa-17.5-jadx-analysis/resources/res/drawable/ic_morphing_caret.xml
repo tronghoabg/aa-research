@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:gearhead="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/caret_pointing_up"
+        android:drawable="@drawable/ic_caret_up"
+        gearhead:state_up="true"/>
+    <item
+        android:id="@+id/caret_pointing_down"
+        android:drawable="@drawable/ic_caret_down"
+        gearhead:state_down="true"/>
+    <item android:drawable="@drawable/ic_caret_up"/>
+    <transition
+        android:drawable="@drawable/caret_updown_animation"
+        android:toId="@+id/caret_pointing_down"
+        android:fromId="@+id/caret_pointing_up"/>
+    <transition
+        android:drawable="@drawable/caret_downup_animation"
+        android:toId="@+id/caret_pointing_up"
+        android:fromId="@+id/caret_pointing_down"/>
+</animated-selector>

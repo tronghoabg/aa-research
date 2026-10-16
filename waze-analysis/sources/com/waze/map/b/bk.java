@@ -1,0 +1,7 @@
+package com.waze.map.b;
+
+/* compiled from: WazeSource */
+/* loaded from: classes6.dex */
+public interface bk {
+    bl a(kotlinx.coroutines.b.k kVar);
+}

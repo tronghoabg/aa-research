@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/expanded_touch_area"
+    android:duplicateParentState="true"
+    android:clipToPadding="false"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/button_focus_ring"
+    android:minWidth="@dimen/button_tuned_touch_minimum_size"
+    android:minHeight="@dimen/button_tuned_touch_minimum_size">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        android:id="@+id/visible_button"
+        android:duplicateParentState="true"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/medium_button_visible_height">
+        <ImageView
+            android:id="@+id/button_icon"
+            android:layout_width="@dimen/gearhead_button_icon_size"
+            android:layout_height="@dimen/gearhead_button_icon_size"/>
+        <TextView
+            android:ellipsize="end"
+            android:id="@+id/button_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            style="@style/TextAppearance.Boardwalk.Body3"/>
+    </LinearLayout>
+</FrameLayout>

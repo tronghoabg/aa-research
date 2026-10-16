@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android" android:ordering="together">
+    <objectAnimator
+        android:interpolator="@interpolator/playpausestop_interpolator_3"
+        android:duration="333"
+        android:startOffset="0"
+        android:propertyName="translateXY"
+        android:pathData="M 21,22C 19.79999995231628,22.36666667461395 15.00000004768372,23.83333332538605 13.8,24.2"
+        android:propertyXName="translateX"
+        android:propertyYName="translateY"/>
+</set>

@@ -1,0 +1,1096 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AlertDialog.Button.SettingsLib" parent="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/settingslib_dialog_accent</item>
+    </style>
+    <style name="Base.SettingsLibButtonStyle.Expressive.Filled" parent="@style/Widget.Material3Expressive.Button">
+        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelLarge</item>
+        <item name="android:textColor">@color/settingslib_expressive_color_button_filled_text_icon</item>
+        <item name="android:gravity">0x11</item>
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-2</item>
+        <item name="backgroundTint">@color/settingslib_expressive_color_button_filled_container</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/settingslib_expressive_color_button_filled_text_icon</item>
+    </style>
+    <style name="CompanionAppSettingsTheme" parent="@style/Theme.GoogleMaterial.Light.Bridge">
+        <item name="android:windowBackground">@android:color/system_neutral1_50</item>
+    </style>
+    <style name="HorizontalProgressBar.SettingsLib" parent="@android:style/Widget.Material.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/settingslib_progress_horizontal</item>
+    </style>
+    <style name="M3Style" parent="">
+        <item name="android:background">@android:color/system_neutral1_50</item>
+        <item name="contentScrim">@android:color/system_accent1_100</item>
+    </style>
+    <style name="PreferenceTheme.SettingsLib" parent="@style/PreferenceThemeOverlay">
+        <item name="checkBoxPreferenceStyle">@style/SettingsCheckBoxPreference.SettingsLib</item>
+        <item name="dialogPreferenceStyle">@style/SettingsPreference.SettingsLib</item>
+        <item name="dropdownPreferenceStyle">@style/SettingsDropdownPreference.SettingsLib</item>
+        <item name="editTextPreferenceStyle">@style/SettingsEditTextPreference.SettingsLib</item>
+        <item name="footerPreferenceStyle">@style/Preference.Material</item>
+        <item name="preferenceCategoryStyle">@style/SettingsCategoryPreference.SettingsLib</item>
+        <item name="preferenceCategoryTitleTextAppearance">@style/TextAppearance.CategoryTitle.SettingsLib</item>
+        <item name="preferenceCategoryTitleTextColor">@color/settingslib_text_color_preference_category_title</item>
+        <item name="preferenceScreenStyle">@style/SettingsPreferenceScreen.SettingsLib</item>
+        <item name="preferenceStyle">@style/SettingsPreference.SettingsLib</item>
+        <item name="seekBarPreferenceStyle">@style/SettingsSeekbarPreference.SettingsLib</item>
+        <item name="switchPreferenceCompatStyle">@style/SettingsSwitchPreferenceCompat.SettingsLib</item>
+        <item name="switchPreferenceStyle">@style/SettingsSwitchPreference.SettingsLib</item>
+    </style>
+    <style name="SettingsCategoryPreference.SettingsLib" parent="@style/Preference.Category.Material">
+        <item name="allowDividerAbove">@bool/settingslib_config_allow_divider</item>
+        <item name="allowDividerBelow">@bool/settingslib_config_allow_divider</item>
+        <item name="iconSpaceReserved">@bool/settingslib_config_icon_space_reserved</item>
+    </style>
+    <style name="SettingsCheckBoxPreference.SettingsLib" parent="@style/Preference.CheckBoxPreference.Material">
+        <item name="iconSpaceReserved">@bool/settingslib_config_icon_space_reserved</item>
+        <item name="layout">@layout/settingslib_preference</item>
+    </style>
+    <style name="SettingsDropdownPreference.SettingsLib" parent="@style/Preference.DropDown.Material">
+        <item name="iconSpaceReserved">@bool/settingslib_config_icon_space_reserved</item>
+        <item name="layout">@layout/settingslib_dropdown_preference</item>
+    </style>
+    <style name="SettingsEditTextPreference.SettingsLib" parent="@style/Preference.DialogPreference.EditTextPreference.Material">
+        <item name="dialogLayout">@layout/settingslib_preference_dialog_edittext</item>
+        <item name="iconSpaceReserved">@bool/settingslib_config_icon_space_reserved</item>
+        <item name="layout">@layout/settingslib_preference</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Filled" parent="@style/Base.SettingsLibButtonStyle.Expressive.Filled">
+        <item name="android:theme">@style/Theme.Material3.DynamicColors.DayNight</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Filled.Extra" parent="@style/SettingsLibButtonStyle.Expressive.Filled.Large">
+        <item name="android:layout_width">-1</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Filled.Large" parent="@style/SettingsLibButtonStyle.Expressive.Filled">
+        <item name="materialSizeOverlay">@style/SizeOverlay.Material3Expressive.Button.Medium</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Icon.Filled" parent="@style/Widget.Material3Expressive.Button.IconButton.Filled">
+        <item name="android:theme">@style/Theme.Material3.DynamicColors.DayNight</item>
+        <item name="android:gravity">0x11</item>
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-2</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Icon.Filled.Extra" parent="@style/SettingsLibButtonStyle.Expressive.Icon.Filled.Large">
+        <item name="android:layout_width">-1</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Icon.Filled.Large" parent="@style/SettingsLibButtonStyle.Expressive.Icon.Filled">
+        <item name="materialSizeOverlay">@style/SizeOverlay.Material3Expressive.Button.Medium</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Icon.Tonal" parent="@style/Widget.Material3Expressive.Button.IconButton.Tonal">
+        <item name="android:theme">@style/Theme.Material3.DynamicColors.DayNight</item>
+        <item name="android:gravity">0x11</item>
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-2</item>
+        <item name="iconGravity">textStart</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Icon.Tonal.Extra" parent="@style/SettingsLibButtonStyle.Expressive.Tonal.Large">
+        <item name="android:layout_width">-1</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Icon.Tonal.Large" parent="@style/SettingsLibButtonStyle.Expressive.Icon.Tonal">
+        <item name="materialSizeOverlay">@style/SizeOverlay.Material3Expressive.Button.Medium</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Outline" parent="@style/Widget.Material3Expressive.Button.OutlinedButton">
+        <item name="android:theme">@style/Theme.Material3.DynamicColors.DayNight</item>
+        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelLarge</item>
+        <item name="android:textColor">@color/settingslib_expressive_color_button_outlined_text_icon</item>
+        <item name="android:gravity">0x11</item>
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-2</item>
+        <item name="backgroundTint">@color/settingslib_expressive_color_button_outlined_container</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/settingslib_expressive_color_button_outlined_text_icon</item>
+        <item name="strokeColor">@color/settingslib_materialColorOutlineVariant</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Outline.Extra" parent="@style/SettingsLibButtonStyle.Expressive.Outline.Large">
+        <item name="android:layout_width">-1</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Outline.Large" parent="@style/SettingsLibButtonStyle.Expressive.Outline">
+        <item name="materialSizeOverlay">@style/SizeOverlay.Material3Expressive.Button.Medium</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Tonal" parent="@style/Widget.Material3Expressive.Button.TonalButton">
+        <item name="android:theme">@style/Theme.Material3.DynamicColors.DayNight</item>
+        <item name="android:textAppearance">@style/TextAppearance.SettingsLib.LabelLarge</item>
+        <item name="android:textColor">@color/settingslib_expressive_color_button_tonal_text_icon</item>
+        <item name="android:gravity">0x11</item>
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-2</item>
+        <item name="backgroundTint">@color/settingslib_expressive_color_button_tonal_container</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconTint">@color/settingslib_expressive_color_button_tonal_text_icon</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Tonal.Extra" parent="@style/SettingsLibButtonStyle.Expressive.Tonal.Large">
+        <item name="android:layout_width">-1</item>
+    </style>
+    <style name="SettingsLibButtonStyle.Expressive.Tonal.Large" parent="@style/SettingsLibButtonStyle.Expressive.Tonal">
+        <item name="materialSizeOverlay">@style/SizeOverlay.Material3Expressive.Button.Medium</item>
+    </style>
+    <style name="SettingsLibCardStyle" parent="">
+        <item name="android:layout_width">-1</item>
+        <item name="android:layout_height">-2</item>
+        <item name="android:layout_marginHorizontal">?android:attr/listPreferredItemPaddingStart</item>
+        <item name="android:layout_marginVertical">@dimen/settingslib_expressive_space_extrasmall4</item>
+        <item name="cardBackgroundColor">@color/settingslib_materialColorPrimary</item>
+        <item name="cardCornerRadius">@dimen/settingslib_expressive_radius_extralarge3</item>
+        <item name="cardElevation">0dp</item>
+        <item name="rippleColor">?android:attr/colorControlHighlight</item>
+    </style>
+    <style name="SettingsPreference.SettingsLib" parent="@style/Preference.Material">
+        <item name="iconSpaceReserved">@bool/settingslib_config_icon_space_reserved</item>
+        <item name="layout">@layout/settingslib_preference</item>
+    </style>
+    <style name="SettingsPreferenceScreen.SettingsLib" parent="@style/Preference.PreferenceScreen.Material">
+        <item name="iconSpaceReserved">@bool/settingslib_config_icon_space_reserved</item>
+        <item name="layout">@layout/settingslib_preference</item>
+    </style>
+    <style name="SettingsSeekbarPreference.SettingsLib" parent="@style/Preference.SeekBarPreference.Material">
+        <item name="iconSpaceReserved">@bool/settingslib_config_icon_space_reserved</item>
+    </style>
+    <style name="SettingsSwitchPreference.SettingsLib" parent="@style/Preference.SwitchPreference.Material">
+        <item name="iconSpaceReserved">@bool/settingslib_config_icon_space_reserved</item>
+        <item name="layout">@layout/settingslib_preference</item>
+    </style>
+    <style name="SettingsSwitchPreferenceCompat.SettingsLib" parent="@style/Preference.SwitchPreferenceCompat.Material">
+        <item name="android:widgetLayout">@layout/settingslib_preference_switch</item>
+        <item name="iconSpaceReserved">@bool/settingslib_config_icon_space_reserved</item>
+        <item name="layout">@layout/settingslib_preference</item>
+        <item name="singleLineTitle">false</item>
+    </style>
+    <style name="SurveyAlertDialogCustomViewTheme" parent="@style/Theme.SubSettingsBase">
+    </style>
+    <style name="SurveyAlertDialogTheme" parent="@style/Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:theme">@style/SurveyAlertDialogCustomViewTheme</item>
+        <item name="android:background">@color/survey_alert_dialog_bg_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="colorAccent">@color/survey_accent_color</item>
+        <item name="dialogCornerRadius">@dimen/survey_alertdialog_corner_radius</item>
+    </style>
+    <style name="SurveyButtonStyle" parent="@style/SurveyMaterialFilledButtonStyle">
+        <item name="android:layout_gravity">end</item>
+        <item name="android:paddingLeft">8dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-2</item>
+    </style>
+    <style name="SurveyMaterialAlertDialogStyle" parent="@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog.Centered">
+        <item name="android:theme">@style/SurveyAlertDialogCustomViewTheme</item>
+        <item name="android:background">@color/google_marterial_dialog_background_color</item>
+        <item name="android:dialogCornerRadius">@dimen/survey_alertdialog_corner_radius</item>
+        <item name="alertDialogStyle">@style/SurveyMaterialComponentsAlertDialogStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/SurveyMaterialDialogNegativeButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/SurveyMaterialDialogNeutralButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/SurveyMaterialDialogPositiveButtonStyle</item>
+        <item name="buttonBarStyle">@style/SurveyMaterialDialogButtonBarStyle</item>
+        <item name="fontFamily">@string/survey_font</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/SurveyMaterialDialogBody</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/SurveyMaterialDialogTitle</item>
+    </style>
+    <style name="SurveyMaterialComponentsAlertDialogStyle" parent="@style/MaterialAlertDialog.MaterialComponents">
+        <item name="backgroundInsetBottom">@dimen/survey_alertdialog_background_inset</item>
+        <item name="backgroundInsetTop">@dimen/survey_alertdialog_background_inset</item>
+    </style>
+    <style name="SurveyMaterialComponentsTheme" parent="@style/Theme.MaterialComponents">
+        <item name="materialAlertDialogTheme">@style/SurveyMaterialAlertDialogStyle</item>
+        <item name="materialButtonOutlinedStyle">@style/SurveyMaterialOutlinedButtonStyle</item>
+        <item name="materialButtonStyle">@style/SurveyMaterialFilledButtonStyle</item>
+    </style>
+    <style name="SurveyMaterialDialogBody" parent="@style/MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textColor">@color/google_marterial_dialog_body_text_color</item>
+        <item name="fontFamily">@string/survey_font</item>
+    </style>
+    <style name="SurveyMaterialDialogButtonBarStyle" parent="@style/Widget.AppCompat.ButtonBar.AlertDialog">
+        <item name="android:paddingTop">@dimen/google_marterial_alertdialog_buttons_top_margin</item>
+        <item name="android:paddingBottom">@dimen/google_marterial_alertdialog_buttons_bottom_margin</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="android:paddingEnd">@dimen/google_marterial_alertdialog_buttons_end_margin</item>
+        <item name="android:paddingVertical">@dimen/google_marterial_alertdialog_buttons_padding_vertical</item>
+    </style>
+    <style name="SurveyMaterialDialogNegativeButtonStyle" parent="@style/SurveyMaterialOutlinedButtonStyle">
+        <item name="android:layout_marginRight">@dimen/google_marterial_margin_between_buttons</item>
+    </style>
+    <style name="SurveyMaterialDialogNeutralButtonStyle" parent="@style/SurveyMaterialOutlinedButtonStyle">
+        <item name="android:layout_marginRight">@dimen/google_marterial_margin_between_buttons</item>
+    </style>
+    <style name="SurveyMaterialDialogPositiveButtonStyle" parent="@style/SurveyMaterialFilledButtonStyle">
+        <item name="android:layout_marginRight">@dimen/google_marterial_margin_between_buttons</item>
+    </style>
+    <style name="SurveyMaterialDialogTitle" parent="@style/MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textSize">@dimen/google_marterial_dialog_title_size</item>
+        <item name="android:textColor">@color/google_marterial_dialog_title_color</item>
+        <item name="android:gravity">0x11</item>
+        <item name="android:paddingTop">@dimen/google_marterial_dialog_title_top_padding</item>
+        <item name="android:layout_width">-1</item>
+        <item name="android:layout_height">-2</item>
+        <item name="fontFamily">@string/survey_font</item>
+    </style>
+    <style name="SurveyMaterialFilledButtonStyle" parent="@style/Widget.GoogleMaterial3.Button">
+        <item name="android:textSize">@dimen/google_marterial_button_text_size</item>
+        <item name="android:textColor">@color/survey_filled_button_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="backgroundTint">@color/survey_filled_button_background_color</item>
+        <item name="fontFamily">@string/survey_font_medium</item>
+    </style>
+    <style name="SurveyMaterialOutlinedButtonStyle" parent="@style/Widget.GoogleMaterial3.Button.OutlinedButton">
+        <item name="android:textSize">@dimen/google_marterial_button_text_size</item>
+        <item name="android:textColor">@color/survey_outlined_button_text_color</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:backgroundTint">@android:color/transparent</item>
+        <item name="fontFamily">@string/survey_font_medium</item>
+        <item name="strokeColor">@color/survey_outlined_button_stroke_color</item>
+    </style>
+    <style name="SurveyNoThanksButtonStyle" parent="@style/SurveyMaterialOutlinedButtonStyle">
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-2</item>
+    </style>
+    <style name="SurveyTakeSurveyButtonStyle" parent="@style/SurveyMaterialFilledButtonStyle">
+        <item name="android:layout_width">-2</item>
+        <item name="android:layout_height">-2</item>
+    </style>
+    <style name="Switch.SettingsLib" parent="@android:style/Widget.Material.CompoundButton.Switch">
+        <item name="android:minHeight">@dimen/settingslib_preferred_minimum_touch_target</item>
+        <item name="android:thumb">@drawable/settingslib_switch_thumb</item>
+        <item name="android:track">@drawable/settingslib_switch_track</item>
+        <item name="android:switchMinWidth">52dp</item>
+    </style>
+    <style name="TextAppearance.CategoryTitle.SettingsLib" parent="@android:style/TextAppearance.DeviceDefault.Medium">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/settingslib_text_color_preference_category_title</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.BodyLarge.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.BodyLarge">
+        <item name="android:fontFamily">@font/gm3_variable_body_large_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_body_large_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.BodyLarge.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.BodyLarge">
+        <item name="android:fontFamily">@font/gm3_variable_body_large</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_body_large</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.BodyMedium.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.BodyMedium">
+        <item name="android:fontFamily">@font/gm3_variable_body_medium_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_body_medium_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.BodyMedium.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.BodyMedium">
+        <item name="android:fontFamily">@font/gm3_variable_body_medium</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_body_medium</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.BodySmall.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.BodySmall">
+        <item name="android:fontFamily">@font/gm3_variable_body_small_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_body_small_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.BodySmall.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.BodySmall">
+        <item name="android:fontFamily">@font/gm3_variable_body_small</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_body_small</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.DisplayLarge.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.DisplayLarge">
+        <item name="android:fontFamily">@font/gm3_variable_display_large_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_display_large_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.DisplayLarge.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.DisplayLarge">
+        <item name="android:fontFamily">@font/gm3_variable_display_large</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_display_large</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.DisplayMedium.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.DisplayMedium">
+        <item name="android:fontFamily">@font/gm3_variable_display_medium_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_display_medium_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.DisplayMedium.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.DisplayMedium">
+        <item name="android:fontFamily">@font/gm3_variable_display_medium</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_display_medium</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.DisplaySmall.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.DisplaySmall">
+        <item name="android:fontFamily">@font/gm3_variable_display_small_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_display_small_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.DisplaySmall.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.DisplaySmall">
+        <item name="android:fontFamily">@font/gm3_variable_display_small</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_display_small</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.HeadlineLarge.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.HeadlineLarge">
+        <item name="android:fontFamily">@font/gm3_variable_headline_large_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_headline_large_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.HeadlineLarge.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.HeadlineLarge">
+        <item name="android:fontFamily">@font/gm3_variable_headline_large</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_headline_large</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.HeadlineMedium.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.HeadlineMedium">
+        <item name="android:fontFamily">@font/gm3_variable_headline_medium_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_headline_medium_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.HeadlineMedium.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.HeadlineMedium">
+        <item name="android:fontFamily">@font/gm3_variable_headline_medium</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_headline_medium</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.HeadlineSmall.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.HeadlineSmall">
+        <item name="android:fontFamily">@font/gm3_variable_headline_small_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_headline_small_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.HeadlineSmall.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.HeadlineSmall">
+        <item name="android:fontFamily">@font/gm3_variable_headline_small</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_headline_small</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.LabelLarge.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.LabelLarge">
+        <item name="android:fontFamily">@font/gm3_variable_label_large_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_label_large_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.LabelLarge.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.LabelLarge">
+        <item name="android:fontFamily">@font/gm3_variable_label_large</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_label_large</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.LabelMedium.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.LabelMedium">
+        <item name="android:fontFamily">@font/gm3_variable_label_medium_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_label_medium_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.LabelMedium.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.LabelMedium">
+        <item name="android:fontFamily">@font/gm3_variable_label_medium</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_label_medium</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.LabelSmall.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.LabelSmall">
+        <item name="android:fontFamily">@font/gm3_variable_label_small_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_label_small_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.LabelSmall.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.LabelSmall">
+        <item name="android:fontFamily">@font/gm3_variable_label_small</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_label_small</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.TitleLarge.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.TitleLarge">
+        <item name="android:fontFamily">@font/gm3_variable_title_large_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_title_large_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.TitleLarge.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.TitleLarge">
+        <item name="android:fontFamily">@font/gm3_variable_title_large</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_title_large</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.TitleMedium.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.TitleMedium">
+        <item name="android:fontFamily">@font/gm3_variable_title_medium_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_title_medium_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.TitleMedium.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.TitleMedium">
+        <item name="android:fontFamily">@font/gm3_variable_title_medium</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_title_medium</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.TitleSmall.Emphasized.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Emphasized.Variable.TitleSmall">
+        <item name="android:fontFamily">@font/gm3_variable_title_small_emphasized</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_title_small_emphasized</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.GoogleMaterial3.TitleSmall.Variable" parent="@style/TextAppearance.Gm3.Sys.Typescale.Variable.TitleSmall">
+        <item name="android:fontFamily">@font/gm3_variable_title_small</item>
+        <item name="android:fontFeatureSettings">@string/gm3_font_feature_settings</item>
+        <item name="android:fontVariationSettings">@null</item>
+        <item name="fontFamily">@font/gm3_variable_title_small</item>
+        <item name="fontVariationSettings">@null</item>
+    </style>
+    <style name="TextAppearance.PreferenceSummary.SettingsLib" parent="@android:style/TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/settingslib_text_color_secondary</item>
+    </style>
+    <style name="TextAppearance.PreferenceTitle.SettingsLib" parent="@android:style/TextAppearance.Material.Subhead">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/settingslib_text_color_primary</item>
+        <item name="android:fontFamily">@font/settingslib_config_headlineFontFamily</item>
+    </style>
+    <style name="Theme.AlertDialog.SettingsLib" parent="@style/Theme.AppCompat.DayNight.Dialog.Alert">
+        <item name="android:colorBackground">@color/settingslib_dialog_background</item>
+        <item name="android:clipChildren">true</item>
+        <item name="android:clipToPadding">true</item>
+        <item name="android:windowSoftInputMode">0x10</item>
+        <item name="android:listChoiceBackgroundIndicator">@drawable/m3_focus_ring_list_selector_background</item>
+        <item name="android:selectableItemBackground">@drawable/m3_focus_ring_item_background</item>
+        <item name="android:selectableItemBackgroundBorderless">@drawable/m3_focus_ring_item_background_borderless</item>
+        <item name="android:colorError">@color/settingslib_dialog_colorError</item>
+        <item name="buttonBarNegativeButtonStyle">@style/AlertDialog.Button.SettingsLib</item>
+        <item name="buttonBarNeutralButtonStyle">@style/AlertDialog.Button.SettingsLib</item>
+        <item name="buttonBarPositiveButtonStyle">@style/AlertDialog.Button.SettingsLib</item>
+        <item name="colorAccent">@color/settingslib_dialog_accent</item>
+        <item name="dialogCornerRadius">@dimen/settingslib_dialogCornerRadius</item>
+        <item name="listChoiceBackgroundIndicator">@drawable/m3_focus_ring_list_selector_background</item>
+        <item name="selectableItemBackground">@drawable/m3_focus_ring_item_background</item>
+        <item name="selectableItemBackgroundBorderless">@drawable/m3_focus_ring_item_background_borderless</item>
+    </style>
+    <style name="Theme.Gearhead.Settings.AlertDialog" parent="@style/ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="alertDialogStyle">@style/MaterialAlertDialog.GoogleMaterial3</item>
+        <item name="dialogCornerRadius">@dimen/gearhead_material3_rounded_corner_radius</item>
+    </style>
+    <style name="Theme.Material3.DynamicColors.Dark" parent="@style/Theme.Material3.Dark">
+        <item name="android:colorBackground">@color/m3_sys_color_dynamic_dark_background</item>
+        <item name="android:textColorPrimary">@color/m3_dynamic_dark_default_color_primary_text</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/m3_dynamic_dark_primary_text_disable_only</item>
+        <item name="android:textColorSecondary">@color/m3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverse">@color/m3_dynamic_default_color_primary_text</item>
+        <item name="android:textColorSecondaryInverse">@color/m3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorHintInverse">@color/m3_dynamic_hint_foreground</item>
+        <item name="android:textColorHighlight">@color/m3_dynamic_dark_highlighted_text</item>
+        <item name="android:textColorHint">@color/m3_dynamic_dark_hint_foreground</item>
+        <item name="android:textColorTertiary">@color/m3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorTertiaryInverse">@color/m3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/m3_dynamic_primary_text_disable_only</item>
+        <item name="android:textColorAlertDialogListItem">@color/m3_dynamic_dark_default_color_primary_text</item>
+        <item name="android:textColorHighlightInverse">@color/m3_dynamic_highlighted_text</item>
+        <item name="colorError">@color/m3_sys_color_dark_error</item>
+        <item name="colorErrorContainer">@color/m3_sys_color_dark_error_container</item>
+        <item name="colorOnBackground">@color/m3_sys_color_dynamic_dark_on_background</item>
+        <item name="colorOnError">@color/m3_sys_color_dark_on_error</item>
+        <item name="colorOnErrorContainer">@color/m3_sys_color_dark_on_error_container</item>
+        <item name="colorOnPrimary">@color/m3_sys_color_dynamic_dark_on_primary</item>
+        <item name="colorOnPrimaryContainer">@color/m3_sys_color_dynamic_dark_on_primary_container</item>
+        <item name="colorOnPrimaryFixed">@color/m3_sys_color_dynamic_on_primary_fixed</item>
+        <item name="colorOnPrimaryFixedVariant">@color/m3_sys_color_dynamic_on_primary_fixed_variant</item>
+        <item name="colorOnSecondary">@color/m3_sys_color_dynamic_dark_on_secondary</item>
+        <item name="colorOnSecondaryContainer">@color/m3_sys_color_dynamic_dark_on_secondary_container</item>
+        <item name="colorOnSecondaryFixed">@color/m3_sys_color_dynamic_on_secondary_fixed</item>
+        <item name="colorOnSecondaryFixedVariant">@color/m3_sys_color_dynamic_on_secondary_fixed_variant</item>
+        <item name="colorOnSurface">@color/m3_sys_color_dynamic_dark_on_surface</item>
+        <item name="colorOnSurfaceInverse">@color/m3_sys_color_dynamic_dark_inverse_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/m3_sys_color_dynamic_dark_on_surface_variant</item>
+        <item name="colorOnTertiary">@color/m3_sys_color_dynamic_dark_on_tertiary</item>
+        <item name="colorOnTertiaryContainer">@color/m3_sys_color_dynamic_dark_on_tertiary_container</item>
+        <item name="colorOnTertiaryFixed">@color/m3_sys_color_dynamic_on_tertiary_fixed</item>
+        <item name="colorOnTertiaryFixedVariant">@color/m3_sys_color_dynamic_on_tertiary_fixed_variant</item>
+        <item name="colorOutline">@color/m3_sys_color_dynamic_dark_outline</item>
+        <item name="colorPrimary">@color/m3_sys_color_dynamic_dark_primary</item>
+        <item name="colorPrimaryContainer">@color/m3_sys_color_dynamic_dark_primary_container</item>
+        <item name="colorPrimaryFixed">@color/m3_sys_color_dynamic_primary_fixed</item>
+        <item name="colorPrimaryFixedDim">@color/m3_sys_color_dynamic_primary_fixed_dim</item>
+        <item name="colorPrimaryInverse">@color/m3_sys_color_dynamic_dark_inverse_primary</item>
+        <item name="colorSecondary">@color/m3_sys_color_dynamic_dark_secondary</item>
+        <item name="colorSecondaryContainer">@color/m3_sys_color_dynamic_dark_secondary_container</item>
+        <item name="colorSecondaryFixed">@color/m3_sys_color_dynamic_secondary_fixed</item>
+        <item name="colorSecondaryFixedDim">@color/m3_sys_color_dynamic_secondary_fixed_dim</item>
+        <item name="colorSurface">@color/m3_sys_color_dynamic_dark_surface</item>
+        <item name="colorSurfaceBright">@color/m3_sys_color_dynamic_dark_surface_bright</item>
+        <item name="colorSurfaceContainer">@color/m3_sys_color_dynamic_dark_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/m3_sys_color_dynamic_dark_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/m3_sys_color_dynamic_dark_surface_container_highest</item>
+        <item name="colorSurfaceContainerLow">@color/m3_sys_color_dynamic_dark_surface_container_low</item>
+        <item name="colorSurfaceContainerLowest">@color/m3_sys_color_dynamic_dark_surface_container_lowest</item>
+        <item name="colorSurfaceDim">@color/m3_sys_color_dynamic_dark_surface_dim</item>
+        <item name="colorSurfaceInverse">@color/m3_sys_color_dynamic_dark_inverse_surface</item>
+        <item name="colorSurfaceVariant">@color/m3_sys_color_dynamic_dark_surface_variant</item>
+        <item name="colorTertiary">@color/m3_sys_color_dynamic_dark_tertiary</item>
+        <item name="colorTertiaryContainer">@color/m3_sys_color_dynamic_dark_tertiary_container</item>
+        <item name="colorTertiaryFixed">@color/m3_sys_color_dynamic_tertiary_fixed</item>
+        <item name="colorTertiaryFixedDim">@color/m3_sys_color_dynamic_tertiary_fixed_dim</item>
+        <item name="isMaterial3DynamicColorApplied">true</item>
+    </style>
+    <style name="Theme.Material3.DynamicColors.Light" parent="@style/Theme.Material3.Light">
+        <item name="android:colorBackground">@color/m3_sys_color_dynamic_light_background</item>
+        <item name="android:textColorPrimary">@color/m3_dynamic_default_color_primary_text</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/m3_dynamic_primary_text_disable_only</item>
+        <item name="android:textColorSecondary">@color/m3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverse">@color/m3_dynamic_dark_default_color_primary_text</item>
+        <item name="android:textColorSecondaryInverse">@color/m3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorHintInverse">@color/m3_dynamic_dark_hint_foreground</item>
+        <item name="android:textColorHighlight">@color/m3_dynamic_highlighted_text</item>
+        <item name="android:textColorHint">@color/m3_dynamic_hint_foreground</item>
+        <item name="android:textColorTertiary">@color/m3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorTertiaryInverse">@color/m3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/m3_dynamic_dark_primary_text_disable_only</item>
+        <item name="android:textColorAlertDialogListItem">@color/m3_dynamic_default_color_primary_text</item>
+        <item name="android:textColorHighlightInverse">@color/m3_dynamic_dark_highlighted_text</item>
+        <item name="colorError">@color/m3_sys_color_light_error</item>
+        <item name="colorErrorContainer">@color/m3_sys_color_light_error_container</item>
+        <item name="colorOnBackground">@color/m3_sys_color_dynamic_light_on_background</item>
+        <item name="colorOnError">@color/m3_sys_color_light_on_error</item>
+        <item name="colorOnErrorContainer">@color/m3_sys_color_light_on_error_container</item>
+        <item name="colorOnPrimary">@color/m3_sys_color_dynamic_light_on_primary</item>
+        <item name="colorOnPrimaryContainer">@color/m3_sys_color_dynamic_light_on_primary_container</item>
+        <item name="colorOnPrimaryFixed">@color/m3_sys_color_dynamic_on_primary_fixed</item>
+        <item name="colorOnPrimaryFixedVariant">@color/m3_sys_color_dynamic_on_primary_fixed_variant</item>
+        <item name="colorOnSecondary">@color/m3_sys_color_dynamic_light_on_secondary</item>
+        <item name="colorOnSecondaryContainer">@color/m3_sys_color_dynamic_light_on_secondary_container</item>
+        <item name="colorOnSecondaryFixed">@color/m3_sys_color_dynamic_on_secondary_fixed</item>
+        <item name="colorOnSecondaryFixedVariant">@color/m3_sys_color_dynamic_on_secondary_fixed_variant</item>
+        <item name="colorOnSurface">@color/m3_sys_color_dynamic_light_on_surface</item>
+        <item name="colorOnSurfaceInverse">@color/m3_sys_color_dynamic_light_inverse_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/m3_sys_color_dynamic_light_on_surface_variant</item>
+        <item name="colorOnTertiary">@color/m3_sys_color_dynamic_light_on_tertiary</item>
+        <item name="colorOnTertiaryContainer">@color/m3_sys_color_dynamic_light_on_tertiary_container</item>
+        <item name="colorOnTertiaryFixed">@color/m3_sys_color_dynamic_on_tertiary_fixed</item>
+        <item name="colorOnTertiaryFixedVariant">@color/m3_sys_color_dynamic_on_tertiary_fixed_variant</item>
+        <item name="colorOutline">@color/m3_sys_color_dynamic_light_outline</item>
+        <item name="colorPrimary">@color/m3_sys_color_dynamic_light_primary</item>
+        <item name="colorPrimaryContainer">@color/m3_sys_color_dynamic_light_primary_container</item>
+        <item name="colorPrimaryFixed">@color/m3_sys_color_dynamic_primary_fixed</item>
+        <item name="colorPrimaryFixedDim">@color/m3_sys_color_dynamic_primary_fixed_dim</item>
+        <item name="colorPrimaryInverse">@color/m3_sys_color_dynamic_light_inverse_primary</item>
+        <item name="colorSecondary">@color/m3_sys_color_dynamic_light_secondary</item>
+        <item name="colorSecondaryContainer">@color/m3_sys_color_dynamic_light_secondary_container</item>
+        <item name="colorSecondaryFixed">@color/m3_sys_color_dynamic_secondary_fixed</item>
+        <item name="colorSecondaryFixedDim">@color/m3_sys_color_dynamic_secondary_fixed_dim</item>
+        <item name="colorSurface">@color/m3_sys_color_dynamic_light_surface</item>
+        <item name="colorSurfaceBright">@color/m3_sys_color_dynamic_light_surface_bright</item>
+        <item name="colorSurfaceContainer">@color/m3_sys_color_dynamic_light_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/m3_sys_color_dynamic_light_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/m3_sys_color_dynamic_light_surface_container_highest</item>
+        <item name="colorSurfaceContainerLow">@color/m3_sys_color_dynamic_light_surface_container_low</item>
+        <item name="colorSurfaceContainerLowest">@color/m3_sys_color_dynamic_light_surface_container_lowest</item>
+        <item name="colorSurfaceDim">@color/m3_sys_color_dynamic_light_surface_dim</item>
+        <item name="colorSurfaceInverse">@color/m3_sys_color_dynamic_light_inverse_surface</item>
+        <item name="colorSurfaceVariant">@color/m3_sys_color_dynamic_light_surface_variant</item>
+        <item name="colorTertiary">@color/m3_sys_color_dynamic_light_tertiary</item>
+        <item name="colorTertiaryContainer">@color/m3_sys_color_dynamic_light_tertiary_container</item>
+        <item name="colorTertiaryFixed">@color/m3_sys_color_dynamic_tertiary_fixed</item>
+        <item name="colorTertiaryFixedDim">@color/m3_sys_color_dynamic_tertiary_fixed_dim</item>
+        <item name="isMaterial3DynamicColorApplied">true</item>
+    </style>
+    <style name="Theme.Material3Expressive.DynamicColors.Dark" parent="@style/Theme.Material3Expressive.Dark">
+        <item name="android:colorBackground">@color/m3_sys_color_dynamic_dark_background</item>
+        <item name="android:textColorPrimary">@color/m3_dynamic_dark_default_color_primary_text</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/m3_dynamic_dark_primary_text_disable_only</item>
+        <item name="android:textColorSecondary">@color/m3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverse">@color/m3_dynamic_default_color_primary_text</item>
+        <item name="android:textColorSecondaryInverse">@color/m3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorHintInverse">@color/m3_dynamic_hint_foreground</item>
+        <item name="android:textColorHighlight">@color/m3_dynamic_dark_highlighted_text</item>
+        <item name="android:textColorHint">@color/m3_dynamic_dark_hint_foreground</item>
+        <item name="android:textColorTertiary">@color/m3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorTertiaryInverse">@color/m3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/m3_dynamic_primary_text_disable_only</item>
+        <item name="android:textColorAlertDialogListItem">@color/m3_dynamic_dark_default_color_primary_text</item>
+        <item name="android:textColorHighlightInverse">@color/m3_dynamic_highlighted_text</item>
+        <item name="colorError">@color/m3_sys_color_dark_error</item>
+        <item name="colorErrorContainer">@color/m3_sys_color_dark_error_container</item>
+        <item name="colorOnBackground">@color/m3_sys_color_dynamic_dark_on_background</item>
+        <item name="colorOnError">@color/m3_sys_color_dark_on_error</item>
+        <item name="colorOnErrorContainer">@color/m3_sys_color_dark_on_error_container</item>
+        <item name="colorOnPrimary">@color/m3_sys_color_dynamic_dark_on_primary</item>
+        <item name="colorOnPrimaryContainer">@color/m3_sys_color_dynamic_dark_on_primary_container</item>
+        <item name="colorOnPrimaryFixed">@color/m3_sys_color_dynamic_on_primary_fixed</item>
+        <item name="colorOnPrimaryFixedVariant">@color/m3_sys_color_dynamic_on_primary_fixed_variant</item>
+        <item name="colorOnSecondary">@color/m3_sys_color_dynamic_dark_on_secondary</item>
+        <item name="colorOnSecondaryContainer">@color/m3_sys_color_dynamic_dark_on_secondary_container</item>
+        <item name="colorOnSecondaryFixed">@color/m3_sys_color_dynamic_on_secondary_fixed</item>
+        <item name="colorOnSecondaryFixedVariant">@color/m3_sys_color_dynamic_on_secondary_fixed_variant</item>
+        <item name="colorOnSurface">@color/m3_sys_color_dynamic_dark_on_surface</item>
+        <item name="colorOnSurfaceInverse">@color/m3_sys_color_dynamic_dark_inverse_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/m3_sys_color_dynamic_dark_on_surface_variant</item>
+        <item name="colorOnTertiary">@color/m3_sys_color_dynamic_dark_on_tertiary</item>
+        <item name="colorOnTertiaryContainer">@color/m3_sys_color_dynamic_dark_on_tertiary_container</item>
+        <item name="colorOnTertiaryFixed">@color/m3_sys_color_dynamic_on_tertiary_fixed</item>
+        <item name="colorOnTertiaryFixedVariant">@color/m3_sys_color_dynamic_on_tertiary_fixed_variant</item>
+        <item name="colorOutline">@color/m3_sys_color_dynamic_dark_outline</item>
+        <item name="colorPrimary">@color/m3_sys_color_dynamic_dark_primary</item>
+        <item name="colorPrimaryContainer">@color/m3_sys_color_dynamic_dark_primary_container</item>
+        <item name="colorPrimaryFixed">@color/m3_sys_color_dynamic_primary_fixed</item>
+        <item name="colorPrimaryFixedDim">@color/m3_sys_color_dynamic_primary_fixed_dim</item>
+        <item name="colorPrimaryInverse">@color/m3_sys_color_dynamic_dark_inverse_primary</item>
+        <item name="colorSecondary">@color/m3_sys_color_dynamic_dark_secondary</item>
+        <item name="colorSecondaryContainer">@color/m3_sys_color_dynamic_dark_secondary_container</item>
+        <item name="colorSecondaryFixed">@color/m3_sys_color_dynamic_secondary_fixed</item>
+        <item name="colorSecondaryFixedDim">@color/m3_sys_color_dynamic_secondary_fixed_dim</item>
+        <item name="colorSurface">@color/m3_sys_color_dynamic_dark_surface</item>
+        <item name="colorSurfaceBright">@color/m3_sys_color_dynamic_dark_surface_bright</item>
+        <item name="colorSurfaceContainer">@color/m3_sys_color_dynamic_dark_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/m3_sys_color_dynamic_dark_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/m3_sys_color_dynamic_dark_surface_container_highest</item>
+        <item name="colorSurfaceContainerLow">@color/m3_sys_color_dynamic_dark_surface_container_low</item>
+        <item name="colorSurfaceContainerLowest">@color/m3_sys_color_dynamic_dark_surface_container_lowest</item>
+        <item name="colorSurfaceDim">@color/m3_sys_color_dynamic_dark_surface_dim</item>
+        <item name="colorSurfaceInverse">@color/m3_sys_color_dynamic_dark_inverse_surface</item>
+        <item name="colorSurfaceVariant">@color/m3_sys_color_dynamic_dark_surface_variant</item>
+        <item name="colorTertiary">@color/m3_sys_color_dynamic_dark_tertiary</item>
+        <item name="colorTertiaryContainer">@color/m3_sys_color_dynamic_dark_tertiary_container</item>
+        <item name="colorTertiaryFixed">@color/m3_sys_color_dynamic_tertiary_fixed</item>
+        <item name="colorTertiaryFixedDim">@color/m3_sys_color_dynamic_tertiary_fixed_dim</item>
+        <item name="isMaterial3DynamicColorApplied">true</item>
+    </style>
+    <style name="Theme.Material3Expressive.DynamicColors.Light" parent="@style/Theme.Material3Expressive.Light">
+        <item name="android:colorBackground">@color/m3_sys_color_dynamic_light_background</item>
+        <item name="android:textColorPrimary">@color/m3_dynamic_default_color_primary_text</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/m3_dynamic_primary_text_disable_only</item>
+        <item name="android:textColorSecondary">@color/m3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverse">@color/m3_dynamic_dark_default_color_primary_text</item>
+        <item name="android:textColorSecondaryInverse">@color/m3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorHintInverse">@color/m3_dynamic_dark_hint_foreground</item>
+        <item name="android:textColorHighlight">@color/m3_dynamic_highlighted_text</item>
+        <item name="android:textColorHint">@color/m3_dynamic_hint_foreground</item>
+        <item name="android:textColorTertiary">@color/m3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorTertiaryInverse">@color/m3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/m3_dynamic_dark_primary_text_disable_only</item>
+        <item name="android:textColorAlertDialogListItem">@color/m3_dynamic_default_color_primary_text</item>
+        <item name="android:textColorHighlightInverse">@color/m3_dynamic_dark_highlighted_text</item>
+        <item name="colorError">@color/m3_sys_color_light_error</item>
+        <item name="colorErrorContainer">@color/m3_sys_color_light_error_container</item>
+        <item name="colorOnBackground">@color/m3_sys_color_dynamic_light_on_background</item>
+        <item name="colorOnError">@color/m3_sys_color_light_on_error</item>
+        <item name="colorOnErrorContainer">@color/m3_ref_palette_error30</item>
+        <item name="colorOnPrimary">@color/m3_sys_color_dynamic_light_on_primary</item>
+        <item name="colorOnPrimaryContainer">@color/m3_ref_palette_primary30</item>
+        <item name="colorOnPrimaryFixed">@color/m3_sys_color_dynamic_on_primary_fixed</item>
+        <item name="colorOnPrimaryFixedVariant">@color/m3_sys_color_dynamic_on_primary_fixed_variant</item>
+        <item name="colorOnSecondary">@color/m3_sys_color_dynamic_light_on_secondary</item>
+        <item name="colorOnSecondaryContainer">@color/m3_ref_palette_secondary30</item>
+        <item name="colorOnSecondaryFixed">@color/m3_sys_color_dynamic_on_secondary_fixed</item>
+        <item name="colorOnSecondaryFixedVariant">@color/m3_sys_color_dynamic_on_secondary_fixed_variant</item>
+        <item name="colorOnSurface">@color/m3_sys_color_dynamic_light_on_surface</item>
+        <item name="colorOnSurfaceInverse">@color/m3_sys_color_dynamic_light_inverse_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/m3_sys_color_dynamic_light_on_surface_variant</item>
+        <item name="colorOnTertiary">@color/m3_sys_color_dynamic_light_on_tertiary</item>
+        <item name="colorOnTertiaryContainer">@color/m3_ref_palette_tertiary30</item>
+        <item name="colorOnTertiaryFixed">@color/m3_sys_color_dynamic_on_tertiary_fixed</item>
+        <item name="colorOnTertiaryFixedVariant">@color/m3_sys_color_dynamic_on_tertiary_fixed_variant</item>
+        <item name="colorOutline">@color/m3_sys_color_dynamic_light_outline</item>
+        <item name="colorPrimary">@color/m3_sys_color_dynamic_light_primary</item>
+        <item name="colorPrimaryContainer">@color/m3_sys_color_dynamic_light_primary_container</item>
+        <item name="colorPrimaryFixed">@color/m3_sys_color_dynamic_primary_fixed</item>
+        <item name="colorPrimaryFixedDim">@color/m3_sys_color_dynamic_primary_fixed_dim</item>
+        <item name="colorPrimaryInverse">@color/m3_sys_color_dynamic_light_inverse_primary</item>
+        <item name="colorSecondary">@color/m3_sys_color_dynamic_light_secondary</item>
+        <item name="colorSecondaryContainer">@color/m3_sys_color_dynamic_light_secondary_container</item>
+        <item name="colorSecondaryFixed">@color/m3_sys_color_dynamic_secondary_fixed</item>
+        <item name="colorSecondaryFixedDim">@color/m3_sys_color_dynamic_secondary_fixed_dim</item>
+        <item name="colorSurface">@color/m3_sys_color_dynamic_light_surface</item>
+        <item name="colorSurfaceBright">@color/m3_sys_color_dynamic_light_surface_bright</item>
+        <item name="colorSurfaceContainer">@color/m3_sys_color_dynamic_light_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/m3_sys_color_dynamic_light_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/m3_sys_color_dynamic_light_surface_container_highest</item>
+        <item name="colorSurfaceContainerLow">@color/m3_sys_color_dynamic_light_surface_container_low</item>
+        <item name="colorSurfaceContainerLowest">@color/m3_sys_color_dynamic_light_surface_container_lowest</item>
+        <item name="colorSurfaceDim">@color/m3_sys_color_dynamic_light_surface_dim</item>
+        <item name="colorSurfaceInverse">@color/m3_sys_color_dynamic_light_inverse_surface</item>
+        <item name="colorSurfaceVariant">@color/m3_sys_color_dynamic_light_surface_variant</item>
+        <item name="colorTertiary">@color/m3_sys_color_dynamic_light_tertiary</item>
+        <item name="colorTertiaryContainer">@color/m3_sys_color_dynamic_light_tertiary_container</item>
+        <item name="colorTertiaryFixed">@color/m3_sys_color_dynamic_tertiary_fixed</item>
+        <item name="colorTertiaryFixedDim">@color/m3_sys_color_dynamic_tertiary_fixed_dim</item>
+        <item name="isMaterial3DynamicColorApplied">true</item>
+    </style>
+    <style name="Theme.SettingsBase" parent="@style/Theme.SettingsBase_v31">
+    </style>
+    <style name="Theme.SettingsBase_v31" parent="@android:style/Theme.DeviceDefault.Settings">
+        <item name="android:progressBarStyleHorizontal">@style/HorizontalProgressBar.SettingsLib</item>
+        <item name="android:listDivider">@drawable/settingslib_list_divider</item>
+        <item name="android:textAppearanceListItem">@style/TextAppearance.PreferenceTitle.SettingsLib</item>
+        <item name="android:listPreferredItemPaddingLeft">@dimen/settingslib_listPreferredItemPaddingStart</item>
+        <item name="android:listPreferredItemPaddingRight">16dp</item>
+        <item name="android:listPreferredItemPaddingStart">@dimen/settingslib_listPreferredItemPaddingStart</item>
+        <item name="android:listPreferredItemPaddingEnd">16dp</item>
+        <item name="android:switchStyle">@style/Switch.SettingsLib</item>
+        <item name="preferenceTheme">@style/PreferenceTheme.SettingsLib</item>
+    </style>
+    <style name="Theme.SubSettingsBase" parent="@style/Theme.SettingsBase">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="alertDialogTheme">@style/Theme.AlertDialog.SettingsLib</item>
+        <item name="colorControlNormal">?android:attr/colorControlNormal</item>
+    </style>
+    <style name="ThemeOverlay.Gearhead.M3.Settings" parent="@style/ThemeOverlay.Material3.DynamicColors.DayNight">
+        <item name="android:colorBackground">@android:color/system_neutral1_50</item>
+    </style>
+    <style name="ThemeOverlay.GoogleMaterial3.DynamicColors.Dark" parent="">
+        <item name="android:colorBackground">@color/gm3_sys_color_dynamic_dark_background</item>
+        <item name="android:textColorPrimary">@color/gm3_dynamic_dark_default_color_primary_text</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/gm3_dynamic_dark_primary_text_disable_only</item>
+        <item name="android:textColorSecondary">@color/gm3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverse">@color/gm3_dynamic_default_color_primary_text</item>
+        <item name="android:textColorSecondaryInverse">@color/gm3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorHintInverse">@color/gm3_dynamic_hint_foreground</item>
+        <item name="android:textColorHighlight">@color/gm3_dynamic_dark_highlighted_text</item>
+        <item name="android:textColorHint">@color/gm3_dynamic_dark_hint_foreground</item>
+        <item name="android:textColorTertiary">@color/gm3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorTertiaryInverse">@color/gm3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/gm3_dynamic_primary_text_disable_only</item>
+        <item name="android:textColorAlertDialogListItem">@color/gm3_dynamic_dark_default_color_primary_text</item>
+        <item name="android:textColorHighlightInverse">@color/gm3_dynamic_highlighted_text</item>
+        <item name="android:isLightTheme">false</item>
+        <item name="colorError">@color/gm3_dynamic_color_dark_error</item>
+        <item name="colorErrorContainer">@color/gm3_dynamic_color_dark_error_container</item>
+        <item name="colorOnBackground">@color/gm3_sys_color_dynamic_dark_on_background</item>
+        <item name="colorOnError">@color/gm3_dynamic_color_dark_on_error</item>
+        <item name="colorOnErrorContainer">@color/gm3_dynamic_color_dark_on_error_container</item>
+        <item name="colorOnPrimary">@color/gm3_sys_color_dynamic_dark_on_primary</item>
+        <item name="colorOnPrimaryContainer">@color/gm3_sys_color_dynamic_dark_on_primary_container</item>
+        <item name="colorOnPrimaryContainerStateContent">?attr/colorOnPrimaryContainer</item>
+        <item name="colorOnPrimaryContainerStateLayer">?attr/colorOnPrimaryContainer</item>
+        <item name="colorOnPrimaryFixed">@color/gm3_sys_color_dynamic_on_primary_fixed</item>
+        <item name="colorOnPrimaryFixedVariant">@color/gm3_sys_color_dynamic_on_primary_fixed_variant</item>
+        <item name="colorOnPrimaryStateContent">?attr/colorOnPrimary</item>
+        <item name="colorOnPrimaryStateLayer">?attr/colorOnPrimary</item>
+        <item name="colorOnSecondary">@color/gm3_sys_color_dynamic_dark_on_secondary</item>
+        <item name="colorOnSecondaryContainer">@color/gm3_sys_color_dynamic_dark_on_secondary_container</item>
+        <item name="colorOnSecondaryContainerStateContent">?attr/colorOnSecondaryContainer</item>
+        <item name="colorOnSecondaryContainerStateLayer">?attr/colorOnSecondaryContainer</item>
+        <item name="colorOnSecondaryFixed">@color/gm3_sys_color_dynamic_on_secondary_fixed</item>
+        <item name="colorOnSecondaryFixedVariant">@color/gm3_sys_color_dynamic_on_secondary_fixed_variant</item>
+        <item name="colorOnSecondaryStateContent">?attr/colorOnSecondary</item>
+        <item name="colorOnSecondaryStateLayer">?attr/colorOnSecondary</item>
+        <item name="colorOnSurface">@color/gm3_sys_color_dynamic_dark_on_surface</item>
+        <item name="colorOnSurfaceInverse">@color/gm3_sys_color_dynamic_dark_inverse_on_surface</item>
+        <item name="colorOnSurfaceStateContent">@color/gm3_sys_color_dynamic_dark_on_surface_state_content</item>
+        <item name="colorOnSurfaceStateLayer">?attr/colorOnSurface</item>
+        <item name="colorOnSurfaceVariant">@color/gm3_sys_color_dynamic_dark_on_surface_variant</item>
+        <item name="colorOnSurfaceVariantStateContent">@color/gm3_sys_color_dynamic_dark_on_surface_variant_state_content</item>
+        <item name="colorOnSurfaceVariantStateLayer">?attr/colorOnSurfaceVariant</item>
+        <item name="colorOnTertiary">@color/gm3_sys_color_dynamic_dark_on_tertiary</item>
+        <item name="colorOnTertiaryContainer">@color/gm3_sys_color_dynamic_dark_on_tertiary_container</item>
+        <item name="colorOnTertiaryContainerStateContent">?attr/colorOnTertiaryContainer</item>
+        <item name="colorOnTertiaryContainerStateLayer">?attr/colorOnTertiaryContainer</item>
+        <item name="colorOnTertiaryFixed">@color/gm3_sys_color_dynamic_on_tertiary_fixed</item>
+        <item name="colorOnTertiaryFixedVariant">@color/gm3_sys_color_dynamic_on_tertiary_fixed_variant</item>
+        <item name="colorOutline">@color/gm3_sys_color_dynamic_dark_outline</item>
+        <item name="colorOutlineVariant">@color/gm3_sys_color_dynamic_dark_outline_variant</item>
+        <item name="colorPrimary">@color/gm3_sys_color_dynamic_dark_primary</item>
+        <item name="colorPrimaryContainer">@color/gm3_sys_color_dynamic_dark_primary_container</item>
+        <item name="colorPrimaryFixed">@color/gm3_sys_color_dynamic_primary_fixed</item>
+        <item name="colorPrimaryFixedDim">@color/gm3_sys_color_dynamic_primary_fixed_dim</item>
+        <item name="colorPrimaryInverse">@color/gm3_sys_color_dynamic_light_primary</item>
+        <item name="colorPrimaryStateContent">?attr/colorPrimary</item>
+        <item name="colorPrimaryStateContentInverse">@color/gm3_sys_color_dynamic_light_primary_state_content</item>
+        <item name="colorPrimaryStateLayer">@color/gm3_sys_color_dynamic_dark_primary_state_layer</item>
+        <item name="colorPrimaryStateLayerInverse">?attr/colorPrimary</item>
+        <item name="colorSecondary">@color/gm3_sys_color_dynamic_dark_secondary</item>
+        <item name="colorSecondaryContainer">@color/gm3_sys_color_dynamic_dark_secondary_container</item>
+        <item name="colorSecondaryFixed">@color/gm3_sys_color_dynamic_secondary_fixed</item>
+        <item name="colorSecondaryFixedDim">@color/gm3_sys_color_dynamic_secondary_fixed_dim</item>
+        <item name="colorSecondaryStateContent">?attr/colorSecondary</item>
+        <item name="colorSecondaryStateLayer">@color/gm3_sys_color_dynamic_dark_secondary_state_layer</item>
+        <item name="colorSurface">@color/gm3_sys_color_dynamic_dark_surface</item>
+        <item name="colorSurfaceBright">@color/gm3_sys_color_dynamic_dark_surface_bright</item>
+        <item name="colorSurfaceContainer">@color/gm3_sys_color_dynamic_dark_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/gm3_sys_color_dynamic_dark_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/gm3_sys_color_dynamic_dark_surface_container_highest</item>
+        <item name="colorSurfaceContainerLow">@color/gm3_sys_color_dynamic_dark_surface_container_low</item>
+        <item name="colorSurfaceContainerLowest">@color/gm3_sys_color_dynamic_dark_surface_container_lowest</item>
+        <item name="colorSurfaceDim">@color/gm3_sys_color_dynamic_dark_surface_dim</item>
+        <item name="colorSurfaceInverse">@color/gm3_sys_color_dynamic_dark_inverse_surface</item>
+        <item name="colorSurfaceVariant">@color/gm3_sys_color_dynamic_dark_surface_variant</item>
+        <item name="colorTertiary">@color/gm3_sys_color_dynamic_dark_tertiary</item>
+        <item name="colorTertiaryContainer">@color/gm3_sys_color_dynamic_dark_tertiary_container</item>
+        <item name="colorTertiaryFixed">@color/gm3_sys_color_dynamic_tertiary_fixed</item>
+        <item name="colorTertiaryFixedDim">@color/gm3_sys_color_dynamic_tertiary_fixed_dim</item>
+        <item name="elevationOverlayColor">?attr/colorPrimary</item>
+        <item name="isMaterial3DynamicColorApplied">true</item>
+    </style>
+    <style name="ThemeOverlay.GoogleMaterial3.DynamicColors.Light" parent="">
+        <item name="android:colorBackground">@color/gm3_sys_color_dynamic_light_background</item>
+        <item name="android:textColorPrimary">@color/gm3_dynamic_default_color_primary_text</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/gm3_dynamic_primary_text_disable_only</item>
+        <item name="android:textColorSecondary">@color/gm3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverse">@color/gm3_dynamic_dark_default_color_primary_text</item>
+        <item name="android:textColorSecondaryInverse">@color/gm3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorHintInverse">@color/gm3_dynamic_dark_hint_foreground</item>
+        <item name="android:textColorHighlight">@color/gm3_dynamic_highlighted_text</item>
+        <item name="android:textColorHint">@color/gm3_dynamic_hint_foreground</item>
+        <item name="android:textColorTertiary">@color/gm3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorTertiaryInverse">@color/gm3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/gm3_dynamic_dark_primary_text_disable_only</item>
+        <item name="android:textColorAlertDialogListItem">@color/gm3_dynamic_default_color_primary_text</item>
+        <item name="android:textColorHighlightInverse">@color/gm3_dynamic_dark_highlighted_text</item>
+        <item name="android:isLightTheme">true</item>
+        <item name="colorError">@color/gm3_dynamic_color_light_error</item>
+        <item name="colorErrorContainer">@color/gm3_dynamic_color_light_error_container</item>
+        <item name="colorOnBackground">@color/gm3_sys_color_dynamic_light_on_background</item>
+        <item name="colorOnError">@color/gm3_dynamic_color_light_on_error</item>
+        <item name="colorOnErrorContainer">@color/gm3_dynamic_color_light_on_error_container</item>
+        <item name="colorOnPrimary">@color/gm3_sys_color_dynamic_light_on_primary</item>
+        <item name="colorOnPrimaryContainer">@color/gm3_sys_color_dynamic_light_on_primary_container</item>
+        <item name="colorOnPrimaryContainerStateContent">?attr/colorOnPrimaryContainer</item>
+        <item name="colorOnPrimaryContainerStateLayer">?attr/colorOnPrimaryContainer</item>
+        <item name="colorOnPrimaryFixed">@color/gm3_sys_color_dynamic_on_primary_fixed</item>
+        <item name="colorOnPrimaryFixedVariant">@color/gm3_sys_color_dynamic_on_primary_fixed_variant</item>
+        <item name="colorOnPrimaryStateContent">?attr/colorOnPrimary</item>
+        <item name="colorOnPrimaryStateLayer">@color/gm3_sys_color_dynamic_light_on_primary_state_layer</item>
+        <item name="colorOnSecondary">@color/gm3_sys_color_dynamic_light_on_secondary</item>
+        <item name="colorOnSecondaryContainer">@color/gm3_sys_color_dynamic_light_on_secondary_container</item>
+        <item name="colorOnSecondaryContainerStateContent">?attr/colorOnSecondaryContainer</item>
+        <item name="colorOnSecondaryContainerStateLayer">?attr/colorOnSecondaryContainer</item>
+        <item name="colorOnSecondaryFixed">@color/gm3_sys_color_dynamic_on_secondary_fixed</item>
+        <item name="colorOnSecondaryFixedVariant">@color/gm3_sys_color_dynamic_on_secondary_fixed_variant</item>
+        <item name="colorOnSecondaryStateContent">?attr/colorOnSecondary</item>
+        <item name="colorOnSecondaryStateLayer">@color/gm3_sys_color_dynamic_light_on_secondary_state_layer</item>
+        <item name="colorOnSurface">@color/gm3_sys_color_dynamic_light_on_surface</item>
+        <item name="colorOnSurfaceInverse">@color/gm3_sys_color_dynamic_light_inverse_on_surface</item>
+        <item name="colorOnSurfaceStateContent">?attr/colorOnSurface</item>
+        <item name="colorOnSurfaceStateLayer">?attr/colorOnSurface</item>
+        <item name="colorOnSurfaceVariant">@color/gm3_sys_color_dynamic_light_on_surface_variant</item>
+        <item name="colorOnSurfaceVariantStateContent">?attr/colorOnSurfaceVariant</item>
+        <item name="colorOnSurfaceVariantStateLayer">?attr/colorOnSurfaceVariant</item>
+        <item name="colorOnTertiary">@color/gm3_sys_color_dynamic_light_on_tertiary</item>
+        <item name="colorOnTertiaryContainer">@color/gm3_sys_color_dynamic_light_on_tertiary_container</item>
+        <item name="colorOnTertiaryContainerStateContent">?attr/colorOnTertiaryContainer</item>
+        <item name="colorOnTertiaryContainerStateLayer">?attr/colorOnTertiaryContainer</item>
+        <item name="colorOnTertiaryFixed">@color/gm3_sys_color_dynamic_on_tertiary_fixed</item>
+        <item name="colorOnTertiaryFixedVariant">@color/gm3_sys_color_dynamic_on_tertiary_fixed_variant</item>
+        <item name="colorOutline">@color/gm3_sys_color_dynamic_light_outline</item>
+        <item name="colorOutlineVariant">@color/gm3_sys_color_dynamic_light_outline_variant</item>
+        <item name="colorPrimary">@color/gm3_sys_color_dynamic_light_primary</item>
+        <item name="colorPrimaryContainer">@color/gm3_sys_color_dynamic_light_primary_container</item>
+        <item name="colorPrimaryFixed">@color/gm3_sys_color_dynamic_primary_fixed</item>
+        <item name="colorPrimaryFixedDim">@color/gm3_sys_color_dynamic_primary_fixed_dim</item>
+        <item name="colorPrimaryInverse">@color/gm3_sys_color_dynamic_dark_primary</item>
+        <item name="colorPrimaryStateContent">@color/gm3_sys_color_dynamic_light_primary_state_content</item>
+        <item name="colorPrimaryStateContentInverse">?attr/colorPrimary</item>
+        <item name="colorPrimaryStateLayer">?attr/colorPrimary</item>
+        <item name="colorPrimaryStateLayerInverse">@color/gm3_sys_color_dynamic_dark_primary_state_layer</item>
+        <item name="colorSecondary">@color/gm3_sys_color_dynamic_light_secondary</item>
+        <item name="colorSecondaryContainer">@color/gm3_sys_color_dynamic_light_secondary_container</item>
+        <item name="colorSecondaryFixed">@color/gm3_sys_color_dynamic_secondary_fixed</item>
+        <item name="colorSecondaryFixedDim">@color/gm3_sys_color_dynamic_secondary_fixed_dim</item>
+        <item name="colorSecondaryStateContent">@color/gm3_sys_color_dynamic_light_secondary_state_content</item>
+        <item name="colorSecondaryStateLayer">?attr/colorSecondary</item>
+        <item name="colorSurface">@color/gm3_sys_color_dynamic_light_surface</item>
+        <item name="colorSurfaceBright">@color/gm3_sys_color_dynamic_light_surface_bright</item>
+        <item name="colorSurfaceContainer">@color/gm3_sys_color_dynamic_light_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/gm3_sys_color_dynamic_light_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/gm3_sys_color_dynamic_light_surface_container_highest</item>
+        <item name="colorSurfaceContainerLow">@color/gm3_sys_color_dynamic_light_surface_container_low</item>
+        <item name="colorSurfaceContainerLowest">@color/gm3_sys_color_dynamic_light_surface_container_lowest</item>
+        <item name="colorSurfaceDim">@color/gm3_sys_color_dynamic_light_surface_dim</item>
+        <item name="colorSurfaceInverse">@color/gm3_sys_color_dynamic_light_inverse_surface</item>
+        <item name="colorSurfaceVariant">@color/gm3_sys_color_dynamic_light_surface_variant</item>
+        <item name="colorTertiary">@color/gm3_sys_color_dynamic_light_tertiary</item>
+        <item name="colorTertiaryContainer">@color/gm3_sys_color_dynamic_light_tertiary_container</item>
+        <item name="colorTertiaryFixed">@color/gm3_sys_color_dynamic_tertiary_fixed</item>
+        <item name="colorTertiaryFixedDim">@color/gm3_sys_color_dynamic_tertiary_fixed_dim</item>
+        <item name="elevationOverlayColor">?attr/colorPrimary</item>
+        <item name="isMaterial3DynamicColorApplied">true</item>
+    </style>
+    <style name="ThemeOverlay.GoogleMaterial3WithLegacySurface.DynamicColors.Dark" parent="@style/ThemeOverlay.GoogleMaterial3.DynamicColors.Dark">
+        <item name="android:colorBackground">@color/gm3_legacy_sys_color_dynamic_dark_background</item>
+        <item name="colorSurface">@color/gm3_legacy_sys_color_dynamic_dark_surface</item>
+        <item name="colorSurfaceBright">@color/gm3_legacy_sys_color_dynamic_dark_surface_bright</item>
+        <item name="colorSurfaceContainer">@color/gm3_legacy_sys_color_dynamic_dark_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/gm3_legacy_sys_color_dynamic_dark_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/gm3_legacy_sys_color_dynamic_dark_surface_container_highest</item>
+        <item name="colorSurfaceContainerLow">@color/gm3_legacy_sys_color_dynamic_dark_surface_container_low</item>
+        <item name="colorSurfaceContainerLowest">@color/gm3_legacy_sys_color_dynamic_dark_surface_container_lowest</item>
+        <item name="colorSurfaceDim">@color/gm3_legacy_sys_color_dynamic_dark_surface_dim</item>
+    </style>
+    <style name="ThemeOverlay.GoogleMaterial3WithLegacySurface.DynamicColors.DayNight" parent="@style/ThemeOverlay.GoogleMaterial3WithLegacySurface.DynamicColors.Light">
+    </style>
+    <style name="ThemeOverlay.GoogleMaterial3WithLegacySurface.DynamicColors.Light" parent="@style/ThemeOverlay.GoogleMaterial3.DynamicColors.Light">
+        <item name="android:colorBackground">@color/gm3_legacy_sys_color_dynamic_light_background</item>
+        <item name="colorSurface">@color/gm3_legacy_sys_color_dynamic_light_surface</item>
+        <item name="colorSurfaceBright">@color/gm3_legacy_sys_color_dynamic_light_surface_bright</item>
+        <item name="colorSurfaceContainer">@color/gm3_legacy_sys_color_dynamic_light_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/gm3_legacy_sys_color_dynamic_light_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/gm3_legacy_sys_color_dynamic_light_surface_container_highest</item>
+        <item name="colorSurfaceContainerLow">@color/gm3_legacy_sys_color_dynamic_light_surface_container_low</item>
+        <item name="colorSurfaceContainerLowest">@color/gm3_legacy_sys_color_dynamic_light_surface_container_lowest</item>
+        <item name="colorSurfaceDim">@color/gm3_legacy_sys_color_dynamic_light_surface_dim</item>
+    </style>
+    <style name="ThemeOverlay.Material3.DynamicColors.Dark" parent="">
+        <item name="android:colorBackground">@color/m3_sys_color_dynamic_dark_background</item>
+        <item name="android:textColorPrimary">@color/m3_dynamic_dark_default_color_primary_text</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/m3_dynamic_dark_primary_text_disable_only</item>
+        <item name="android:textColorSecondary">@color/m3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverse">@color/m3_dynamic_default_color_primary_text</item>
+        <item name="android:textColorSecondaryInverse">@color/m3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorHintInverse">@color/m3_dynamic_hint_foreground</item>
+        <item name="android:textColorHighlight">@color/m3_dynamic_dark_highlighted_text</item>
+        <item name="android:textColorHint">@color/m3_dynamic_dark_hint_foreground</item>
+        <item name="android:textColorTertiary">@color/m3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorTertiaryInverse">@color/m3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/m3_dynamic_primary_text_disable_only</item>
+        <item name="android:textColorAlertDialogListItem">@color/m3_dynamic_dark_default_color_primary_text</item>
+        <item name="android:textColorHighlightInverse">@color/m3_dynamic_highlighted_text</item>
+        <item name="colorError">@color/material_dynamic_color_dark_error</item>
+        <item name="colorErrorContainer">@color/material_dynamic_color_dark_error_container</item>
+        <item name="colorOnBackground">@color/m3_sys_color_dynamic_dark_on_background</item>
+        <item name="colorOnError">@color/material_dynamic_color_dark_on_error</item>
+        <item name="colorOnErrorContainer">@color/material_dynamic_color_dark_on_error_container</item>
+        <item name="colorOnPrimary">@color/m3_sys_color_dynamic_dark_on_primary</item>
+        <item name="colorOnPrimaryContainer">@color/m3_sys_color_dynamic_dark_on_primary_container</item>
+        <item name="colorOnPrimaryFixed">@color/m3_sys_color_dynamic_on_primary_fixed</item>
+        <item name="colorOnPrimaryFixedVariant">@color/m3_sys_color_dynamic_on_primary_fixed_variant</item>
+        <item name="colorOnSecondary">@color/m3_sys_color_dynamic_dark_on_secondary</item>
+        <item name="colorOnSecondaryContainer">@color/m3_sys_color_dynamic_dark_on_secondary_container</item>
+        <item name="colorOnSecondaryFixed">@color/m3_sys_color_dynamic_on_secondary_fixed</item>
+        <item name="colorOnSecondaryFixedVariant">@color/m3_sys_color_dynamic_on_secondary_fixed_variant</item>
+        <item name="colorOnSurface">@color/m3_sys_color_dynamic_dark_on_surface</item>
+        <item name="colorOnSurfaceInverse">@color/m3_sys_color_dynamic_dark_inverse_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/m3_sys_color_dynamic_dark_on_surface_variant</item>
+        <item name="colorOnTertiary">@color/m3_sys_color_dynamic_dark_on_tertiary</item>
+        <item name="colorOnTertiaryContainer">@color/m3_sys_color_dynamic_dark_on_tertiary_container</item>
+        <item name="colorOnTertiaryFixed">@color/m3_sys_color_dynamic_on_tertiary_fixed</item>
+        <item name="colorOnTertiaryFixedVariant">@color/m3_sys_color_dynamic_on_tertiary_fixed_variant</item>
+        <item name="colorOutline">@color/m3_sys_color_dynamic_dark_outline</item>
+        <item name="colorOutlineVariant">@color/m3_sys_color_dynamic_dark_outline_variant</item>
+        <item name="colorPrimary">@color/m3_sys_color_dynamic_dark_primary</item>
+        <item name="colorPrimaryContainer">@color/m3_sys_color_dynamic_dark_primary_container</item>
+        <item name="colorPrimaryFixed">@color/m3_sys_color_dynamic_primary_fixed</item>
+        <item name="colorPrimaryFixedDim">@color/m3_sys_color_dynamic_primary_fixed_dim</item>
+        <item name="colorPrimaryInverse">@color/m3_sys_color_dynamic_dark_inverse_primary</item>
+        <item name="colorSecondary">@color/m3_sys_color_dynamic_dark_secondary</item>
+        <item name="colorSecondaryContainer">@color/m3_sys_color_dynamic_dark_secondary_container</item>
+        <item name="colorSecondaryFixed">@color/m3_sys_color_dynamic_secondary_fixed</item>
+        <item name="colorSecondaryFixedDim">@color/m3_sys_color_dynamic_secondary_fixed_dim</item>
+        <item name="colorSurface">@color/m3_sys_color_dynamic_dark_surface</item>
+        <item name="colorSurfaceBright">@color/m3_sys_color_dynamic_dark_surface_bright</item>
+        <item name="colorSurfaceContainer">@color/m3_sys_color_dynamic_dark_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/m3_sys_color_dynamic_dark_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/m3_sys_color_dynamic_dark_surface_container_highest</item>
+        <item name="colorSurfaceContainerLow">@color/m3_sys_color_dynamic_dark_surface_container_low</item>
+        <item name="colorSurfaceContainerLowest">@color/m3_sys_color_dynamic_dark_surface_container_lowest</item>
+        <item name="colorSurfaceDim">@color/m3_sys_color_dynamic_dark_surface_dim</item>
+        <item name="colorSurfaceInverse">@color/m3_sys_color_dynamic_dark_inverse_surface</item>
+        <item name="colorSurfaceVariant">@color/m3_sys_color_dynamic_dark_surface_variant</item>
+        <item name="colorTertiary">@color/m3_sys_color_dynamic_dark_tertiary</item>
+        <item name="colorTertiaryContainer">@color/m3_sys_color_dynamic_dark_tertiary_container</item>
+        <item name="colorTertiaryFixed">@color/m3_sys_color_dynamic_tertiary_fixed</item>
+        <item name="colorTertiaryFixedDim">@color/m3_sys_color_dynamic_tertiary_fixed_dim</item>
+        <item name="isMaterial3DynamicColorApplied">true</item>
+    </style>
+    <style name="ThemeOverlay.Material3.DynamicColors.Light" parent="">
+        <item name="android:colorBackground">@color/m3_sys_color_dynamic_light_background</item>
+        <item name="android:textColorPrimary">@color/m3_dynamic_default_color_primary_text</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/m3_dynamic_primary_text_disable_only</item>
+        <item name="android:textColorSecondary">@color/m3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverse">@color/m3_dynamic_dark_default_color_primary_text</item>
+        <item name="android:textColorSecondaryInverse">@color/m3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorHintInverse">@color/m3_dynamic_dark_hint_foreground</item>
+        <item name="android:textColorHighlight">@color/m3_dynamic_highlighted_text</item>
+        <item name="android:textColorHint">@color/m3_dynamic_hint_foreground</item>
+        <item name="android:textColorTertiary">@color/m3_dynamic_default_color_secondary_text</item>
+        <item name="android:textColorTertiaryInverse">@color/m3_dynamic_dark_default_color_secondary_text</item>
+        <item name="android:textColorPrimaryInverseDisableOnly">@color/m3_dynamic_dark_primary_text_disable_only</item>
+        <item name="android:textColorAlertDialogListItem">@color/m3_dynamic_default_color_primary_text</item>
+        <item name="android:textColorHighlightInverse">@color/m3_dynamic_dark_highlighted_text</item>
+        <item name="colorError">@color/material_dynamic_color_light_error</item>
+        <item name="colorErrorContainer">@color/material_dynamic_color_light_error_container</item>
+        <item name="colorOnBackground">@color/m3_sys_color_dynamic_light_on_background</item>
+        <item name="colorOnError">@color/material_dynamic_color_light_on_error</item>
+        <item name="colorOnErrorContainer">@color/material_dynamic_color_light_on_error_container</item>
+        <item name="colorOnPrimary">@color/m3_sys_color_dynamic_light_on_primary</item>
+        <item name="colorOnPrimaryContainer">@color/m3_sys_color_dynamic_light_on_primary_container</item>
+        <item name="colorOnPrimaryFixed">@color/m3_sys_color_dynamic_on_primary_fixed</item>
+        <item name="colorOnPrimaryFixedVariant">@color/m3_sys_color_dynamic_on_primary_fixed_variant</item>
+        <item name="colorOnSecondary">@color/m3_sys_color_dynamic_light_on_secondary</item>
+        <item name="colorOnSecondaryContainer">@color/m3_sys_color_dynamic_light_on_secondary_container</item>
+        <item name="colorOnSecondaryFixed">@color/m3_sys_color_dynamic_on_secondary_fixed</item>
+        <item name="colorOnSecondaryFixedVariant">@color/m3_sys_color_dynamic_on_secondary_fixed_variant</item>
+        <item name="colorOnSurface">@color/m3_sys_color_dynamic_light_on_surface</item>
+        <item name="colorOnSurfaceInverse">@color/m3_sys_color_dynamic_light_inverse_on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/m3_sys_color_dynamic_light_on_surface_variant</item>
+        <item name="colorOnTertiary">@color/m3_sys_color_dynamic_light_on_tertiary</item>
+        <item name="colorOnTertiaryContainer">@color/m3_sys_color_dynamic_light_on_tertiary_container</item>
+        <item name="colorOnTertiaryFixed">@color/m3_sys_color_dynamic_on_tertiary_fixed</item>
+        <item name="colorOnTertiaryFixedVariant">@color/m3_sys_color_dynamic_on_tertiary_fixed_variant</item>
+        <item name="colorOutline">@color/m3_sys_color_dynamic_light_outline</item>
+        <item name="colorOutlineVariant">@color/m3_sys_color_dynamic_light_outline_variant</item>
+        <item name="colorPrimary">@color/m3_sys_color_dynamic_light_primary</item>
+        <item name="colorPrimaryContainer">@color/m3_sys_color_dynamic_light_primary_container</item>
+        <item name="colorPrimaryFixed">@color/m3_sys_color_dynamic_primary_fixed</item>
+        <item name="colorPrimaryFixedDim">@color/m3_sys_color_dynamic_primary_fixed_dim</item>
+        <item name="colorPrimaryInverse">@color/m3_sys_color_dynamic_light_inverse_primary</item>
+        <item name="colorSecondary">@color/m3_sys_color_dynamic_light_secondary</item>
+        <item name="colorSecondaryContainer">@color/m3_sys_color_dynamic_light_secondary_container</item>
+        <item name="colorSecondaryFixed">@color/m3_sys_color_dynamic_secondary_fixed</item>
+        <item name="colorSecondaryFixedDim">@color/m3_sys_color_dynamic_secondary_fixed_dim</item>
+        <item name="colorSurface">@color/m3_sys_color_dynamic_light_surface</item>
+        <item name="colorSurfaceBright">@color/m3_sys_color_dynamic_light_surface_bright</item>
+        <item name="colorSurfaceContainer">@color/m3_sys_color_dynamic_light_surface_container</item>
+        <item name="colorSurfaceContainerHigh">@color/m3_sys_color_dynamic_light_surface_container_high</item>
+        <item name="colorSurfaceContainerHighest">@color/m3_sys_color_dynamic_light_surface_container_highest</item>
+        <item name="colorSurfaceContainerLow">@color/m3_sys_color_dynamic_light_surface_container_low</item>
+        <item name="colorSurfaceContainerLowest">@color/m3_sys_color_dynamic_light_surface_container_lowest</item>
+        <item name="colorSurfaceDim">@color/m3_sys_color_dynamic_light_surface_dim</item>
+        <item name="colorSurfaceInverse">@color/m3_sys_color_dynamic_light_inverse_surface</item>
+        <item name="colorSurfaceVariant">@color/m3_sys_color_dynamic_light_surface_variant</item>
+        <item name="colorTertiary">@color/m3_sys_color_dynamic_light_tertiary</item>
+        <item name="colorTertiaryContainer">@color/m3_sys_color_dynamic_light_tertiary_container</item>
+        <item name="colorTertiaryFixed">@color/m3_sys_color_dynamic_tertiary_fixed</item>
+        <item name="colorTertiaryFixedDim">@color/m3_sys_color_dynamic_tertiary_fixed_dim</item>
+        <item name="isMaterial3DynamicColorApplied">true</item>
+    </style>
+    <style name="ThemeOverlay.Material3Expressive.DynamicColors.Dark" parent="@style/ThemeOverlay.Material3.DynamicColors.Dark">
+    </style>
+    <style name="ThemeOverlay.Material3Expressive.DynamicColors.Light" parent="@style/ThemeOverlay.Material3.DynamicColors.Light">
+    </style>
+    <style name="ThemeOverlay.PhoneKeyboard.DynamicColors.DayNight" parent="@style/ThemeOverlay.Material3.DynamicColors.DayNight">
+        <item name="android:colorBackground">@android:color/system_neutral1_50</item>
+    </style>
+    <style name="Widget.PhoneKeyboard.SearchView" parent="@style/Widget.Material3.SearchView">
+        <item name="backgroundTint">@android:color/system_neutral1_50</item>
+    </style>
+</resources>

@@ -1,0 +1,51 @@
+package defpackage;
+
+/* loaded from: classes.dex */
+public final class ddx {
+    public static final deb a = new deb("ContentDescription", true, new abp(20));
+    public static final deb b = new deb("StateDescription", (byte[]) null);
+    public static final deb c = new deb("ProgressBarRangeInfo", (byte[]) null);
+    public static final deb d = new deb("PaneTitle", true, new ddw(10));
+    public static final deb e = new deb("SelectableGroup", (byte[]) null);
+    public static final deb f = new deb("CollectionInfo", (byte[]) null);
+    public static final deb g = new deb("CollectionItemInfo", (byte[]) null);
+    public static final deb h = new deb("Heading", (byte[]) null);
+    public static final deb i = new deb("TextEntryKey", (byte[]) null);
+    public static final deb j = new deb("Disabled", (byte[]) null);
+    public static final deb k = new deb("LiveRegion", (byte[]) null);
+    public static final deb l = new deb("Focused", (byte[]) null);
+    public static final deb m = new deb("IsContainer", (byte[]) null);
+    public static final deb n = new deb("IsTraversalGroup");
+    public static final deb o = new deb("IsSensitiveData");
+    public static final deb p = new deb("InvisibleToUser", new ddw(11));
+    public static final deb q = new deb("HideFromAccessibility", new ddw(12));
+    public static final deb r = new deb("ContentType", new ddw(13));
+    public static final deb s = new deb("ContentDataType", new ddw(1));
+    public static final deb t = new deb("FillableData", new ddw(0));
+    public static final deb u = new deb("TraversalIndex", new ddw(2));
+    public static final deb v = new deb("HintText", (byte[]) null);
+    public static final deb w = new deb("HorizontalScrollAxisRange", (byte[]) null);
+    public static final deb x = new deb("VerticalScrollAxisRange", (byte[]) null);
+    public static final deb y = new deb("IsPopup", true, new ddw(3));
+    public static final deb z = new deb("IsDialog", true, new ddw(4));
+    public static final deb A = new deb("Role", true, new ddw(5));
+    public static final deb B = new deb("TestTag", false, new ddw(6));
+    public static final deb C = new deb("LinkTestMarker", false, new ddw(7));
+    public static final deb D = new deb("Text", true, new ddw(8));
+    public static final deb E = new deb("TextSubstitution");
+    public static final deb F = new deb("IsShowingTextSubstitution");
+    public static final deb G = new deb("InputText", (byte[]) null);
+    public static final deb H = new deb("EditableText", (byte[]) null);
+    public static final deb I = new deb("TextSelectionRange", (byte[]) null);
+    public static final deb J = new deb("TextCompositionRange", (byte[]) null);
+    public static final deb K = new deb("ImeAction", (byte[]) null);
+    public static final deb L = new deb("Selected", (byte[]) null);
+    public static final deb M = new deb("ToggleableState", (byte[]) null);
+    public static final deb N = new deb("InputTextSuggestionState", (byte[]) null);
+    public static final deb O = new deb("Password", (byte[]) null);
+    public static final deb P = new deb("Error", (byte[]) null);
+    public static final deb Q = new deb("IndexForKey");
+    public static final deb R = new deb("IsEditable");
+    public static final deb S = new deb("MaxTextLength");
+    public static final deb T = new deb("Shape", false, new ddw(9));
+}

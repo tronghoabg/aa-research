@@ -1,0 +1,51 @@
+# Android binaries & packages
+*.apk
+*.xapk
+*.apks
+*.aab
+
+# Archives & compressed packages
+*.zip
+*.tar
+*.gz
+*.tgz
+*.rar
+*.7z
+
+# Large / intermediate binary data
+*.dex
+*.wmap
+*.hprof
+*.mp4
+*.exe
+
+# Large tool binaries (>50MB)
+tools/frida-server*
+tools/jadx*/lib/jadx-*-all.jar
+
+# Windows reserved DOS device names (from JADX obfuscated classes)
+**/aux.java
+**/con.java
+**/prn.java
+**/nul.java
+**/com[0-9].java
+**/lpt[0-9].java
+**/aux.*
+**/con.*
+**/prn.*
+**/nul.*
+**/com[0-9].*
+**/lpt[0-9].*
+
+# Build systems, IDE & caches
+.gradle/
+**/.gradle/
+build/
+**/build/
+local.properties
+**/local.properties
+.idea/
+**/.idea/
+*.iml
+*.log
+hs_err_*.log

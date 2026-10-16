@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:name="fundip_small"
+    android:height="96dp"
+    android:width="328dp"
+    android:viewportWidth="328"
+    android:viewportHeight="96">
+    <group
+        android:name="base"
+        android:scaleX="1.0488"
+        android:scaleY="1.0488"
+        android:translateX="164"
+        android:translateY="48">
+        <group
+            android:name="base_pivot"
+            android:translateX="-154.8889"
+            android:translateY="-45.3333">
+            <group
+                android:name="base"
+                android:scaleX="0.9444"
+                android:scaleY="0.9444">
+                <path
+                    android:name="base_path"
+                    android:fillColor="#ff424242"
+                    android:pathData="M 328.0,48.0 c 0.0,26.5096740723 -21.4903259277,48.0 -48.0,48.0 c 0.0,0.0 -232.0,0.0 -232.0,0.0 c -26.5096740723,0.0 -48.0,-21.4903259277 -48.0,-48.0 c 0.0,-26.5096740723 21.4903259277,-48.0 48.0,-48.0 c 0.0,0.0 232.0,0.0 232.0,0.0 c 26.5096740723,0.0 48.0,21.4903259277 48.0,48.0 Z"/>
+            </group>
+        </group>
+    </group>
+    <group
+        android:name="bar"
+        android:translateX="164"
+        android:translateY="48">
+        <group
+            android:name="bar_pivot"
+            android:translateX="-154.8889"
+            android:translateY="-45.3333">
+            <clip-path
+                android:name="bar_mask"
+                android:pathData="M 86.7399291992,45.3125 c 0.0,26.5096740723 -21.4903259277,48.0 -48.0,48.0 c 0.0,0.0 -232.0,0.0 -232.0,0.0 c -26.5096740723,0.0 -48.0,-21.4903259277 -48.0,-48.0 c 0.0,-26.5096588135 21.4903259277,-48.0 48.0,-48.0 c 0.0,0.0 232.0,0.0 232.0,0.0 c 26.5096740723,0.0 48.0,21.4903411865 48.0,48.0 Z"/>
+            <group
+                android:name="bar"
+                android:translateX="0.0781"
+                android:translateY="0.0625">
+                <path
+                    android:name="bar_path"
+                    android:fillColor="#ff005b9f"
+                    android:pathData="M 318.829040527,45.259185791 c 0.0,26.5096740723 -21.4903259277,48.0 -47.9999694824,48.0 c 0.0,0.0 -232.000030518,0.0 -232.000030518,0.0 c -26.5096740723,0.0 -48.0,-21.4903259277 -48.0,-48.0 c 0.0,-26.5096588135 21.4903259277,-48.0 48.0,-48.0 c 0.0,0.0 232.000030518,0.0 232.000030518,0.0 c 26.5096435547,0.0 47.9999694824,21.4903411865 47.9999694824,48.0 Z"/>
+            </group>
+        </group>
+    </group>
+</vector>

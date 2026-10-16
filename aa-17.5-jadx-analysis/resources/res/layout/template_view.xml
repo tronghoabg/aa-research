@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.view.TemplateView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/template_view"
+    android:focusable="true"
+    android:descendantFocusability="afterDescendants"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.android.car.libraries.apphost.view.SurfaceViewContainer
+        android:id="@+id/surface_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.android.car.libraries.apphost.view.TextureViewContainer
+        android:id="@+id/texture_container"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <FrameLayout
+        android:id="@+id/template_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.google.android.apps.auto.components.ui.speedbump.SpeedbumpView
+        android:id="@+id/speedbump_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <com.android.car.libraries.apphost.view.MicrophoneRecordingView
+        android:id="@+id/microphone_recording_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</com.google.android.apps.auto.components.apphost.view.TemplateView>

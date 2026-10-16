@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <stroke
+        android:width="@dimen/gearhead_focus_ring_stroke_width_focused"
+        android:color="?attr/gearheadFocusAccentColor"/>
+    <corners android:radius="@dimen/gearhead_focus_rectangle_round_corner_radius"/>
+</shape>

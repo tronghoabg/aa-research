@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="bottom_padded_car_ime_height">310dp</dimen>
+    <dimen name="car_ime_height">300dp</dimen>
+    <dimen name="car_ime_min_width">765dp</dimen>
+    <dimen name="projection_keyboard_empty_key_width">68dp</dimen>
+    <dimen name="projection_keyboard_half_key_width">32dp</dimen>
+    <dimen name="projection_keyboard_height">300dp</dimen>
+    <dimen name="projection_keyboard_key_height">52dp</dimen>
+    <dimen name="projection_keyboard_key_width">64dp</dimen>
+    <dimen name="projection_keyboard_spacebar_width">320dp</dimen>
+</resources>

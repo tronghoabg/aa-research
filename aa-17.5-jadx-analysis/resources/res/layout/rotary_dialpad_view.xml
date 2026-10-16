@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.telecom.dialpad.RotaryDialpadView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialpad_view"
+    android:paddingLeft="@dimen/gearhead_sdk_card_margin"
+    android:paddingRight="@dimen/gearhead_sdk_card_margin"
+    android:focusable="false"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:carMaxWidth="@dimen/gearhead_sdk_card_max_width">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/rotary_dialpad_number_horizontal_padding"
+        android:paddingTop="@dimen/rotary_dialpad_number_padding_top"
+        android:paddingRight="@dimen/rotary_dialpad_number_horizontal_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/rotary_dialpad_number_margin_top">
+        <TextView
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:id="@+id/number"
+            android:focusable="true"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/TextAppearance.Boardwalk.Dialpad"/>
+        <com.google.android.apps.auto.components.support.CarRestrictedEditText
+            android:id="@+id/edit_text"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:editable="false"
+            android:inputType="phone"
+            android:textSelectHandle="@drawable/gearhead_sdk_empty"/>
+    </LinearLayout>
+</com.google.android.apps.auto.components.telecom.dialpad.RotaryDialpadView>

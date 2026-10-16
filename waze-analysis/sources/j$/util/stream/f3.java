@@ -1,0 +1,38 @@
+package j$.util.stream;
+
+import java.util.function.IntFunction;
+
+/* compiled from: r8-map-id-ef3156dd11616e3312fa97d164663e876a378324a977203425f20cc125230e5c */
+/* loaded from: classes10.dex */
+public abstract class f3 implements m2 {
+    @Override // j$.util.stream.m2
+    public m2 a(int i2) {
+        throw new IndexOutOfBoundsException();
+    }
+
+    public final void c(int i2, Object obj) {
+    }
+
+    @Override // j$.util.stream.m2
+    public final long count() {
+        return 0L;
+    }
+
+    public final void d(Object obj) {
+    }
+
+    @Override // j$.util.stream.m2
+    public /* synthetic */ m2 f(long j2, long j3, IntFunction intFunction) {
+        return d4.w(this, j2, j3, intFunction);
+    }
+
+    @Override // j$.util.stream.m2
+    public final Object[] k(IntFunction intFunction) {
+        return (Object[]) intFunction.apply(0);
+    }
+
+    @Override // j$.util.stream.m2
+    public final int s() {
+        return 0;
+    }
+}

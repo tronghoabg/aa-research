@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="android_auto_icon">?unknown_ref: 7f0808f1</drawable>
+    <drawable name="android_auto_icon_large">?unknown_ref: 7f0808f1</drawable>
+    <drawable name="android_auto_splashscreen">@drawable/quantum_launchscreen_android_auto</drawable>
+    <drawable name="common_switch_bar_background_color_activated">@color/material_google_blue_600</drawable>
+    <drawable name="common_switch_bar_background_color_normal">#ff80868b</drawable>
+    <drawable name="dash_weather_blizzard">?unknown_ref: 7f0808fc</drawable>
+    <drawable name="dash_weather_clear_day">?unknown_ref: 7f080924</drawable>
+    <drawable name="dash_weather_clear_night">?unknown_ref: 7f0808fe</drawable>
+    <drawable name="dash_weather_cloud">?unknown_ref: 7f080900</drawable>
+    <drawable name="dash_weather_fog">?unknown_ref: 7f080926</drawable>
+    <drawable name="dash_weather_hail_sleet">?unknown_ref: 7f080915</drawable>
+    <drawable name="dash_weather_haze_fog_dust_smoke">?unknown_ref: 7f08090d</drawable>
+    <drawable name="dash_weather_heavy_rain">?unknown_ref: 7f08090f</drawable>
+    <drawable name="dash_weather_partly_cloudy">?unknown_ref: 7f08091b</drawable>
+    <drawable name="dash_weather_rain">?unknown_ref: 7f08091e</drawable>
+    <drawable name="dash_weather_snow">?unknown_ref: 7f080920</drawable>
+    <drawable name="dash_weather_thunder">?unknown_ref: 7f080922</drawable>
+    <drawable name="dash_weather_thunderstorm">?unknown_ref: 7f080922</drawable>
+    <drawable name="dash_weather_unknown">?unknown_ref: 7f080919</drawable>
+    <drawable name="dash_weather_wind">?unknown_ref: 7f080926</drawable>
+    <drawable name="dash_weather_wintry_mix">?unknown_ref: 7f080928</drawable>
+    <drawable name="dissatisfied">?unknown_ref: 7f080b33</drawable>
+    <drawable name="google_g_logo">?unknown_ref: 7f08033e</drawable>
+    <drawable name="ic_launcher_auto">@mipmap/adaptiveproduct_android_auto</drawable>
+    <drawable name="material_ic_keyboard_arrow_next_black_24dp">@drawable/material_ic_keyboard_arrow_right_black_24dp</drawable>
+    <drawable name="material_ic_keyboard_arrow_previous_black_24dp">@drawable/material_ic_keyboard_arrow_left_black_24dp</drawable>
+    <drawable name="neutral">?unknown_ref: 7f080b35</drawable>
+    <drawable name="notification_template_icon_bg">#3333b5e5</drawable>
+    <drawable name="notification_template_icon_low_bg">#0cffffff</drawable>
+    <drawable name="satisfied">?unknown_ref: 7f080b37</drawable>
+    <drawable name="survey_close_button_icon">?unknown_ref: 7f0809f5</drawable>
+    <drawable name="survey_rating_image_rounded_button_background">@drawable/survey_rounded_button_background</drawable>
+    <drawable name="very_dissatisfied">?unknown_ref: 7f080b39</drawable>
+    <drawable name="very_satisfied">?unknown_ref: 7f080b3b</drawable>
+</resources>

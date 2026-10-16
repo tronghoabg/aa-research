@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/ThemeOverlay.Template.Card.Material"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/card_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="?attr/templateMapWithContentCardStartMargin"
+        android:layout_marginVertical="@dimen/padding_p2"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_max="@dimen/template_card_content_container_max_height"
+        app:layout_constraintHorizontal_bias="?attr/templateMapWithContentCardHorizontalBias"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintWidth_max="@dimen/template_card_content_container_max_width"
+        app:layout_constraintWidth_percent="@dimen/template_card_content_container_width_fraction">
+        <com.google.android.material.card.MaterialCardView
+            android:theme="@style/ThemeOverlay.Template.Card.HalfListRadius.Material"
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:cardCornerRadius="@dimen/padding_p4"
+            app:cardElevation="3dp">
+            <include layout="@layout/material_row_list_wrapper_template_layout"/>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+    <com.google.android.apps.auto.components.apphost.basewidgets.action.MaterialActionStripView
+        android:orientation="horizontal"
+        android:id="@+id/horizontal_floating_actions"
+        android:paddingBottom="@dimen/padding_p0"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_p2"
+        android:layout_marginEnd="@dimen/padding_p2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+</android.support.constraint.ConstraintLayout>

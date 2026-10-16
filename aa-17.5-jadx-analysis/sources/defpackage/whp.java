@@ -1,0 +1,14 @@
+package defpackage;
+
+import java.util.concurrent.ThreadFactory;
+import java.util.concurrent.atomic.AtomicInteger;
+
+/* loaded from: classes3.dex */
+final class whp implements ThreadFactory {
+    private final AtomicInteger a = new AtomicInteger(1);
+
+    @Override // java.util.concurrent.ThreadFactory
+    public final Thread newThread(Runnable runnable) {
+        return new Thread(runnable, "Survey #" + this.a.getAndIncrement());
+    }
+}

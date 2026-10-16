@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <Preference
+        android:icon="@drawable/hero_connect_a_car_wireless"
+        android:layout="@layout/settings_list_header"
+        android:selectable="false"
+        android:key="key_settings_connection_header"/>
+    <Preference
+        android:icon="0x7f080957"
+        android:selectable="false"
+        android:key="key_settings_connection_wireless"/>
+    <Preference
+        android:selectable="false"
+        android:key="key_settings_connection_phone_info"
+        app:allowDividerBelow="true"/>
+    <Preference
+        android:title="@string/settings_connection_bt_help_title"
+        android:key="key_settings_connection_options"
+        app:allowDividerAbove="true"/>
+</PreferenceScreen>

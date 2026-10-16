@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.apphost.basewidgets.action.ui.MaterialActionButtonView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:focusable="true"
+    android:clickable="true"
+    android:addStatesFromChildren="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>

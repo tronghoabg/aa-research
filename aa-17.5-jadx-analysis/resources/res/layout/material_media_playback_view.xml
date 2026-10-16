@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.components.ui.media.MediaPlaybackView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/playback_view"
+    android:background="@color/playback_background"
+    android:clipChildren="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/playback_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <com.google.android.apps.auto.components.ui.image.CrossfadeImageView
+                android:id="@+id/album_art"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="fitXY"
+                android:adjustViewBounds="true"/>
+            <View
+                android:id="@+id/playback_background_gradient"
+                android:background="@drawable/playback_view_background_vertical_gradient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/album_art"
+                android:layout_alignBottom="@+id/album_art"/>
+        </RelativeLayout>
+        <View
+            android:id="@+id/playback_scrim"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        <com.google.android.apps.auto.sdk.ui.FocusClusterLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:forceFieldType="multimoveModal">
+            <include
+                android:visibility="gone"
+                layout="@layout/material_expanding_action_panel"/>
+        </com.google.android.apps.auto.sdk.ui.FocusClusterLayout>
+    </FrameLayout>
+    <com.google.android.apps.auto.components.nocontentview.NoContentView
+        android:id="@+id/no_content_view"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</com.google.android.apps.auto.components.ui.media.MediaPlaybackView>

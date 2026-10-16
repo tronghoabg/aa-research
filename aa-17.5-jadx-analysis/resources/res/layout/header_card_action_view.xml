@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_gravity="center"
+    android:id="@+id/header_button_container"
+    android:background="?attr/templateHeaderButtonBackground"
+    android:focusable="true"
+    android:visibility="gone"
+    android:clickable="true"
+    android:addStatesFromChildren="true"
+    android:layout_width="@dimen/template_edge_column_width"
+    android:layout_height="@dimen/template_edge_column_width">
+    <ImageView
+        android:layout_gravity="center"
+        android:id="@+id/header_button_icon"
+        android:layout_width="?attr/templateCardHeaderButtonIconSize"
+        android:layout_height="?attr/templateCardHeaderButtonIconSize"
+        android:scaleType="fitCenter"/>
+</FrameLayout>

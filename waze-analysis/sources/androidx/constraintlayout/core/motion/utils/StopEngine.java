@@ -1,0 +1,15 @@
+package androidx.constraintlayout.core.motion.utils;
+
+/* compiled from: WazeSource */
+/* loaded from: classes3.dex */
+public interface StopEngine {
+    String debug(String str, float f2);
+
+    float getInterpolation(float f2);
+
+    float getVelocity();
+
+    float getVelocity(float f2);
+
+    boolean isStopped();
+}

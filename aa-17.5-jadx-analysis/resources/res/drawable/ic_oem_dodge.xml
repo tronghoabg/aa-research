@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android" xmlns:aapt="http://schemas.android.com/aapt"
+    android:height="72dp"
+    android:width="72dp"
+    android:viewportWidth="72"
+    android:viewportHeight="72">
+    <path
+        android:fillColor="@drawable/_ic_oem_dodge__0_res_0x7f080026"
+        android:pathData="M0,0 h72 v72 h-72 z"/>
+    <path
+        android:fillColor="#e1251b"
+        android:pathData="M33.63,20.63l12.95,0.03l-26.49,30.71l-13,0z"
+        android:fillType="evenOdd"/>
+    <path
+        android:fillColor="#e1251b"
+        android:pathData="M51.96,20.63l12.95,0.03l-26.49,30.71l-13,0z"
+        android:fillType="evenOdd"/>
+</vector>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/outline_stroke">
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="@dimen/button_secondary_stroke_width"
+                android:color="@color/button_secondary_stroke_outline"/>
+            <corners android:radius="@dimen/gearhead_button_corner_radius"/>
+        </shape>
+    </item>
+    <item android:drawable="@drawable/button_background_ripple"/>
+</layer-list>

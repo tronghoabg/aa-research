@@ -1,0 +1,177 @@
+package defpackage;
+
+import androidx.car.app.navigation.model.Maneuver;
+
+/* loaded from: classes3.dex */
+public enum yyc implements abnz {
+    UNKNOWN_STATE(0),
+    WAIT_FOR_CAR_CONNECTION(1),
+    CHECK_COUNTRY_WHITELIST(2),
+    CHECK_PHONE_BLACKLIST(3),
+    AUTHORIZE_CAR_CONNECTION(4),
+    DOWNLOAD_APP(5),
+    DOWNLOAD_APP_RETRY(6),
+    INSTALL_APP(7),
+    OPT_IN(8),
+    CAR_MOVING(9),
+    SETUP_ERROR(10),
+    SETUP_FAILED(11),
+    SETUP_DONE(12),
+    CHECK_PERMISSIONS(13),
+    UNUSED_VALUE_14(14),
+    LOCK_SCREEN(15),
+    GH_WAIT_FOR_CAR_CONNECTION(16),
+    GH_APPS_PERMISSION(17),
+    GH_APPS_PERMISSION_DETAILS(18),
+    GH_CHECK_PERMISSIONS(19),
+    GH_GMM_SIGN_IN(20),
+    GH_GSA_SIGN_IN(21),
+    GH_GSA_SIGN_IN_CONTACT_ONLY(22),
+    GH_MUSIC_SIGN_IN(23),
+    GH_TERMS_OF_SERVICE(24),
+    GH_UNPLUG_REPLUG(25),
+    GH_CAR_DOCK_PROMPT(26),
+    GH_CAR_MOVING(27),
+    GH_ERROR(28),
+    GH_SETUP_FAILED(29),
+    GH_SETUP_DONE(30),
+    GH_START_STATE(31),
+    GH_VANAGON_START_STATE(32),
+    GH_PROJECTED_START_STATE(33),
+    GH_DOWNLOAD_APP(34),
+    GH_INSTALL_APP(35),
+    GH_CHECK_SENSITIVE_PERMISSIONS(36),
+    GH_BRANCHING_STATE(37),
+    GH_VANAGON_CAPABILITY_CHECK_STATE(38),
+    AUTO_INTRO(39),
+    DEVICE_INCOMPATIBLE(40),
+    GH_SAFETY_NOTICE_STATE(41),
+    COMPATIBILITY_CHECKER(42),
+    GH_WORK_PROFILE_CHECK_STATE(43),
+    START_CAR_SERVICE(44),
+    RESET_CAR_DOCK(45),
+    FRX_NOT_RUNNING(46),
+    GH_FRX_NOT_RUNNING(47),
+    GH_AUTO_LAUNCH_STATE(48);
+
+    public final int X;
+
+    yyc(int i) {
+        this.X = i;
+    }
+
+    public static yyc b(int i) {
+        switch (i) {
+            case 0:
+                return UNKNOWN_STATE;
+            case 1:
+                return WAIT_FOR_CAR_CONNECTION;
+            case 2:
+                return CHECK_COUNTRY_WHITELIST;
+            case 3:
+                return CHECK_PHONE_BLACKLIST;
+            case 4:
+                return AUTHORIZE_CAR_CONNECTION;
+            case 5:
+                return DOWNLOAD_APP;
+            case 6:
+                return DOWNLOAD_APP_RETRY;
+            case 7:
+                return INSTALL_APP;
+            case 8:
+                return OPT_IN;
+            case 9:
+                return CAR_MOVING;
+            case 10:
+                return SETUP_ERROR;
+            case 11:
+                return SETUP_FAILED;
+            case 12:
+                return SETUP_DONE;
+            case 13:
+                return CHECK_PERMISSIONS;
+            case 14:
+                return UNUSED_VALUE_14;
+            case 15:
+                return LOCK_SCREEN;
+            case 16:
+                return GH_WAIT_FOR_CAR_CONNECTION;
+            case 17:
+                return GH_APPS_PERMISSION;
+            case 18:
+                return GH_APPS_PERMISSION_DETAILS;
+            case 19:
+                return GH_CHECK_PERMISSIONS;
+            case 20:
+                return GH_GMM_SIGN_IN;
+            case 21:
+                return GH_GSA_SIGN_IN;
+            case 22:
+                return GH_GSA_SIGN_IN_CONTACT_ONLY;
+            case 23:
+                return GH_MUSIC_SIGN_IN;
+            case 24:
+                return GH_TERMS_OF_SERVICE;
+            case 25:
+                return GH_UNPLUG_REPLUG;
+            case 26:
+                return GH_CAR_DOCK_PROMPT;
+            case 27:
+                return GH_CAR_MOVING;
+            case Maneuver.TYPE_MERGE_RIGHT /* 28 */:
+                return GH_ERROR;
+            case Maneuver.TYPE_MERGE_SIDE_UNSPECIFIED /* 29 */:
+                return GH_SETUP_FAILED;
+            case 30:
+                return GH_SETUP_DONE;
+            case 31:
+                return GH_START_STATE;
+            case 32:
+                return GH_VANAGON_START_STATE;
+            case Maneuver.TYPE_ROUNDABOUT_ENTER_AND_EXIT_CW_WITH_ANGLE /* 33 */:
+                return GH_PROJECTED_START_STATE;
+            case Maneuver.TYPE_ROUNDABOUT_ENTER_AND_EXIT_CCW /* 34 */:
+                return GH_DOWNLOAD_APP;
+            case Maneuver.TYPE_ROUNDABOUT_ENTER_AND_EXIT_CCW_WITH_ANGLE /* 35 */:
+                return GH_INSTALL_APP;
+            case Maneuver.TYPE_STRAIGHT /* 36 */:
+                return GH_CHECK_SENSITIVE_PERMISSIONS;
+            case 37:
+                return GH_BRANCHING_STATE;
+            case Maneuver.TYPE_FERRY_TRAIN /* 38 */:
+                return GH_VANAGON_CAPABILITY_CHECK_STATE;
+            case Maneuver.TYPE_DESTINATION /* 39 */:
+                return AUTO_INTRO;
+            case Maneuver.TYPE_DESTINATION_STRAIGHT /* 40 */:
+                return DEVICE_INCOMPATIBLE;
+            case Maneuver.TYPE_DESTINATION_LEFT /* 41 */:
+                return GH_SAFETY_NOTICE_STATE;
+            case Maneuver.TYPE_DESTINATION_RIGHT /* 42 */:
+                return COMPATIBILITY_CHECKER;
+            case Maneuver.TYPE_ROUNDABOUT_ENTER_CW /* 43 */:
+                return GH_WORK_PROFILE_CHECK_STATE;
+            case Maneuver.TYPE_ROUNDABOUT_EXIT_CW /* 44 */:
+                return START_CAR_SERVICE;
+            case Maneuver.TYPE_ROUNDABOUT_ENTER_CCW /* 45 */:
+                return RESET_CAR_DOCK;
+            case Maneuver.TYPE_ROUNDABOUT_EXIT_CCW /* 46 */:
+                return FRX_NOT_RUNNING;
+            case Maneuver.TYPE_FERRY_BOAT_LEFT /* 47 */:
+                return GH_FRX_NOT_RUNNING;
+            case 48:
+                return GH_AUTO_LAUNCH_STATE;
+            default:
+                return null;
+        }
+    }
+
+    @Override // defpackage.abnz
+    public final int a() {
+        return this.X;
+    }
+
+    @Override // java.lang.Enum
+    public final String toString() {
+        return Integer.toString(this.X);
+    }
+}

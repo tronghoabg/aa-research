@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_column_grid_margin">112dp</dimen>
+    <dimen name="vn_dialpad_number_input_height">112dp</dimen>
+    <dimen name="vn_metadata_primary_text_margin_top">120dp</dimen>
+</resources>

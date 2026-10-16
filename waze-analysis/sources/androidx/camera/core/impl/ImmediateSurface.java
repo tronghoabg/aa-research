@@ -1,0 +1,26 @@
+package androidx.camera.core.impl;
+
+import android.util.Size;
+import android.view.Surface;
+import androidx.camera.core.impl.utils.futures.Futures;
+import com.google.d.m.a.bm;
+
+/* compiled from: WazeSource */
+/* loaded from: classes2.dex */
+public final class ImmediateSurface extends DeferrableSurface {
+    private final Surface mSurface;
+
+    public ImmediateSurface(Surface surface) {
+        this.mSurface = surface;
+    }
+
+    @Override // androidx.camera.core.impl.DeferrableSurface
+    public bm<Surface> provideSurface() {
+        return Futures.immediateFuture(this.mSurface);
+    }
+
+    public ImmediateSurface(Surface surface, Size size, int i2) {
+        super(size, i2);
+        this.mSurface = surface;
+    }
+}

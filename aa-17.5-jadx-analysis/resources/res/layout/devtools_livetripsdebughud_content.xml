@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" style="@style/MatchParentContainer">
+    <TextView
+        android:textSize="@dimen/text_size_small"
+        android:textColor="@color/gmm_white"
+        android:id="@+id/livetripsdebughud_textbox"
+        android:background="@color/black_almost_transparent"
+        android:padding="@dimen/textbox_spacer_tiny"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="130dp"
+        android:contentDescription=""
+        style="@style/TextBox"/>
+</LinearLayout>

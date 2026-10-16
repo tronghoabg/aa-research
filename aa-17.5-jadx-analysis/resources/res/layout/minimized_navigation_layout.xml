@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/minimized_template"
+    android:background="@null"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/focus_frame"
+        android:background="@null"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:foreground="@drawable/minimized_focus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <include
+        android:id="@+id/action_strip"
+        android:visibility="gone"
+        layout="@layout/action_strip_view_minimized_state"/>
+    <include
+        android:visibility="gone"
+        layout="@layout/responsive_turn_card_container"/>
+    <include
+        android:visibility="gone"
+        layout="@layout/responsive_travel_estimate_view"/>
+    <include
+        android:visibility="gone"
+        layout="@layout/minimized_bottom_bar"/>
+</android.support.constraint.ConstraintLayout>

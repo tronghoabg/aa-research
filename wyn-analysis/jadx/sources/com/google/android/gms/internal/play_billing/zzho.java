@@ -1,0 +1,39 @@
+package com.google.android.gms.internal.play_billing;
+
+/* loaded from: classes4.dex */
+public final class zzho extends zzcs implements zzed {
+    private static final zzho zzb;
+    private int zzd;
+    private int zze;
+
+    static {
+        zzho zzhoVar = new zzho();
+        zzb = zzhoVar;
+        zzcs.zzt(zzho.class, zzhoVar);
+    }
+
+    private zzho() {
+    }
+
+    @Override // com.google.android.gms.internal.play_billing.zzcs
+    public final Object zzx(int i5, Object obj, Object obj2) {
+        int i10 = i5 - 1;
+        if (i10 == 0) {
+            return (byte) 1;
+        }
+        if (i10 == 2) {
+            return zzcs.zzq(zzb, "\u0001\u0001\u0000\u0001\u0001\u0001\u0001\u0000\u0000\u0000\u0001င\u0000", new Object[]{"zzd", "zze"});
+        }
+        if (i10 == 3) {
+            return new zzho();
+        }
+        zzhm zzhmVar = null;
+        if (i10 == 4) {
+            return new zzhn(zzhmVar);
+        }
+        if (i10 != 5) {
+            return null;
+        }
+        return zzb;
+    }
+}

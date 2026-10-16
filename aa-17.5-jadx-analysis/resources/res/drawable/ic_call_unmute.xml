@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="@color/m3_text_button_foreground_color_selector"/>
+        </shape>
+    </item>
+    <item>
+        <inset
+            android:drawable="@drawable/ic_mic_off"
+            android:inset="@dimen/dialer_incall_unmute_button_icon_inset"/>
+    </item>
+</layer-list>

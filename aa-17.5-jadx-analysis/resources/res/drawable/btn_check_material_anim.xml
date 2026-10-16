@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_enabled="false"
+        android:state_checked="true">
+        <bitmap
+            android:src="0x7f08015c"
+            android:alpha="?android:attr/disabledAlpha"/>
+    </item>
+    <item android:state_enabled="false">
+        <bitmap
+            android:src="0x7f08014d"
+            android:alpha="?android:attr/disabledAlpha"/>
+    </item>
+    <item
+        android:state_checked="true"
+        android:id="@+id/on">
+        <bitmap android:src="0x7f08015c"/>
+    </item>
+    <item android:id="@+id/off">
+        <bitmap android:src="0x7f08014d"/>
+    </item>
+    <transition
+        android:toId="@+id/on"
+        android:fromId="@+id/off">
+        <animation-list>
+            <item android:duration="15">
+                <bitmap android:src="0x7f08014d"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f08014e"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f08014f"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080150"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080151"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080152"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080153"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080154"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080155"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080156"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080157"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080158"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080159"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f08015a"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f08015b"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f08015c"/>
+            </item>
+        </animation-list>
+    </transition>
+    <transition
+        android:toId="@+id/off"
+        android:fromId="@+id/on">
+        <animation-list>
+            <item android:duration="15">
+                <bitmap android:src="0x7f08013d"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f08013e"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f08013f"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080140"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080141"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080142"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080143"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080144"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080145"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080146"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080147"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080148"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f080149"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f08014a"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f08014b"/>
+            </item>
+            <item android:duration="15">
+                <bitmap android:src="0x7f08014c"/>
+            </item>
+        </animation-list>
+    </transition>
+</animated-selector>

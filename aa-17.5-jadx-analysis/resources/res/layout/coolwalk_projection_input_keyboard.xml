@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.apps.auto.sdk.ui.FocusClusterLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="bottom|center_horizontal"
+    android:background="@color/coolwalk_ime_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:forceFieldType="multimoveModal">
+    <FrameLayout
+        android:gravity="bottom|center_horizontal"
+        android:id="@+id/keyboard_parent"
+        android:background="@drawable/coolwalk_projection_keyboard_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.google.android.projection.gearhead.input.ProjectionKeyboardLayout
+            android:layout_gravity="bottom|center_horizontal"
+            android:id="@+id/keyboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/projection_keyboard_vertical_margin"
+            android:layout_marginBottom="@dimen/projection_keyboard_vertical_margin"
+            style="@style/Keyboard"/>
+        <TextView
+            android:textAppearance="@style/TextAppearance.Gearhead.KeyboardOverlay"
+            android:layout_gravity="center"
+            android:id="@+id/lockout_label"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/park_to_use_keyboard"/>
+    </FrameLayout>
+    <FrameLayout
+        android:layout_gravity="bottom|center_horizontal"
+        android:id="@+id/use_phone_keyboard_overlay"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:textAppearance="@style/TextAppearance.Gearhead.KeyboardOverlay"
+            android:layout_gravity="center"
+            android:id="@+id/use_phone_keyboard_overlay_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/keyboard_on_phone"/>
+    </FrameLayout>
+</com.google.android.apps.auto.sdk.ui.FocusClusterLayout>

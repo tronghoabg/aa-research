@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/linear"
+    android:duration="@integer/gearhead_notification_center_open_scroll_bar_alpha_duration_ms"
+    android:startOffset="@integer/gearhead_notification_center_open_scroll_bar_alpha_delay_ms"
+    android:fromAlpha="0"
+    android:toAlpha="1"/>

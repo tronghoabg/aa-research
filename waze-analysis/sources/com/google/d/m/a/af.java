@@ -1,0 +1,7 @@
+package com.google.d.m.a;
+
+/* compiled from: WazeSource */
+/* loaded from: classes4.dex */
+public interface af {
+    bm a();
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+    <TextView
+        android:textAppearance="?attr/textAppearanceHeadlineSmall"
+        android:textColor="?attr/colorOnSurface"
+        android:gravity="center_horizontal"
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/bottom_sheet_parent_layout_margin"
+        android:layout_marginTop="@dimen/bottom_sheet_parent_layout_margin"
+        android:layout_marginRight="@dimen/bottom_sheet_parent_layout_margin"
+        android:layout_marginBottom="@dimen/dialog_marginBottom"
+        android:text="@string/tap_head_unit"
+        android:drawableTop="@drawable/android_auto_gm3_logo"
+        android:drawablePadding="@dimen/bottom_sheet_logo_and_prompt_padding"/>
+    <ImageView
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/dialog_illustration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_sheet_layout_padding"
+        android:src="@drawable/phone_frx_continue_to_hu"
+        android:adjustViewBounds="true"
+        android:contentDescription="@null"/>
+    <com.google.android.material.button.MaterialButton
+        android:textAppearance="?attr/textAppearanceLabelLarge"
+        android:layout_gravity="center"
+        android:id="@+id/dont_show_again_button"
+        android:paddingLeft="@dimen/button_paddingHorizontal"
+        android:paddingRight="@dimen/button_paddingHorizontal"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/bottom_sheet_layout_padding"
+        style="?attr/materialButtonOutlinedStyle"/>
+</LinearLayout>

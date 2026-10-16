@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android" android:color="@color/gearhead_sdk_controller_ripple">
+    <item
+        android:gravity="center"
+        android:id="@android:id/mask">
+        <inset>
+            <shape android:shape="oval">
+                <solid android:color="@color/gearhead_controller_ripple_color_selector"/>
+                <size
+                    android:height="@dimen/material_dialer_action_panel_button_size"
+                    android:width="@dimen/material_dialer_action_panel_button_size"/>
+            </shape>
+        </inset>
+    </item>
+    <item android:id="@+id/foreground_ring">
+        <selector>
+            <item
+                android:state_focused="true"
+                android:state_window_focused="true"
+                android:state_activated="false">
+                <shape android:shape="oval">
+                    <stroke
+                        android:width="@dimen/gearhead_focus_ring_stroke_width_focused"
+                        android:color="?attr/gearheadFocusAccentColor"/>
+                    <size
+                        android:height="@dimen/material_dialer_action_panel_button_size"
+                        android:width="@dimen/material_dialer_action_panel_button_size"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+    <item android:gravity="center">
+        <selector>
+            <item
+                android:state_focused="true"
+                android:state_window_focused="true"
+                android:state_activated="true">
+                <shape android:shape="oval">
+                    <stroke
+                        android:width="@dimen/gearhead_focus_ring_stroke_width_hovered"
+                        android:color="?attr/colorSurfaceVariant"/>
+                    <size
+                        android:height="@dimen/material_dialer_action_panel_activatable_button_focus_ring_size"
+                        android:width="@dimen/material_dialer_action_panel_activatable_button_focus_ring_size"/>
+                </shape>
+            </item>
+        </selector>
+    </item>
+</ripple>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:interpolator/linear"
+    android:duration="@integer/boardwalk_app_switch_duration"
+    android:shareInterpolator="true"
+    android:fillBefore="true"
+    android:fillAfter="true"
+    android:zAdjustment="bottom"
+    android:fromAlpha="1"
+    android:toAlpha="1"
+    android:fillEnabled="true"/>

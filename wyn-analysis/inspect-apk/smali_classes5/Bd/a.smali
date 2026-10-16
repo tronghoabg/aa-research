@@ -1,0 +1,47 @@
+.class public final LBd/a;
+.super Ljava/net/ConnectException;
+.source "SourceFile"
+
+
+# instance fields
+.field public final a:Ljava/lang/Throwable;
+
+
+# direct methods
+.method public constructor <init>(Ljava/lang/String;Ljava/lang/Throwable;)V
+    .locals 1
+
+    .line 1
+    const-string v0, "message"
+
+    .line 2
+    .line 3
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/k;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 4
+    .line 5
+    .line 6
+    invoke-direct {p0, p1}, Ljava/net/ConnectException;-><init>(Ljava/lang/String;)V
+
+    .line 7
+    .line 8
+    .line 9
+    iput-object p2, p0, LBd/a;->a:Ljava/lang/Throwable;
+
+    .line 10
+    .line 11
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getCause()Ljava/lang/Throwable;
+    .locals 1
+
+    .line 1
+    iget-object v0, p0, LBd/a;->a:Ljava/lang/Throwable;
+
+    .line 2
+    .line 3
+    return-object v0
+.end method

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:title="@string/companion_legal_safety_information_title"
+        android:key="safety"
+        style="@style/M3PreferenceStyle"/>
+    <Preference
+        android:title="@string/companion_legal_data_notice_title"
+        android:key="data"
+        style="@style/M3PreferenceStyle"/>
+    <Preference
+        android:title="@string/companion_legal_messaging_and_llms_title"
+        android:key="messaging_and_llms"
+        style="@style/M3PreferenceStyle"/>
+    <Preference
+        android:title="@string/companion_legal_terms_of_service_title"
+        android:key="terms_of_service"
+        style="@style/M3PreferenceStyle"/>
+    <Preference
+        android:title="@string/menu_action_osl"
+        android:key="open_source"
+        style="@style/M3PreferenceStyle"/>
+</PreferenceScreen>
